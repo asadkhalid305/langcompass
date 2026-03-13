@@ -29,7 +29,11 @@ export const formatSchemaIssues = (errors: z.ZodIssue[]): string[] =>
     return `${path}: ${error.message}`
   })
 
-export const readValidatedJson = async <T>(path: string, schema: z.ZodType<T>, context: string): Promise<T> => {
+export const readValidatedJson = async <T>(
+  path: string,
+  schema: z.ZodType<T, z.ZodTypeDef, unknown>,
+  context: string,
+): Promise<T> => {
   const parsed = schema.safeParse(await readJson(path))
 
   if (!parsed.success) {

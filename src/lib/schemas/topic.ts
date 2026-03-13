@@ -12,7 +12,7 @@ import {
   TopicSourceStyle,
   TopicTable,
   TopicUI,
-} from "../../types"
+} from "../types"
 import { ALLOWED_DIFFICULTY_STAGES, ALLOWED_LEVELS } from "../constants"
 
 const requiredString = z.string().trim().min(1)
@@ -27,7 +27,7 @@ export const TopicIdSchema = z.custom<TopicId>((value) => typeof value === "stri
   message: "Expected a non-empty topic id",
 })
 
-export const TopicCatalogItemSchema: z.ZodType<TopicCatalogItem> = z.object({
+export const TopicCatalogItemSchema = z.object({
   id: TopicIdSchema,
   title: requiredString,
   level: topicLevelSchema,
@@ -40,13 +40,13 @@ export const TopicCatalogItemSchema: z.ZodType<TopicCatalogItem> = z.object({
   keywords: stringArraySchema,
 })
 
-export const TopicRuleBlockSchema: z.ZodType<TopicRuleBlock> = z.object({
+export const TopicRuleBlockSchema = z.object({
   id: TopicIdSchema,
   title: requiredString,
   content: requiredString,
 })
 
-export const TopicTableSchema: z.ZodType<TopicTable> = z.object({
+export const TopicTableSchema = z.object({
   id: TopicIdSchema,
   title: requiredString,
   columns: stringArraySchema,
@@ -60,20 +60,20 @@ export const TopicExampleSchema = z.object({
   note: optionalString,
 })
 
-export const TopicMemoryHookSchema: z.ZodType<TopicMemoryHook> = z.object({
+export const TopicMemoryHookSchema = z.object({
   id: TopicIdSchema,
   title: requiredString,
   content: requiredString,
 })
 
-export const TopicCommonMistakeSchema: z.ZodType<TopicCommonMistake> = z.object({
+export const TopicCommonMistakeSchema = z.object({
   id: TopicIdSchema,
   wrong: requiredString,
   correct: requiredString,
   reason: requiredString,
 })
 
-export const TopicMiniQuizItemSchema: z.ZodType<TopicMiniQuizItem> = z
+export const TopicMiniQuizItemSchema = z
   .object({
     id: TopicIdSchema,
     type: z.union([z.literal("multiple_choice"), z.literal("fill_in_blank")]),
@@ -98,12 +98,12 @@ export const TopicMiniQuizItemSchema: z.ZodType<TopicMiniQuizItem> = z
     }
   })
 
-export const TopicUISchema: z.ZodType<TopicUI> = z.object({
+export const TopicUISchema = z.object({
   status: z.union([z.literal("draft"), z.literal("ready")]),
   recommendedSections: z.array(requiredString),
 })
 
-export const TopicSourceStyleSchema: z.ZodType<TopicSourceStyle> = z.object({
+export const TopicSourceStyleSchema = z.object({
   origin: requiredString,
   confidence: z.union([z.literal("low"), z.literal("medium"), z.literal("high")]),
   notes: optionalString,
@@ -111,7 +111,7 @@ export const TopicSourceStyleSchema: z.ZodType<TopicSourceStyle> = z.object({
 
 export const TopicCatalogSchema = z.array(TopicCatalogItemSchema)
 
-export const TopicDetailSchema: z.ZodType<TopicDetail> = TopicCatalogItemSchema.extend({
+export const TopicDetailSchema = TopicCatalogItemSchema.extend({
   summary: requiredString,
   whyItMatters: optionalString,
   prerequisiteTopicIds: z.array(TopicIdSchema).default([]).optional(),

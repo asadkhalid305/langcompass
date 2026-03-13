@@ -2,7 +2,7 @@ import { access } from "node:fs/promises"
 import { constants } from "node:fs"
 import { join } from "node:path"
 import { ALLOWED_DIFFICULTY_STAGES, ALLOWED_LEVELS } from "../constants"
-import { TopicCatalogItem, TopicDetail, TopicId, TopicLevel } from "../../types"
+import { TopicCatalogItem, TopicDetail, TopicId, TopicLevel } from "../types"
 
 export const getAllLevelsInDisplayOrder = (): TopicLevel[] => [...ALLOWED_LEVELS]
 
@@ -37,17 +37,22 @@ export const normalizeSearchText = (value: string): string =>
     .trim()
 
 export const buildSearchText = (topic: TopicCatalogItem | TopicDetail): string => {
+  const summary = "summary" in topic && typeof topic.summary === "string" ? [topic.summary] : []
+  const patterns = "patterns" in topic && Array.isArray(topic.patterns) ? topic.patterns : []
+  const tips = "tips" in topic && Array.isArray(topic.tips) ? topic.tips : []
+  const searchHints = "searchHints" in topic && Array.isArray(topic.searchHints) ? topic.searchHints : []
+
   const values = [
     topic.title,
     topic.category,
     topic.group,
     ...(topic.aliases ?? []),
     ...(topic.keywords ?? []),
-    ...(topic.summary ? [topic.summary] : []),
+    ...summary,
     ...(topic.revisitedIn ?? []),
-    ...(topic.patterns ?? []),
-    ...(topic.tips ?? []),
-    ...(topic.searchHints ?? []),
+    ...patterns,
+    ...tips,
+    ...searchHints,
   ]
 
   return values
