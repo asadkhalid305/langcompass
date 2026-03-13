@@ -3,6 +3,9 @@ import { constants } from "node:fs"
 import { join } from "node:path"
 import { ALLOWED_DIFFICULTY_STAGES, ALLOWED_LEVELS } from "../constants"
 import { TopicCatalogItem, TopicDetail, TopicId, TopicLevel } from "../types"
+import { normalizeSearchText } from "./text"
+
+export { normalizeSearchText } from "./text"
 
 export const getAllLevelsInDisplayOrder = (): TopicLevel[] => [...ALLOWED_LEVELS]
 
@@ -26,15 +29,6 @@ export const getTopicsGroupedByGroup = (topics: TopicCatalogItem[]): Record<stri
 
 export const getTopicById = (topics: TopicCatalogItem[], topicId: TopicId): TopicCatalogItem | undefined =>
   topics.find((topic) => topic.id === topicId)
-
-export const normalizeSearchText = (value: string): string =>
-  value
-    .normalize("NFD")
-    .replace(/\p{Diacritic}/gu, "")
-    .toLowerCase()
-    .replace(/[^a-z0-9\s]/g, " ")
-    .replace(/\s+/g, " ")
-    .trim()
 
 export const buildSearchText = (topic: TopicCatalogItem | TopicDetail): string => {
   const summary = "summary" in topic && typeof topic.summary === "string" ? [topic.summary] : []

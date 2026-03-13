@@ -1,6 +1,6 @@
 import Fuse, { type IFuseOptions } from "fuse.js"
 import type { TopicCatalogItem } from "../types"
-import { normalizeSearchText } from "../utils"
+import { normalizeSearchText } from "../utils/text"
 import type {
   TopicSearchBoostField,
   TopicSearchConfig,

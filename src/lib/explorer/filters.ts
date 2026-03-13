@@ -1,6 +1,6 @@
 import { ALLOWED_DIFFICULTY_STAGES, ALLOWED_LEVELS } from "../constants"
 import type { TopicCatalogItem, TopicId } from "../types"
-import { normalizeSearchText } from "../utils"
+import { normalizeSearchText } from "../utils/text"
 import type { ExplorerFilterOptions, ExplorerFilters } from "./types"
 
 const EMPTY_TOPIC_ID_SET = new Set<TopicId>()
