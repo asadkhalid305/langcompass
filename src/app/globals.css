@@ -2,16 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Manrope, Avenir, "Segoe UI", sans-serif;
-  background: #0f172a;
-  color: #e2e8f0;
+:root {
+  --background: 0 0% 98%; /* #FAFAFA */
+  --foreground: 220 39% 11%; /* #111827 */
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 222.2 84% 4.9%;
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+  --radius: 0px;
 }
 
-:root {
-  --foreground: #e2e8f0;
-  --background: #0f172a;
+* {
+  border-color: hsl(var(--border));
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: var(--font-text), "Inter", sans-serif;
+}
+
+button,
+a {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: hsl(198 74% 43% / 0.14);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display), "Times New Roman", serif;
 }
