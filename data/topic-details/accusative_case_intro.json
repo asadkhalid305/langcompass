@@ -1,0 +1,213 @@
+{
+  "id": "accusative_case_intro",
+  "title": "Accusative Case",
+  "level": "A1.2",
+  "category": "grammar",
+  "group": "cases",
+  "summary": "The accusative case is used for the direct object in a sentence. It answers the question 'Wen?' or 'Was?'. In beginner German, it is usually the first case learners notice because some articles and pronouns change when the noun becomes the object.",
+  "whyItMatters": "You need the accusative to say what someone sees, buys, has, likes, or does to something. Without it, many everyday German sentences feel incomplete or incorrect.",
+  "firstIntroducedIn": "A1.2",
+  "revisitedIn": ["A2.1", "A2.2", "B1.1"],
+  "difficultyStage": "intro",
+  "aliases": [
+    "Akkusativ",
+    "accusative",
+    "direct object case"
+  ],
+  "keywords": [
+    "wen",
+    "was",
+    "mich",
+    "dich",
+    "den",
+    "einen",
+    "direct object"
+  ],
+  "prerequisiteTopicIds": [
+    "basic_sentence_structure",
+    "definite_articles_nominative",
+    "indefinite_articles_nominative",
+    "personal_pronouns_nominative"
+  ],
+  "relatedTopicIds": [
+    "nominative_case",
+    "accusative_definite_articles",
+    "accusative_indefinite_articles",
+    "personal_pronouns_accusative",
+    "dative_case_intro",
+    "accusative_dative_together"
+  ],
+  "ruleBlocks": [
+    {
+      "id": "accusative_core_use",
+      "title": "Main use",
+      "content": "Use the accusative for the direct object — the person or thing directly affected by the action."
+    },
+    {
+      "id": "accusative_questions",
+      "title": "Question clue",
+      "content": "The accusative often answers the question 'Wen?' (whom?) or 'Was?' (what?)."
+    },
+    {
+      "id": "accusative_article_change",
+      "title": "Important article change",
+      "content": "In the accusative, the masculine article usually changes. 'der' becomes 'den' and 'ein' becomes 'einen'. Feminine, neuter, and plural often stay the same in the article form at this level."
+    }
+  ],
+  "tables": [
+    {
+      "id": "accusative_definite_articles_table",
+      "title": "Definite Articles in Accusative",
+      "columns": ["Gender", "Nominative", "Accusative"],
+      "rows": [
+        ["Masculine", "der", "den"],
+        ["Feminine", "die", "die"],
+        ["Neuter", "das", "das"],
+        ["Plural", "die", "die"]
+      ]
+    },
+    {
+      "id": "accusative_indefinite_articles_table",
+      "title": "Indefinite Articles in Accusative",
+      "columns": ["Gender", "Nominative", "Accusative"],
+      "rows": [
+        ["Masculine", "ein", "einen"],
+        ["Feminine", "eine", "eine"],
+        ["Neuter", "ein", "ein"]
+      ]
+    },
+    {
+      "id": "accusative_pronouns_table",
+      "title": "Personal Pronouns in Accusative",
+      "columns": ["Nominative", "Accusative"],
+      "rows": [
+        ["ich", "mich"],
+        ["du", "dich"],
+        ["er", "ihn"],
+        ["sie", "sie"],
+        ["es", "es"],
+        ["wir", "uns"],
+        ["ihr", "euch"],
+        ["sie/Sie", "sie/Sie"]
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "id": "ex_1",
+      "de": "Ich sehe den Mann.",
+      "en": "I see the man.",
+      "note": "The verb 'sehen' takes a direct object. 'der Mann' becomes 'den Mann'."
+    },
+    {
+      "id": "ex_2",
+      "de": "Sie kauft einen Apfel.",
+      "en": "She buys an apple.",
+      "note": "Masculine 'ein' changes to 'einen'."
+    },
+    {
+      "id": "ex_3",
+      "de": "Wir haben die Tasche.",
+      "en": "We have the bag.",
+      "note": "Feminine article stays 'die'."
+    },
+    {
+      "id": "ex_4",
+      "de": "Ich liebe das Buch.",
+      "en": "I love the book.",
+      "note": "Neuter article stays 'das'."
+    },
+    {
+      "id": "ex_5",
+      "de": "Kannst du mich hören?",
+      "en": "Can you hear me?",
+      "note": "'ich' changes to 'mich' in the accusative."
+    }
+  ],
+  "patterns": [
+    "Subject + verb + accusative object",
+    "Subject + modal verb + accusative object + infinitive",
+    "Wen/Was + verb + subject?"
+  ],
+  "tips": [
+    "At A1 level, the fastest clue is this: if the noun is masculine, check whether the article changes to 'den' or 'einen'.",
+    "If the action is done directly to a person or thing, accusative is very common.",
+    "Learn accusative together with verbs you use daily: sehen, haben, kaufen, brauchen, lieben."
+  ],
+  "memoryHooks": [
+    {
+      "id": "hook_1",
+      "title": "Think 'target of the action'",
+      "content": "The accusative is often the target that receives the action directly."
+    },
+    {
+      "id": "hook_2",
+      "title": "Masculine is the warning sign",
+      "content": "When you see a masculine noun, slow down and check whether the article must change."
+    }
+  ],
+  "commonMistakes": [
+    {
+      "id": "mistake_1",
+      "wrong": "Ich sehe der Mann.",
+      "correct": "Ich sehe den Mann.",
+      "reason": "Masculine definite article changes in the accusative."
+    },
+    {
+      "id": "mistake_2",
+      "wrong": "Kannst du ich hören?",
+      "correct": "Kannst du mich hören?",
+      "reason": "Personal pronouns also change in the accusative."
+    },
+    {
+      "id": "mistake_3",
+      "wrong": "Sie kauft ein Apfel.",
+      "correct": "Sie kauft einen Apfel.",
+      "reason": "Masculine indefinite article changes from 'ein' to 'einen'."
+    }
+  ],
+  "miniQuiz": [
+    {
+      "id": "quiz_1",
+      "type": "multiple_choice",
+      "question": "Which sentence is correct?",
+      "options": [
+        "Ich habe der Hund.",
+        "Ich habe den Hund.",
+        "Ich habe dem Hund."
+      ],
+      "answer": "Ich habe den Hund."
+    },
+    {
+      "id": "quiz_2",
+      "type": "fill_in_blank",
+      "question": "Ich sehe ___ Lehrer.",
+      "answer": "den"
+    }
+  ],
+  "searchHints": [
+    "mich vs ich",
+    "den vs der",
+    "einen vs ein",
+    "direct object in German"
+  ],
+  "ui": {
+    "status": "ready",
+    "recommendedSections": [
+      "summary",
+      "ruleBlocks",
+      "tables",
+      "examples",
+      "tips",
+      "commonMistakes",
+      "miniQuiz",
+      "relatedTopics"
+    ]
+  },
+  "sourceStyle": {
+    "origin": "normalized curriculum content",
+    "confidence": "high",
+    "notes": "This is a learner-friendly synthesized explanation aligned to beginner German teaching patterns, not a verbatim copy from one school."
+  },
+  "updatedAt": "2026-03-12"
+}
