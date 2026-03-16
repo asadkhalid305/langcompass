@@ -1,13 +1,14 @@
 import { humanizeGroupLabel } from "@/lib/explorer/labels"
 import type { ExplorerTopicSection } from "@/lib/explorer/types"
-import type { TopicId, TopicLevel } from "@/lib/types/topic"
+import type { TopicId, TopicLevelOrAll } from "@/lib/types/topic"
+import { ALL_LEVEL } from "@/lib/constants/topic"
 
 import { TopicNode } from "./topic-node"
 import type { LevelCounts, SearchResultGroup } from "./types"
 
 interface ExplorerViewProps {
-  selectedLevel: TopicLevel
-  selectedLevelCounts: LevelCounts[TopicLevel]
+  selectedLevel: TopicLevelOrAll
+  selectedLevelCounts: LevelCounts[TopicLevelOrAll]
   hasActiveSearch: boolean
   totalSearchMatches: number
   searchResultsByLevel: SearchResultGroup[]
@@ -36,12 +37,14 @@ export function ExplorerView({
         <p className="text-xs uppercase tracking-[0.08em] text-muted-foreground">Learning flow</p>
         {!hasActiveSearch ? (
           <>
-            <h2 className="mt-1 text-pretty text-xl font-semibold">Level {selectedLevel} explorer</h2>
+            <h2 className="mt-1 text-pretty text-xl font-semibold">
+              {selectedLevel === ALL_LEVEL ? "All levels explorer" : `Level ${selectedLevel} explorer`}
+            </h2>
             <p className="mt-1 text-sm text-muted-foreground">
               {selectedLevelCounts.introducedCount > 0 ? `${selectedLevelCounts.introducedCount} new` : null}
               {selectedLevelCounts.introducedCount > 0 && selectedLevelCounts.revisitedCount > 0 ? " and " : null}
               {selectedLevelCounts.revisitedCount > 0 ? `${selectedLevelCounts.revisitedCount} revisited` : null}
-              {" topics in this level."}
+              {selectedLevel === ALL_LEVEL ? " topics across all levels." : " topics in this level."}
             </p>
             {focusedGroup ? (
               <div className="mt-3 inline-flex items-center gap-2 rounded-full bg-background px-3 py-1 text-xs ring-1 ring-border">
@@ -78,7 +81,9 @@ export function ExplorerView({
                 <div className="space-y-8">
                   {hasIntroduced ? (
                     <div>
-                      <p className="mb-4 text-xs font-bold uppercase tracking-[0.1em] text-muted-foreground">New in {selectedLevel}</p>
+                      <p className="mb-4 text-xs font-bold uppercase tracking-[0.1em] text-muted-foreground">
+                        {selectedLevel === ALL_LEVEL ? "Topics" : `New in ${selectedLevel}`}
+                      </p>
                       <div className="flex flex-wrap gap-3 md:gap-4">
                         {section.introducedTopics.map((topic) => (
                           <TopicNode key={topic.id} topic={topic} isSelected={topic.id === selectedTopicId} onOpenTopic={onOpenTopic} />

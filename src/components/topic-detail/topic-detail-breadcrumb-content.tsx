@@ -4,10 +4,10 @@ import { ArrowLeft } from "lucide-react"
 import { AppBreadcrumb } from "@/components/navigation/app-breadcrumb"
 import { Button } from "@/components/ui/button"
 import { humanizeGroupLabel } from "@/lib/explorer/labels"
-import type { TopicLevel } from "@/lib/types/topic"
+import type { TopicLevelOrAll } from "@/lib/types/topic"
 
 interface TopicDetailBreadcrumbContentProps {
-  level: TopicLevel
+  level: TopicLevelOrAll
   group: string
   topicTitle: string
   explorerHref: string

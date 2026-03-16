@@ -1,7 +1,12 @@
 import type { LevelProfile } from "./types"
-import type { TopicLevel } from "@/lib/types/topic"
+import type { TopicLevelOrAll } from "@/lib/types/topic"
+import { ALL_LEVEL } from "@/lib/constants/topic"
 
-export const LEVEL_PROFILES: Record<TopicLevel, LevelProfile> = {
+export const LEVEL_PROFILES: Record<TopicLevelOrAll, LevelProfile> = {
+  [ALL_LEVEL]: {
+    title: "Complete curriculum",
+    description: "Browse every topic in one place across all CEFR sub-levels.",
+  },
   "A1.1": {
     title: "Starter foundations",
     description: "First contact with German sounds, core vocabulary, and basic sentence building blocks.",

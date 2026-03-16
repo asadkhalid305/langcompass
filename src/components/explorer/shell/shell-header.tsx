@@ -1,15 +1,15 @@
 import { Search, X } from "lucide-react"
 
 import { Input } from "@/components/ui/input"
-import { ALLOWED_LEVELS } from "@/lib/constants/topic"
-import type { TopicLevel } from "@/lib/types/topic"
+import { ALLOWED_LEVEL_OPTIONS, ALL_LEVEL } from "@/lib/constants/topic"
+import type { TopicLevelOrAll } from "@/lib/types/topic"
 
 interface ShellHeaderProps {
   isExplorerMode: boolean
-  selectedLevel: TopicLevel
+  selectedLevel: TopicLevelOrAll
   searchInput: string
   onGoOverview: () => void
-  onLevelSelect: (level: TopicLevel) => void
+  onLevelSelect: (level: TopicLevelOrAll) => void
   onSearchChange: (value: string) => void
   onClearSearch: () => void
 }
@@ -41,7 +41,9 @@ export function ShellHeader({
               <span className="text-muted-foreground/50 font-light text-lg select-none" aria-hidden="true">
                 /
               </span>
-              <span className="text-sm text-muted-foreground truncate">{selectedLevel} Explorer</span>
+              <span className="text-sm text-muted-foreground truncate">
+                {selectedLevel === ALL_LEVEL ? "All levels Explorer" : `${selectedLevel} Explorer`}
+              </span>
             </>
           ) : null}
         </div>
@@ -50,10 +52,10 @@ export function ShellHeader({
           <select
             className="h-9 rounded-none border border-border bg-background px-2 text-sm md:hidden"
             value={selectedLevel}
-            onChange={(event) => onLevelSelect(event.target.value as TopicLevel)}
+            onChange={(event) => onLevelSelect(event.target.value as TopicLevelOrAll)}
             aria-label="Select level"
           >
-            {ALLOWED_LEVELS.map((level) => (
+            {ALLOWED_LEVEL_OPTIONS.map((level) => (
               <option key={level} value={level}>
                 {level}
               </option>

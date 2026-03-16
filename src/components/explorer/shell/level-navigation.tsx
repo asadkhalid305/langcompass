@@ -1,19 +1,19 @@
-import { ALLOWED_LEVELS } from "@/lib/constants/topic"
-import type { TopicLevel } from "@/lib/types/topic"
+import { ALLOWED_LEVEL_OPTIONS } from "@/lib/constants/topic"
+import type { TopicLevelOrAll } from "@/lib/types/topic"
 import { cn } from "@/lib/utils/cn"
 
 import type { LevelCounts } from "./types"
 
 interface LevelNavigationProps {
-  selectedLevel: TopicLevel
+  selectedLevel: TopicLevelOrAll
   levelCounts: LevelCounts
-  onLevelSelect: (level: TopicLevel) => void
+  onLevelSelect: (level: TopicLevelOrAll) => void
 }
 
 export function LevelNavigation({ selectedLevel, levelCounts, onLevelSelect }: LevelNavigationProps) {
   return (
     <nav className="space-y-1" aria-label="Curriculum levels">
-      {ALLOWED_LEVELS.map((level) => {
+      {ALLOWED_LEVEL_OPTIONS.map((level) => {
         const counts = levelCounts[level]
         const isActive = level === selectedLevel
 

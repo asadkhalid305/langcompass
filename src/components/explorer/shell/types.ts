@@ -1,7 +1,7 @@
-import type { TopicCatalogItem, TopicDetail, TopicId, TopicLevel } from "@/lib/types/topic"
+import type { TopicCatalogItem, TopicDetail, TopicId, TopicLevel, TopicLevelOrAll } from "@/lib/types/topic"
 
 export interface LangCompassShellRouteState {
-  selectedLevel?: TopicLevel
+  selectedLevel?: TopicLevelOrAll
   focusedGroup?: string | null
   selectedTopicId?: TopicId | null
   searchQuery?: string
@@ -25,7 +25,7 @@ export interface GroupSummary {
 }
 
 export type LevelCounts = Record<
-  TopicLevel,
+  TopicLevelOrAll,
   {
     totalCount: number
     introducedCount: number

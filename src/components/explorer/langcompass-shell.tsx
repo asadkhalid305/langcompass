@@ -12,12 +12,13 @@ import { TopicPreviewDrawer } from "@/components/explorer/shell/topic-preview-dr
 import { useDesktopViewport } from "@/components/explorer/shell/use-desktop-viewport"
 import { useTopicDetailPreview } from "@/components/explorer/shell/use-topic-detail-preview"
 import type { GroupSummary, LangCompassShellRouteState, LevelCounts } from "@/components/explorer/shell/types"
-import { ALLOWED_LEVELS } from "@/lib/constants/topic"
+import { ALLOWED_LEVELS, ALLOWED_LEVEL_OPTIONS, ALL_LEVEL } from "@/lib/constants/topic"
 import { buildExplorerHref, buildOverviewHref, buildTopicDetailHref, parseExplorerQueryState, parseOverviewQueryState } from "@/lib/explorer/navigation"
 import { useExplorerPreferences } from "@/lib/explorer/preferences-store"
 import { createTopicSearchEngine } from "@/lib/explorer/search"
 import { getAllLevelTopicCounts, getGroupedTopicSectionsForLevel } from "@/lib/explorer/selectors"
-import type { TopicCatalogItem, TopicId, TopicLevel } from "@/lib/types/topic"
+import type { ExplorerTopicSection } from "@/lib/explorer/types"
+import type { TopicCatalogItem, TopicId, TopicLevel, TopicLevelOrAll } from "@/lib/types/topic"
 import { cn } from "@/lib/utils/cn"
 
 interface LangCompassShellProps {
@@ -27,8 +28,33 @@ interface LangCompassShellProps {
   initialRouteState?: LangCompassShellRouteState
 }
 
-const topicAppearsInLevel = (topic: TopicCatalogItem, level: TopicLevel): boolean =>
-  topic.firstIntroducedIn === level || topic.revisitedIn.includes(level)
+const sortTopicsByTitle = (topics: TopicCatalogItem[]): TopicCatalogItem[] => [...topics].sort((a, b) => a.title.localeCompare(b.title))
+
+const topicAppearsInLevel = (topic: TopicCatalogItem, level: TopicLevelOrAll): boolean =>
+  level === ALL_LEVEL || topic.firstIntroducedIn === level || topic.revisitedIn.includes(level)
+
+const getGroupedTopicSectionsForAllLevels = (topics: TopicCatalogItem[]): ExplorerTopicSection[] => {
+  const grouped = new Map<string, TopicCatalogItem[]>()
+
+  for (const topic of topics) {
+    const existing = grouped.get(topic.group) ?? []
+    existing.push(topic)
+    grouped.set(topic.group, existing)
+  }
+
+  return [...grouped.entries()]
+    .sort(([leftGroup], [rightGroup]) => leftGroup.localeCompare(rightGroup))
+    .map(([group, groupTopics]) => {
+      const sortedTopics = sortTopicsByTitle(groupTopics)
+
+      return {
+        group,
+        introducedTopics: sortedTopics,
+        revisitedTopics: [],
+        topics: sortedTopics,
+      }
+    })
+}
 
 export type { LangCompassShellRouteState }
 
@@ -60,12 +86,12 @@ export function LangCompassShell({ mode, topics, detailTopicIds, initialRouteSta
   const selectedLevel =
     (isExplorerMode ? explorerRouteState.level : overviewRouteState.level) ??
     preferences.lastLevel ??
-    (initialRouteState?.selectedLevel && ALLOWED_LEVELS.includes(initialRouteState.selectedLevel)
+    (initialRouteState?.selectedLevel && ALLOWED_LEVEL_OPTIONS.includes(initialRouteState.selectedLevel)
       ? initialRouteState.selectedLevel
-      : ALLOWED_LEVELS[0])
+      : ALL_LEVEL)
 
   const focusedGroup = isExplorerMode
-    ? (explorerRouteState.group ?? preferences.lastGroup ?? initialRouteState?.focusedGroup ?? null)
+    ? (explorerRouteState.group ?? initialRouteState?.focusedGroup ?? null)
     : null
 
   const routeSelectedTopicId = isExplorerMode ? explorerRouteState.topicId : undefined
@@ -115,7 +141,7 @@ export function LangCompassShell({ mode, topics, detailTopicIds, initialRouteSta
   const updateExplorerRoute = useCallback(
     (
       next: {
-        level?: TopicLevel | null
+        level?: TopicLevelOrAll | null
         group?: string | null
         query?: string | null
         topicId?: TopicId | null
@@ -140,11 +166,29 @@ export function LangCompassShell({ mode, topics, detailTopicIds, initialRouteSta
   const detailTopicIdSet = useMemo(() => new Set(detailTopicIds), [detailTopicIds])
   const topicsById = useMemo(() => new Map(topics.map((topic) => [topic.id, topic])), [topics])
 
-  const levelCounts = useMemo(() => getAllLevelTopicCounts(topics) as LevelCounts, [topics])
-  const levelSections = useMemo(() => getGroupedTopicSectionsForLevel(topics, selectedLevel), [selectedLevel, topics])
+  const baseLevelCounts = useMemo(() => getAllLevelTopicCounts(topics), [topics])
+  const levelCounts = useMemo<LevelCounts>(
+    () => ({
+      [ALL_LEVEL]: {
+        totalCount: topics.length,
+        introducedCount: topics.length,
+        revisitedCount: 0,
+      },
+      ...baseLevelCounts,
+    }),
+    [baseLevelCounts, topics.length],
+  )
+  const levelSections = useMemo(
+    () => (selectedLevel === ALL_LEVEL ? getGroupedTopicSectionsForAllLevels(topics) : getGroupedTopicSectionsForLevel(topics, selectedLevel)),
+    [selectedLevel, topics],
+  )
 
   const firstTopicByLevel = useMemo(() => {
-    const mapping = new Map<TopicLevel, TopicId | null>()
+    const mapping = new Map<TopicLevelOrAll, TopicId | null>()
+
+    const allSections = getGroupedTopicSectionsForAllLevels(topics)
+    const firstTopicIdAcrossAll = allSections.find((section) => section.topics.length > 0)?.topics[0]?.id ?? null
+    mapping.set(ALL_LEVEL, firstTopicIdAcrossAll)
 
     for (const level of ALLOWED_LEVELS) {
       const sections = getGroupedTopicSectionsForLevel(topics, level)
@@ -270,7 +314,7 @@ export function LangCompassShell({ mode, topics, detailTopicIds, initialRouteSta
     }
   }, [explorerRouteState.query, focusedGroup, isExplorerMode, searchInput, selectedLevel, selectedTopicId, updateExplorerRoute])
 
-  const handleLevelSelect = (level: TopicLevel): void => {
+  const handleLevelSelect = (level: TopicLevelOrAll): void => {
     if (!isExplorerMode) {
       updateRoute(buildOverviewHref({ level }), "push")
       return
@@ -284,7 +328,6 @@ export function LangCompassShell({ mode, topics, detailTopicIds, initialRouteSta
       }
     }
 
-    setPreferences({ lastGroup: null })
     updateExplorerRoute({
       level,
       group: null,
@@ -408,7 +451,6 @@ export function LangCompassShell({ mode, topics, detailTopicIds, initialRouteSta
                 sections={explorerSections}
                 focusedGroup={focusedGroup}
                 onClearFocusedGroup={() => {
-                  setPreferences({ lastGroup: null })
                   updateExplorerRoute({
                     level: selectedLevel,
                     group: null,

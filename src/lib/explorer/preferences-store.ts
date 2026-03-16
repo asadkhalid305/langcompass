@@ -2,17 +2,17 @@
 
 import { useCallback, useState } from "react"
 
-import { ALLOWED_LEVELS } from "../constants/topic"
-import type { TopicLevel } from "../types/topic"
+import { ALLOWED_LEVEL_OPTIONS } from "../constants/topic"
+import type { TopicLevelOrAll } from "../types/topic"
 
 export interface ExplorerPreferences {
-  lastLevel?: TopicLevel
+  lastLevel?: TopicLevelOrAll
   lastGroup?: string
   lastQuery?: string
 }
 
 type ExplorerPreferencePatch = {
-  lastLevel?: TopicLevel | null
+  lastLevel?: TopicLevelOrAll | null
   lastGroup?: string | null
   lastQuery?: string | null
 }
@@ -25,9 +25,9 @@ const normalizeOptionalText = (value: unknown): string | undefined => {
   return normalized.length > 0 ? normalized : undefined
 }
 
-const normalizeTopicLevel = (value: unknown): TopicLevel | undefined => {
+const normalizeTopicLevel = (value: unknown): TopicLevelOrAll | undefined => {
   if (typeof value !== "string") return undefined
-  return ALLOWED_LEVELS.includes(value as TopicLevel) ? (value as TopicLevel) : undefined
+  return ALLOWED_LEVEL_OPTIONS.includes(value as TopicLevelOrAll) ? (value as TopicLevelOrAll) : undefined
 }
 
 const readStoredPreferences = (): ExplorerPreferences => {

@@ -7,12 +7,13 @@ import { cn } from "@/lib/utils/cn"
 
 import { CATEGORY_ORDER } from "./constants"
 import type { GroupSummary, LevelCounts, LevelProfile } from "./types"
-import type { TopicLevel } from "@/lib/types/topic"
+import type { TopicLevelOrAll } from "@/lib/types/topic"
+import { ALL_LEVEL } from "@/lib/constants/topic"
 
 interface OverviewViewProps {
-  selectedLevel: TopicLevel
+  selectedLevel: TopicLevelOrAll
   levelProfile: LevelProfile
-  selectedLevelCounts: LevelCounts[TopicLevel]
+  selectedLevelCounts: LevelCounts[TopicLevelOrAll]
   groupSummaries: GroupSummary[]
   onExploreLevel: () => void
   onExploreGroup: (group: string) => void
@@ -70,7 +71,7 @@ export function OverviewView({
       <section>
         <p className="text-xs font-bold uppercase tracking-[0.1em] text-muted-foreground">Curriculum overview</p>
         <h2 className="mt-4 text-pretty text-3xl font-display font-bold md:text-5xl">
-          Level {selectedLevel}: {levelProfile.title}
+          {selectedLevel === ALL_LEVEL ? levelProfile.title : `Level ${selectedLevel}: ${levelProfile.title}`}
         </h2>
         <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground">{levelProfile.description}</p>
         <div className="mt-6 flex flex-wrap items-center gap-6 text-sm font-medium text-foreground">
