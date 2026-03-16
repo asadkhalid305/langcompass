@@ -1,7 +1,8 @@
 "use client"
 
-import { useDeferredValue, useEffect, useMemo, useState } from "react"
+import { useCallback, useDeferredValue, useEffect, useMemo, useState } from "react"
 import { ArrowRight, Search, X } from "lucide-react"
+import { usePathname, useRouter, useSearchParams } from "next/navigation"
 
 import { TopicPreviewPanel } from "@/components/topic/topic-preview-panel"
 
@@ -9,7 +10,8 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "@/components/ui/sheet"
 import { ALLOWED_LEVELS } from "@/lib/constants/topic"
-import { buildTopicDetailHref } from "@/lib/explorer/navigation"
+import { buildExplorerHref, buildOverviewHref, buildTopicDetailHref, parseExplorerQueryState, parseOverviewQueryState } from "@/lib/explorer/navigation"
+import { useExplorerPreferences } from "@/lib/explorer/preferences-store"
 import {
   humanizeCategoryLabel,
   humanizeDifficultyStageLabel,
@@ -22,19 +24,17 @@ import type { TopicCatalogItem, TopicDetail, TopicId, TopicLevel } from "@/lib/t
 import { cn } from "@/lib/utils/cn"
 
 interface LangCompassShellProps {
+  mode: "overview" | "explorer"
   topics: TopicCatalogItem[]
   detailTopicIds: TopicId[]
-  initialState?: LangCompassShellInitialState
+  initialRouteState?: LangCompassShellRouteState
 }
 
-type ShellView = "overview" | "explorer"
-
-export interface LangCompassShellInitialState {
-  activeView?: ShellView
+export interface LangCompassShellRouteState {
   selectedLevel?: TopicLevel
   focusedGroup?: string | null
   selectedTopicId?: TopicId | null
-  detailSheetOpen?: boolean
+  searchQuery?: string
 }
 
 interface TopicDetailResponse {
@@ -430,33 +430,75 @@ const ExplorerView = ({
   </div>
 )
 
-export function LangCompassShell({ topics, detailTopicIds, initialState }: LangCompassShellProps) {
-  const initialSelectedLevel =
-    initialState?.selectedLevel && ALLOWED_LEVELS.includes(initialState.selectedLevel)
-      ? initialState.selectedLevel
-      : ALLOWED_LEVELS[0]
+export function LangCompassShell({ mode, topics, detailTopicIds, initialRouteState }: LangCompassShellProps) {
+  const router = useRouter()
+  const pathname = usePathname()
+  const searchParams = useSearchParams()
+  const [preferences, setPreferences] = useExplorerPreferences()
 
-  const initialSelectedTopicId =
-    initialState?.selectedTopicId && topics.some((topic) => topic.id === initialState.selectedTopicId)
-      ? initialState.selectedTopicId
+  const isExplorerMode = mode === "explorer"
+  const explorerRouteState = useMemo(
+    () =>
+      parseExplorerQueryState({
+        level: searchParams.get("level"),
+        group: searchParams.get("group"),
+        topic: searchParams.get("topic"),
+        q: searchParams.get("q"),
+      }),
+    [searchParams],
+  )
+  const overviewRouteState = useMemo(
+    () =>
+      parseOverviewQueryState({
+        level: searchParams.get("level"),
+      }),
+    [searchParams],
+  )
+
+  const selectedLevel =
+    (isExplorerMode ? explorerRouteState.level : overviewRouteState.level) ??
+    preferences.lastLevel ??
+    (initialRouteState?.selectedLevel && ALLOWED_LEVELS.includes(initialRouteState.selectedLevel)
+      ? initialRouteState.selectedLevel
+      : ALLOWED_LEVELS[0])
+
+  const focusedGroup = isExplorerMode
+    ? (explorerRouteState.group ?? preferences.lastGroup ?? initialRouteState?.focusedGroup ?? null)
+    : null
+
+  const routeSelectedTopicId = isExplorerMode ? explorerRouteState.topicId : undefined
+  const selectedTopicId =
+    routeSelectedTopicId && topics.some((topic) => topic.id === routeSelectedTopicId)
+      ? routeSelectedTopicId
       : null
 
-  const initialView = initialState?.activeView === "explorer" || initialSelectedTopicId ? "explorer" : "overview"
+  const resolvedRouteQuery = isExplorerMode
+    ? (explorerRouteState.query ?? preferences.lastQuery ?? initialRouteState?.searchQuery ?? "")
+    : ""
 
-  const [activeView, setActiveView] = useState<ShellView>(initialView)
-  const [selectedLevel, setSelectedLevel] = useState<TopicLevel>(initialSelectedLevel)
-  const [focusedGroup, setFocusedGroup] = useState<string | null>(
-    initialView === "explorer" ? (initialState?.focusedGroup ?? null) : null,
-  )
-  const [searchInput, setSearchInput] = useState("")
+  const [searchInput, setSearchInput] = useState(resolvedRouteQuery)
   const deferredSearchInput = useDeferredValue(searchInput)
-  const [selectedTopicId, setSelectedTopicId] = useState<TopicId | null>(initialSelectedTopicId)
-  const [detailSheetOpen, setDetailSheetOpen] = useState(false)
   const [isDesktopViewport, setIsDesktopViewport] = useState(false)
 
   const [detailByTopicId, setDetailByTopicId] = useState<Partial<Record<TopicId, TopicDetail | null>>>({})
   const [detailLoadErrors, setDetailLoadErrors] = useState<Partial<Record<TopicId, string>>>({})
   const [loadingTopicId, setLoadingTopicId] = useState<TopicId | null>(null)
+
+  useEffect(() => {
+    setSearchInput(resolvedRouteQuery)
+  }, [resolvedRouteQuery])
+
+  useEffect(() => {
+    setPreferences({ lastLevel: selectedLevel })
+  }, [selectedLevel, setPreferences])
+
+  useEffect(() => {
+    if (!isExplorerMode) return
+    setPreferences({
+      lastGroup: focusedGroup,
+      lastQuery: searchInput.trim(),
+    })
+  }, [focusedGroup, isExplorerMode, searchInput, setPreferences])
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(min-width: 1024px)")
@@ -472,14 +514,47 @@ export function LangCompassShell({ topics, detailTopicIds, initialState }: LangC
     }
   }, [])
 
-  useEffect(() => {
-    if (isDesktopViewport && detailSheetOpen) {
-      setDetailSheetOpen(false)
-    }
-  }, [detailSheetOpen, isDesktopViewport])
+  const updateRoute = useCallback(
+    (href: string, method: "push" | "replace") => {
+      const currentQuery = searchParams.toString()
+      const currentHref = currentQuery.length > 0 ? `${pathname}?${currentQuery}` : pathname
+      if (href === currentHref) return
+
+      if (method === "replace") {
+        router.replace(href, { scroll: false })
+        return
+      }
+
+      router.push(href, { scroll: false })
+    },
+    [pathname, router, searchParams],
+  )
+
+  const updateExplorerRoute = useCallback(
+    (
+      next: {
+        level?: TopicLevel | null
+        group?: string | null
+        query?: string | null
+        topicId?: TopicId | null
+      },
+      method: "push" | "replace" = "push",
+    ) => {
+      updateRoute(
+        buildExplorerHref({
+          level: next.level ?? selectedLevel,
+          group: next.group === undefined ? focusedGroup : next.group,
+          query: next.query === undefined ? searchInput.trim() || null : next.query,
+          topicId: next.topicId === undefined ? selectedTopicId : next.topicId,
+        }),
+        method,
+      )
+    },
+    [focusedGroup, searchInput, selectedLevel, selectedTopicId, updateRoute],
+  )
 
   const normalizedQuery = deferredSearchInput.trim()
-  const hasActiveSearch = normalizedQuery.length > 0
+  const hasActiveSearch = isExplorerMode && normalizedQuery.length > 0
   const detailTopicIdSet = useMemo(() => new Set(detailTopicIds), [detailTopicIds])
   const topicsById = useMemo(() => new Map(topics.map((topic) => [topic.id, topic])), [topics])
 
@@ -632,45 +707,120 @@ export function LangCompassShell({ topics, detailTopicIds, initialState }: LangC
     }
   }, [detailTopicIdSet, selectedTopic, selectedTopicDetail])
 
+  useEffect(() => {
+    if (!isExplorerMode) return
+
+    const routeQuery = explorerRouteState.query ?? ""
+    const nextQuery = searchInput.trim()
+    if (nextQuery === routeQuery) return
+
+    const timer = window.setTimeout(() => {
+      updateExplorerRoute(
+        {
+          level: selectedLevel,
+          group: focusedGroup,
+          query: nextQuery || null,
+          topicId: selectedTopicId,
+        },
+        "replace",
+      )
+    }, 220)
+
+    return () => {
+      window.clearTimeout(timer)
+    }
+  }, [explorerRouteState.query, focusedGroup, isExplorerMode, searchInput, selectedLevel, selectedTopicId, updateExplorerRoute])
+
   const handleLevelSelect = (level: TopicLevel): void => {
-    setSelectedLevel(level)
-    setFocusedGroup(null)
+    if (!isExplorerMode) {
+      updateRoute(buildOverviewHref({ level }), "push")
+      return
+    }
 
-    setSelectedTopicId((currentTopicId) => {
-      if (!currentTopicId) return firstTopicByLevel.get(level) ?? null
+    let nextTopicId: TopicId | null = selectedTopicId
+    if (nextTopicId) {
+      const currentTopic = topicsById.get(nextTopicId)
+      if (!currentTopic || !topicAppearsInLevel(currentTopic, level)) {
+        nextTopicId = firstTopicByLevel.get(level) ?? null
+      }
+    }
 
-      const currentTopic = topicsById.get(currentTopicId)
-      if (currentTopic && topicAppearsInLevel(currentTopic, level)) return currentTopicId
-
-      return firstTopicByLevel.get(level) ?? currentTopicId
+    updateExplorerRoute({
+      level,
+      group: null,
+      query: searchInput.trim() || null,
+      topicId: nextTopicId,
     })
   }
 
   const handleSearchChange = (value: string): void => {
     setSearchInput(value)
-
-    if (value.trim().length > 0 && activeView !== "explorer") {
-      setActiveView("explorer")
+    if (!isExplorerMode && value.trim().length > 0) {
+      updateRoute(
+        buildExplorerHref({
+          level: selectedLevel,
+          query: value.trim(),
+        }),
+        "push",
+      )
     }
   }
 
   const openTopic = (topicId: TopicId): void => {
-    setSelectedTopicId(topicId)
-    setActiveView("explorer")
-    setDetailSheetOpen(!isDesktopViewport)
+    if (!isExplorerMode) {
+      updateRoute(
+        buildExplorerHref({
+          level: selectedLevel,
+          query: searchInput.trim() || null,
+          topicId,
+        }),
+        "push",
+      )
+      return
+    }
+
+    updateExplorerRoute({
+      level: selectedLevel,
+      group: focusedGroup,
+      query: searchInput.trim() || null,
+      topicId,
+    })
   }
 
   const openExplorerWithGroup = (group: string): void => {
-    setFocusedGroup(group)
-    setSearchInput("")
-    setActiveView("explorer")
+    updateRoute(
+      buildExplorerHref({
+        level: selectedLevel,
+        group,
+      }),
+      "push",
+    )
   }
 
   const openExplorerLevel = (): void => {
-    setFocusedGroup(null)
-    setSearchInput("")
-    setActiveView("explorer")
+    updateRoute(
+      buildExplorerHref({
+        level: selectedLevel,
+      }),
+      "push",
+    )
   }
+
+  const closeTopicPreview = useCallback(
+    (method: "push" | "replace" = "replace") => {
+      if (!isExplorerMode) return
+      updateExplorerRoute(
+        {
+          level: selectedLevel,
+          group: focusedGroup,
+          query: searchInput.trim() || null,
+          topicId: null,
+        },
+        method,
+      )
+    },
+    [focusedGroup, isExplorerMode, searchInput, selectedLevel, updateExplorerRoute],
+  )
 
   return (
     <div className="min-h-0">
@@ -681,14 +831,14 @@ export function LangCompassShell({ topics, detailTopicIds, initialState }: LangC
             <div className="flex items-center gap-2 min-w-0">
               <button
                 type="button"
-                onClick={() => setActiveView("overview")}
+                onClick={() => updateRoute(buildOverviewHref({ level: selectedLevel }), "push")}
                 className="text-xl font-display font-bold tracking-tight hover:opacity-70 transition-opacity shrink-0"
                 aria-label="Go to overview"
                 title="Home"
               >
                 LangCompass
               </button>
-              {activeView === "explorer" && (
+              {isExplorerMode && (
                 <>
                   <span className="text-muted-foreground/50 font-light text-lg select-none" aria-hidden="true">/</span>
                   <span className="text-sm text-muted-foreground truncate">
@@ -743,7 +893,7 @@ export function LangCompassShell({ topics, detailTopicIds, initialState }: LangC
         <div
           className={cn(
             "grid gap-4 md:grid-cols-[13rem_minmax(0,1fr)]",
-            activeView === "explorer" && selectedTopicId ? "lg:grid-cols-[13rem_minmax(0,1fr)_22rem]" : "",
+            isExplorerMode && selectedTopicId ? "lg:grid-cols-[13rem_minmax(0,1fr)_22rem]" : "",
           )}
         >
           <aside className="hidden md:flex md:h-[calc(100dvh-8rem)] md:flex-col md:pr-6 md:sticky md:top-4">
@@ -754,7 +904,7 @@ export function LangCompassShell({ topics, detailTopicIds, initialState }: LangC
           </aside>
 
           <main className="min-h-0 bg-transparent">
-            {activeView === "overview" ? (
+            {!isExplorerMode ? (
               <OverviewView
                 selectedLevel={selectedLevel}
                 levelProfile={levelProfile}
@@ -772,20 +922,27 @@ export function LangCompassShell({ topics, detailTopicIds, initialState }: LangC
                 searchResultsByLevel={searchResultsByLevel}
                 sections={explorerSections}
                 focusedGroup={focusedGroup}
-                onClearFocusedGroup={() => setFocusedGroup(null)}
+                onClearFocusedGroup={() =>
+                  updateExplorerRoute({
+                    level: selectedLevel,
+                    group: null,
+                    query: searchInput.trim() || null,
+                    topicId: selectedTopicId,
+                  })
+                }
                 selectedTopicId={selectedTopicId}
                 onOpenTopic={openTopic}
               />
             )}
           </main>
 
-          {activeView === "explorer" && selectedTopicId ? (
+          {isExplorerMode && selectedTopicId ? (
             <aside className="hidden lg:flex lg:flex-col lg:h-[calc(100dvh-9rem)] lg:overflow-hidden lg:bg-white lg:shadow-[0_0_40px_rgba(0,0,0,0.05)] lg:border-l lg:border-border lg:sticky lg:top-4">
               <div className="flex items-center justify-between px-8 pt-6 pb-4 border-b border-border shrink-0">
                 <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Topic preview</p>
                 <button
                   type="button"
-                  onClick={() => setSelectedTopicId(null)}
+                  onClick={() => closeTopicPreview("replace")}
                   className="text-muted-foreground hover:text-foreground transition-colors"
                   aria-label="Close panel"
                 >
@@ -808,7 +965,12 @@ export function LangCompassShell({ topics, detailTopicIds, initialState }: LangC
         </div>
       </div>
 
-      <Sheet open={!isDesktopViewport && detailSheetOpen} onOpenChange={setDetailSheetOpen}>
+      <Sheet
+        open={!isDesktopViewport && isExplorerMode && Boolean(selectedTopicId)}
+        onOpenChange={(open) => {
+          if (!open) closeTopicPreview("replace")
+        }}
+      >
         <SheetContent side="bottom" className="h-[80dvh] p-0 lg:hidden">
           <SheetHeader className="border-b border-border/80 pb-4">
             <SheetTitle>Topic preview</SheetTitle>

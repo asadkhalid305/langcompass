@@ -21,6 +21,14 @@
 - Topic details are progressively loaded from `/api/topic-details/[topicId]`.
 - Current content status: catalog is broad; detail files are partial (many topics still metadata-only).
 
+## Routing Model (Current)
+
+- Canonical overview route: `/` (optional `?level=<CEFR>`).
+- Canonical explorer route: `/explorer` (query-backed state: `level`, `group`, `q`, `topic`).
+- Topic detail route: `/topic/[topicId]` (optional return context `level` and `group`).
+- Legacy root explorer query links are redirected to `/explorer`.
+- Route state is primary for view/navigation; local storage only persists convenience defaults.
+
 ## Source Of Truth
 
 - Canonical topic index: `data/topic-catalog.json`
