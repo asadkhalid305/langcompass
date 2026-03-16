@@ -38,11 +38,6 @@
 - Do not collapse curriculum semantics (introduced vs revisited) into generic lists.
 - Keep search behavior aligned with current weighted Fuse strategy; tune weights/thresholds before replacing search architecture.
 - Favor component extraction only when it reduces coupling/readability costs in `langcompass-shell.tsx`.
-- Preserve explorer semantics:
-- `level` scopes the explorer dataset.
-- `group` filters only within the current level.
-- clearing `group` returns to all groups for that level, not all levels.
-- cross-level results appear only with active global search (`q`).
 
 ## Data + Architecture Truths
 
@@ -77,38 +72,6 @@
 - Don’t rewrite the app into a new framework/state stack for cosmetic cleanup.
 - Don’t add speculative systems (DB/auth/personalization/AI pipelines) without explicit product direction.
 - Don’t bloat docs with architecture theory; keep guidance tied to active code paths.
-
-## Code Organization Rules For Future Splits
-
-- Treat `page.tsx` files as orchestration-only:
-- fetch/prepare data
-- resolve route params/query
-- render composed feature components
-- no giant JSX section renderers in route files
-- Keep explorer decomposition under `src/components/explorer/shell/*`:
-- `shell-header` (header/search/level select)
-- `level-navigation`
-- `overview-view`
-- `explorer-view`
-- preview drawer wrappers and focused hooks
-- Keep topic detail decomposition under `src/components/topic-detail/*`:
-- breadcrumb fallback/static
-- page header/meta block
-- long-form content sections
-- right sidebar sections
-- Extract hooks/utilities when one file mixes:
-- route synchronization logic
-- preference sync logic
-- async detail fetching state
-- media-query listeners
-- Prefer shared topic primitives for repeated blocks (`topic-meta-tags`, curriculum placement, related-topic chips).
-- Do not over-fragment into tiny one-line components; split by responsibility boundaries.
-
-## Route State vs Preferences
-
-- Route query is source-of-truth for active explorer state.
-- Local storage preferences are convenience fallbacks only.
-- Any explicit user clear action must clear both URL state and stored preference values for that key.
 
 ## Quick Validation Loop
 

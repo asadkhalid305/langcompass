@@ -1,9 +1,9 @@
 import Link from "next/link"
 import { ArrowRight, BookOpenText } from "lucide-react"
 
-import { TopicCurriculumPlacement } from "@/components/topic/topic-curriculum-placement"
 import { Button } from "@/components/ui/button"
 import { TopicMetaTags } from "@/components/topic/topic-meta-tags"
+import { formatIntroducedInLabel, formatRevisitedInLabel } from "@/lib/explorer/labels"
 import type { TopicCatalogItem, TopicDetail, TopicId } from "@/lib/types/topic"
 import { cn } from "@/lib/utils/cn"
 
@@ -64,12 +64,11 @@ export function TopicPreviewPanel({
           <TopicMetaTags topic={topic} hasDetailFile={hasDetailFile} className="flex flex-wrap gap-2" />
         </section>
 
-        <TopicCurriculumPlacement
-          topic={topic}
-          className="space-y-3 border-t border-border pt-5"
-          introducedClassName="mt-0 text-sm font-medium text-foreground"
-          revisitedClassName="mt-0 text-sm text-muted-foreground"
-        />
+        <section className="space-y-3 border-t border-border pt-5">
+          <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Curriculum placement</p>
+          <p className="text-sm font-medium text-foreground">{formatIntroducedInLabel(topic.firstIntroducedIn)}</p>
+          <p className="text-sm text-muted-foreground">{formatRevisitedInLabel(topic.revisitedIn)}</p>
+        </section>
 
         {!hasDetailFile ? (
           <section className="space-y-3 border-t border-border pt-5">
