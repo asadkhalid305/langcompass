@@ -29,6 +29,11 @@
 - Topic detail route: `/topic/[topicId]` (optional return context `level` and `group`).
 - Legacy root explorer query links are redirected to `/explorer`.
 - Route state is primary for view/navigation; local storage only persists convenience defaults.
+- Explorer semantics:
+- `level` scopes explorer topics.
+- `group` narrows within the selected level only.
+- Clearing `group` must show all groups for the current level (not all levels).
+- Cross-level topic visibility happens only in global search mode (`q`).
 
 ## Source Of Truth
 
@@ -107,6 +112,36 @@
 - Add functionality in existing modules first (`lib/explorer`, `lib/data`, `components/explorer`).
 - Do not introduce global state libraries unless current local state becomes a clear blocker.
 - Keep APIs narrow and explicit; prefer typed utility functions over generalized plugin systems.
+
+## Code Split Rules (Important)
+
+- Keep route files as orchestration layers:
+- load/validate data
+- parse route state
+- compose feature components
+- avoid large rendering blocks in route files
+- For explorer UI, keep composition in `src/components/explorer/langcompass-shell.tsx` and split feature pieces under `src/components/explorer/shell/*`:
+- layout/navigation/search header
+- overview view
+- explorer view
+- topic preview drawer/panel wrappers
+- Extract hooks when logic is non-trivial or side-effectful:
+- route sync/debounced query sync
+- viewport media-query logic
+- progressive detail fetch/cache/error state
+- Reuse shared topic UI in `src/components/topic/*` for repeated metadata/pill/placement patterns.
+- For topic detail page, keep content sections and sidebar blocks in `src/components/topic-detail/*`; `src/app/topic/[topicId]/page.tsx` should only orchestrate.
+- Do not create micro-components for trivial markup; split when it reduces coupling and cognitive load.
+- Keep feature-local types/constants close to feature folders unless shared across features.
+
+## Route + Preference Safety Rules
+
+- URL query params are authoritative for current view state.
+- Preferences are fallback defaults only when query params are absent.
+- When user explicitly clears a filter (`group`, `q`, etc.), clear both:
+- route param
+- corresponding stored preference key
+- Never allow cleared route state to be immediately rehydrated from local storage.
 
 ## How To Update This File
 
