@@ -27,6 +27,9 @@
 - Preserve responsive behavior:
 - desktop uses a persistent right detail pane
 - mobile uses bottom sheet detail
+- Keep both detail surfaces coherent:
+- in-explorer preview (panel/sheet) for quick scan
+- `/topic/[topicId]` as the full lesson page for deep reading
 - Do not replace shadcn primitives unless there is a clear defect.
 
 ## Design/Refactor Guardrails
@@ -53,6 +56,16 @@
 - Visual system shifts (token, typography, spacing, color strategy changes)
 - Data contract updates (new required fields, enum changes, content model edits)
 - Any move away from static-first architecture
+
+## Commit Message Standard
+
+- Use Conventional Commits consistently; do not mix ad-hoc styles.
+- Required format: `<type>(<scope>): <imperative summary>`
+- Example: `refactor(ui): extract topic detail section component`
+- Allowed `type`: `feat`, `fix`, `refactor`, `perf`, `docs`, `test`, `build`, `ci`, `chore`, `revert`
+- Scope should map to the area being changed (`app`, `explorer`, `api`, `data`, `types`, `schemas`, `ui`, `styles`, `docs`, `scripts`).
+- Summary should be imperative, lowercase, no trailing period, and concise (~72 chars).
+- Mark breaking changes with `!`: `refactor(data)!: replace topic group identifier format`
 
 ## What Not To Do
 

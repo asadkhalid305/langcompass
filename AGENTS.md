@@ -16,7 +16,7 @@
 
 ## Product Scope (Current)
 
-- Main flow: level navigation -> overview/explorer -> topic detail panel.
+- Main flow: level navigation -> overview/explorer -> topic detail panel -> optional full lesson page.
 - Search is catalog-based (title, aliases, keywords, group/category/level).
 - Topic details are progressively loaded from `/api/topic-details/[topicId]`.
 - Current content status: catalog is broad; detail files are partial (many topics still metadata-only).
@@ -24,6 +24,7 @@
 ## Routing Model (Current)
 
 - Canonical overview route: `/` (optional `?level=<CEFR>`).
+- `/overview` is a legacy alias that redirects to `/`.
 - Canonical explorer route: `/explorer` (query-backed state: `level`, `group`, `q`, `topic`).
 - Topic detail route: `/topic/[topicId]` (optional return context `level` and `group`).
 - Legacy root explorer query links are redirected to `/explorer`.
@@ -72,6 +73,19 @@
 - adjust loaders/selectors/UI usage as needed
 - Run `npm run validate:topics` after data or schema edits.
 - Prefer small, local edits over framework-wide abstraction changes.
+
+## Commit Message Standard
+
+- Use Conventional Commits for every commit.
+- Required format: `<type>(<scope>): <imperative summary>`
+- Example: `feat(explorer): add grouped search result headers`
+- Allowed `type`: `feat`, `fix`, `refactor`, `perf`, `docs`, `test`, `build`, `ci`, `chore`, `revert`
+- Use a scope that matches changed area (examples: `app`, `explorer`, `api`, `data`, `types`, `schemas`, `ui`, `styles`, `docs`, `scripts`).
+- Summary rules:
+- imperative verb (`add`, `update`, `remove`, `refactor`)
+- lowercase, no trailing period
+- keep to ~72 chars
+- Use `!` for breaking changes: `feat(api)!: rename topic detail response shape`
 
 ## Catalog Vs Detail File Guidance
 

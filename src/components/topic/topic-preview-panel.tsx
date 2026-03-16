@@ -21,7 +21,7 @@ interface TopicPreviewPanelProps {
 
 const clampPreview = (text: string, maxLength: number): string => {
   if (text.length <= maxLength) return text
-  return `${text.slice(0, maxLength - 1).trimEnd()}...`
+  return `${text.slice(0, maxLength - 1).trimEnd()}…`
 }
 
 const fallbackSummary = (topic: TopicCatalogItem): string =>
@@ -81,7 +81,7 @@ export function TopicPreviewPanel({
 
         {hasDetailFile && isLoading ? (
           <section className="space-y-3 border-t border-border pt-5">
-            <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Loading preview</p>
+            <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Loading preview…</p>
             <p className="text-sm text-muted-foreground">Fetching summary and section highlights.</p>
           </section>
         ) : null}

@@ -283,7 +283,7 @@ const TopicNode = ({ topic, isSelected, showEarlierIndicator = false, onOpenTopi
     type="button"
     onClick={() => onOpenTopic(topic.id)}
     className={cn(
-      "w-full sm:w-[14rem] flex flex-col justify-start text-left p-4 transition-all duration-200 ring-1 ring-border rounded-none border-l-4",
+      "w-full sm:w-[14rem] flex flex-col justify-start text-left p-4 transition-[transform,box-shadow] duration-200 ring-1 ring-border rounded-none border-l-4",
       getCategoryColorClasses(topic.category),
       "shadow-[2px_2px_0px_#111827] hover:shadow-[4px_4px_0px_#111827] hover:-translate-y-0.5 hover:-translate-x-0.5",
       isSelected ? "ring-2 ring-foreground shadow-[4px_4px_0px_#111827] -translate-y-0.5 -translate-x-0.5" : "",
