@@ -46,3 +46,14 @@ h3,
 h4 {
   font-family: var(--font-display), "Times New Roman", serif;
 }
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}

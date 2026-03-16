@@ -1,16 +1,16 @@
 "use client"
 
 import { useDeferredValue, useEffect, useMemo, useState } from "react"
-import { ArrowLeft, ArrowRight, BookOpenText, Search, X } from "lucide-react"
+import { ArrowRight, Search, X } from "lucide-react"
 
+import { TopicPreviewPanel } from "@/components/topic/topic-preview-panel"
 
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "@/components/ui/sheet"
 import { ALLOWED_LEVELS } from "@/lib/constants/topic"
+import { buildTopicDetailHref } from "@/lib/explorer/navigation"
 import {
-  formatIntroducedInLabel,
-  formatRevisitedInLabel,
   humanizeCategoryLabel,
   humanizeDifficultyStageLabel,
   humanizeGroupLabel,
@@ -24,9 +24,18 @@ import { cn } from "@/lib/utils/cn"
 interface LangCompassShellProps {
   topics: TopicCatalogItem[]
   detailTopicIds: TopicId[]
+  initialState?: LangCompassShellInitialState
 }
 
 type ShellView = "overview" | "explorer"
+
+export interface LangCompassShellInitialState {
+  activeView?: ShellView
+  selectedLevel?: TopicLevel
+  focusedGroup?: string | null
+  selectedTopicId?: TopicId | null
+  detailSheetOpen?: boolean
+}
 
 interface TopicDetailResponse {
   detail: TopicDetail | null
@@ -81,14 +90,6 @@ interface ExplorerViewProps {
   onOpenTopic: (topicId: TopicId) => void
 }
 
-interface TopicDetailPanelProps {
-  topic: TopicCatalogItem | null
-  detail: TopicDetail | null | undefined
-  hasDetailFile: boolean
-  isLoading: boolean
-  loadError: string | undefined
-}
-
 const LEVEL_PROFILES: Record<TopicLevel, LevelProfile> = {
   "A1.1": {
     title: "Starter foundations",
@@ -122,15 +123,6 @@ const LEVEL_PROFILES: Record<TopicLevel, LevelProfile> = {
     title: "Upper-intermediate mastery",
     description: "Consolidates broad topic control and prepares for advanced-level learning.",
   },
-}
-
-const formatDate = (value: string): string => {
-  const parsed = new Date(value)
-  if (Number.isNaN(parsed.getTime())) return value
-
-  return new Intl.DateTimeFormat("en", {
-    dateStyle: "medium",
-  }).format(parsed)
 }
 
 const topicAppearsInLevel = (topic: TopicCatalogItem, level: TopicLevel): boolean =>
@@ -271,12 +263,6 @@ const OverviewView = ({
   )
 }
 
-const PathConnector = () => (
-  <div className="flex items-center justify-center w-6 md:w-8 shrink-0" aria-hidden>
-    <div className="w-full h-[2px] bg-border" />
-  </div>
-)
-
 const getCategoryColorClasses = (category: string) => {
   switch (category.toLowerCase()) {
     case "grammar":
@@ -297,7 +283,7 @@ const TopicNode = ({ topic, isSelected, showEarlierIndicator = false, onOpenTopi
     type="button"
     onClick={() => onOpenTopic(topic.id)}
     className={cn(
-      "min-w-[14rem] flex flex-col justify-start text-left p-4 transition-all duration-200 ring-1 ring-border rounded-none border-l-4",
+      "w-full sm:w-[14rem] flex flex-col justify-start text-left p-4 transition-all duration-200 ring-1 ring-border rounded-none border-l-4",
       getCategoryColorClasses(topic.category),
       "shadow-[2px_2px_0px_#111827] hover:shadow-[4px_4px_0px_#111827] hover:-translate-y-0.5 hover:-translate-x-0.5",
       isSelected ? "ring-2 ring-foreground shadow-[4px_4px_0px_#111827] -translate-y-0.5 -translate-x-0.5" : "",
@@ -378,16 +364,14 @@ const ExplorerView = ({
                 {hasIntroduced ? (
                   <div>
                     <p className="mb-4 text-xs font-bold uppercase tracking-[0.1em] text-muted-foreground">New in {selectedLevel}</p>
-                    <div className="flex items-center overflow-x-auto pb-4 -mx-4 px-4 md:mx-0 md:px-0 hide-scrollbar">
-                      {section.introducedTopics.map((topic, index) => (
-                        <div key={topic.id} className="flex items-center shrink-0">
-                          <TopicNode
-                            topic={topic}
-                            isSelected={topic.id === selectedTopicId}
-                            onOpenTopic={onOpenTopic}
-                          />
-                          {index < section.introducedTopics.length - 1 && <PathConnector />}
-                        </div>
+                    <div className="flex flex-wrap gap-3 md:gap-4">
+                      {section.introducedTopics.map((topic) => (
+                        <TopicNode
+                          key={topic.id}
+                          topic={topic}
+                          isSelected={topic.id === selectedTopicId}
+                          onOpenTopic={onOpenTopic}
+                        />
                       ))}
                     </div>
                   </div>
@@ -396,17 +380,15 @@ const ExplorerView = ({
                 {hasRevisited ? (
                   <div>
                     <p className="mb-4 text-xs font-bold uppercase tracking-[0.1em] text-muted-foreground">Revisited from earlier levels</p>
-                    <div className="flex items-center overflow-x-auto pb-4 -mx-4 px-4 md:mx-0 md:px-0 hide-scrollbar">
-                      {section.revisitedTopics.map((topic, index) => (
-                        <div key={topic.id} className="flex items-center shrink-0">
-                          <TopicNode
-                            topic={topic}
-                            isSelected={topic.id === selectedTopicId}
-                            showEarlierIndicator
-                            onOpenTopic={onOpenTopic}
-                          />
-                          {index < section.revisitedTopics.length - 1 && <PathConnector />}
-                        </div>
+                    <div className="flex flex-wrap gap-3 md:gap-4">
+                      {section.revisitedTopics.map((topic) => (
+                        <TopicNode
+                          key={topic.id}
+                          topic={topic}
+                          isSelected={topic.id === selectedTopicId}
+                          showEarlierIndicator
+                          onOpenTopic={onOpenTopic}
+                        />
                       ))}
                     </div>
                   </div>
@@ -448,100 +430,53 @@ const ExplorerView = ({
   </div>
 )
 
-const TopicDetailPanel = ({ topic, detail, hasDetailFile, isLoading, loadError }: TopicDetailPanelProps) => {
-  if (!topic) {
-    return (
-      <div className="flex h-full min-h-[20rem] flex-col items-center justify-center px-6 text-center">
-        <BookOpenText className="h-8 w-8 text-muted-foreground" aria-hidden="true" />
-        <p className="mt-3 text-sm font-medium">Select a topic node</p>
-        <p className="mt-1 text-sm text-muted-foreground">The learning sheet opens here with curriculum placement and detail content.</p>
-      </div>
-    )
-  }
+export function LangCompassShell({ topics, detailTopicIds, initialState }: LangCompassShellProps) {
+  const initialSelectedLevel =
+    initialState?.selectedLevel && ALLOWED_LEVELS.includes(initialState.selectedLevel)
+      ? initialState.selectedLevel
+      : ALLOWED_LEVELS[0]
 
-  return (
-    <div className="flex h-full flex-col bg-white shadow-[0_0_40px_rgba(0,0,0,0.05)] border-l border-border">
-      <header className="px-8 py-10 md:py-12">
-        <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Learning sheet</p>
-        <h2 className="mt-4 text-pretty text-4xl font-display font-bold leading-tight md:text-5xl">{topic.title}</h2>
-        <div className="mt-6 flex flex-wrap items-center gap-4 text-xs font-bold uppercase tracking-wider">
-          <span className={cn("px-2 py-1 bg-background ring-1 ring-border", getCategoryColorClasses(topic.category).split(" ")[0])}>
-            {humanizeCategoryLabel(topic.category)}
-          </span>
-          <span className="text-muted-foreground">{humanizeDifficultyStageLabel(topic.difficultyStage)}</span>
-          <span className={cn(hasDetailFile ? "text-foreground" : "text-muted-foreground")}>{hasDetailFile ? "Detail available" : "Catalog metadata only"}</span>
-        </div>
-      </header>
+  const initialSelectedTopicId =
+    initialState?.selectedTopicId && topics.some((topic) => topic.id === initialState.selectedTopicId)
+      ? initialState.selectedTopicId
+      : null
 
-      <div className="flex-1 space-y-12 overflow-y-auto px-8 pb-12 text-base leading-relaxed" aria-live="polite">
-        <section>
-          <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Curriculum placement</p>
-          <p className="mt-3 text-foreground font-medium">{formatIntroducedInLabel(topic.firstIntroducedIn)}</p>
-          <p className="mt-1 text-muted-foreground">{formatRevisitedInLabel(topic.revisitedIn)}</p>
-        </section>
+  const initialView = initialState?.activeView === "explorer" || initialSelectedTopicId ? "explorer" : "overview"
 
-        {!hasDetailFile ? (
-          <section className="pt-4 border-t border-border">
-            <p className="text-sm font-bold uppercase tracking-widest text-muted-foreground">Detail file not added yet</p>
-            <p className="mt-3 text-muted-foreground max-w-prose">
-              This topic is ready for exploration from catalog metadata. Add `data/topic-details/{topic.id}.json` for full lesson content.
-            </p>
-          </section>
-        ) : null}
-
-        {hasDetailFile && isLoading ? (
-          <section className="pt-4 border-t border-border">
-            <p className="text-sm font-bold uppercase tracking-widest text-muted-foreground">Loading detail content…</p>
-            <p className="mt-3 text-muted-foreground max-w-prose">Fetching summary and supporting sections.</p>
-          </section>
-        ) : null}
-
-        {hasDetailFile && loadError ? (
-          <section className="pt-4 border-t border-border">
-            <p className="text-sm font-bold uppercase tracking-widest text-red-500">Could not load detail content</p>
-            <p className="mt-3 text-muted-foreground max-w-prose">{loadError}</p>
-          </section>
-        ) : null}
-
-        {hasDetailFile && detail ? (
-          <>
-            <section className="pt-4 border-t border-border">
-              <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Summary</p>
-              <p className="mt-4 leading-relaxed text-foreground max-w-prose text-lg">{detail.summary}</p>
-            </section>
-
-            {detail.whyItMatters ? (
-              <section className="pt-4 border-t border-border">
-                <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Why it matters</p>
-                <p className="mt-4 leading-relaxed text-foreground max-w-prose">{detail.whyItMatters}</p>
-              </section>
-            ) : null}
-
-            <section className="pt-4 border-t border-border">
-              <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Detail snapshot</p>
-              <p className="mt-4 font-medium text-foreground">{detail.ruleBlocks.length} rule blocks</p>
-              <p className="mt-1 text-muted-foreground max-w-prose">{detail.examples?.length ?? 0} examples · {detail.tables?.length ?? 0} tables</p>
-              <p className="mt-4 text-sm text-muted-foreground">Updated {formatDate(detail.updatedAt)}</p>
-            </section>
-          </>
-        ) : null}
-      </div>
-    </div>
+  const [activeView, setActiveView] = useState<ShellView>(initialView)
+  const [selectedLevel, setSelectedLevel] = useState<TopicLevel>(initialSelectedLevel)
+  const [focusedGroup, setFocusedGroup] = useState<string | null>(
+    initialView === "explorer" ? (initialState?.focusedGroup ?? null) : null,
   )
-}
-
-export function LangCompassShell({ topics, detailTopicIds }: LangCompassShellProps) {
-  const [activeView, setActiveView] = useState<ShellView>("overview")
-  const [selectedLevel, setSelectedLevel] = useState<TopicLevel>(ALLOWED_LEVELS[0])
-  const [focusedGroup, setFocusedGroup] = useState<string | null>(null)
   const [searchInput, setSearchInput] = useState("")
   const deferredSearchInput = useDeferredValue(searchInput)
-  const [selectedTopicId, setSelectedTopicId] = useState<TopicId | null>(null)
+  const [selectedTopicId, setSelectedTopicId] = useState<TopicId | null>(initialSelectedTopicId)
   const [detailSheetOpen, setDetailSheetOpen] = useState(false)
+  const [isDesktopViewport, setIsDesktopViewport] = useState(false)
 
   const [detailByTopicId, setDetailByTopicId] = useState<Partial<Record<TopicId, TopicDetail | null>>>({})
   const [detailLoadErrors, setDetailLoadErrors] = useState<Partial<Record<TopicId, string>>>({})
   const [loadingTopicId, setLoadingTopicId] = useState<TopicId | null>(null)
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 1024px)")
+    const updateViewport = (): void => {
+      setIsDesktopViewport(mediaQuery.matches)
+    }
+
+    updateViewport()
+    mediaQuery.addEventListener("change", updateViewport)
+
+    return () => {
+      mediaQuery.removeEventListener("change", updateViewport)
+    }
+  }, [])
+
+  useEffect(() => {
+    if (isDesktopViewport && detailSheetOpen) {
+      setDetailSheetOpen(false)
+    }
+  }, [detailSheetOpen, isDesktopViewport])
 
   const normalizedQuery = deferredSearchInput.trim()
   const hasActiveSearch = normalizedQuery.length > 0
@@ -636,6 +571,20 @@ export function LangCompassShell({ topics, detailTopicIds }: LangCompassShellPro
   const selectedTopicHasDetailFile = Boolean(selectedTopic && detailTopicIdSet.has(selectedTopic.id))
   const selectedTopicDetail = selectedTopic ? detailByTopicId[selectedTopic.id] : undefined
   const selectedTopicLoadError = selectedTopic ? detailLoadErrors[selectedTopic.id] : undefined
+  const selectedTopicFullLessonHref = selectedTopic
+    ? buildTopicDetailHref(selectedTopic.id, {
+        level: selectedLevel,
+        group: focusedGroup ?? selectedTopic.group,
+      })
+    : null
+  const previewRelatedTopics = useMemo(() => {
+    const relatedTopicIds = selectedTopicDetail?.relatedTopicIds ?? []
+    if (relatedTopicIds.length === 0) return []
+
+    return relatedTopicIds
+      .map((relatedTopicId) => topicsById.get(relatedTopicId))
+      .filter((relatedTopic): relatedTopic is TopicCatalogItem => Boolean(relatedTopic))
+  }, [selectedTopicDetail, topicsById])
 
   useEffect(() => {
     if (!selectedTopic || !detailTopicIdSet.has(selectedTopic.id)) return
@@ -708,7 +657,7 @@ export function LangCompassShell({ topics, detailTopicIds }: LangCompassShellPro
   const openTopic = (topicId: TopicId): void => {
     setSelectedTopicId(topicId)
     setActiveView("explorer")
-    setDetailSheetOpen(true)
+    setDetailSheetOpen(!isDesktopViewport)
   }
 
   const openExplorerWithGroup = (group: string): void => {
@@ -724,10 +673,10 @@ export function LangCompassShell({ topics, detailTopicIds }: LangCompassShellPro
   }
 
   return (
-    <div className="min-h-screen">
-      <div className="mx-auto max-w-[1500px] px-3 py-4 md:px-5 md:py-6">
-        <header className="mb-6 px-4 md:px-0">
-          <div className="flex items-center justify-between py-5">
+    <div className="min-h-0">
+      <div className="mx-auto max-w-[1500px] px-3 md:px-5">
+        <header className="px-4 md:px-0">
+          <div className="flex items-center justify-between py-3 md:py-4">
             {/* Left: Logo (always home) + optional breadcrumb trail */}
             <div className="flex items-center gap-2 min-w-0">
               <button
@@ -764,18 +713,28 @@ export function LangCompassShell({ topics, detailTopicIds }: LangCompassShellPro
               </select>
 
               {/* Compact search — always visible on the right */}
-              <div className="relative w-40 sm:w-56 md:w-72">
+              <div className="relative w-44 sm:w-56 md:w-72 lg:w-[22rem]">
                 <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" aria-hidden="true" />
                 <Input
                   value={searchInput}
                   onChange={(event) => handleSearchChange(event.target.value)}
                   placeholder="Search topics…"
-                  className="pl-9 h-9 text-sm rounded-none border border-border bg-background shadow-none focus-visible:ring-0 focus-visible:border-foreground"
+                  className="h-9 rounded-none border border-border bg-background pl-9 pr-9 text-sm shadow-none focus-visible:border-foreground focus-visible:ring-0"
                   aria-label="Search topics"
                   name="topicSearch"
                   autoComplete="off"
                   spellCheck={false}
                 />
+                {searchInput.trim().length > 0 ? (
+                  <button
+                    type="button"
+                    onClick={() => setSearchInput("")}
+                    className="absolute right-2 top-1/2 -translate-y-1/2 rounded-sm p-1 text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground"
+                    aria-label="Clear search"
+                  >
+                    <X className="h-3.5 w-3.5" aria-hidden="true" />
+                  </button>
+                ) : null}
               </div>
             </div>
           </div>
@@ -787,14 +746,14 @@ export function LangCompassShell({ topics, detailTopicIds }: LangCompassShellPro
             activeView === "explorer" && selectedTopicId ? "lg:grid-cols-[13rem_minmax(0,1fr)_22rem]" : "",
           )}
         >
-          <aside className="hidden md:flex md:h-[calc(100dvh-12rem)] md:flex-col md:pr-6 md:sticky md:top-6">
+          <aside className="hidden md:flex md:h-[calc(100dvh-8rem)] md:flex-col md:pr-6 md:sticky md:top-4">
             <div className="mb-6 px-1 pb-4 border-b border-border">
               <p className="text-xs font-bold uppercase tracking-[0.1em] text-muted-foreground">Levels</p>
             </div>
             <LevelNavigation selectedLevel={selectedLevel} levelCounts={levelCounts} onLevelSelect={handleLevelSelect} />
           </aside>
 
-          <main className="min-h-[72dvh] bg-transparent">
+          <main className="min-h-0 bg-transparent">
             {activeView === "overview" ? (
               <OverviewView
                 selectedLevel={selectedLevel}
@@ -821,9 +780,9 @@ export function LangCompassShell({ topics, detailTopicIds }: LangCompassShellPro
           </main>
 
           {activeView === "explorer" && selectedTopicId ? (
-            <aside className="hidden lg:flex lg:flex-col lg:h-[calc(100dvh-6rem)] lg:overflow-hidden lg:bg-white lg:shadow-[0_0_40px_rgba(0,0,0,0.05)] lg:border-l lg:border-border lg:sticky lg:top-6">
+            <aside className="hidden lg:flex lg:flex-col lg:h-[calc(100dvh-9rem)] lg:overflow-hidden lg:bg-white lg:shadow-[0_0_40px_rgba(0,0,0,0.05)] lg:border-l lg:border-border lg:sticky lg:top-4">
               <div className="flex items-center justify-between px-8 pt-6 pb-4 border-b border-border shrink-0">
-                <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Topic detail</p>
+                <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Topic preview</p>
                 <button
                   type="button"
                   onClick={() => setSelectedTopicId(null)}
@@ -833,33 +792,41 @@ export function LangCompassShell({ topics, detailTopicIds }: LangCompassShellPro
                   <X className="h-4 w-4" aria-hidden="true" />
                 </button>
               </div>
-              <TopicDetailPanel
+              <TopicPreviewPanel
                 topic={selectedTopic}
                 detail={selectedTopicDetail}
                 hasDetailFile={selectedTopicHasDetailFile}
                 isLoading={loadingTopicId === selectedTopic?.id}
                 loadError={selectedTopicLoadError}
+                fullLessonHref={selectedTopicFullLessonHref}
+                relatedTopics={previewRelatedTopics}
+                onOpenTopic={openTopic}
+                className="flex-1 min-h-0"
               />
             </aside>
           ) : null}
         </div>
       </div>
 
-      <Sheet open={detailSheetOpen} onOpenChange={setDetailSheetOpen}>
+      <Sheet open={!isDesktopViewport && detailSheetOpen} onOpenChange={setDetailSheetOpen}>
         <SheetContent side="bottom" className="h-[80dvh] p-0 lg:hidden">
           <SheetHeader className="border-b border-border/80 pb-4">
-            <SheetTitle>Topic details</SheetTitle>
+            <SheetTitle>Topic preview</SheetTitle>
             <SheetDescription>
-              {selectedTopic ? selectedTopic.title : "Select a topic from the explorer to open details."}
+              {selectedTopic ? selectedTopic.title : "Select a topic from the explorer to open a preview."}
             </SheetDescription>
           </SheetHeader>
-          <div className="h-[calc(100%-5.1rem)] overflow-y-auto">
-            <TopicDetailPanel
+          <div className="h-[calc(100%-5.1rem)] min-h-0">
+            <TopicPreviewPanel
               topic={selectedTopic}
               detail={selectedTopicDetail}
               hasDetailFile={selectedTopicHasDetailFile}
               isLoading={loadingTopicId === selectedTopic?.id}
               loadError={selectedTopicLoadError}
+              fullLessonHref={selectedTopicFullLessonHref}
+              relatedTopics={previewRelatedTopics}
+              onOpenTopic={openTopic}
+              className="h-full min-h-0"
             />
           </div>
         </SheetContent>
