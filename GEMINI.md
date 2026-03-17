@@ -5,6 +5,7 @@
 - LangCompass is a curriculum-aware German learning explorer, not a generic LMS.
 - Current product shape is intentionally focused:
 - level-led discovery
+- default unfiltered `All`-level discovery plus CEFR level filtering
 - grouped topic exploration
 - optional deep detail per topic
 - This is a static-data app with strong schema validation and lightweight client interactions.
@@ -35,6 +36,7 @@
 ## Design/Refactor Guardrails
 
 - Keep the two-view shell model (`overview` + `explorer`) intact unless explicitly asked to change IA.
+- Treat `All` as an aggregate navigation mode, not as a real CEFR value in data contracts.
 - Do not collapse curriculum semantics (introduced vs revisited) into generic lists.
 - Keep search behavior aligned with current weighted Fuse strategy; tune weights/thresholds before replacing search architecture.
 - Favor component extraction only when it reduces coupling/readability costs in `langcompass-shell.tsx`.

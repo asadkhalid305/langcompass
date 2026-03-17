@@ -3,7 +3,7 @@
 ## Purpose
 
 - LangCompass is a curriculum-aware German learning explorer.
-- It helps users browse topics by CEFR sub-level (`A1.1` -> `B2.2`), then open topic details when available.
+- It helps users browse topics by CEFR sub-level (`A1.1` -> `B2.2`) or an aggregate `All` view, then open topic details when available.
 
 ## Current Stack
 
@@ -17,15 +17,16 @@
 ## Product Scope (Current)
 
 - Main flow: level navigation -> overview/explorer -> topic detail panel -> optional full lesson page.
+- Default browsing starts in `All` level mode (unfiltered across CEFR sub-levels).
 - Search is catalog-based (title, aliases, keywords, group/category/level).
 - Topic details are progressively loaded from `/api/topic-details/[topicId]`.
 - Current content status: catalog is broad; detail files are partial (many topics still metadata-only).
 
 ## Routing Model (Current)
 
-- Canonical overview route: `/` (optional `?level=<CEFR>`).
+- Canonical overview route: `/` (optional `?level=<TopicLevelOrAll>`; omitted level implies `All`).
 - `/overview` is a legacy alias that redirects to `/`.
-- Canonical explorer route: `/explorer` (query-backed state: `level`, `group`, `q`, `topic`).
+- Canonical explorer route: `/explorer` (query-backed state: `level`, `group`, `q`, `topic`; omitted level implies `All`).
 - Topic detail route: `/topic/[topicId]` (optional return context `level` and `group`).
 - Legacy root explorer query links are redirected to `/explorer`.
 - Route state is primary for view/navigation; local storage only persists convenience defaults.
@@ -42,6 +43,7 @@
 
 - App entry: `src/app/page.tsx`
 - Main UI shell: `src/components/explorer/langcompass-shell.tsx`
+- Explorer shell modules: `src/components/explorer/shell/*`
 - Topic detail API: `src/app/api/topic-details/[topicId]/route.ts`
 - Explorer logic: `src/lib/explorer/*`
 - Types/constants: `src/lib/types/topic.ts`, `src/lib/constants/topic.ts`
@@ -63,6 +65,7 @@
 - Catalog and detail files share overlapping fields; detail extends catalog shape.
 - `topicId` is the join key across catalog, detail filename, API route, and UI selection state.
 - CEFR level ordering is fixed by `ALLOWED_LEVELS`; do not infer/sort levels ad hoc.
+- `All` is a UI/navigation pseudo-level (`ALLOWED_LEVEL_OPTIONS`), not a persisted catalog/detail `level` value.
 
 ## Safe Change Rules
 
