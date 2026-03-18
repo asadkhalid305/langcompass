@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint . --ext .js,.ts,.tsx",
-    "validate:topics": "node scripts/validate-topics.js"
+    "validate:topics": "node scripts/validate-topics.js",
+    "promote:worktree": "bash scripts/codex-promote-worktree.sh"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.15",
