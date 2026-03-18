@@ -1,8 +1,6 @@
 import { ALLOWED_LEVELS } from "../constants"
 import type { TopicCatalogItem, TopicLevel } from "../types"
-import { applyTopicFilters } from "./filters"
-import { searchTopics } from "./search"
-import type { BuildExplorerDataOptions, ExplorerDerivedData, ExplorerState, ExplorerTopicSection, LevelTopicCounts } from "./types"
+import type { ExplorerTopicSection, LevelTopicCounts } from "./types"
 
 const sortTopicsByTitle = (topics: TopicCatalogItem[]): TopicCatalogItem[] =>
   [...topics].sort((a, b) => a.title.localeCompare(b.title))
@@ -106,26 +104,4 @@ export const getAllLevelTopicCounts = (topics: TopicCatalogItem[]): Record<Topic
     },
     {} as Record<TopicLevel, LevelTopicCounts>,
   )
-}
-
-export const buildExplorerData = (
-  topics: TopicCatalogItem[],
-  state: ExplorerState,
-  options: BuildExplorerDataOptions = {},
-): ExplorerDerivedData => {
-  const levelTopics = getTopicsForSelectedLevel(topics, state.selectedLevel)
-  const filteredTopics = applyTopicFilters(levelTopics, state.activeFilters, options.detailTopicIds)
-  const searchResults = searchTopics(filteredTopics, state.searchQuery, options.searchConfig)
-  const visibleTopics = searchResults.map((result) => result.topic)
-
-  return {
-    state,
-    visibleTopics,
-    searchResults,
-    introducedTopics: getTopicsIntroducedInLevel(visibleTopics, state.selectedLevel),
-    revisitedTopics: getTopicsRevisitedInLevel(visibleTopics, state.selectedLevel),
-    groupedSections: getGroupedTopicSectionsForLevel(visibleTopics, state.selectedLevel),
-    selectedTopic: state.selectedTopicId ? topics.find((topic) => topic.id === state.selectedTopicId) ?? null : null,
-    levelCounts: getLevelTopicCounts(topics, state.selectedLevel),
-  }
 }

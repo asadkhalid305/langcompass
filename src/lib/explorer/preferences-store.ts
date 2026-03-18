@@ -7,23 +7,13 @@ import type { TopicLevelOrAll } from "../types/topic"
 
 export interface ExplorerPreferences {
   lastLevel?: TopicLevelOrAll
-  lastGroup?: string
-  lastQuery?: string
 }
 
 type ExplorerPreferencePatch = {
   lastLevel?: TopicLevelOrAll | null
-  lastGroup?: string | null
-  lastQuery?: string | null
 }
 
 const STORAGE_KEY = "langcompass.explorer.preferences.v1"
-
-const normalizeOptionalText = (value: unknown): string | undefined => {
-  if (typeof value !== "string") return undefined
-  const normalized = value.trim()
-  return normalized.length > 0 ? normalized : undefined
-}
 
 const normalizeTopicLevel = (value: unknown): TopicLevelOrAll | undefined => {
   if (typeof value !== "string") return undefined
@@ -38,8 +28,6 @@ const readStoredPreferences = (): ExplorerPreferences => {
     const parsed = JSON.parse(raw) as Record<string, unknown>
     return {
       lastLevel: normalizeTopicLevel(parsed.lastLevel),
-      lastGroup: normalizeOptionalText(parsed.lastGroup),
-      lastQuery: normalizeOptionalText(parsed.lastQuery),
     }
   } catch {
     return {}
@@ -68,24 +56,6 @@ export const useExplorerPreferences = (): [ExplorerPreferences, (patch: Explorer
           delete next.lastLevel
         } else {
           next.lastLevel = patch.lastLevel
-        }
-      }
-
-      if (patch.lastGroup !== undefined) {
-        const normalized = normalizeOptionalText(patch.lastGroup)
-        if (!normalized) {
-          delete next.lastGroup
-        } else {
-          next.lastGroup = normalized
-        }
-      }
-
-      if (patch.lastQuery !== undefined) {
-        const normalized = normalizeOptionalText(patch.lastQuery)
-        if (!normalized) {
-          delete next.lastQuery
-        } else {
-          next.lastQuery = normalized
         }
       }
 

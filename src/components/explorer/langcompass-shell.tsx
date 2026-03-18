@@ -11,8 +11,8 @@ import { LEVEL_PROFILES } from "@/components/explorer/shell/constants"
 import { TopicPreviewDrawer } from "@/components/explorer/shell/topic-preview-drawer"
 import { useDesktopViewport } from "@/components/explorer/shell/use-desktop-viewport"
 import { useTopicDetailPreview } from "@/components/explorer/shell/use-topic-detail-preview"
-import type { GroupSummary, LangCompassShellRouteState, LevelCounts } from "@/components/explorer/shell/types"
-import { ALLOWED_LEVELS, ALLOWED_LEVEL_OPTIONS, ALL_LEVEL } from "@/lib/constants/topic"
+import type { GroupSummary, LevelCounts } from "@/components/explorer/shell/types"
+import { ALLOWED_LEVELS, ALL_LEVEL } from "@/lib/constants/topic"
 import { buildExplorerHref, buildOverviewHref, buildTopicDetailHref, parseExplorerQueryState, parseOverviewQueryState } from "@/lib/explorer/navigation"
 import { useExplorerPreferences } from "@/lib/explorer/preferences-store"
 import { createTopicSearchEngine } from "@/lib/explorer/search"
@@ -25,7 +25,6 @@ interface LangCompassShellProps {
   mode: "overview" | "explorer"
   topics: TopicCatalogItem[]
   detailTopicIds: TopicId[]
-  initialRouteState?: LangCompassShellRouteState
 }
 
 const sortTopicsByTitle = (topics: TopicCatalogItem[]): TopicCatalogItem[] => [...topics].sort((a, b) => a.title.localeCompare(b.title))
@@ -56,13 +55,11 @@ const getGroupedTopicSectionsForAllLevels = (topics: TopicCatalogItem[]): Explor
     })
 }
 
-export type { LangCompassShellRouteState }
-
-export function LangCompassShell({ mode, topics, detailTopicIds, initialRouteState }: LangCompassShellProps) {
+export function LangCompassShell({ mode, topics, detailTopicIds }: LangCompassShellProps) {
   const router = useRouter()
   const pathname = usePathname()
   const searchParams = useSearchParams()
-  const [preferences, setPreferences] = useExplorerPreferences()
+  const [, setPreferences] = useExplorerPreferences()
 
   const isExplorerMode = mode === "explorer"
   const explorerRouteState = useMemo(
@@ -83,23 +80,13 @@ export function LangCompassShell({ mode, topics, detailTopicIds, initialRouteSta
     [searchParams],
   )
 
-  const selectedLevel =
-    (isExplorerMode ? explorerRouteState.level : overviewRouteState.level) ??
-    preferences.lastLevel ??
-    (initialRouteState?.selectedLevel && ALLOWED_LEVEL_OPTIONS.includes(initialRouteState.selectedLevel)
-      ? initialRouteState.selectedLevel
-      : ALL_LEVEL)
-
-  const focusedGroup = isExplorerMode
-    ? (explorerRouteState.group ?? initialRouteState?.focusedGroup ?? null)
-    : null
+  const selectedLevel = (isExplorerMode ? explorerRouteState.level : overviewRouteState.level) ?? ALL_LEVEL
+  const focusedGroup = isExplorerMode ? (explorerRouteState.group ?? null) : null
 
   const routeSelectedTopicId = isExplorerMode ? explorerRouteState.topicId : undefined
   const selectedTopicId = routeSelectedTopicId && topics.some((topic) => topic.id === routeSelectedTopicId) ? routeSelectedTopicId : null
 
-  const resolvedRouteQuery = isExplorerMode
-    ? (explorerRouteState.query ?? preferences.lastQuery ?? initialRouteState?.searchQuery ?? "")
-    : ""
+  const resolvedRouteQuery = isExplorerMode ? (explorerRouteState.query ?? "") : ""
 
   const [searchInput, setSearchInput] = useState(resolvedRouteQuery)
   const deferredSearchInput = useDeferredValue(searchInput)
@@ -112,14 +99,6 @@ export function LangCompassShell({ mode, topics, detailTopicIds, initialRouteSta
   useEffect(() => {
     setPreferences({ lastLevel: selectedLevel })
   }, [selectedLevel, setPreferences])
-
-  useEffect(() => {
-    if (!isExplorerMode) return
-    setPreferences({
-      lastGroup: focusedGroup,
-      lastQuery: searchInput.trim(),
-    })
-  }, [focusedGroup, isExplorerMode, searchInput, setPreferences])
 
   const updateRoute = useCallback(
     (href: string, method: "push" | "replace") => {

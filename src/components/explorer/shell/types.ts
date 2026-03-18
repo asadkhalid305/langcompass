@@ -1,11 +1,4 @@
-import type { TopicCatalogItem, TopicDetail, TopicId, TopicLevel, TopicLevelOrAll } from "@/lib/types/topic"
-
-export interface LangCompassShellRouteState {
-  selectedLevel?: TopicLevelOrAll
-  focusedGroup?: string | null
-  selectedTopicId?: TopicId | null
-  searchQuery?: string
-}
+import type { TopicCatalogItem, TopicDetail, TopicLevel, TopicLevelOrAll } from "@/lib/types/topic"
 
 export interface TopicDetailResponse {
   detail: TopicDetail | null

@@ -3,7 +3,7 @@ import { redirect } from "next/navigation"
 import { LangCompassShell } from "@/components/explorer/langcompass-shell"
 import { loadTopicCatalog } from "@/lib/data/topic-catalog"
 import { loadTopicDetailIdSet } from "@/lib/data/topic-detail"
-import { buildExplorerHref, hasLegacyExplorerSignal, parseExplorerQueryState, parseOverviewQueryState } from "@/lib/explorer/navigation"
+import { buildExplorerHref, hasLegacyExplorerSignal, parseExplorerQueryState } from "@/lib/explorer/navigation"
 
 type HomePageSearchParams = Record<string, string | string[] | undefined>
 
@@ -27,16 +27,11 @@ export default async function HomePage({ searchParams }: HomePageProps = {}) {
   }
 
   const [topics, detailTopicIdSet] = await Promise.all([loadTopicCatalog(), loadTopicDetailIdSet()])
-  const queryState = parseOverviewQueryState(resolvedSearchParams)
-
   return (
     <LangCompassShell
       mode="overview"
       topics={topics}
       detailTopicIds={Array.from(detailTopicIdSet)}
-      initialRouteState={{
-        selectedLevel: queryState.level,
-      }}
     />
   )
 }

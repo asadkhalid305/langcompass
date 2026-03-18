@@ -47,6 +47,12 @@
 - `topic-catalog.json` for index/discovery
 - `topic-details/*.json` for rich content
 - Zod schemas in `src/lib/schemas/topic.ts` are runtime contract gates.
+- Routing is URL-first:
+  - `/` overview (`level` optional, defaults to `All`)
+  - `/explorer` explorer (`level`, `group`, `q`, `topic`)
+  - `/topic/[topicId]` full lesson page (`level`/`group` return context optional)
+- Explorer preview drawer state is route-driven via `/explorer?topic=<topicId>`.
+- Local storage is convenience-only and must never supersede explicit route params.
 - Any schema-shape refactor must also update:
 - TS types (`src/lib/types/topic.ts`)
 - validator script (`scripts/validate-topics.js`)

@@ -31,6 +31,13 @@
 - Legacy root explorer query links are redirected to `/explorer`.
 - Route state is primary for view/navigation; local storage only persists convenience defaults.
 
+## Route vs Store State
+
+- Route state owns active UI/navigation state (`level`, `group`, `q`, `topic`, page/view).
+- Explorer preview open/close state is URL-driven via `topic` query in `/explorer`.
+- Local storage (`useExplorerPreferences`) only persists convenience defaults (currently `lastLevel`) and must not override explicit URL state.
+- Deep links and refresh behavior should always resolve from URL first.
+
 ## Source Of Truth
 
 - Canonical topic index: `data/topic-catalog.json`
@@ -44,6 +51,7 @@
 - App entry: `src/app/page.tsx`
 - Main UI shell: `src/components/explorer/langcompass-shell.tsx`
 - Explorer shell modules: `src/components/explorer/shell/*`
+- Explorer preference storage: `src/lib/explorer/preferences-store.ts`
 - Topic detail API: `src/app/api/topic-details/[topicId]/route.ts`
 - Explorer logic: `src/lib/explorer/*`
 - Types/constants: `src/lib/types/topic.ts`, `src/lib/constants/topic.ts`

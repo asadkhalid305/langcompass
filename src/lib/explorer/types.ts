@@ -1,6 +1,4 @@
-import type { TopicCatalogItem, TopicDifficultyStage, TopicId, TopicLevel } from "../types"
-
-export type ExplorerDetailFileFilter = "any" | "with_detail" | "without_detail"
+import type { TopicCatalogItem, TopicLevel } from "../types"
 export type TopicSearchBoostField = "title" | "alias" | null
 
 export interface TopicSearchConfig {
@@ -23,25 +21,6 @@ export interface TopicSearchResult {
   boostedField: TopicSearchBoostField
 }
 
-export interface ExplorerFilters {
-  levels: TopicLevel[]
-  categories: string[]
-  groups: string[]
-  difficultyStages: TopicDifficultyStage[]
-  hasDetailFile: ExplorerDetailFileFilter
-}
-
-export interface ExplorerState {
-  selectedLevel: TopicLevel
-  searchQuery: string
-  activeFilters: ExplorerFilters
-  selectedTopicId: TopicId | null
-}
-
-export interface ExplorerStatePatch extends Partial<Omit<ExplorerState, "activeFilters">> {
-  activeFilters?: Partial<ExplorerFilters>
-}
-
 export interface ExplorerTopicSection {
   group: string
   introducedTopics: TopicCatalogItem[]
@@ -56,28 +35,4 @@ export interface LevelTopicCounts {
   totalCount: number
   byCategory: Record<string, number>
   byGroup: Record<string, number>
-}
-
-export interface ExplorerDerivedData {
-  state: ExplorerState
-  visibleTopics: TopicCatalogItem[]
-  searchResults: TopicSearchResult[]
-  introducedTopics: TopicCatalogItem[]
-  revisitedTopics: TopicCatalogItem[]
-  groupedSections: ExplorerTopicSection[]
-  selectedTopic: TopicCatalogItem | null
-  levelCounts: LevelTopicCounts
-}
-
-export interface ExplorerFilterOptions {
-  levels: TopicLevel[]
-  categories: string[]
-  groups: string[]
-  difficultyStages: TopicDifficultyStage[]
-  hasDetailFile: ExplorerDetailFileFilter[]
-}
-
-export interface BuildExplorerDataOptions {
-  detailTopicIds?: ReadonlySet<TopicId>
-  searchConfig?: TopicSearchConfig
 }
