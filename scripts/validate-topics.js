@@ -10,7 +10,7 @@ const catalogPath = path.join(dataRoot, "topic-catalog.json")
 const detailsDir = path.join(dataRoot, "topic-details")
 
 const ALLOWED_LEVELS = ["A1.1", "A1.2", "A2.1", "A2.2", "B1.1", "B1.2", "B2.1", "B2.2"]
-const ALLOWED_DIFFICULTY_STAGES = ["intro", "expanded", "combined", "advanced"]
+const ALLOWED_DIFFICULTY_STAGES = ["intro", "core", "expanded", "combined", "advanced"]
 
 const requiredString = z.string().trim().min(1)
 const topicId = requiredString
@@ -18,6 +18,7 @@ const levelSchema = z.enum(ALLOWED_LEVELS)
 const difficultySchema = z.enum(ALLOWED_DIFFICULTY_STAGES)
 const datetimeSchema = requiredString
 const levelArray = z.array(levelSchema)
+const progressionLevelSchema = z.union([z.literal("A1"), z.literal("A2"), z.literal("B1"), z.literal("B2"), levelSchema])
 
 const topicCatalogItemSchema = z.object({
   id: topicId,
@@ -39,6 +40,15 @@ const topicDetailSchema = topicCatalogItemSchema.extend({
   whyItMatters: requiredString.optional(),
   prerequisiteTopicIds: z.array(topicId).optional(),
   relatedTopicIds: z.array(topicId).optional(),
+  mentalModel: z
+    .array(
+      z.object({
+        title: requiredString,
+        content: requiredString,
+      }),
+    )
+    .optional(),
+  coverageChecklist: z.array(requiredString).optional(),
   ruleBlocks: z.array(
     z.object({
       id: topicId,
@@ -59,7 +69,7 @@ const topicDetailSchema = topicCatalogItemSchema.extend({
   examples: z
     .array(
       z.object({
-        id: topicId,
+        id: topicId.optional(),
         de: requiredString,
         en: z.string().trim().min(1).optional(),
         note: z.string().trim().min(1).optional(),
@@ -67,6 +77,33 @@ const topicDetailSchema = topicCatalogItemSchema.extend({
     )
     .optional(),
   patterns: z.array(requiredString).optional(),
+  verbs: z.array(requiredString).optional(),
+  prepositions: z.array(requiredString).optional(),
+  twoWayPrepositions: z.array(requiredString).optional(),
+  sentenceStructure: z.array(requiredString).optional(),
+  levelProgression: z
+    .array(
+      z.object({
+        level: progressionLevelSchema,
+        concepts: z.array(requiredString).min(1),
+      }),
+    )
+    .optional(),
+  comparisons: z
+    .array(
+      z.object({
+        topicId,
+        summary: requiredString,
+        table: z
+          .object({
+            columns: z.array(requiredString),
+            rows: z.array(z.array(requiredString)),
+          })
+          .optional(),
+      }),
+    )
+    .optional(),
+  specialCases: z.array(requiredString).optional(),
   tips: z.array(requiredString).optional(),
   memoryHooks: z
     .array(
@@ -80,7 +117,7 @@ const topicDetailSchema = topicCatalogItemSchema.extend({
   commonMistakes: z
     .array(
       z.object({
-        id: topicId,
+        id: topicId.optional(),
         wrong: requiredString,
         correct: requiredString,
         reason: requiredString,
@@ -110,7 +147,7 @@ const topicDetailSchema = topicCatalogItemSchema.extend({
   searchHints: z.array(requiredString).optional(),
   ui: z
     .object({
-      status: z.union([z.literal("draft"), z.literal("ready")]),
+      status: z.union([z.literal("draft"), z.literal("ready")]).optional(),
       recommendedSections: z.array(requiredString),
     })
     .optional(),
@@ -184,6 +221,11 @@ const validateTopicDetails = async (validTopicIds) => {
   const referenceIssues = []
 
   const seenIds = []
+  const checkReference = (fileName, sourceId, fieldPath, reference) => {
+    if (!validIds.has(reference)) {
+      referenceIssues.push(`${fileName}: ${sourceId} ${fieldPath} references invalid id "${reference}"`)
+    }
+  }
 
   for (const file of jsonFiles) {
     const filePath = path.join(detailsDir, file.name)
@@ -208,16 +250,13 @@ const validateTopicDetails = async (validTopicIds) => {
       seenIds.push(parsed.data.id)
 
       for (const reference of parsed.data.prerequisiteTopicIds ?? []) {
-        if (!validIds.has(reference)) {
-          referenceIssues.push(
-            `${file.name}: ${parsed.data.id} prerequisiteTopicIds references invalid id "${reference}"`,
-          )
-        }
+        checkReference(file.name, parsed.data.id, "prerequisiteTopicIds", reference)
       }
       for (const reference of parsed.data.relatedTopicIds ?? []) {
-        if (!validIds.has(reference)) {
-          referenceIssues.push(`${file.name}: ${parsed.data.id} relatedTopicIds references invalid id "${reference}"`)
-        }
+        checkReference(file.name, parsed.data.id, "relatedTopicIds", reference)
+      }
+      for (const [index, comparison] of (parsed.data.comparisons ?? []).entries()) {
+        checkReference(file.name, parsed.data.id, `comparisons[${index}].topicId`, comparison.topicId)
       }
 
       valid.push(parsed.data)

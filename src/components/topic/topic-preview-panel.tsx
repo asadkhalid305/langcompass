@@ -54,6 +54,12 @@ export function TopicPreviewPanel({
   const previewSummary = clampPreview(detail?.summary ?? fallbackSummary(topic), 250)
   const previewWhyItMatters = clampPreview(detail?.whyItMatters ?? fallbackWhyItMatters(topic), 220)
   const loadedDetail = hasDetailFile && detail ? detail : null
+  const previewMentalModel = loadedDetail?.mentalModel?.[0]?.content
+  const previewPatternsCount =
+    (loadedDetail?.patterns?.length ?? 0) +
+    (loadedDetail?.verbs?.length ?? 0) +
+    (loadedDetail?.prepositions?.length ?? 0) +
+    (loadedDetail?.twoWayPrepositions?.length ?? 0)
 
   return (
     <div className={cn("flex min-h-0 flex-col bg-white", className)}>
@@ -105,12 +111,20 @@ export function TopicPreviewPanel({
               <p className="text-sm leading-relaxed text-foreground">{previewWhyItMatters}</p>
             </section>
 
+            {previewMentalModel ? (
+              <section className="space-y-3 border-t border-border pt-5">
+                <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Mental model</p>
+                <p className="text-sm leading-relaxed text-foreground">{clampPreview(previewMentalModel, 180)}</p>
+              </section>
+            ) : null}
+
             <section className="space-y-3 border-t border-border pt-5">
-              <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Where it appears</p>
-              <p className="text-sm text-muted-foreground">Used in level progression and revisit cycles for this track.</p>
+              <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Learning structure</p>
+              <p className="text-sm text-muted-foreground">Built for concept clarity first, then patterns, contrasts, and examples.</p>
               {loadedDetail ? (
                 <p className="text-xs text-muted-foreground">
-                  {loadedDetail.ruleBlocks.length} rule blocks · {loadedDetail.examples?.length ?? 0} examples · {loadedDetail.tables?.length ?? 0} tables
+                  {loadedDetail.ruleBlocks.length} core rules · {loadedDetail.examples?.length ?? 0} examples · {loadedDetail.tables?.length ?? 0} tables
+                  {previewPatternsCount > 0 ? ` · ${previewPatternsCount} usage cues` : ""}
                 </p>
               ) : null}
             </section>

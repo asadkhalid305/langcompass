@@ -12,6 +12,6 @@ export const ALLOWED_LEVELS = [
 export const ALL_LEVEL = "All" as const
 export const ALLOWED_LEVEL_OPTIONS = [ALL_LEVEL, ...ALLOWED_LEVELS] as const
 
-export const ALLOWED_DIFFICULTY_STAGES = ["intro", "expanded", "combined", "advanced"] as const
+export const ALLOWED_DIFFICULTY_STAGES = ["intro", "core", "expanded", "combined", "advanced"] as const
 
 export const STABLE_CATEGORIES = ["basics", "vocabulary", "communication", "grammar"] as const

@@ -1,0 +1,248 @@
+{
+  "id": "accusative_case",
+  "title": "Accusative Case",
+  "level": "A1.2",
+  "category": "grammar",
+  "group": "cases",
+
+  "summary": "The accusative case is used for the direct object in a sentence — the person or thing directly affected by an action. It answers the question 'Wen?' or 'Was?'.",
+
+  "whyItMatters": "Accusative is essential for everyday communication. You need it to express what you see, buy, have, or interact with. It is one of the most frequently used structures in German.",
+
+  "mentalModel": [
+    {
+      "title": "Target of the action",
+      "content": "The accusative marks the target that receives the action. Example: 'Ich sehe den Mann' — the man is being seen."
+    },
+    {
+      "title": "Contrast with dative",
+      "content": "Accusative = direct object (what is affected). Dative = indirect object (who receives something)."
+    }
+  ],
+
+  "firstIntroducedIn": "A1.2",
+  "revisitedIn": ["A2.1", "A2.2", "B1.1"],
+  "difficultyStage": "core",
+
+  "aliases": ["Akkusativ", "direct object case"],
+  "keywords": ["wen", "was", "mich", "dich", "den", "einen"],
+
+  "coverageChecklist": [
+    "definition",
+    "core usage",
+    "articles",
+    "pronouns",
+    "verbs",
+    "prepositions",
+    "sentence structure",
+    "level progression",
+    "comparisons",
+    "common mistakes",
+    "special cases"
+  ],
+
+  "ruleBlocks": [
+    {
+      "id": "definition",
+      "title": "Definition",
+      "content": "The accusative case marks the direct object of a sentence and answers the question 'Wen?' or 'Was?'."
+    },
+    {
+      "id": "core_usage",
+      "title": "Core Usage",
+      "content": "Used for the direct object — the thing directly affected by the verb. Example: 'Ich habe einen Hund'."
+    }
+  ],
+
+  "tables": [
+    {
+      "id": "definite_articles",
+      "title": "Definite Articles (Accusative)",
+      "columns": ["Gender", "Nominative", "Accusative"],
+      "rows": [
+        ["Masculine", "der", "den"],
+        ["Feminine", "die", "die"],
+        ["Neuter", "das", "das"],
+        ["Plural", "die", "die"]
+      ]
+    },
+    {
+      "id": "indefinite_articles",
+      "title": "Indefinite Articles (Accusative)",
+      "columns": ["Gender", "Nominative", "Accusative"],
+      "rows": [
+        ["Masculine", "ein", "einen"],
+        ["Feminine", "eine", "eine"],
+        ["Neuter", "ein", "ein"]
+      ]
+    },
+    {
+      "id": "personal_pronouns",
+      "title": "Personal Pronouns (Accusative)",
+      "columns": ["Nominative", "Accusative"],
+      "rows": [
+        ["ich", "mich"],
+        ["du", "dich"],
+        ["er", "ihn"],
+        ["sie", "sie"],
+        ["es", "es"],
+        ["wir", "uns"],
+        ["ihr", "euch"],
+        ["sie/Sie", "sie/Sie"]
+      ]
+    }
+  ],
+
+  "patterns": [
+    "Subject + verb + accusative object",
+    "Subject + modal verb + accusative object + infinitive",
+    "Wen/Was + verb + subject?"
+  ],
+
+  "verbs": [
+    "haben",
+    "sehen",
+    "kaufen",
+    "brauchen",
+    "mögen",
+    "finden"
+  ],
+
+  "prepositions": [
+    "durch",
+    "für",
+    "gegen",
+    "ohne",
+    "um"
+  ],
+
+  "twoWayPrepositions": [
+    "in",
+    "auf",
+    "an",
+    "über",
+    "unter",
+    "vor",
+    "hinter",
+    "neben",
+    "zwischen"
+  ],
+
+  "sentenceStructure": [
+    "SVO structure with direct object",
+    "Pronouns often come before nouns",
+    "Accusative object appears after verb in main clause",
+    "Used in questions and modal constructions"
+  ],
+
+  "levelProgression": [
+    {
+      "level": "A1",
+      "concepts": [
+        "basic direct objects",
+        "articles (den, einen)",
+        "personal pronouns",
+        "common verbs"
+      ]
+    },
+    {
+      "level": "A2",
+      "concepts": [
+        "accusative + dative together",
+        "two-way prepositions (wohin)",
+        "word order changes",
+        "negation with kein"
+      ]
+    },
+    {
+      "level": "B1",
+      "concepts": [
+        "subordinate clauses",
+        "complex sentence structures",
+        "advanced comparisons with dative",
+        "idiomatic usage"
+      ]
+    }
+  ],
+
+  "comparisons": [
+    {
+      "topicId": "dative_case_intro",
+      "summary": "Accusative is the direct object, while dative is the indirect object.",
+      "table": {
+        "columns": ["Case", "Question", "Example"],
+        "rows": [
+          ["Accusative", "Wen/Was", "Ich sehe den Mann"],
+          ["Dative", "Wem", "Ich gebe dem Mann das Buch"]
+        ]
+      }
+    },
+    {
+      "topicId": "nominative_case",
+      "summary": "Nominative is the subject, accusative is the object."
+    }
+  ],
+
+  "examples": [
+    {
+      "de": "Ich sehe den Mann.",
+      "en": "I see the man."
+    },
+    {
+      "de": "Sie kauft einen Apfel.",
+      "en": "She buys an apple."
+    },
+    {
+      "de": "Ich habe kein Geld.",
+      "en": "I have no money."
+    }
+  ],
+
+  "commonMistakes": [
+    {
+      "wrong": "Ich sehe der Mann.",
+      "correct": "Ich sehe den Mann.",
+      "reason": "Masculine article must change in accusative."
+    },
+    {
+      "wrong": "Kannst du ich hören?",
+      "correct": "Kannst du mich hören?",
+      "reason": "Pronouns change in accusative."
+    },
+    {
+      "wrong": "Ich habe nicht Geld.",
+      "correct": "Ich habe kein Geld.",
+      "reason": "Use 'kein' for negating nouns."
+    }
+  ],
+
+  "specialCases": [
+    "Time expressions (e.g. den ganzen Tag)",
+    "Accusative with infinitive constructions",
+    "Accusative in idiomatic expressions",
+    "Accusative without article",
+    "es as placeholder object"
+  ],
+
+  "relatedTopicIds": [
+    "dative_case_intro",
+    "nominative_case",
+    "basic_location_prepositions",
+    "personal_pronouns_accusative",
+    "word_order_modal_verbs"
+  ],
+
+  "ui": {
+    "recommendedSections": [
+      "mentalModel",
+      "ruleBlocks",
+      "tables",
+      "levelProgression",
+      "comparisons",
+      "examples",
+      "commonMistakes"
+    ]
+  },
+
+  "updatedAt": "2026-03-18"
+}

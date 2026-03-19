@@ -35,6 +35,18 @@ export const buildSearchText = (topic: TopicCatalogItem | TopicDetail): string =
   const patterns = "patterns" in topic && Array.isArray(topic.patterns) ? topic.patterns : []
   const tips = "tips" in topic && Array.isArray(topic.tips) ? topic.tips : []
   const searchHints = "searchHints" in topic && Array.isArray(topic.searchHints) ? topic.searchHints : []
+  const mentalModel =
+    "mentalModel" in topic && Array.isArray(topic.mentalModel)
+      ? topic.mentalModel.flatMap((item) => [item.title, item.content])
+      : []
+  const coverageChecklist = "coverageChecklist" in topic && Array.isArray(topic.coverageChecklist) ? topic.coverageChecklist : []
+  const verbs = "verbs" in topic && Array.isArray(topic.verbs) ? topic.verbs : []
+  const prepositions = "prepositions" in topic && Array.isArray(topic.prepositions) ? topic.prepositions : []
+  const twoWayPrepositions =
+    "twoWayPrepositions" in topic && Array.isArray(topic.twoWayPrepositions) ? topic.twoWayPrepositions : []
+  const sentenceStructure =
+    "sentenceStructure" in topic && Array.isArray(topic.sentenceStructure) ? topic.sentenceStructure : []
+  const specialCases = "specialCases" in topic && Array.isArray(topic.specialCases) ? topic.specialCases : []
 
   const values = [
     topic.title,
@@ -45,6 +57,13 @@ export const buildSearchText = (topic: TopicCatalogItem | TopicDetail): string =
     ...summary,
     ...(topic.revisitedIn ?? []),
     ...patterns,
+    ...mentalModel,
+    ...coverageChecklist,
+    ...verbs,
+    ...prepositions,
+    ...twoWayPrepositions,
+    ...sentenceStructure,
+    ...specialCases,
     ...tips,
     ...searchHints,
   ]

@@ -1,3 +1,4 @@
+import { Suspense } from "react"
 import { redirect } from "next/navigation"
 
 import { LangCompassShell } from "@/components/explorer/langcompass-shell"
@@ -9,6 +10,10 @@ type HomePageSearchParams = Record<string, string | string[] | undefined>
 
 interface HomePageProps {
   searchParams?: Promise<HomePageSearchParams>
+}
+
+function OverviewShellFallback() {
+  return <div className="min-h-[60vh] rounded-none border border-border bg-white" aria-hidden="true" />
 }
 
 export default async function HomePage({ searchParams }: HomePageProps = {}) {
@@ -28,10 +33,12 @@ export default async function HomePage({ searchParams }: HomePageProps = {}) {
 
   const [topics, detailTopicIdSet] = await Promise.all([loadTopicCatalog(), loadTopicDetailIdSet()])
   return (
-    <LangCompassShell
-      mode="overview"
-      topics={topics}
-      detailTopicIds={Array.from(detailTopicIdSet)}
-    />
+    <Suspense fallback={<OverviewShellFallback />}>
+      <LangCompassShell
+        mode="overview"
+        topics={topics}
+        detailTopicIds={Array.from(detailTopicIdSet)}
+      />
+    </Suspense>
   )
 }

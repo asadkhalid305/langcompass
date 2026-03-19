@@ -14,7 +14,6 @@ import { useTopicDetailPreview } from "@/components/explorer/shell/use-topic-det
 import type { GroupSummary, LevelCounts } from "@/components/explorer/shell/types"
 import { ALLOWED_LEVELS, ALL_LEVEL } from "@/lib/constants/topic"
 import { buildExplorerHref, buildOverviewHref, buildTopicDetailHref, parseExplorerQueryState, parseOverviewQueryState } from "@/lib/explorer/navigation"
-import { useExplorerPreferences } from "@/lib/explorer/preferences-store"
 import { createTopicSearchEngine } from "@/lib/explorer/search"
 import { getAllLevelTopicCounts, getGroupedTopicSectionsForLevel } from "@/lib/explorer/selectors"
 import type { ExplorerTopicSection } from "@/lib/explorer/types"
@@ -59,7 +58,6 @@ export function LangCompassShell({ mode, topics, detailTopicIds }: LangCompassSh
   const router = useRouter()
   const pathname = usePathname()
   const searchParams = useSearchParams()
-  const [, setPreferences] = useExplorerPreferences()
 
   const isExplorerMode = mode === "explorer"
   const explorerRouteState = useMemo(
@@ -95,10 +93,6 @@ export function LangCompassShell({ mode, topics, detailTopicIds }: LangCompassSh
   useEffect(() => {
     setSearchInput(resolvedRouteQuery)
   }, [resolvedRouteQuery])
-
-  useEffect(() => {
-    setPreferences({ lastLevel: selectedLevel })
-  }, [selectedLevel, setPreferences])
 
   const updateRoute = useCallback(
     (href: string, method: "push" | "replace") => {

@@ -44,7 +44,7 @@ export default async function TopicDetailPage({ params }: TopicDetailPageProps) 
         <TopicDetailHeader topic={topic} detail={detail} />
 
         <div className="mt-8 grid gap-6 lg:grid-cols-[minmax(0,1fr)_18rem]">
-          <TopicDetailContent detail={detail} topicId={topic.id} />
+          <TopicDetailContent detail={detail} topicId={topic.id} topicsById={topicsById} />
           <TopicDetailSidebar topic={topic} detail={detail} prerequisiteTopics={prerequisiteTopics} relatedTopics={relatedTopics} />
         </div>
       </div>
