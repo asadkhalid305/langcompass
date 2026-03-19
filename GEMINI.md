@@ -40,6 +40,7 @@
 - Do not collapse curriculum semantics (introduced vs revisited) into generic lists.
 - Keep search behavior aligned with current weighted Fuse strategy; tune weights/thresholds before replacing search architecture.
 - Favor component extraction only when it reduces coupling/readability costs in `langcompass-shell.tsx`.
+- Preserve the data-driven lesson section model on `/topic/[topicId]` (recommended sections + stable fallback order/aliases) instead of hardcoding per-topic layouts.
 
 ## Data + Architecture Truths
 
@@ -47,6 +48,8 @@
 - `topic-catalog.json` for index/discovery
 - `topic-details/*.json` for rich content
 - Zod schemas in `src/lib/schemas/topic.ts` are runtime contract gates.
+- Topic detail supports extended optional instructional blocks (for example `mentalModel`, `coverageChecklist`, usage cues, level progression, comparisons, special cases).
+- `TopicDifficultyStage` includes `core`, and progression levels may be aggregate (`A1`-`B2`) or CEFR sub-levels.
 - Routing is URL-first:
   - `/` overview (`level` optional, defaults to `All`)
   - `/explorer` explorer (`level`, `group`, `q`, `topic`)
@@ -57,6 +60,7 @@
 - TS types (`src/lib/types/topic.ts`)
 - validator script (`scripts/validate-topics.js`)
 - downstream UI/data usage
+- Cross-topic references in detail payloads (for example `comparisons[].topicId`) must resolve to valid catalog ids.
 
 ## Changes To Propose Before Implementing
 
@@ -88,6 +92,7 @@
 - level navigation still works
 - overview/explorer switching remains intact
 - detail panel works on desktop and mobile variants
+- `/topic/[topicId]` still renders cleanly when `ui.recommendedSections` is sparse/missing and when detail files are metadata-only.
 
 ## How To Update This File
 

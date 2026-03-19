@@ -20,7 +20,7 @@
 - Default browsing starts in `All` level mode (unfiltered across CEFR sub-levels).
 - Search is catalog-based (title, aliases, keywords, group/category/level).
 - Topic details are progressively loaded from `/api/topic-details/[topicId]`.
-- Current content status: catalog is broad; detail files are partial (many topics still metadata-only).
+- Current content status: catalog is broad; detail files are partial (some topics remain metadata-only), while richer files can drive structured lesson sections.
 
 ## Routing Model (Current)
 
@@ -66,6 +66,7 @@
 - Desktop: right-side sticky panel
 - Mobile: bottom sheet
 - Topic detail is optional per topic; UI must gracefully handle missing detail files.
+- Full lesson sections are data-driven (`ui.recommendedSections` with fallback order) and map to canonical section groups (mental model, core rules, forms, usage, progression, comparisons, examples, mistakes, advanced/special cases).
 
 ## Architecture Constraints
 
@@ -74,6 +75,7 @@
 - `topicId` is the join key across catalog, detail filename, API route, and UI selection state.
 - CEFR level ordering is fixed by `ALLOWED_LEVELS`; do not infer/sort levels ad hoc.
 - `All` is a UI/navigation pseudo-level (`ALLOWED_LEVEL_OPTIONS`), not a persisted catalog/detail `level` value.
+- Detail comparisons must reference valid catalog `topicId` values (validated by `validate:topics`).
 
 ## Safe Change Rules
 
@@ -82,6 +84,7 @@
 - update `src/lib/schemas/topic.ts`
 - update `scripts/validate-topics.js` (kept in lockstep with schema expectations)
 - adjust loaders/selectors/UI usage as needed
+- if detail section ids/aliases/order change, also update `src/components/topic-detail/topic-detail-page-helpers.ts`
 - Run `npm run validate:topics` after data or schema edits.
 - Prefer small, local edits over framework-wide abstraction changes.
 
