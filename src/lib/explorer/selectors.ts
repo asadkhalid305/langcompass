@@ -1,6 +1,6 @@
-import { ALLOWED_LEVELS } from "../constants"
-import type { TopicCatalogItem, TopicLevel } from "../types"
-import type { ExplorerTopicSection, LevelTopicCounts } from "./types"
+import { ALLOWED_LEVELS, TOPIC_SECTION_ORDER } from "../constants"
+import type { TopicCatalogItem, TopicLevel, TopicSection } from "../types"
+import type { ExplorerLevelSection, ExplorerTopicGroup, LevelTopicCounts } from "./types"
 
 const sortTopicsByTitle = (topics: TopicCatalogItem[]): TopicCatalogItem[] =>
   [...topics].sort((a, b) => a.title.localeCompare(b.title))
@@ -18,6 +18,20 @@ const dedupeTopicsById = (topics: TopicCatalogItem[]): TopicCatalogItem[] => {
   return deduped
 }
 
+const countSections = (topics: TopicCatalogItem[]): Record<TopicSection, number> => {
+  const counts = {
+    themes: 0,
+    grammar: 0,
+    communication: 0,
+  } satisfies Record<TopicSection, number>
+
+  for (const topic of topics) {
+    counts[topic.section] += 1
+  }
+
+  return counts
+}
+
 const countBy = (topics: TopicCatalogItem[], selector: (topic: TopicCatalogItem) => string): Record<string, number> => {
   const counts: Record<string, number> = {}
   for (const topic of topics) {
@@ -27,16 +41,17 @@ const countBy = (topics: TopicCatalogItem[], selector: (topic: TopicCatalogItem)
   return counts
 }
 
-const groupByGroup = (topics: TopicCatalogItem[]): Map<string, TopicCatalogItem[]> => {
+const groupBy = (topics: TopicCatalogItem[], selector: (topic: TopicCatalogItem) => string): Map<string, TopicCatalogItem[]> => {
   const grouped = new Map<string, TopicCatalogItem[]>()
 
   for (const topic of topics) {
-    const current = grouped.get(topic.group)
+    const key = selector(topic)
+    const current = grouped.get(key)
     if (current) {
       current.push(topic)
       continue
     }
-    grouped.set(topic.group, [topic])
+    grouped.set(key, [topic])
   }
 
   return grouped
@@ -54,15 +69,13 @@ export const getTopicsForSelectedLevel = (topics: TopicCatalogItem[], level: Top
   return sortTopicsByTitle(dedupeTopicsById([...introduced, ...revisited]))
 }
 
-export const getGroupedTopicSectionsForLevel = (
-  topics: TopicCatalogItem[],
-  level: TopicLevel,
-): ExplorerTopicSection[] => {
-  const introduced = getTopicsIntroducedInLevel(topics, level)
-  const revisited = getTopicsRevisitedInLevel(topics, level)
-
-  const introducedByGroup = groupByGroup(introduced)
-  const revisitedByGroup = groupByGroup(revisited)
+const buildExplorerTopicGroups = (
+  introduced: TopicCatalogItem[],
+  revisited: TopicCatalogItem[],
+  section: TopicSection,
+): ExplorerTopicGroup[] => {
+  const introducedByGroup = groupBy(introduced, (topic) => topic.group)
+  const revisitedByGroup = groupBy(revisited, (topic) => topic.group)
   const allGroups = Array.from(new Set([...introducedByGroup.keys(), ...revisitedByGroup.keys()])).sort((a, b) =>
     a.localeCompare(b),
   )
@@ -70,15 +83,37 @@ export const getGroupedTopicSectionsForLevel = (
   return allGroups.map((group) => {
     const introducedTopics = sortTopicsByTitle(introducedByGroup.get(group) ?? [])
     const revisitedTopics = sortTopicsByTitle(revisitedByGroup.get(group) ?? [])
-    const topicsInGroup = sortTopicsByTitle(dedupeTopicsById([...introducedTopics, ...revisitedTopics]))
 
     return {
+      section,
       group,
       introducedTopics,
       revisitedTopics,
-      topics: topicsInGroup,
+      topics: sortTopicsByTitle(dedupeTopicsById([...introducedTopics, ...revisitedTopics])),
     }
   })
+}
+
+export const getLevelSectionGroups = (
+  topics: TopicCatalogItem[],
+  level: TopicLevel,
+): ExplorerLevelSection[] => {
+  const introduced = getTopicsIntroducedInLevel(topics, level)
+  const revisited = getTopicsRevisitedInLevel(topics, level)
+
+  return TOPIC_SECTION_ORDER.map((section) => {
+    const introducedTopics = sortTopicsByTitle(introduced.filter((topic) => topic.section === section))
+    const revisitedTopics = sortTopicsByTitle(revisited.filter((topic) => topic.section === section))
+    const topicsInSection = sortTopicsByTitle(dedupeTopicsById([...introducedTopics, ...revisitedTopics]))
+
+    return {
+      section,
+      introducedTopics,
+      revisitedTopics,
+      topics: topicsInSection,
+      groups: buildExplorerTopicGroups(introducedTopics, revisitedTopics, section),
+    }
+  }).filter((sectionGroup) => sectionGroup.topics.length > 0)
 }
 
 export const getLevelTopicCounts = (topics: TopicCatalogItem[], level: TopicLevel): LevelTopicCounts => {
@@ -91,7 +126,7 @@ export const getLevelTopicCounts = (topics: TopicCatalogItem[], level: TopicLeve
     introducedCount: introduced.length,
     revisitedCount: revisited.length,
     totalCount: allLevelTopics.length,
-    byCategory: countBy(allLevelTopics, (topic) => topic.category),
+    bySection: countSections(allLevelTopics),
     byGroup: countBy(allLevelTopics, (topic) => topic.group),
   }
 }

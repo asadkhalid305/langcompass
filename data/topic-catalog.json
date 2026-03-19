@@ -3,1728 +3,3266 @@
     "id": "german_alphabet",
     "title": "German Alphabet",
     "level": "A1.1",
-    "category": "basics",
+    "section": "themes",
+    "topicType": "theme",
     "group": "foundations",
+    "summary": "German Alphabet is a theme in A1.1 that supports the foundations module path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.1",
     "revisitedIn": [],
     "difficultyStage": "intro",
-    "aliases": ["alphabet", "letters"],
-    "keywords": ["abc", "spelling", "letters"]
+    "aliases": [
+      "alphabet",
+      "letters"
+    ],
+    "keywords": [
+      "abc",
+      "spelling",
+      "letters"
+    ]
   },
   {
     "id": "pronunciation_basics",
     "title": "Pronunciation Basics",
     "level": "A1.1",
-    "category": "basics",
+    "section": "themes",
+    "topicType": "theme",
     "group": "foundations",
+    "summary": "Pronunciation Basics is a theme in A1.1 that supports the foundations module path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.1",
-    "revisitedIn": ["A1.2", "A2.1"],
+    "revisitedIn": [
+      "A1.2",
+      "A2.1"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["pronunciation", "sounds"],
-    "keywords": ["umlaut", "ä", "ö", "ü", "ß"]
+    "aliases": [
+      "pronunciation",
+      "sounds"
+    ],
+    "keywords": [
+      "umlaut",
+      "ä",
+      "ö",
+      "ü",
+      "ß"
+    ]
   },
   {
     "id": "numbers_0_20",
     "title": "Numbers 0–20",
     "level": "A1.1",
-    "category": "basics",
+    "section": "themes",
+    "topicType": "theme",
     "group": "numbers_time",
+    "summary": "Numbers 0–20 is a theme in A1.1 that supports the numbers time module path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.1",
     "revisitedIn": [],
     "difficultyStage": "intro",
-    "aliases": ["basic numbers"],
-    "keywords": ["eins", "zwei", "drei"]
+    "aliases": [
+      "basic numbers"
+    ],
+    "keywords": [
+      "eins",
+      "zwei",
+      "drei"
+    ]
   },
   {
     "id": "numbers_20_100",
     "title": "Numbers 20–100",
     "level": "A1.1",
-    "category": "basics",
+    "section": "themes",
+    "topicType": "theme",
     "group": "numbers_time",
+    "summary": "Numbers 20–100 is a theme in A1.1 that supports the numbers time module path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.1",
-    "revisitedIn": ["A1.2"],
+    "revisitedIn": [
+      "A1.2"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["numbers"],
-    "keywords": ["zwanzig", "hundert"]
+    "aliases": [
+      "numbers"
+    ],
+    "keywords": [
+      "zwanzig",
+      "hundert"
+    ]
   },
   {
     "id": "days_of_week",
     "title": "Days of the Week",
     "level": "A1.1",
-    "category": "vocabulary",
+    "section": "themes",
+    "topicType": "theme",
     "group": "numbers_time",
+    "summary": "Days of the Week is a theme in A1.1 that supports the numbers time module path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.1",
-    "revisitedIn": ["A1.2"],
+    "revisitedIn": [
+      "A1.2"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["weekdays"],
-    "keywords": ["montag", "dienstag", "woche"]
+    "aliases": [
+      "weekdays"
+    ],
+    "keywords": [
+      "montag",
+      "dienstag",
+      "woche"
+    ]
   },
   {
     "id": "months_of_year",
     "title": "Months of the Year",
     "level": "A1.1",
-    "category": "vocabulary",
+    "section": "themes",
+    "topicType": "theme",
     "group": "numbers_time",
+    "summary": "Months of the Year is a theme in A1.1 that supports the numbers time module path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.1",
-    "revisitedIn": ["A1.2"],
+    "revisitedIn": [
+      "A1.2"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["months"],
-    "keywords": ["januar", "februar", "monat"]
+    "aliases": [
+      "months"
+    ],
+    "keywords": [
+      "januar",
+      "februar",
+      "monat"
+    ]
   },
   {
     "id": "telling_time",
     "title": "Telling Time",
     "level": "A1.1",
-    "category": "communication",
+    "section": "communication",
+    "topicType": "communication",
     "group": "numbers_time",
+    "summary": "Telling Time is a communication topic in A1.1 for guided practice in numbers time.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.1",
-    "revisitedIn": ["A1.2", "A2.1"],
+    "revisitedIn": [
+      "A1.2",
+      "A2.1"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["time", "clock time"],
-    "keywords": ["uhr", "halb", "viertel"]
+    "aliases": [
+      "time",
+      "clock time"
+    ],
+    "keywords": [
+      "uhr",
+      "halb",
+      "viertel"
+    ]
   },
   {
     "id": "dates",
     "title": "Dates",
     "level": "A1.1",
-    "category": "communication",
+    "section": "communication",
+    "topicType": "communication",
     "group": "numbers_time",
+    "summary": "Dates is a communication topic in A1.1 for guided practice in numbers time.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.1",
-    "revisitedIn": ["A1.2"],
+    "revisitedIn": [
+      "A1.2"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["calendar dates"],
-    "keywords": ["datum", "am", "vom"]
+    "aliases": [
+      "calendar dates"
+    ],
+    "keywords": [
+      "datum",
+      "am",
+      "vom"
+    ]
   },
   {
     "id": "basic_greetings",
     "title": "Basic Greetings",
     "level": "A1.1",
-    "category": "communication",
+    "section": "communication",
+    "topicType": "communication",
     "group": "everyday_communication",
+    "summary": "Basic Greetings is a communication topic in A1.1 for guided practice in everyday communication.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.1",
     "revisitedIn": [],
     "difficultyStage": "intro",
-    "aliases": ["greetings"],
-    "keywords": ["hallo", "guten tag", "tschüss"]
+    "aliases": [
+      "greetings"
+    ],
+    "keywords": [
+      "hallo",
+      "guten tag",
+      "tschüss"
+    ]
   },
   {
     "id": "formal_vs_informal_address",
     "title": "Formal vs Informal Address (du / Sie)",
     "level": "A1.1",
-    "category": "communication",
+    "section": "communication",
+    "topicType": "communication",
     "group": "everyday_communication",
+    "summary": "Formal vs Informal Address (du / Sie) is a communication topic in A1.1 for guided practice in everyday communication.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.1",
-    "revisitedIn": ["A1.2", "A2.1"],
+    "revisitedIn": [
+      "A1.2",
+      "A2.1"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["du sie"],
-    "keywords": ["formal", "informal", "siezen", "duzen"]
+    "aliases": [
+      "du sie"
+    ],
+    "keywords": [
+      "formal",
+      "informal",
+      "siezen",
+      "duzen"
+    ]
   },
   {
     "id": "introducing_yourself",
     "title": "Introducing Yourself",
     "level": "A1.1",
-    "category": "communication",
+    "section": "communication",
+    "topicType": "communication",
     "group": "everyday_communication",
+    "summary": "Introducing Yourself is a communication topic in A1.1 for guided practice in everyday communication.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.1",
     "revisitedIn": [],
     "difficultyStage": "intro",
-    "aliases": ["self introduction"],
-    "keywords": ["ich heiße", "ich bin", "name"]
+    "aliases": [
+      "self introduction"
+    ],
+    "keywords": [
+      "ich heiße",
+      "ich bin",
+      "name"
+    ]
   },
   {
     "id": "personal_information",
     "title": "Personal Information",
     "level": "A1.1",
-    "category": "communication",
+    "section": "communication",
+    "topicType": "communication",
     "group": "everyday_communication",
+    "summary": "Personal Information is a communication topic in A1.1 for guided practice in everyday communication.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.1",
-    "revisitedIn": ["A1.2"],
+    "revisitedIn": [
+      "A1.2"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["basic personal details"],
-    "keywords": ["alter", "adresse", "telefonnummer"]
+    "aliases": [
+      "basic personal details"
+    ],
+    "keywords": [
+      "alter",
+      "adresse",
+      "telefonnummer"
+    ]
   },
   {
     "id": "countries_and_languages",
     "title": "Countries and Languages",
     "level": "A1.1",
-    "category": "vocabulary",
+    "section": "themes",
+    "topicType": "theme",
     "group": "everyday_communication",
+    "summary": "Countries and Languages is a theme in A1.1 that supports the everyday communication module path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.1",
-    "revisitedIn": ["A1.2"],
+    "revisitedIn": [
+      "A1.2"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["nationalities"],
-    "keywords": ["land", "sprache", "aus"]
+    "aliases": [
+      "nationalities"
+    ],
+    "keywords": [
+      "land",
+      "sprache",
+      "aus"
+    ]
   },
   {
     "id": "family_vocabulary_basic",
     "title": "Family Vocabulary",
     "level": "A1.1",
-    "category": "vocabulary",
+    "section": "themes",
+    "topicType": "theme",
     "group": "people_home_food",
+    "summary": "Family Vocabulary is a theme in A1.1 that supports the people home food module path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.1",
-    "revisitedIn": ["A1.2", "A2.1"],
+    "revisitedIn": [
+      "A1.2",
+      "A2.1"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["family"],
-    "keywords": ["mutter", "vater", "kind"]
+    "aliases": [
+      "family"
+    ],
+    "keywords": [
+      "mutter",
+      "vater",
+      "kind"
+    ]
   },
   {
     "id": "food_and_drinks_basic",
     "title": "Food and Drinks",
     "level": "A1.1",
-    "category": "vocabulary",
+    "section": "themes",
+    "topicType": "theme",
     "group": "people_home_food",
+    "summary": "Food and Drinks is a theme in A1.1 that supports the people home food module path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.1",
-    "revisitedIn": ["A1.2"],
+    "revisitedIn": [
+      "A1.2"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["food vocabulary"],
-    "keywords": ["essen", "trinken", "brot"]
+    "aliases": [
+      "food vocabulary"
+    ],
+    "keywords": [
+      "essen",
+      "trinken",
+      "brot"
+    ]
   },
   {
     "id": "restaurant_cafe_basics",
     "title": "At the Café or Restaurant",
     "level": "A1.1",
-    "category": "communication",
+    "section": "communication",
+    "topicType": "communication",
     "group": "people_home_food",
+    "summary": "At the Café or Restaurant is a communication topic in A1.1 for guided practice in people home food.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.1",
-    "revisitedIn": ["A1.2"],
+    "revisitedIn": [
+      "A1.2"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["ordering food"],
-    "keywords": ["ich möchte", "zahlen", "bestellen"]
+    "aliases": [
+      "ordering food"
+    ],
+    "keywords": [
+      "ich möchte",
+      "zahlen",
+      "bestellen"
+    ]
   },
   {
     "id": "basic_sentence_structure",
     "title": "Basic Sentence Structure",
     "level": "A1.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "sentence_structure",
+    "summary": "Basic Sentence Structure is a grammar topic in A1.1 that supports the sentence structure learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.1",
-    "revisitedIn": ["A1.2", "A2.1", "A2.2"],
+    "revisitedIn": [
+      "A1.2",
+      "A2.1",
+      "A2.2"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["subject verb object", "main clause basics"],
-    "keywords": ["satz", "word order", "subject", "verb"]
+    "aliases": [
+      "subject verb object",
+      "main clause basics"
+    ],
+    "keywords": [
+      "satz",
+      "word order",
+      "subject",
+      "verb"
+    ]
   },
   {
     "id": "verb_position_main_clause",
     "title": "Verb Position in Main Clause",
     "level": "A1.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "sentence_structure",
+    "summary": "Verb Position in Main Clause is a grammar topic in A1.1 that supports the sentence structure learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.1",
-    "revisitedIn": ["A1.2", "A2.1", "A2.2", "B1.1"],
+    "revisitedIn": [
+      "A1.2",
+      "A2.1",
+      "A2.2",
+      "B1.1"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["verb second", "v2"],
-    "keywords": ["verb position", "hauptsatz"]
+    "aliases": [
+      "verb second",
+      "v2"
+    ],
+    "keywords": [
+      "verb position",
+      "hauptsatz"
+    ]
   },
   {
     "id": "yes_no_questions",
     "title": "Yes/No Questions",
     "level": "A1.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "sentence_structure",
+    "summary": "Yes/No Questions is a grammar topic in A1.1 that supports the sentence structure learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.1",
-    "revisitedIn": ["A1.2"],
+    "revisitedIn": [
+      "A1.2"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["ja nein fragen"],
-    "keywords": ["frage", "kommst du", "hast du"]
+    "aliases": [
+      "ja nein fragen"
+    ],
+    "keywords": [
+      "frage",
+      "kommst du",
+      "hast du"
+    ]
   },
   {
     "id": "w_questions",
     "title": "W-Questions",
     "level": "A1.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "sentence_structure",
+    "summary": "W-Questions is a grammar topic in A1.1 that supports the sentence structure learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.1",
-    "revisitedIn": ["A1.2", "A2.1"],
+    "revisitedIn": [
+      "A1.2",
+      "A2.1"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["question words"],
-    "keywords": ["wer", "was", "wo", "wann", "wie"]
+    "aliases": [
+      "question words"
+    ],
+    "keywords": [
+      "wer",
+      "was",
+      "wo",
+      "wann",
+      "wie"
+    ]
   },
   {
     "id": "present_tense_conjugation",
     "title": "Present Tense Conjugation",
     "level": "A1.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "verbs",
+    "summary": "Present Tense Conjugation is a grammar topic in A1.1 that supports the verbs learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.1",
-    "revisitedIn": ["A1.2", "A2.1"],
+    "revisitedIn": [
+      "A1.2",
+      "A2.1"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["präsens", "present tense"],
-    "keywords": ["ich mache", "du machst", "er macht"]
+    "aliases": [
+      "präsens",
+      "present tense"
+    ],
+    "keywords": [
+      "ich mache",
+      "du machst",
+      "er macht"
+    ]
   },
   {
     "id": "regular_verbs_present",
     "title": "Regular Verbs in Present Tense",
     "level": "A1.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "verbs",
+    "summary": "Regular Verbs in Present Tense is a grammar topic in A1.1 that supports the verbs learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.1",
-    "revisitedIn": ["A1.2"],
+    "revisitedIn": [
+      "A1.2"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["regular verbs"],
-    "keywords": ["lernen", "machen", "arbeiten"]
+    "aliases": [
+      "regular verbs"
+    ],
+    "keywords": [
+      "lernen",
+      "machen",
+      "arbeiten"
+    ]
   },
   {
     "id": "sein_present",
     "title": "sein (Present Tense)",
     "level": "A1.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "verbs",
+    "summary": "sein (Present Tense) is a grammar topic in A1.1 that supports the verbs learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.1",
-    "revisitedIn": ["A1.2", "A2.1", "B1.1"],
+    "revisitedIn": [
+      "A1.2",
+      "A2.1",
+      "B1.1"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["to be"],
-    "keywords": ["bin", "bist", "ist", "sind", "seid"]
+    "aliases": [
+      "to be"
+    ],
+    "keywords": [
+      "bin",
+      "bist",
+      "ist",
+      "sind",
+      "seid"
+    ]
   },
   {
     "id": "haben_present",
     "title": "haben (Present Tense)",
     "level": "A1.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "verbs",
+    "summary": "haben (Present Tense) is a grammar topic in A1.1 that supports the verbs learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.1",
-    "revisitedIn": ["A1.2", "A2.1", "B1.1"],
+    "revisitedIn": [
+      "A1.2",
+      "A2.1",
+      "B1.1"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["to have"],
-    "keywords": ["habe", "hast", "hat", "haben"]
+    "aliases": [
+      "to have"
+    ],
+    "keywords": [
+      "habe",
+      "hast",
+      "hat",
+      "haben"
+    ]
   },
   {
     "id": "noun_gender",
     "title": "Noun Gender (der / die / das)",
     "level": "A1.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "nouns_articles",
+    "summary": "Noun Gender (der / die / das) is a grammar topic in A1.1 that supports the nouns articles learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.1",
-    "revisitedIn": ["A1.2", "A2.1"],
+    "revisitedIn": [
+      "A1.2",
+      "A2.1"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["gender of nouns"],
-    "keywords": ["der", "die", "das", "artikel"]
+    "aliases": [
+      "gender of nouns"
+    ],
+    "keywords": [
+      "der",
+      "die",
+      "das",
+      "artikel"
+    ]
   },
   {
     "id": "definite_articles_nominative",
     "title": "Definite Articles (Nominative)",
     "level": "A1.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "nouns_articles",
+    "summary": "Definite Articles (Nominative) is a grammar topic in A1.1 that supports the nouns articles learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.1",
-    "revisitedIn": ["A1.2", "A2.1", "A2.2"],
+    "revisitedIn": [
+      "A1.2",
+      "A2.1",
+      "A2.2"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["definite articles"],
-    "keywords": ["der", "die", "das"]
+    "aliases": [
+      "definite articles"
+    ],
+    "keywords": [
+      "der",
+      "die",
+      "das"
+    ]
   },
   {
     "id": "indefinite_articles_nominative",
     "title": "Indefinite Articles (Nominative)",
     "level": "A1.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "nouns_articles",
+    "summary": "Indefinite Articles (Nominative) is a grammar topic in A1.1 that supports the nouns articles learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.1",
-    "revisitedIn": ["A1.2", "A2.1"],
+    "revisitedIn": [
+      "A1.2",
+      "A2.1"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["indefinite articles"],
-    "keywords": ["ein", "eine"]
+    "aliases": [
+      "indefinite articles"
+    ],
+    "keywords": [
+      "ein",
+      "eine"
+    ]
   },
   {
     "id": "plural_forms_nouns",
     "title": "Plural Forms of Nouns",
     "level": "A1.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "nouns_articles",
+    "summary": "Plural Forms of Nouns is a grammar topic in A1.1 that supports the nouns articles learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.1",
-    "revisitedIn": ["A1.2"],
+    "revisitedIn": [
+      "A1.2"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["plurals"],
-    "keywords": ["plural", "die kinder", "die bücher"]
+    "aliases": [
+      "plurals"
+    ],
+    "keywords": [
+      "plural",
+      "die kinder",
+      "die bücher"
+    ]
   },
   {
     "id": "personal_pronouns_nominative",
     "title": "Personal Pronouns (Nominative)",
     "level": "A1.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "pronouns",
+    "summary": "Personal Pronouns (Nominative) is a grammar topic in A1.1 that supports the pronouns learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.1",
-    "revisitedIn": ["A1.2", "A2.1"],
+    "revisitedIn": [
+      "A1.2",
+      "A2.1"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["ich du er sie es"],
-    "keywords": ["ich", "du", "er", "sie", "es", "wir", "ihr", "sie"]
+    "aliases": [
+      "ich du er sie es"
+    ],
+    "keywords": [
+      "ich",
+      "du",
+      "er",
+      "sie",
+      "es",
+      "wir",
+      "ihr",
+      "sie"
+    ]
   },
   {
     "id": "negation_nicht",
     "title": "Negation with nicht",
     "level": "A1.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "negation",
+    "summary": "Negation with nicht is a grammar topic in A1.1 that supports the negation learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.1",
-    "revisitedIn": ["A1.2", "A2.1"],
+    "revisitedIn": [
+      "A1.2",
+      "A2.1"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["nicht"],
-    "keywords": ["not", "kein verb", "negation"]
+    "aliases": [
+      "nicht"
+    ],
+    "keywords": [
+      "not",
+      "kein verb",
+      "negation"
+    ]
   },
   {
     "id": "negation_kein",
     "title": "Negation with kein",
     "level": "A1.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "negation",
+    "summary": "Negation with kein is a grammar topic in A1.1 that supports the negation learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.1",
-    "revisitedIn": ["A1.2", "A2.1"],
+    "revisitedIn": [
+      "A1.2",
+      "A2.1"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["kein"],
-    "keywords": ["no", "not a", "kein", "keine"]
+    "aliases": [
+      "kein"
+    ],
+    "keywords": [
+      "no",
+      "not a",
+      "kein",
+      "keine"
+    ]
   },
   {
     "id": "basic_location_prepositions",
     "title": "Basic Location Prepositions",
     "level": "A1.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "prepositions",
+    "summary": "Basic Location Prepositions is a grammar topic in A1.1 that supports the prepositions learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.1",
-    "revisitedIn": ["A2.1", "A2.2"],
+    "revisitedIn": [
+      "A2.1",
+      "A2.2"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["basic prepositions"],
-    "keywords": ["in", "auf", "bei", "wo"]
+    "aliases": [
+      "basic prepositions"
+    ],
+    "keywords": [
+      "in",
+      "auf",
+      "bei",
+      "wo"
+    ]
   },
   {
     "id": "preposition_in_basic",
     "title": "Preposition: in",
     "level": "A1.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "prepositions",
+    "summary": "Preposition: in is a grammar topic in A1.1 that supports the prepositions learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.1",
-    "revisitedIn": ["A2.2"],
+    "revisitedIn": [
+      "A2.2"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["in"],
-    "keywords": ["in der stadt", "im haus"]
+    "aliases": [
+      "in"
+    ],
+    "keywords": [
+      "in der stadt",
+      "im haus"
+    ]
   },
   {
     "id": "preposition_auf_basic",
     "title": "Preposition: auf",
     "level": "A1.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "prepositions",
+    "summary": "Preposition: auf is a grammar topic in A1.1 that supports the prepositions learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.1",
-    "revisitedIn": ["A2.2"],
+    "revisitedIn": [
+      "A2.2"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["auf"],
-    "keywords": ["auf dem tisch"]
+    "aliases": [
+      "auf"
+    ],
+    "keywords": [
+      "auf dem tisch"
+    ]
   },
   {
     "id": "preposition_bei_basic",
     "title": "Preposition: bei",
     "level": "A1.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "prepositions",
+    "summary": "Preposition: bei is a grammar topic in A1.1 that supports the prepositions learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.1",
-    "revisitedIn": ["A2.1"],
+    "revisitedIn": [
+      "A2.1"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["bei"],
-    "keywords": ["bei mir", "beim arzt"]
+    "aliases": [
+      "bei"
+    ],
+    "keywords": [
+      "bei mir",
+      "beim arzt"
+    ]
   },
   {
     "id": "daily_routine_vocabulary",
     "title": "Daily Routine Vocabulary",
     "level": "A1.2",
-    "category": "vocabulary",
+    "section": "themes",
+    "topicType": "theme",
     "group": "everyday_life",
+    "summary": "Daily Routine Vocabulary is a theme in A1.2 that supports the everyday life module path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.2",
-    "revisitedIn": ["A2.1"],
+    "revisitedIn": [
+      "A2.1"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["routine"],
-    "keywords": ["aufstehen", "arbeiten", "frühstücken"]
+    "aliases": [
+      "routine"
+    ],
+    "keywords": [
+      "aufstehen",
+      "arbeiten",
+      "frühstücken"
+    ]
   },
   {
     "id": "hobbies_vocabulary",
     "title": "Hobbies Vocabulary",
     "level": "A1.2",
-    "category": "vocabulary",
+    "section": "themes",
+    "topicType": "theme",
     "group": "everyday_life",
+    "summary": "Hobbies Vocabulary is a theme in A1.2 that supports the everyday life module path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.2",
     "revisitedIn": [],
     "difficultyStage": "intro",
-    "aliases": ["free time"],
-    "keywords": ["lesen", "sport", "musik"]
+    "aliases": [
+      "free time"
+    ],
+    "keywords": [
+      "lesen",
+      "sport",
+      "musik"
+    ]
   },
   {
     "id": "professions_vocabulary",
     "title": "Professions Vocabulary",
     "level": "A1.2",
-    "category": "vocabulary",
+    "section": "themes",
+    "topicType": "theme",
     "group": "everyday_life",
+    "summary": "Professions Vocabulary is a theme in A1.2 that supports the everyday life module path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.2",
-    "revisitedIn": ["B1.1"],
+    "revisitedIn": [
+      "B1.1"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["jobs", "occupations"],
-    "keywords": ["arzt", "lehrer", "ingenieur"]
+    "aliases": [
+      "jobs",
+      "occupations"
+    ],
+    "keywords": [
+      "arzt",
+      "lehrer",
+      "ingenieur"
+    ]
   },
   {
     "id": "shopping_vocabulary",
     "title": "Shopping Vocabulary",
     "level": "A1.2",
-    "category": "vocabulary",
+    "section": "themes",
+    "topicType": "theme",
     "group": "everyday_life",
+    "summary": "Shopping Vocabulary is a theme in A1.2 that supports the everyday life module path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.2",
     "revisitedIn": [],
     "difficultyStage": "intro",
-    "aliases": ["shopping"],
-    "keywords": ["kaufen", "preis", "laden"]
+    "aliases": [
+      "shopping"
+    ],
+    "keywords": [
+      "kaufen",
+      "preis",
+      "laden"
+    ]
   },
   {
     "id": "city_and_directions",
     "title": "City and Directions",
     "level": "A1.2",
-    "category": "communication",
+    "section": "communication",
+    "topicType": "communication",
     "group": "travel_city",
+    "summary": "City and Directions is a communication topic in A1.2 for guided practice in travel city.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.2",
-    "revisitedIn": ["A2.1", "A2.2"],
+    "revisitedIn": [
+      "A2.1",
+      "A2.2"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["directions"],
-    "keywords": ["links", "rechts", "geradeaus"]
+    "aliases": [
+      "directions"
+    ],
+    "keywords": [
+      "links",
+      "rechts",
+      "geradeaus"
+    ]
   },
   {
     "id": "travel_basics",
     "title": "Travel Basics",
     "level": "A1.2",
-    "category": "communication",
+    "section": "communication",
+    "topicType": "communication",
     "group": "travel_city",
+    "summary": "Travel Basics is a communication topic in A1.2 for guided practice in travel city.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.2",
-    "revisitedIn": ["A2.1"],
+    "revisitedIn": [
+      "A2.1"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["transport basics"],
-    "keywords": ["bahnhof", "ticket", "fahren"]
+    "aliases": [
+      "transport basics"
+    ],
+    "keywords": [
+      "bahnhof",
+      "ticket",
+      "fahren"
+    ]
   },
   {
     "id": "appointments_basic",
     "title": "Appointments",
     "level": "A1.2",
-    "category": "communication",
+    "section": "communication",
+    "topicType": "communication",
     "group": "everyday_life",
+    "summary": "Appointments is a communication topic in A1.2 for guided practice in everyday life.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.2",
-    "revisitedIn": ["A2.1"],
+    "revisitedIn": [
+      "A2.1"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["making appointments"],
-    "keywords": ["termin", "uhrzeit", "morgen"]
+    "aliases": [
+      "making appointments"
+    ],
+    "keywords": [
+      "termin",
+      "uhrzeit",
+      "morgen"
+    ]
   },
   {
     "id": "describing_people_basic",
     "title": "Describing People",
     "level": "A1.2",
-    "category": "communication",
+    "section": "communication",
+    "topicType": "communication",
     "group": "people_home_food",
+    "summary": "Describing People is a communication topic in A1.2 for guided practice in people home food.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.2",
     "revisitedIn": [],
     "difficultyStage": "intro",
-    "aliases": ["people description"],
-    "keywords": ["groß", "klein", "nett"]
+    "aliases": [
+      "people description"
+    ],
+    "keywords": [
+      "groß",
+      "klein",
+      "nett"
+    ]
   },
   {
     "id": "nominative_case",
     "title": "Nominative Case",
     "level": "A1.2",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "cases",
+    "summary": "Nominative Case is a grammar topic in A1.2 that supports the cases learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.2",
-    "revisitedIn": ["A2.1", "A2.2"],
+    "revisitedIn": [
+      "A2.1",
+      "A2.2"
+    ],
     "difficultyStage": "expanded",
-    "aliases": ["nominativ"],
-    "keywords": ["subject case", "wer"]
+    "aliases": [
+      "nominativ"
+    ],
+    "keywords": [
+      "subject case",
+      "wer"
+    ]
   },
   {
     "id": "accusative_case",
     "title": "Accusative Case",
     "level": "A1.2",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "cases",
+    "summary": "Accusative Case is a grammar topic in A1.2 that supports the cases learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.2",
-    "revisitedIn": ["A2.1", "A2.2", "B1.1"],
+    "revisitedIn": [
+      "A2.1",
+      "A2.2",
+      "B1.1"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["akkusativ"],
-    "keywords": ["direct object", "wen", "was"]
+    "aliases": [
+      "akkusativ"
+    ],
+    "keywords": [
+      "direct object",
+      "wen",
+      "was"
+    ]
   },
   {
     "id": "accusative_definite_articles",
     "title": "Accusative Definite Articles",
     "level": "A1.2",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "nouns_articles",
+    "summary": "Accusative Definite Articles is a grammar topic in A1.2 that supports the nouns articles learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.2",
-    "revisitedIn": ["A2.2"],
+    "revisitedIn": [
+      "A2.2"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["den article changes"],
-    "keywords": ["den", "die", "das"]
+    "aliases": [
+      "den article changes"
+    ],
+    "keywords": [
+      "den",
+      "die",
+      "das"
+    ]
   },
   {
     "id": "accusative_indefinite_articles",
     "title": "Accusative Indefinite Articles",
     "level": "A1.2",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "nouns_articles",
+    "summary": "Accusative Indefinite Articles is a grammar topic in A1.2 that supports the nouns articles learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.2",
-    "revisitedIn": ["A2.2"],
+    "revisitedIn": [
+      "A2.2"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["einen"],
-    "keywords": ["einen", "eine", "ein"]
+    "aliases": [
+      "einen"
+    ],
+    "keywords": [
+      "einen",
+      "eine",
+      "ein"
+    ]
   },
   {
     "id": "personal_pronouns_accusative",
     "title": "Personal Pronouns (Accusative)",
     "level": "A1.2",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "pronouns",
+    "summary": "Personal Pronouns (Accusative) is a grammar topic in A1.2 that supports the pronouns learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.2",
-    "revisitedIn": ["A2.1", "A2.2"],
+    "revisitedIn": [
+      "A2.1",
+      "A2.2"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["mich dich ihn sie es"],
-    "keywords": ["mich", "dich", "ihn", "uns", "euch"]
+    "aliases": [
+      "mich dich ihn sie es"
+    ],
+    "keywords": [
+      "mich",
+      "dich",
+      "ihn",
+      "uns",
+      "euch"
+    ]
   },
   {
     "id": "modal_verb_koennen",
     "title": "Modal Verb: können",
     "level": "A1.2",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "verbs",
+    "summary": "Modal Verb: können is a grammar topic in A1.2 that supports the verbs learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.2",
-    "revisitedIn": ["A2.1"],
+    "revisitedIn": [
+      "A2.1"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["can"],
-    "keywords": ["kann", "können"]
+    "aliases": [
+      "can"
+    ],
+    "keywords": [
+      "kann",
+      "können"
+    ]
   },
   {
     "id": "modal_verb_muessen",
     "title": "Modal Verb: müssen",
     "level": "A1.2",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "verbs",
+    "summary": "Modal Verb: müssen is a grammar topic in A1.2 that supports the verbs learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.2",
-    "revisitedIn": ["A2.1"],
+    "revisitedIn": [
+      "A2.1"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["must"],
-    "keywords": ["muss", "müssen"]
+    "aliases": [
+      "must"
+    ],
+    "keywords": [
+      "muss",
+      "müssen"
+    ]
   },
   {
     "id": "modal_verb_wollen",
     "title": "Modal Verb: wollen",
     "level": "A1.2",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "verbs",
+    "summary": "Modal Verb: wollen is a grammar topic in A1.2 that supports the verbs learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.2",
-    "revisitedIn": ["A2.1"],
+    "revisitedIn": [
+      "A2.1"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["want"],
-    "keywords": ["will", "wollen"]
+    "aliases": [
+      "want"
+    ],
+    "keywords": [
+      "will",
+      "wollen"
+    ]
   },
   {
     "id": "modal_verb_moechten",
     "title": "möchten",
     "level": "A1.2",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "verbs",
+    "summary": "möchten is a grammar topic in A1.2 that supports the verbs learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.2",
     "revisitedIn": [],
     "difficultyStage": "intro",
-    "aliases": ["would like"],
-    "keywords": ["möchte", "möchten"]
+    "aliases": [
+      "would like"
+    ],
+    "keywords": [
+      "möchte",
+      "möchten"
+    ]
   },
   {
     "id": "separable_verbs_intro",
     "title": "Separable Verbs",
     "level": "A1.2",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "verbs",
+    "summary": "Separable Verbs is a grammar topic in A1.2 that supports the verbs learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.2",
-    "revisitedIn": ["A2.1", "B1.1"],
+    "revisitedIn": [
+      "A2.1",
+      "B1.1"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["trennbare verben"],
-    "keywords": ["anrufen", "aufstehen", "mitkommen"]
+    "aliases": [
+      "trennbare verben"
+    ],
+    "keywords": [
+      "anrufen",
+      "aufstehen",
+      "mitkommen"
+    ]
   },
   {
     "id": "word_order_modal_verbs",
     "title": "Word Order with Modal Verbs",
     "level": "A1.2",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "sentence_structure",
+    "summary": "Word Order with Modal Verbs is a grammar topic in A1.2 that supports the sentence structure learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.2",
-    "revisitedIn": ["A2.1"],
+    "revisitedIn": [
+      "A2.1"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["modal verb word order"],
-    "keywords": ["infinitive at end", "kann gehen"]
+    "aliases": [
+      "modal verb word order"
+    ],
+    "keywords": [
+      "infinitive at end",
+      "kann gehen"
+    ]
   },
   {
     "id": "questions_with_modal_verbs",
     "title": "Questions with Modal Verbs",
     "level": "A1.2",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "sentence_structure",
+    "summary": "Questions with Modal Verbs is a grammar topic in A1.2 that supports the sentence structure learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.2",
     "revisitedIn": [],
     "difficultyStage": "intro",
-    "aliases": ["modal questions"],
-    "keywords": ["kannst du", "willst du"]
+    "aliases": [
+      "modal questions"
+    ],
+    "keywords": [
+      "kannst du",
+      "willst du"
+    ]
   },
   {
     "id": "accusative_prepositions",
     "title": "Accusative Prepositions",
     "level": "A1.2",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "prepositions",
+    "summary": "Accusative Prepositions is a grammar topic in A1.2 that supports the prepositions learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.2",
-    "revisitedIn": ["A2.2"],
+    "revisitedIn": [
+      "A2.2"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["prepositions with accusative"],
-    "keywords": ["für", "ohne", "um"]
+    "aliases": [
+      "prepositions with accusative"
+    ],
+    "keywords": [
+      "für",
+      "ohne",
+      "um"
+    ]
   },
   {
     "id": "preposition_fuer",
     "title": "Preposition: für",
     "level": "A1.2",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "prepositions",
+    "summary": "Preposition: für is a grammar topic in A1.2 that supports the prepositions learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.2",
     "revisitedIn": [],
     "difficultyStage": "intro",
-    "aliases": ["für"],
-    "keywords": ["for"]
+    "aliases": [
+      "für"
+    ],
+    "keywords": [
+      "for"
+    ]
   },
   {
     "id": "preposition_ohne",
     "title": "Preposition: ohne",
     "level": "A1.2",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "prepositions",
+    "summary": "Preposition: ohne is a grammar topic in A1.2 that supports the prepositions learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.2",
     "revisitedIn": [],
     "difficultyStage": "intro",
-    "aliases": ["ohne"],
-    "keywords": ["without"]
+    "aliases": [
+      "ohne"
+    ],
+    "keywords": [
+      "without"
+    ]
   },
   {
     "id": "preposition_um",
     "title": "Preposition: um",
     "level": "A1.2",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "prepositions",
+    "summary": "Preposition: um is a grammar topic in A1.2 that supports the prepositions learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.2",
-    "revisitedIn": ["A2.2"],
+    "revisitedIn": [
+      "A2.2"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["um"],
-    "keywords": ["around", "at", "for"]
+    "aliases": [
+      "um"
+    ],
+    "keywords": [
+      "around",
+      "at",
+      "for"
+    ]
   },
   {
     "id": "basic_adjectives",
     "title": "Basic Adjectives",
     "level": "A1.2",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "adjectives",
+    "summary": "Basic Adjectives is a grammar topic in A1.2 that supports the adjectives learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.2",
-    "revisitedIn": ["A2.2", "B1.1"],
+    "revisitedIn": [
+      "A2.2",
+      "B1.1"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["adjectives"],
-    "keywords": ["groß", "klein", "schön"]
+    "aliases": [
+      "adjectives"
+    ],
+    "keywords": [
+      "groß",
+      "klein",
+      "schön"
+    ]
   },
   {
     "id": "adjectives_in_sentences",
     "title": "Adjectives in Sentences",
     "level": "A1.2",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "adjectives",
+    "summary": "Adjectives in Sentences is a grammar topic in A1.2 that supports the adjectives learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A1.2",
-    "revisitedIn": ["A2.2"],
+    "revisitedIn": [
+      "A2.2"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["predicate adjectives"],
-    "keywords": ["ist groß", "ist schön"]
+    "aliases": [
+      "predicate adjectives"
+    ],
+    "keywords": [
+      "ist groß",
+      "ist schön"
+    ]
   },
   {
     "id": "talking_about_past_events",
     "title": "Talking About Past Events",
     "level": "A2.1",
-    "category": "communication",
+    "section": "communication",
+    "topicType": "communication",
     "group": "past_experience",
+    "summary": "Talking About Past Events is a communication topic in A2.1 for guided practice in past experience.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A2.1",
-    "revisitedIn": ["B1.1"],
+    "revisitedIn": [
+      "B1.1"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["past narration"],
-    "keywords": ["gestern", "letzte woche", "früher"]
+    "aliases": [
+      "past narration"
+    ],
+    "keywords": [
+      "gestern",
+      "letzte woche",
+      "früher"
+    ]
   },
   {
     "id": "describing_experiences",
     "title": "Describing Experiences",
     "level": "A2.1",
-    "category": "communication",
+    "section": "communication",
+    "topicType": "communication",
     "group": "past_experience",
+    "summary": "Describing Experiences is a communication topic in A2.1 for guided practice in past experience.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A2.1",
-    "revisitedIn": ["A2.2", "B1.1"],
+    "revisitedIn": [
+      "A2.2",
+      "B1.1"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["experiences"],
-    "keywords": ["erfahrung", "erlebt"]
+    "aliases": [
+      "experiences"
+    ],
+    "keywords": [
+      "erfahrung",
+      "erlebt"
+    ]
   },
   {
     "id": "housing_and_apartments",
     "title": "Housing and Apartments",
     "level": "A2.1",
-    "category": "vocabulary",
+    "section": "themes",
+    "topicType": "theme",
     "group": "everyday_life",
+    "summary": "Housing and Apartments is a theme in A2.1 that supports the everyday life module path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A2.1",
     "revisitedIn": [],
     "difficultyStage": "intro",
-    "aliases": ["home", "apartment"],
-    "keywords": ["wohnung", "zimmer", "miete"]
+    "aliases": [
+      "home",
+      "apartment"
+    ],
+    "keywords": [
+      "wohnung",
+      "zimmer",
+      "miete"
+    ]
   },
   {
     "id": "health_and_body",
     "title": "Health and Body",
     "level": "A2.1",
-    "category": "communication",
+    "section": "communication",
+    "topicType": "communication",
     "group": "everyday_life",
+    "summary": "Health and Body is a communication topic in A2.1 for guided practice in everyday life.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A2.1",
     "revisitedIn": [],
     "difficultyStage": "intro",
-    "aliases": ["doctor vocabulary"],
-    "keywords": ["kopf", "arzt", "weh tun"]
+    "aliases": [
+      "doctor vocabulary"
+    ],
+    "keywords": [
+      "kopf",
+      "arzt",
+      "weh tun"
+    ]
   },
   {
     "id": "making_appointments_expanded",
     "title": "Making Appointments (Expanded)",
     "level": "A2.1",
-    "category": "communication",
+    "section": "communication",
+    "topicType": "communication",
     "group": "everyday_life",
+    "summary": "Making Appointments (Expanded) is a communication topic in A2.1 for guided practice in everyday life.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A2.1",
     "revisitedIn": [],
     "difficultyStage": "expanded",
-    "aliases": ["appointments"],
-    "keywords": ["termin vereinbaren", "verschieben"]
+    "aliases": [
+      "appointments"
+    ],
+    "keywords": [
+      "termin vereinbaren",
+      "verschieben"
+    ]
   },
   {
     "id": "giving_reasons_basic",
     "title": "Giving Reasons",
     "level": "A2.1",
-    "category": "communication",
+    "section": "communication",
+    "topicType": "communication",
     "group": "communication_strategies",
+    "summary": "Giving Reasons is a communication topic in A2.1 for guided practice in communication strategies.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A2.1",
-    "revisitedIn": ["A2.2", "B1.2"],
+    "revisitedIn": [
+      "A2.2",
+      "B1.2"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["reasoning"],
-    "keywords": ["denn", "weil", "deshalb"]
+    "aliases": [
+      "reasoning"
+    ],
+    "keywords": [
+      "denn",
+      "weil",
+      "deshalb"
+    ]
   },
   {
     "id": "dative_case_intro",
     "title": "Dative Case",
     "level": "A2.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "cases",
+    "summary": "Dative Case is a grammar topic in A2.1 that supports the cases learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A2.1",
-    "revisitedIn": ["A2.2", "B1.1"],
+    "revisitedIn": [
+      "A2.2",
+      "B1.1"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["dativ"],
-    "keywords": ["indirect object", "wem"]
+    "aliases": [
+      "dativ"
+    ],
+    "keywords": [
+      "indirect object",
+      "wem"
+    ]
   },
   {
     "id": "dative_definite_articles",
     "title": "Dative Definite Articles",
     "level": "A2.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "nouns_articles",
+    "summary": "Dative Definite Articles is a grammar topic in A2.1 that supports the nouns articles learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A2.1",
-    "revisitedIn": ["A2.2"],
+    "revisitedIn": [
+      "A2.2"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["dem der den"],
-    "keywords": ["dem", "der", "den"]
+    "aliases": [
+      "dem der den"
+    ],
+    "keywords": [
+      "dem",
+      "der",
+      "den"
+    ]
   },
   {
     "id": "dative_indefinite_articles",
     "title": "Dative Indefinite Articles",
     "level": "A2.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "nouns_articles",
+    "summary": "Dative Indefinite Articles is a grammar topic in A2.1 that supports the nouns articles learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A2.1",
-    "revisitedIn": ["A2.2"],
+    "revisitedIn": [
+      "A2.2"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["einem einer"],
-    "keywords": ["einem", "einer"]
+    "aliases": [
+      "einem einer"
+    ],
+    "keywords": [
+      "einem",
+      "einer"
+    ]
   },
   {
     "id": "personal_pronouns_dative",
     "title": "Personal Pronouns (Dative)",
     "level": "A2.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "pronouns",
+    "summary": "Personal Pronouns (Dative) is a grammar topic in A2.1 that supports the pronouns learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A2.1",
-    "revisitedIn": ["A2.2", "B1.1"],
+    "revisitedIn": [
+      "A2.2",
+      "B1.1"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["mir dir ihm ihr"],
-    "keywords": ["mir", "dir", "ihm", "ihr", "uns", "euch", "ihnen"]
+    "aliases": [
+      "mir dir ihm ihr"
+    ],
+    "keywords": [
+      "mir",
+      "dir",
+      "ihm",
+      "ihr",
+      "uns",
+      "euch",
+      "ihnen"
+    ]
   },
   {
     "id": "reflexive_verbs_intro",
     "title": "Reflexive Verbs",
     "level": "A2.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "verbs",
+    "summary": "Reflexive Verbs is a grammar topic in A2.1 that supports the verbs learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A2.1",
-    "revisitedIn": ["B1.1"],
+    "revisitedIn": [
+      "B1.1"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["reflexive verbs"],
-    "keywords": ["sich freuen", "sich waschen"]
+    "aliases": [
+      "reflexive verbs"
+    ],
+    "keywords": [
+      "sich freuen",
+      "sich waschen"
+    ]
   },
   {
     "id": "reflexive_pronouns",
     "title": "Reflexive Pronouns",
     "level": "A2.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "pronouns",
+    "summary": "Reflexive Pronouns is a grammar topic in A2.1 that supports the pronouns learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A2.1",
-    "revisitedIn": ["B1.1"],
+    "revisitedIn": [
+      "B1.1"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["mich dich sich"],
-    "keywords": ["mich", "dich", "sich", "uns", "euch"]
+    "aliases": [
+      "mich dich sich"
+    ],
+    "keywords": [
+      "mich",
+      "dich",
+      "sich",
+      "uns",
+      "euch"
+    ]
   },
   {
     "id": "perfect_tense_perfekt",
     "title": "Perfect Tense (Perfekt)",
     "level": "A2.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "tenses",
+    "summary": "Perfect Tense (Perfekt) is a grammar topic in A2.1 that supports the tenses learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A2.1",
-    "revisitedIn": ["B1.1"],
+    "revisitedIn": [
+      "B1.1"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["perfekt"],
-    "keywords": ["habe gemacht", "bin gegangen"]
+    "aliases": [
+      "perfekt"
+    ],
+    "keywords": [
+      "habe gemacht",
+      "bin gegangen"
+    ]
   },
   {
     "id": "past_participle_formation",
     "title": "Past Participle Formation",
     "level": "A2.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "tenses",
+    "summary": "Past Participle Formation is a grammar topic in A2.1 that supports the tenses learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A2.1",
-    "revisitedIn": ["B1.1"],
+    "revisitedIn": [
+      "B1.1"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["partizip ii"],
-    "keywords": ["gemacht", "gegangen", "gespielt"]
+    "aliases": [
+      "partizip ii"
+    ],
+    "keywords": [
+      "gemacht",
+      "gegangen",
+      "gespielt"
+    ]
   },
   {
     "id": "haben_vs_sein_perfekt",
     "title": "haben vs sein in Perfekt",
     "level": "A2.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "tenses",
+    "summary": "haben vs sein in Perfekt is a grammar topic in A2.1 that supports the tenses learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A2.1",
-    "revisitedIn": ["B1.1"],
+    "revisitedIn": [
+      "B1.1"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["auxiliary verbs in perfekt"],
-    "keywords": ["movement", "change of state", "haben oder sein"]
+    "aliases": [
+      "auxiliary verbs in perfekt"
+    ],
+    "keywords": [
+      "movement",
+      "change of state",
+      "haben oder sein"
+    ]
   },
   {
     "id": "verb_position_perfekt",
     "title": "Verb Position in Perfekt",
     "level": "A2.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "sentence_structure",
+    "summary": "Verb Position in Perfekt is a grammar topic in A2.1 that supports the sentence structure learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A2.1",
-    "revisitedIn": ["B1.1"],
+    "revisitedIn": [
+      "B1.1"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["perfekt word order"],
-    "keywords": ["participle at end"]
+    "aliases": [
+      "perfekt word order"
+    ],
+    "keywords": [
+      "participle at end"
+    ]
   },
   {
     "id": "word_order_reflexive_verbs",
     "title": "Word Order with Reflexive Verbs",
     "level": "A2.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "sentence_structure",
+    "summary": "Word Order with Reflexive Verbs is a grammar topic in A2.1 that supports the sentence structure learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A2.1",
     "revisitedIn": [],
     "difficultyStage": "intro",
-    "aliases": ["reflexive word order"],
-    "keywords": ["ich freue mich"]
+    "aliases": [
+      "reflexive word order"
+    ],
+    "keywords": [
+      "ich freue mich"
+    ]
   },
   {
     "id": "dative_prepositions",
     "title": "Dative Prepositions",
     "level": "A2.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "prepositions",
+    "summary": "Dative Prepositions is a grammar topic in A2.1 that supports the prepositions learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A2.1",
-    "revisitedIn": ["A2.2", "B1.1"],
+    "revisitedIn": [
+      "A2.2",
+      "B1.1"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["prepositions with dative"],
-    "keywords": ["mit", "nach", "von", "zu", "bei"]
+    "aliases": [
+      "prepositions with dative"
+    ],
+    "keywords": [
+      "mit",
+      "nach",
+      "von",
+      "zu",
+      "bei"
+    ]
   },
   {
     "id": "preposition_mit",
     "title": "Preposition: mit",
     "level": "A2.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "prepositions",
+    "summary": "Preposition: mit is a grammar topic in A2.1 that supports the prepositions learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A2.1",
     "revisitedIn": [],
     "difficultyStage": "intro",
-    "aliases": ["mit"],
-    "keywords": ["with"]
+    "aliases": [
+      "mit"
+    ],
+    "keywords": [
+      "with"
+    ]
   },
   {
     "id": "preposition_nach",
     "title": "Preposition: nach",
     "level": "A2.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "prepositions",
+    "summary": "Preposition: nach is a grammar topic in A2.1 that supports the prepositions learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A2.1",
     "revisitedIn": [],
     "difficultyStage": "intro",
-    "aliases": ["nach"],
-    "keywords": ["to", "after"]
+    "aliases": [
+      "nach"
+    ],
+    "keywords": [
+      "to",
+      "after"
+    ]
   },
   {
     "id": "preposition_von",
     "title": "Preposition: von",
     "level": "A2.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "prepositions",
+    "summary": "Preposition: von is a grammar topic in A2.1 that supports the prepositions learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A2.1",
     "revisitedIn": [],
     "difficultyStage": "intro",
-    "aliases": ["von"],
-    "keywords": ["from", "of"]
+    "aliases": [
+      "von"
+    ],
+    "keywords": [
+      "from",
+      "of"
+    ]
   },
   {
     "id": "preposition_zu",
     "title": "Preposition: zu",
     "level": "A2.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "prepositions",
+    "summary": "Preposition: zu is a grammar topic in A2.1 that supports the prepositions learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A2.1",
     "revisitedIn": [],
     "difficultyStage": "intro",
-    "aliases": ["zu"],
-    "keywords": ["to"]
+    "aliases": [
+      "zu"
+    ],
+    "keywords": [
+      "to"
+    ]
   },
   {
     "id": "connectors_und_oder_aber_denn",
     "title": "Connectors: und, oder, aber, denn",
     "level": "A2.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "connectors",
+    "summary": "Connectors: und, oder, aber, denn is a grammar topic in A2.1 that supports the connectors learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A2.1",
-    "revisitedIn": ["A2.2", "B1.2"],
+    "revisitedIn": [
+      "A2.2",
+      "B1.2"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["basic connectors"],
-    "keywords": ["und", "oder", "aber", "denn"]
+    "aliases": [
+      "basic connectors"
+    ],
+    "keywords": [
+      "und",
+      "oder",
+      "aber",
+      "denn"
+    ]
   },
   {
     "id": "giving_opinions_basic",
     "title": "Giving Opinions",
     "level": "A2.2",
-    "category": "communication",
+    "section": "communication",
+    "topicType": "communication",
     "group": "communication_strategies",
+    "summary": "Giving Opinions is a communication topic in A2.2 for guided practice in communication strategies.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A2.2",
-    "revisitedIn": ["B1.2", "B2.1"],
+    "revisitedIn": [
+      "B1.2",
+      "B2.1"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["opinion phrases"],
-    "keywords": ["ich denke", "ich finde", "meiner meinung nach"]
+    "aliases": [
+      "opinion phrases"
+    ],
+    "keywords": [
+      "ich denke",
+      "ich finde",
+      "meiner meinung nach"
+    ]
   },
   {
     "id": "future_plans",
     "title": "Talking About Future Plans",
     "level": "A2.2",
-    "category": "communication",
+    "section": "communication",
+    "topicType": "communication",
     "group": "communication_strategies",
+    "summary": "Talking About Future Plans is a communication topic in A2.2 for guided practice in communication strategies.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A2.2",
-    "revisitedIn": ["B1.1"],
+    "revisitedIn": [
+      "B1.1"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["plans"],
-    "keywords": ["morgen", "nächstes jahr", "planen"]
+    "aliases": [
+      "plans"
+    ],
+    "keywords": [
+      "morgen",
+      "nächstes jahr",
+      "planen"
+    ]
   },
   {
     "id": "complaints_and_requests",
     "title": "Complaints and Requests",
     "level": "A2.2",
-    "category": "communication",
+    "section": "communication",
+    "topicType": "communication",
     "group": "communication_strategies",
+    "summary": "Complaints and Requests is a communication topic in A2.2 for guided practice in communication strategies.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A2.2",
-    "revisitedIn": ["B1.2"],
+    "revisitedIn": [
+      "B1.2"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["complaining politely"],
-    "keywords": ["beschwerde", "problem", "könnten sie"]
+    "aliases": [
+      "complaining politely"
+    ],
+    "keywords": [
+      "beschwerde",
+      "problem",
+      "könnten sie"
+    ]
   },
   {
     "id": "social_interactions",
     "title": "Social Interactions",
     "level": "A2.2",
-    "category": "communication",
+    "section": "communication",
+    "topicType": "communication",
     "group": "communication_strategies",
+    "summary": "Social Interactions is a communication topic in A2.2 for guided practice in communication strategies.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A2.2",
     "revisitedIn": [],
     "difficultyStage": "intro",
-    "aliases": ["social situations"],
-    "keywords": ["einladen", "vorschlagen", "absagen"]
+    "aliases": [
+      "social situations"
+    ],
+    "keywords": [
+      "einladen",
+      "vorschlagen",
+      "absagen"
+    ]
   },
   {
     "id": "wechselpraepositionen",
     "title": "Two-Way Prepositions (Wechselpräpositionen)",
     "level": "A2.2",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "prepositions",
+    "summary": "Two-Way Prepositions (Wechselpräpositionen) is a grammar topic in A2.2 that supports the prepositions learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A2.2",
-    "revisitedIn": ["B1.1"],
+    "revisitedIn": [
+      "B1.1"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["two-way prepositions"],
-    "keywords": ["in", "an", "auf", "über", "unter", "vor", "hinter", "neben", "zwischen"]
+    "aliases": [
+      "two-way prepositions"
+    ],
+    "keywords": [
+      "in",
+      "an",
+      "auf",
+      "über",
+      "unter",
+      "vor",
+      "hinter",
+      "neben",
+      "zwischen"
+    ]
   },
   {
     "id": "location_vs_direction",
     "title": "Location vs Direction",
     "level": "A2.2",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "prepositions",
+    "summary": "Location vs Direction is a grammar topic in A2.2 that supports the prepositions learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A2.2",
-    "revisitedIn": ["B1.1"],
+    "revisitedIn": [
+      "B1.1"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["wo vs wohin"],
-    "keywords": ["wo", "wohin", "dative", "accusative"]
+    "aliases": [
+      "wo vs wohin"
+    ],
+    "keywords": [
+      "wo",
+      "wohin",
+      "dative",
+      "accusative"
+    ]
   },
   {
     "id": "future_tense_werden",
     "title": "Future Tense (werden + infinitive)",
     "level": "A2.2",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "tenses",
+    "summary": "Future Tense (werden + infinitive) is a grammar topic in A2.2 that supports the tenses learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A2.2",
-    "revisitedIn": ["B1.1"],
+    "revisitedIn": [
+      "B1.1"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["futur i"],
-    "keywords": ["werde", "wirst", "wird"]
+    "aliases": [
+      "futur i"
+    ],
+    "keywords": [
+      "werde",
+      "wirst",
+      "wird"
+    ]
   },
   {
     "id": "imperative_intro",
     "title": "Imperative",
     "level": "A2.2",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "verbs",
+    "summary": "Imperative is a grammar topic in A2.2 that supports the verbs learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A2.2",
-    "revisitedIn": ["B1.2"],
+    "revisitedIn": [
+      "B1.2"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["commands"],
-    "keywords": ["geh", "gehen sie", "komm"]
+    "aliases": [
+      "commands"
+    ],
+    "keywords": [
+      "geh",
+      "gehen sie",
+      "komm"
+    ]
   },
   {
     "id": "possessive_pronouns",
     "title": "Possessive Pronouns",
     "level": "A2.2",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "pronouns",
+    "summary": "Possessive Pronouns is a grammar topic in A2.2 that supports the pronouns learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A2.2",
-    "revisitedIn": ["B1.1"],
+    "revisitedIn": [
+      "B1.1"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["mein dein sein ihr"],
-    "keywords": ["mein", "dein", "sein", "ihr", "unser", "euer"]
+    "aliases": [
+      "mein dein sein ihr"
+    ],
+    "keywords": [
+      "mein",
+      "dein",
+      "sein",
+      "ihr",
+      "unser",
+      "euer"
+    ]
   },
   {
     "id": "accusative_dative_together",
     "title": "Accusative + Dative Together",
     "level": "A2.2",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "cases",
+    "summary": "Accusative + Dative Together is a grammar topic in A2.2 that supports the cases learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A2.2",
-    "revisitedIn": ["B1.1"],
+    "revisitedIn": [
+      "B1.1"
+    ],
     "difficultyStage": "combined",
-    "aliases": ["double object"],
-    "keywords": ["ich gebe dir das buch"]
+    "aliases": [
+      "double object"
+    ],
+    "keywords": [
+      "ich gebe dir das buch"
+    ]
   },
   {
     "id": "comparative_adjectives",
     "title": "Comparative Adjectives",
     "level": "A2.2",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "adjectives",
+    "summary": "Comparative Adjectives is a grammar topic in A2.2 that supports the adjectives learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A2.2",
-    "revisitedIn": ["B1.2"],
+    "revisitedIn": [
+      "B1.2"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["comparative"],
-    "keywords": ["größer", "besser"]
+    "aliases": [
+      "comparative"
+    ],
+    "keywords": [
+      "größer",
+      "besser"
+    ]
   },
   {
     "id": "superlative_adjectives",
     "title": "Superlative Adjectives",
     "level": "A2.2",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "adjectives",
+    "summary": "Superlative Adjectives is a grammar topic in A2.2 that supports the adjectives learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A2.2",
-    "revisitedIn": ["B1.2"],
+    "revisitedIn": [
+      "B1.2"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["superlative"],
-    "keywords": ["am größten", "der beste"]
+    "aliases": [
+      "superlative"
+    ],
+    "keywords": [
+      "am größten",
+      "der beste"
+    ]
   },
   {
     "id": "basic_adjective_endings",
     "title": "Basic Adjective Endings",
     "level": "A2.2",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "adjectives",
+    "summary": "Basic Adjective Endings is a grammar topic in A2.2 that supports the adjectives learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A2.2",
-    "revisitedIn": ["B1.1", "B1.2"],
+    "revisitedIn": [
+      "B1.1",
+      "B1.2"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["adjective declension basics"],
-    "keywords": ["ein kleiner hund", "die schöne stadt"]
+    "aliases": [
+      "adjective declension basics"
+    ],
+    "keywords": [
+      "ein kleiner hund",
+      "die schöne stadt"
+    ]
   },
   {
     "id": "subordinate_clauses_intro",
     "title": "Subordinate Clauses",
     "level": "A2.2",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "clauses",
+    "summary": "Subordinate Clauses is a grammar topic in A2.2 that supports the clauses learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A2.2",
-    "revisitedIn": ["B1.1", "B1.2", "B2.1"],
+    "revisitedIn": [
+      "B1.1",
+      "B1.2",
+      "B2.1"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["nebensatz"],
-    "keywords": ["verb at end", "subordinate clause"]
+    "aliases": [
+      "nebensatz"
+    ],
+    "keywords": [
+      "verb at end",
+      "subordinate clause"
+    ]
   },
   {
     "id": "weil_clause",
     "title": "weil Clause",
     "level": "A2.2",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "clauses",
+    "summary": "weil Clause is a grammar topic in A2.2 that supports the clauses learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A2.2",
-    "revisitedIn": ["B1.2"],
+    "revisitedIn": [
+      "B1.2"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["because clause"],
-    "keywords": ["weil"]
+    "aliases": [
+      "because clause"
+    ],
+    "keywords": [
+      "weil"
+    ]
   },
   {
     "id": "dass_clause",
     "title": "dass Clause",
     "level": "A2.2",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "clauses",
+    "summary": "dass Clause is a grammar topic in A2.2 that supports the clauses learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "A2.2",
-    "revisitedIn": ["B1.2"],
+    "revisitedIn": [
+      "B1.2"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["that clause"],
-    "keywords": ["dass"]
+    "aliases": [
+      "that clause"
+    ],
+    "keywords": [
+      "dass"
+    ]
   },
   {
     "id": "narrating_events",
     "title": "Narrating Events",
     "level": "B1.1",
-    "category": "communication",
+    "section": "communication",
+    "topicType": "communication",
     "group": "past_experience",
+    "summary": "Narrating Events is a communication topic in B1.1 for guided practice in past experience.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "B1.1",
-    "revisitedIn": ["B1.2"],
+    "revisitedIn": [
+      "B1.2"
+    ],
     "difficultyStage": "expanded",
-    "aliases": ["storytelling"],
-    "keywords": ["erzählen", "berichten"]
+    "aliases": [
+      "storytelling"
+    ],
+    "keywords": [
+      "erzählen",
+      "berichten"
+    ]
   },
   {
     "id": "education_and_work",
     "title": "Education and Work",
     "level": "B1.1",
-    "category": "communication",
+    "section": "communication",
+    "topicType": "communication",
     "group": "work_study",
+    "summary": "Education and Work is a communication topic in B1.1 for guided practice in work study.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "B1.1",
-    "revisitedIn": ["B2.1"],
+    "revisitedIn": [
+      "B2.1"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["school and job"],
-    "keywords": ["studium", "beruf", "ausbildung"]
+    "aliases": [
+      "school and job"
+    ],
+    "keywords": [
+      "studium",
+      "beruf",
+      "ausbildung"
+    ]
   },
   {
     "id": "expressing_plans",
     "title": "Expressing Plans",
     "level": "B1.1",
-    "category": "communication",
+    "section": "communication",
+    "topicType": "communication",
     "group": "communication_strategies",
+    "summary": "Expressing Plans is a communication topic in B1.1 for guided practice in communication strategies.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "B1.1",
     "revisitedIn": [],
     "difficultyStage": "expanded",
-    "aliases": ["plans"],
-    "keywords": ["vorhaben", "plan"]
+    "aliases": [
+      "plans"
+    ],
+    "keywords": [
+      "vorhaben",
+      "plan"
+    ]
   },
   {
     "id": "praeteritum_sein_haben",
     "title": "Präteritum: sein / haben",
     "level": "B1.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "tenses",
+    "summary": "Präteritum: sein / haben is a grammar topic in B1.1 that supports the tenses learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "B1.1",
-    "revisitedIn": ["B1.2"],
+    "revisitedIn": [
+      "B1.2"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["simple past of sein and haben"],
-    "keywords": ["war", "waren", "hatte", "hatten"]
+    "aliases": [
+      "simple past of sein and haben"
+    ],
+    "keywords": [
+      "war",
+      "waren",
+      "hatte",
+      "hatten"
+    ]
   },
   {
     "id": "praeteritum_common_verbs",
     "title": "Präteritum: Common Verbs",
     "level": "B1.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "tenses",
+    "summary": "Präteritum: Common Verbs is a grammar topic in B1.1 that supports the tenses learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "B1.1",
-    "revisitedIn": ["B1.2"],
+    "revisitedIn": [
+      "B1.2"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["simple past"],
-    "keywords": ["ging", "kam", "sagte"]
+    "aliases": [
+      "simple past"
+    ],
+    "keywords": [
+      "ging",
+      "kam",
+      "sagte"
+    ]
   },
   {
     "id": "wenn_clause",
     "title": "wenn Clause",
     "level": "B1.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "clauses",
+    "summary": "wenn Clause is a grammar topic in B1.1 that supports the clauses learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "B1.1",
-    "revisitedIn": ["B1.2"],
+    "revisitedIn": [
+      "B1.2"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["if/when clause"],
-    "keywords": ["wenn"]
+    "aliases": [
+      "if/when clause"
+    ],
+    "keywords": [
+      "wenn"
+    ]
   },
   {
     "id": "als_clause",
     "title": "als Clause",
     "level": "B1.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "clauses",
+    "summary": "als Clause is a grammar topic in B1.1 that supports the clauses learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "B1.1",
     "revisitedIn": [],
     "difficultyStage": "intro",
-    "aliases": ["when in past"],
-    "keywords": ["als"]
+    "aliases": [
+      "when in past"
+    ],
+    "keywords": [
+      "als"
+    ]
   },
   {
     "id": "subordinate_clause_word_order",
     "title": "Subordinate Clause Word Order",
     "level": "B1.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "clauses",
+    "summary": "Subordinate Clause Word Order is a grammar topic in B1.1 that supports the clauses learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "B1.1",
-    "revisitedIn": ["B1.2", "B2.1"],
+    "revisitedIn": [
+      "B1.2",
+      "B2.1"
+    ],
     "difficultyStage": "expanded",
-    "aliases": ["nebensatz word order"],
-    "keywords": ["verb at end"]
+    "aliases": [
+      "nebensatz word order"
+    ],
+    "keywords": [
+      "verb at end"
+    ]
   },
   {
     "id": "relative_pronouns",
     "title": "Relative Pronouns",
     "level": "B1.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "clauses",
+    "summary": "Relative Pronouns is a grammar topic in B1.1 that supports the clauses learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "B1.1",
-    "revisitedIn": ["B1.2", "B2.2"],
+    "revisitedIn": [
+      "B1.2",
+      "B2.2"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["der die das in relative clauses"],
-    "keywords": ["der", "die", "das", "dem", "denen"]
+    "aliases": [
+      "der die das in relative clauses"
+    ],
+    "keywords": [
+      "der",
+      "die",
+      "das",
+      "dem",
+      "denen"
+    ]
   },
   {
     "id": "relative_clauses_basics",
     "title": "Relative Clauses",
     "level": "B1.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "clauses",
+    "summary": "Relative Clauses is a grammar topic in B1.1 that supports the clauses learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "B1.1",
-    "revisitedIn": ["B1.2", "B2.2"],
+    "revisitedIn": [
+      "B1.2",
+      "B2.2"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["relative clauses basics"],
-    "keywords": ["who which that"]
+    "aliases": [
+      "relative clauses basics"
+    ],
+    "keywords": [
+      "who which that"
+    ]
   },
   {
     "id": "reflexive_verbs_expanded",
     "title": "Reflexive Verbs (Expanded)",
     "level": "B1.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "verbs",
+    "summary": "Reflexive Verbs (Expanded) is a grammar topic in B1.1 that supports the verbs learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "B1.1",
     "revisitedIn": [],
     "difficultyStage": "expanded",
-    "aliases": ["reflexive verbs advanced"],
-    "keywords": ["sich interessieren für", "sich erinnern an"]
+    "aliases": [
+      "reflexive verbs advanced"
+    ],
+    "keywords": [
+      "sich interessieren für",
+      "sich erinnern an"
+    ]
   },
   {
     "id": "verb_preposition_combinations_intro",
     "title": "Verb + Preposition Combinations",
     "level": "B1.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "verbs",
+    "summary": "Verb + Preposition Combinations is a grammar topic in B1.1 that supports the verbs learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "B1.1",
-    "revisitedIn": ["B1.2"],
+    "revisitedIn": [
+      "B1.2"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["verb preposition combos"],
-    "keywords": ["warten auf", "denken an", "sich freuen auf"]
+    "aliases": [
+      "verb preposition combos"
+    ],
+    "keywords": [
+      "warten auf",
+      "denken an",
+      "sich freuen auf"
+    ]
   },
   {
     "id": "adjective_declension",
     "title": "Adjective Declension",
     "level": "B1.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "adjectives",
+    "summary": "Adjective Declension is a grammar topic in B1.1 that supports the adjectives learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "B1.1",
-    "revisitedIn": ["B1.2", "B2.1"],
+    "revisitedIn": [
+      "B1.2",
+      "B2.1"
+    ],
     "difficultyStage": "expanded",
-    "aliases": ["adjective endings"],
-    "keywords": ["starker", "schwacher", "gemischter deklination"]
+    "aliases": [
+      "adjective endings"
+    ],
+    "keywords": [
+      "starker",
+      "schwacher",
+      "gemischter deklination"
+    ]
   },
   {
     "id": "passive_voice_intro",
     "title": "Passive Voice",
     "level": "B1.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "voice",
+    "summary": "Passive Voice is a grammar topic in B1.1 that supports the voice learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "B1.1",
-    "revisitedIn": ["B1.2", "B2.1"],
+    "revisitedIn": [
+      "B1.2",
+      "B2.1"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["passiv"],
-    "keywords": ["wird gemacht"]
+    "aliases": [
+      "passiv"
+    ],
+    "keywords": [
+      "wird gemacht"
+    ]
   },
   {
     "id": "arguments_and_opinions",
     "title": "Expressing Arguments",
     "level": "B1.2",
-    "category": "communication",
+    "section": "communication",
+    "topicType": "communication",
     "group": "communication_strategies",
+    "summary": "Expressing Arguments is a communication topic in B1.2 for guided practice in communication strategies.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "B1.2",
-    "revisitedIn": ["B2.1", "B2.2"],
+    "revisitedIn": [
+      "B2.1",
+      "B2.2"
+    ],
     "difficultyStage": "expanded",
-    "aliases": ["argumentation"],
-    "keywords": ["erstens", "außerdem", "meiner meinung nach"]
+    "aliases": [
+      "argumentation"
+    ],
+    "keywords": [
+      "erstens",
+      "außerdem",
+      "meiner meinung nach"
+    ]
   },
   {
     "id": "advantages_disadvantages",
     "title": "Advantages and Disadvantages",
     "level": "B1.2",
-    "category": "communication",
+    "section": "communication",
+    "topicType": "communication",
     "group": "communication_strategies",
+    "summary": "Advantages and Disadvantages is a communication topic in B1.2 for guided practice in communication strategies.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "B1.2",
-    "revisitedIn": ["B2.1"],
+    "revisitedIn": [
+      "B2.1"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["pros and cons"],
-    "keywords": ["vorteile", "nachteile"]
+    "aliases": [
+      "pros and cons"
+    ],
+    "keywords": [
+      "vorteile",
+      "nachteile"
+    ]
   },
   {
     "id": "feelings_and_reactions",
     "title": "Feelings and Reactions",
     "level": "B1.2",
-    "category": "communication",
+    "section": "communication",
+    "topicType": "communication",
     "group": "communication_strategies",
+    "summary": "Feelings and Reactions is a communication topic in B1.2 for guided practice in communication strategies.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "B1.2",
     "revisitedIn": [],
     "difficultyStage": "intro",
-    "aliases": ["emotions"],
-    "keywords": ["glücklich", "traurig", "überrascht"]
+    "aliases": [
+      "emotions"
+    ],
+    "keywords": [
+      "glücklich",
+      "traurig",
+      "überrascht"
+    ]
   },
   {
     "id": "media_and_society",
     "title": "Media and Society",
     "level": "B1.2",
-    "category": "communication",
+    "section": "communication",
+    "topicType": "communication",
     "group": "society_media",
+    "summary": "Media and Society is a communication topic in B1.2 for guided practice in society media.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "B1.2",
-    "revisitedIn": ["B2.1"],
+    "revisitedIn": [
+      "B2.1"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["society topics"],
-    "keywords": ["nachrichten", "internet", "gesellschaft"]
+    "aliases": [
+      "society topics"
+    ],
+    "keywords": [
+      "nachrichten",
+      "internet",
+      "gesellschaft"
+    ]
   },
   {
     "id": "konjunktiv_ii_basics",
     "title": "Konjunktiv II Basics",
     "level": "B1.2",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "mood",
+    "summary": "Konjunktiv II Basics is a grammar topic in B1.2 that supports the mood learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "B1.2",
-    "revisitedIn": ["B2.1"],
+    "revisitedIn": [
+      "B2.1"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["würde form", "subjunctive ii"],
-    "keywords": ["würde", "hätte", "wäre"]
+    "aliases": [
+      "würde form",
+      "subjunctive ii"
+    ],
+    "keywords": [
+      "würde",
+      "hätte",
+      "wäre"
+    ]
   },
   {
     "id": "polite_requests",
     "title": "Polite Requests",
     "level": "B1.2",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "mood",
+    "summary": "Polite Requests is a grammar topic in B1.2 that supports the mood learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "B1.2",
-    "revisitedIn": ["B2.1"],
+    "revisitedIn": [
+      "B2.1"
+    ],
     "difficultyStage": "expanded",
-    "aliases": ["could you", "would you"],
-    "keywords": ["könnten sie", "würden sie"]
+    "aliases": [
+      "could you",
+      "would you"
+    ],
+    "keywords": [
+      "könnten sie",
+      "würden sie"
+    ]
   },
   {
     "id": "passive_voice_expanded",
     "title": "Passive Voice (Expanded)",
     "level": "B1.2",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "voice",
+    "summary": "Passive Voice (Expanded) is a grammar topic in B1.2 that supports the voice learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "B1.2",
-    "revisitedIn": ["B2.1"],
+    "revisitedIn": [
+      "B2.1"
+    ],
     "difficultyStage": "expanded",
-    "aliases": ["passive expanded"],
-    "keywords": ["wurde gemacht", "ist gemacht worden"]
+    "aliases": [
+      "passive expanded"
+    ],
+    "keywords": [
+      "wurde gemacht",
+      "ist gemacht worden"
+    ]
   },
   {
     "id": "complex_subordinate_clauses",
     "title": "Complex Subordinate Clauses",
     "level": "B1.2",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "clauses",
+    "summary": "Complex Subordinate Clauses is a grammar topic in B1.2 that supports the clauses learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "B1.2",
-    "revisitedIn": ["B2.1", "B2.2"],
+    "revisitedIn": [
+      "B2.1",
+      "B2.2"
+    ],
     "difficultyStage": "expanded",
-    "aliases": ["advanced subordinate clauses"],
-    "keywords": ["obwohl", "damit", "bevor", "nachdem"]
+    "aliases": [
+      "advanced subordinate clauses"
+    ],
+    "keywords": [
+      "obwohl",
+      "damit",
+      "bevor",
+      "nachdem"
+    ]
   },
   {
     "id": "relative_clauses_expanded",
     "title": "Relative Clauses (Expanded)",
     "level": "B1.2",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "clauses",
+    "summary": "Relative Clauses (Expanded) is a grammar topic in B1.2 that supports the clauses learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "B1.2",
-    "revisitedIn": ["B2.2"],
+    "revisitedIn": [
+      "B2.2"
+    ],
     "difficultyStage": "expanded",
-    "aliases": ["relative clauses advanced"],
-    "keywords": ["genitive relative clauses", "preposition + relative pronoun"]
+    "aliases": [
+      "relative clauses advanced"
+    ],
+    "keywords": [
+      "genitive relative clauses",
+      "preposition + relative pronoun"
+    ]
   },
   {
     "id": "verb_preposition_combinations_expanded",
     "title": "Verb + Preposition Combinations (Expanded)",
     "level": "B1.2",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "verbs",
+    "summary": "Verb + Preposition Combinations (Expanded) is a grammar topic in B1.2 that supports the verbs learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "B1.2",
-    "revisitedIn": ["B2.1"],
+    "revisitedIn": [
+      "B2.1"
+    ],
     "difficultyStage": "expanded",
-    "aliases": ["verb preposition advanced"],
-    "keywords": ["abhängen von", "teilnehmen an", "sich kümmern um"]
+    "aliases": [
+      "verb preposition advanced"
+    ],
+    "keywords": [
+      "abhängen von",
+      "teilnehmen an",
+      "sich kümmern um"
+    ]
   },
   {
     "id": "presentations_and_reports",
     "title": "Presentations and Reports",
     "level": "B2.1",
-    "category": "communication",
+    "section": "communication",
+    "topicType": "communication",
     "group": "work_study",
+    "summary": "Presentations and Reports is a communication topic in B2.1 for guided practice in work study.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "B2.1",
-    "revisitedIn": ["B2.2"],
+    "revisitedIn": [
+      "B2.2"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["presentations"],
-    "keywords": ["vortrag", "präsentation", "berichten"]
+    "aliases": [
+      "presentations"
+    ],
+    "keywords": [
+      "vortrag",
+      "präsentation",
+      "berichten"
+    ]
   },
   {
     "id": "academic_discussions",
     "title": "Academic Discussions",
     "level": "B2.1",
-    "category": "communication",
+    "section": "communication",
+    "topicType": "communication",
     "group": "work_study",
+    "summary": "Academic Discussions is a communication topic in B2.1 for guided practice in work study.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "B2.1",
-    "revisitedIn": ["B2.2"],
+    "revisitedIn": [
+      "B2.2"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["study discussions"],
-    "keywords": ["diskussion", "these", "argument"]
+    "aliases": [
+      "study discussions"
+    ],
+    "keywords": [
+      "diskussion",
+      "these",
+      "argument"
+    ]
   },
   {
     "id": "professional_communication",
     "title": "Professional Communication",
     "level": "B2.1",
-    "category": "communication",
+    "section": "communication",
+    "topicType": "communication",
     "group": "work_study",
+    "summary": "Professional Communication is a communication topic in B2.1 for guided practice in work study.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "B2.1",
-    "revisitedIn": ["B2.2"],
+    "revisitedIn": [
+      "B2.2"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["workplace communication"],
-    "keywords": ["meeting", "email", "beruflich"]
+    "aliases": [
+      "workplace communication"
+    ],
+    "keywords": [
+      "meeting",
+      "email",
+      "beruflich"
+    ]
   },
   {
     "id": "passive_voice_advanced",
     "title": "Passive Voice (Advanced)",
     "level": "B2.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "voice",
+    "summary": "Passive Voice (Advanced) is a grammar topic in B2.1 that supports the voice learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "B2.1",
     "revisitedIn": [],
     "difficultyStage": "advanced",
-    "aliases": ["advanced passive"],
-    "keywords": ["passive with modal verbs", "state passive"]
+    "aliases": [
+      "advanced passive"
+    ],
+    "keywords": [
+      "passive with modal verbs",
+      "state passive"
+    ]
   },
   {
     "id": "nominalization",
     "title": "Nominalization",
     "level": "B2.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "style",
+    "summary": "Nominalization is a grammar topic in B2.1 that supports the style learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "B2.1",
-    "revisitedIn": ["B2.2"],
+    "revisitedIn": [
+      "B2.2"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["nominalisierung"],
-    "keywords": ["das lesen", "beim essen"]
+    "aliases": [
+      "nominalisierung"
+    ],
+    "keywords": [
+      "das lesen",
+      "beim essen"
+    ]
   },
   {
     "id": "partizip_i_usage",
     "title": "Partizip I Usage",
     "level": "B2.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "style",
+    "summary": "Partizip I Usage is a grammar topic in B2.1 that supports the style learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "B2.1",
-    "revisitedIn": ["B2.2"],
+    "revisitedIn": [
+      "B2.2"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["present participle"],
-    "keywords": ["laufend", "sprechend"]
+    "aliases": [
+      "present participle"
+    ],
+    "keywords": [
+      "laufend",
+      "sprechend"
+    ]
   },
   {
     "id": "partizip_ii_usage",
     "title": "Partizip II Usage",
     "level": "B2.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "style",
+    "summary": "Partizip II Usage is a grammar topic in B2.1 that supports the style learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "B2.1",
-    "revisitedIn": ["B2.2"],
+    "revisitedIn": [
+      "B2.2"
+    ],
     "difficultyStage": "expanded",
-    "aliases": ["past participle usage"],
-    "keywords": ["geschrieben", "gemacht"]
+    "aliases": [
+      "past participle usage"
+    ],
+    "keywords": [
+      "geschrieben",
+      "gemacht"
+    ]
   },
   {
     "id": "indirect_speech_intro",
     "title": "Indirect Speech",
     "level": "B2.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "reported_speech",
+    "summary": "Indirect Speech is a grammar topic in B2.1 that supports the reported speech learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "B2.1",
-    "revisitedIn": ["B2.2"],
+    "revisitedIn": [
+      "B2.2"
+    ],
     "difficultyStage": "intro",
-    "aliases": ["reported speech", "indirekte rede"],
-    "keywords": ["er sagt, dass", "sie meint"]
+    "aliases": [
+      "reported speech",
+      "indirekte rede"
+    ],
+    "keywords": [
+      "er sagt, dass",
+      "sie meint"
+    ]
   },
   {
     "id": "advanced_connectors",
     "title": "Advanced Connectors",
     "level": "B2.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "connectors",
+    "summary": "Advanced Connectors is a grammar topic in B2.1 that supports the connectors learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "B2.1",
-    "revisitedIn": ["B2.2"],
+    "revisitedIn": [
+      "B2.2"
+    ],
     "difficultyStage": "expanded",
-    "aliases": ["advanced linking words"],
-    "keywords": ["obwohl", "deshalb", "trotzdem", "während"]
+    "aliases": [
+      "advanced linking words"
+    ],
+    "keywords": [
+      "obwohl",
+      "deshalb",
+      "trotzdem",
+      "während"
+    ]
   },
   {
     "id": "connector_obwohl",
     "title": "Connector: obwohl",
     "level": "B2.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "connectors",
+    "summary": "Connector: obwohl is a grammar topic in B2.1 that supports the connectors learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "B2.1",
     "revisitedIn": [],
     "difficultyStage": "expanded",
-    "aliases": ["although"],
-    "keywords": ["obwohl"]
+    "aliases": [
+      "although"
+    ],
+    "keywords": [
+      "obwohl"
+    ]
   },
   {
     "id": "connector_deshalb",
     "title": "Connector: deshalb",
     "level": "B2.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "connectors",
+    "summary": "Connector: deshalb is a grammar topic in B2.1 that supports the connectors learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "B2.1",
     "revisitedIn": [],
     "difficultyStage": "expanded",
-    "aliases": ["therefore"],
-    "keywords": ["deshalb"]
+    "aliases": [
+      "therefore"
+    ],
+    "keywords": [
+      "deshalb"
+    ]
   },
   {
     "id": "connector_trotzdem",
     "title": "Connector: trotzdem",
     "level": "B2.1",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "connectors",
+    "summary": "Connector: trotzdem is a grammar topic in B2.1 that supports the connectors learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "B2.1",
     "revisitedIn": [],
     "difficultyStage": "expanded",
-    "aliases": ["nevertheless"],
-    "keywords": ["trotzdem"]
+    "aliases": [
+      "nevertheless"
+    ],
+    "keywords": [
+      "trotzdem"
+    ]
   },
   {
     "id": "debate_and_argumentation",
     "title": "Debate and Argumentation",
     "level": "B2.2",
-    "category": "communication",
+    "section": "communication",
+    "topicType": "communication",
     "group": "communication_strategies",
+    "summary": "Debate and Argumentation is a communication topic in B2.2 for guided practice in communication strategies.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "B2.2",
     "revisitedIn": [],
     "difficultyStage": "advanced",
-    "aliases": ["debate"],
-    "keywords": ["argumentieren", "widersprechen", "zustimmen"]
+    "aliases": [
+      "debate"
+    ],
+    "keywords": [
+      "argumentieren",
+      "widersprechen",
+      "zustimmen"
+    ]
   },
   {
     "id": "professional_writing",
     "title": "Professional Writing",
     "level": "B2.2",
-    "category": "communication",
+    "section": "communication",
+    "topicType": "communication",
     "group": "work_study",
+    "summary": "Professional Writing is a communication topic in B2.2 for guided practice in work study.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "B2.2",
     "revisitedIn": [],
     "difficultyStage": "advanced",
-    "aliases": ["formal writing"],
-    "keywords": ["formell", "bericht", "stellungnahme"]
+    "aliases": [
+      "formal writing"
+    ],
+    "keywords": [
+      "formell",
+      "bericht",
+      "stellungnahme"
+    ]
   },
   {
     "id": "abstract_topics",
     "title": "Abstract Topics",
     "level": "B2.2",
-    "category": "communication",
+    "section": "communication",
+    "topicType": "communication",
     "group": "society_media",
+    "summary": "Abstract Topics is a communication topic in B2.2 for guided practice in society media.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "B2.2",
     "revisitedIn": [],
     "difficultyStage": "advanced",
-    "aliases": ["abstract discussion"],
-    "keywords": ["gesellschaft", "werte", "entwicklung"]
+    "aliases": [
+      "abstract discussion"
+    ],
+    "keywords": [
+      "gesellschaft",
+      "werte",
+      "entwicklung"
+    ]
   },
   {
     "id": "complex_sentence_transformations",
     "title": "Complex Sentence Transformations",
     "level": "B2.2",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "style",
+    "summary": "Complex Sentence Transformations is a grammar topic in B2.2 that supports the style learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "B2.2",
     "revisitedIn": [],
     "difficultyStage": "advanced",
-    "aliases": ["sentence transformation"],
-    "keywords": ["rewrite sentence", "transform structure"]
+    "aliases": [
+      "sentence transformation"
+    ],
+    "keywords": [
+      "rewrite sentence",
+      "transform structure"
+    ]
   },
   {
     "id": "advanced_relative_clauses",
     "title": "Advanced Relative Clauses",
     "level": "B2.2",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "clauses",
+    "summary": "Advanced Relative Clauses is a grammar topic in B2.2 that supports the clauses learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "B2.2",
     "revisitedIn": [],
     "difficultyStage": "advanced",
-    "aliases": ["relative clauses advanced"],
-    "keywords": ["wessen", "worüber", "in denen"]
+    "aliases": [
+      "relative clauses advanced"
+    ],
+    "keywords": [
+      "wessen",
+      "worüber",
+      "in denen"
+    ]
   },
   {
     "id": "stylistic_variations",
     "title": "Stylistic Variations",
     "level": "B2.2",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "style",
+    "summary": "Stylistic Variations is a grammar topic in B2.2 that supports the style learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "B2.2",
     "revisitedIn": [],
     "difficultyStage": "advanced",
-    "aliases": ["style variations"],
-    "keywords": ["formal", "neutral", "written style"]
+    "aliases": [
+      "style variations"
+    ],
+    "keywords": [
+      "formal",
+      "neutral",
+      "written style"
+    ]
   },
   {
     "id": "formal_vs_informal_tone_advanced",
     "title": "Formal vs Informal Tone",
     "level": "B2.2",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "style",
+    "summary": "Formal vs Informal Tone is a grammar topic in B2.2 that supports the style learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "B2.2",
     "revisitedIn": [],
     "difficultyStage": "advanced",
-    "aliases": ["register"],
-    "keywords": ["tone", "register", "style"]
+    "aliases": [
+      "register"
+    ],
+    "keywords": [
+      "tone",
+      "register",
+      "style"
+    ]
   },
   {
     "id": "indirect_speech_advanced",
     "title": "Indirect Speech (Advanced)",
     "level": "B2.2",
-    "category": "grammar",
+    "section": "grammar",
+    "topicType": "grammar",
     "group": "reported_speech",
+    "summary": "Indirect Speech (Advanced) is a grammar topic in B2.2 that supports the reported speech learning path.",
+    "relatedTopicIds": [],
     "firstIntroducedIn": "B2.2",
     "revisitedIn": [],
     "difficultyStage": "advanced",
-    "aliases": ["reported speech advanced"],
-    "keywords": ["konjunktiv i", "reported statements"]
+    "aliases": [
+      "reported speech advanced"
+    ],
+    "keywords": [
+      "konjunktiv i",
+      "reported statements"
+    ]
   }
 ]

@@ -1,6 +1,7 @@
 import type { LevelProfile } from "./types"
 import type { TopicLevelOrAll } from "@/lib/types/topic"
 import { ALL_LEVEL } from "@/lib/constants/topic"
+export { TOPIC_SECTION_ORDER as SECTION_ORDER } from "@/lib/constants/topic"
 
 export const LEVEL_PROFILES: Record<TopicLevelOrAll, LevelProfile> = {
   [ALL_LEVEL]: {
@@ -40,5 +41,3 @@ export const LEVEL_PROFILES: Record<TopicLevelOrAll, LevelProfile> = {
     description: "Consolidates broad topic control and prepares for advanced-level learning.",
   },
 }
-
-export const CATEGORY_ORDER = ["basics", "vocabulary", "grammar", "communication"]

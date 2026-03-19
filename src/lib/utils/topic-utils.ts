@@ -50,7 +50,8 @@ export const buildSearchText = (topic: TopicCatalogItem | TopicDetail): string =
 
   const values = [
     topic.title,
-    topic.category,
+    topic.section,
+    topic.topicType,
     topic.group,
     ...(topic.aliases ?? []),
     ...(topic.keywords ?? []),

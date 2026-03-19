@@ -2,13 +2,9 @@
   "id": "accusative_case",
   "title": "Accusative Case",
   "level": "A1.2",
-  "category": "grammar",
   "group": "cases",
-
   "summary": "The accusative case is used for the direct object in a sentence — the person or thing directly affected by an action. It answers the question 'Wen?' or 'Was?'.",
-
   "whyItMatters": "Accusative is essential for everyday communication. You need it to express what you see, buy, have, or interact with. It is one of the most frequently used structures in German.",
-
   "mentalModel": [
     {
       "title": "Target of the action",
@@ -19,14 +15,25 @@
       "content": "Accusative = direct object (what is affected). Dative = indirect object (who receives something)."
     }
   ],
-
   "firstIntroducedIn": "A1.2",
-  "revisitedIn": ["A2.1", "A2.2", "B1.1"],
+  "revisitedIn": [
+    "A2.1",
+    "A2.2",
+    "B1.1"
+  ],
   "difficultyStage": "core",
-
-  "aliases": ["Akkusativ", "direct object case"],
-  "keywords": ["wen", "was", "mich", "dich", "den", "einen"],
-
+  "aliases": [
+    "Akkusativ",
+    "direct object case"
+  ],
+  "keywords": [
+    "wen",
+    "was",
+    "mich",
+    "dich",
+    "den",
+    "einen"
+  ],
   "coverageChecklist": [
     "definition",
     "core usage",
@@ -40,7 +47,6 @@
     "common mistakes",
     "special cases"
   ],
-
   "ruleBlocks": [
     {
       "id": "definition",
@@ -53,52 +59,112 @@
       "content": "Used for the direct object — the thing directly affected by the verb. Example: 'Ich habe einen Hund'."
     }
   ],
-
   "tables": [
     {
       "id": "definite_articles",
       "title": "Definite Articles (Accusative)",
-      "columns": ["Gender", "Nominative", "Accusative"],
+      "columns": [
+        "Gender",
+        "Nominative",
+        "Accusative"
+      ],
       "rows": [
-        ["Masculine", "der", "den"],
-        ["Feminine", "die", "die"],
-        ["Neuter", "das", "das"],
-        ["Plural", "die", "die"]
+        [
+          "Masculine",
+          "der",
+          "den"
+        ],
+        [
+          "Feminine",
+          "die",
+          "die"
+        ],
+        [
+          "Neuter",
+          "das",
+          "das"
+        ],
+        [
+          "Plural",
+          "die",
+          "die"
+        ]
       ]
     },
     {
       "id": "indefinite_articles",
       "title": "Indefinite Articles (Accusative)",
-      "columns": ["Gender", "Nominative", "Accusative"],
+      "columns": [
+        "Gender",
+        "Nominative",
+        "Accusative"
+      ],
       "rows": [
-        ["Masculine", "ein", "einen"],
-        ["Feminine", "eine", "eine"],
-        ["Neuter", "ein", "ein"]
+        [
+          "Masculine",
+          "ein",
+          "einen"
+        ],
+        [
+          "Feminine",
+          "eine",
+          "eine"
+        ],
+        [
+          "Neuter",
+          "ein",
+          "ein"
+        ]
       ]
     },
     {
       "id": "personal_pronouns",
       "title": "Personal Pronouns (Accusative)",
-      "columns": ["Nominative", "Accusative"],
+      "columns": [
+        "Nominative",
+        "Accusative"
+      ],
       "rows": [
-        ["ich", "mich"],
-        ["du", "dich"],
-        ["er", "ihn"],
-        ["sie", "sie"],
-        ["es", "es"],
-        ["wir", "uns"],
-        ["ihr", "euch"],
-        ["sie/Sie", "sie/Sie"]
+        [
+          "ich",
+          "mich"
+        ],
+        [
+          "du",
+          "dich"
+        ],
+        [
+          "er",
+          "ihn"
+        ],
+        [
+          "sie",
+          "sie"
+        ],
+        [
+          "es",
+          "es"
+        ],
+        [
+          "wir",
+          "uns"
+        ],
+        [
+          "ihr",
+          "euch"
+        ],
+        [
+          "sie/Sie",
+          "sie/Sie"
+        ]
       ]
     }
   ],
-
   "patterns": [
     "Subject + verb + accusative object",
     "Subject + modal verb + accusative object + infinitive",
     "Wen/Was + verb + subject?"
   ],
-
   "verbs": [
     "haben",
     "sehen",
@@ -107,7 +173,6 @@
     "mögen",
     "finden"
   ],
-
   "prepositions": [
     "durch",
     "für",
@@ -115,7 +180,6 @@
     "ohne",
     "um"
   ],
-
   "twoWayPrepositions": [
     "in",
     "auf",
@@ -127,14 +191,12 @@
     "neben",
     "zwischen"
   ],
-
   "sentenceStructure": [
     "SVO structure with direct object",
     "Pronouns often come before nouns",
     "Accusative object appears after verb in main clause",
     "Used in questions and modal constructions"
   ],
-
   "levelProgression": [
     {
       "level": "A1",
@@ -164,16 +226,27 @@
       ]
     }
   ],
-
   "comparisons": [
     {
       "topicId": "dative_case_intro",
       "summary": "Accusative is the direct object, while dative is the indirect object.",
       "table": {
-        "columns": ["Case", "Question", "Example"],
+        "columns": [
+          "Case",
+          "Question",
+          "Example"
+        ],
         "rows": [
-          ["Accusative", "Wen/Was", "Ich sehe den Mann"],
-          ["Dative", "Wem", "Ich gebe dem Mann das Buch"]
+          [
+            "Accusative",
+            "Wen/Was",
+            "Ich sehe den Mann"
+          ],
+          [
+            "Dative",
+            "Wem",
+            "Ich gebe dem Mann das Buch"
+          ]
         ]
       }
     },
@@ -182,7 +255,6 @@
       "summary": "Nominative is the subject, accusative is the object."
     }
   ],
-
   "examples": [
     {
       "de": "Ich sehe den Mann.",
@@ -197,7 +269,6 @@
       "en": "I have no money."
     }
   ],
-
   "commonMistakes": [
     {
       "wrong": "Ich sehe der Mann.",
@@ -215,7 +286,6 @@
       "reason": "Use 'kein' for negating nouns."
     }
   ],
-
   "specialCases": [
     "Time expressions (e.g. den ganzen Tag)",
     "Accusative with infinitive constructions",
@@ -223,7 +293,6 @@
     "Accusative without article",
     "es as placeholder object"
   ],
-
   "relatedTopicIds": [
     "dative_case_intro",
     "nominative_case",
@@ -231,7 +300,6 @@
     "personal_pronouns_accusative",
     "word_order_modal_verbs"
   ],
-
   "ui": {
     "recommendedSections": [
       "mentalModel",
@@ -243,6 +311,7 @@
       "commonMistakes"
     ]
   },
-
-  "updatedAt": "2026-03-18"
+  "updatedAt": "2026-03-18",
+  "section": "grammar",
+  "topicType": "grammar"
 }

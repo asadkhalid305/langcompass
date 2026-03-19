@@ -1,5 +1,5 @@
-import { humanizeGroupLabel } from "@/lib/explorer/labels"
-import type { ExplorerTopicSection } from "@/lib/explorer/types"
+import { humanizeGroupLabel, humanizeSectionLabel } from "@/lib/explorer/labels"
+import type { ExplorerLevelSection } from "@/lib/explorer/types"
 import type { TopicId, TopicLevelOrAll } from "@/lib/types/topic"
 import { ALL_LEVEL } from "@/lib/constants/topic"
 
@@ -12,7 +12,7 @@ interface ExplorerViewProps {
   hasActiveSearch: boolean
   totalSearchMatches: number
   searchResultsByLevel: SearchResultGroup[]
-  sections: ExplorerTopicSection[]
+  sections: ExplorerLevelSection[]
   focusedGroup: string | null
   onClearFocusedGroup: () => void
   selectedTopicId: TopicId | null
@@ -65,49 +65,78 @@ export function ExplorerView({
 
       {!hasActiveSearch ? (
         <div className="space-y-16">
-          {sections.map((section) => {
-            const hasIntroduced = section.introducedTopics.length > 0
-            const hasRevisited = section.revisitedTopics.length > 0
+          {sections.map((sectionGroup) => {
+            const hasIntroduced = sectionGroup.introducedTopics.length > 0
+            const hasRevisited = sectionGroup.revisitedTopics.length > 0
 
             if (!hasIntroduced && !hasRevisited) return null
 
             return (
-              <section key={section.group} className="[content-visibility:auto]">
-                <header className="mb-6 flex items-baseline gap-4">
-                  <h3 className="text-2xl font-display font-bold">{humanizeGroupLabel(section.group)}</h3>
-                  <p className="text-xs font-medium tracking-widest text-muted-foreground uppercase">{section.topics.length} topics</p>
+              <section key={sectionGroup.section} className="space-y-8 [content-visibility:auto]">
+                <header className="mb-2 flex items-baseline gap-4 border-b border-border/70 pb-3">
+                  <h3 className="text-2xl font-display font-bold">{humanizeSectionLabel(sectionGroup.section)}</h3>
+                  <p className="text-xs font-medium tracking-widest text-muted-foreground uppercase">
+                    {sectionGroup.topics.length} topics
+                  </p>
                 </header>
 
-                <div className="space-y-8">
-                  {hasIntroduced ? (
-                    <div>
-                      <p className="mb-4 text-xs font-bold uppercase tracking-[0.1em] text-muted-foreground">
-                        {selectedLevel === ALL_LEVEL ? "Topics" : `New in ${selectedLevel}`}
-                      </p>
-                      <div className="flex flex-wrap gap-3 md:gap-4">
-                        {section.introducedTopics.map((topic) => (
-                          <TopicNode key={topic.id} topic={topic} isSelected={topic.id === selectedTopicId} onOpenTopic={onOpenTopic} />
-                        ))}
-                      </div>
-                    </div>
-                  ) : null}
+                <div className="space-y-10">
+                  {sectionGroup.groups.map((group) => {
+                    const groupHasIntroduced = group.introducedTopics.length > 0
+                    const groupHasRevisited = group.revisitedTopics.length > 0
 
-                  {hasRevisited ? (
-                    <div>
-                      <p className="mb-4 text-xs font-bold uppercase tracking-[0.1em] text-muted-foreground">Revisited from earlier levels</p>
-                      <div className="flex flex-wrap gap-3 md:gap-4">
-                        {section.revisitedTopics.map((topic) => (
-                          <TopicNode
-                            key={topic.id}
-                            topic={topic}
-                            isSelected={topic.id === selectedTopicId}
-                            showEarlierIndicator
-                            onOpenTopic={onOpenTopic}
-                          />
-                        ))}
-                      </div>
-                    </div>
-                  ) : null}
+                    if (!groupHasIntroduced && !groupHasRevisited) return null
+
+                    return (
+                      <section key={`${sectionGroup.section}:${group.group}`} className="space-y-8">
+                        <header className="mb-6 flex items-baseline gap-4">
+                          <h4 className="text-2xl font-display font-bold">{humanizeGroupLabel(group.group)}</h4>
+                          <p className="text-xs font-medium tracking-widest text-muted-foreground uppercase">
+                            {group.topics.length} topics
+                          </p>
+                        </header>
+
+                        <div className="space-y-8">
+                          {groupHasIntroduced ? (
+                            <div>
+                              <p className="mb-4 text-xs font-bold uppercase tracking-[0.1em] text-muted-foreground">
+                                {selectedLevel === ALL_LEVEL ? "Topics" : `New in ${selectedLevel}`}
+                              </p>
+                              <div className="flex flex-wrap gap-3 md:gap-4">
+                                {group.introducedTopics.map((topic) => (
+                                  <TopicNode
+                                    key={topic.id}
+                                    topic={topic}
+                                    isSelected={topic.id === selectedTopicId}
+                                    onOpenTopic={onOpenTopic}
+                                  />
+                                ))}
+                              </div>
+                            </div>
+                          ) : null}
+
+                          {groupHasRevisited ? (
+                            <div>
+                              <p className="mb-4 text-xs font-bold uppercase tracking-[0.1em] text-muted-foreground">
+                                Revisited from earlier levels
+                              </p>
+                              <div className="flex flex-wrap gap-3 md:gap-4">
+                                {group.revisitedTopics.map((topic) => (
+                                  <TopicNode
+                                    key={topic.id}
+                                    topic={topic}
+                                    isSelected={topic.id === selectedTopicId}
+                                    showEarlierIndicator
+                                    onOpenTopic={onOpenTopic}
+                                  />
+                                ))}
+                              </div>
+                            </div>
+                          ) : null}
+                        </div>
+                      </section>
+                    )
+                  })}
                 </div>
               </section>
             )
@@ -120,11 +149,28 @@ export function ExplorerView({
               <section key={entry.level} className="space-y-3 [content-visibility:auto]">
                 <header className="flex items-end justify-between gap-3 border-b border-border/80 pb-2">
                   <h3 className="text-sm font-semibold">Level {entry.level}</h3>
-                  <p className="text-xs text-muted-foreground">{entry.topics.length} matches</p>
+                  <p className="text-xs text-muted-foreground">{entry.totalCount} matches</p>
                 </header>
-                <div className="flex flex-wrap gap-2.5 md:gap-3">
-                  {entry.topics.map((topic) => (
-                    <TopicNode key={topic.id} topic={topic} isSelected={topic.id === selectedTopicId} onOpenTopic={onOpenTopic} />
+                <div className="space-y-5">
+                  {entry.sections.map((section) => (
+                    <section key={`${entry.level}:${section.section}`} className="space-y-3">
+                      <div className="flex items-center justify-between gap-3">
+                        <h4 className="text-xs font-bold uppercase tracking-[0.1em] text-muted-foreground">
+                          {humanizeSectionLabel(section.section)}
+                        </h4>
+                        <p className="text-xs text-muted-foreground">{section.topics.length} matches</p>
+                      </div>
+                      <div className="flex flex-wrap gap-2.5 md:gap-3">
+                        {section.topics.map((topic) => (
+                          <TopicNode
+                            key={topic.id}
+                            topic={topic}
+                            isSelected={topic.id === selectedTopicId}
+                            onOpenTopic={onOpenTopic}
+                          />
+                        ))}
+                      </div>
+                    </section>
                   ))}
                 </div>
               </section>

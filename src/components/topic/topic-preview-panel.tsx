@@ -25,10 +25,10 @@ const clampPreview = (text: string, maxLength: number): string => {
 }
 
 const fallbackSummary = (topic: TopicCatalogItem): string =>
-  `${topic.title} is part of the ${topic.level} ${topic.group.replace(/[_-]+/g, " ")} path in LangCompass.`
+  `${topic.title} is part of the ${topic.level} ${topic.section} section in the ${topic.group.replace(/[_-]+/g, " ")} path.`
 
 const fallbackWhyItMatters = (topic: TopicCatalogItem): string =>
-  `This topic supports ${topic.category.replace(/[_-]+/g, " ")} fluency and appears in guided practice across the curriculum.`
+  `This topic supports ${topic.section.replace(/[_-]+/g, " ")} fluency and appears in guided practice across the curriculum.`
 
 export function TopicPreviewPanel({
   topic,
@@ -51,7 +51,7 @@ export function TopicPreviewPanel({
     )
   }
 
-  const previewSummary = clampPreview(detail?.summary ?? fallbackSummary(topic), 250)
+  const previewSummary = clampPreview(detail?.summary ?? topic.summary ?? fallbackSummary(topic), 250)
   const previewWhyItMatters = clampPreview(detail?.whyItMatters ?? fallbackWhyItMatters(topic), 220)
   const loadedDetail = hasDetailFile && detail ? detail : null
   const previewMentalModel = loadedDetail?.mentalModel?.[0]?.content

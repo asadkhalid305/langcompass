@@ -12,12 +12,12 @@ import { TopicPreviewDrawer } from "@/components/explorer/shell/topic-preview-dr
 import { useDesktopViewport } from "@/components/explorer/shell/use-desktop-viewport"
 import { useTopicDetailPreview } from "@/components/explorer/shell/use-topic-detail-preview"
 import type { GroupSummary, LevelCounts } from "@/components/explorer/shell/types"
-import { ALLOWED_LEVELS, ALL_LEVEL } from "@/lib/constants/topic"
+import { ALLOWED_LEVELS, ALL_LEVEL, TOPIC_SECTION_ORDER } from "@/lib/constants/topic"
 import { buildExplorerHref, buildOverviewHref, buildTopicDetailHref, parseExplorerQueryState, parseOverviewQueryState } from "@/lib/explorer/navigation"
 import { createTopicSearchEngine } from "@/lib/explorer/search"
-import { getAllLevelTopicCounts, getGroupedTopicSectionsForLevel } from "@/lib/explorer/selectors"
-import type { ExplorerTopicSection } from "@/lib/explorer/types"
-import type { TopicCatalogItem, TopicId, TopicLevel, TopicLevelOrAll } from "@/lib/types/topic"
+import { getAllLevelTopicCounts, getLevelSectionGroups } from "@/lib/explorer/selectors"
+import type { ExplorerLevelSection } from "@/lib/explorer/types"
+import type { TopicCatalogItem, TopicId, TopicLevel, TopicLevelOrAll, TopicSection } from "@/lib/types/topic"
 import { cn } from "@/lib/utils/cn"
 
 interface LangCompassShellProps {
@@ -31,27 +31,46 @@ const sortTopicsByTitle = (topics: TopicCatalogItem[]): TopicCatalogItem[] => [.
 const topicAppearsInLevel = (topic: TopicCatalogItem, level: TopicLevelOrAll): boolean =>
   level === ALL_LEVEL || topic.firstIntroducedIn === level || topic.revisitedIn.includes(level)
 
-const getGroupedTopicSectionsForAllLevels = (topics: TopicCatalogItem[]): ExplorerTopicSection[] => {
-  const grouped = new Map<string, TopicCatalogItem[]>()
+const getLevelSectionsForAllLevels = (topics: TopicCatalogItem[]): ExplorerLevelSection[] =>
+  TOPIC_SECTION_ORDER.map((section) => {
+    const topicsInSection = sortTopicsByTitle(topics.filter((topic) => topic.section === section))
+    const groups = new Map<string, TopicCatalogItem[]>()
 
-  for (const topic of topics) {
-    const existing = grouped.get(topic.group) ?? []
-    existing.push(topic)
-    grouped.set(topic.group, existing)
+    for (const topic of topicsInSection) {
+      const existing = groups.get(topic.group) ?? []
+      existing.push(topic)
+      groups.set(topic.group, existing)
+    }
+
+    return {
+      section,
+      introducedTopics: topicsInSection,
+      revisitedTopics: [],
+      topics: topicsInSection,
+      groups: [...groups.entries()]
+        .sort(([leftGroup], [rightGroup]) => leftGroup.localeCompare(rightGroup))
+        .map(([group, groupTopics]) => {
+          const sortedTopics = sortTopicsByTitle(groupTopics)
+          return {
+            section,
+            group,
+            introducedTopics: sortedTopics,
+            revisitedTopics: [],
+            topics: sortedTopics,
+          }
+        }),
+    }
+  }).filter((section) => section.topics.length > 0)
+
+const getFirstTopicIdFromLevelSections = (sections: ExplorerLevelSection[]): TopicId | null => {
+  for (const section of sections) {
+    for (const group of section.groups) {
+      const firstTopicId = group.topics[0]?.id
+      if (firstTopicId) return firstTopicId
+    }
   }
 
-  return [...grouped.entries()]
-    .sort(([leftGroup], [rightGroup]) => leftGroup.localeCompare(rightGroup))
-    .map(([group, groupTopics]) => {
-      const sortedTopics = sortTopicsByTitle(groupTopics)
-
-      return {
-        group,
-        introducedTopics: sortedTopics,
-        revisitedTopics: [],
-        topics: sortedTopics,
-      }
-    })
+  return null
 }
 
 export function LangCompassShell({ mode, topics, detailTopicIds }: LangCompassShellProps) {
@@ -152,21 +171,17 @@ export function LangCompassShell({ mode, topics, detailTopicIds }: LangCompassSh
     [baseLevelCounts, topics.length],
   )
   const levelSections = useMemo(
-    () => (selectedLevel === ALL_LEVEL ? getGroupedTopicSectionsForAllLevels(topics) : getGroupedTopicSectionsForLevel(topics, selectedLevel)),
+    () => (selectedLevel === ALL_LEVEL ? getLevelSectionsForAllLevels(topics) : getLevelSectionGroups(topics, selectedLevel)),
     [selectedLevel, topics],
   )
 
   const firstTopicByLevel = useMemo(() => {
     const mapping = new Map<TopicLevelOrAll, TopicId | null>()
 
-    const allSections = getGroupedTopicSectionsForAllLevels(topics)
-    const firstTopicIdAcrossAll = allSections.find((section) => section.topics.length > 0)?.topics[0]?.id ?? null
-    mapping.set(ALL_LEVEL, firstTopicIdAcrossAll)
+    mapping.set(ALL_LEVEL, getFirstTopicIdFromLevelSections(getLevelSectionsForAllLevels(topics)))
 
     for (const level of ALLOWED_LEVELS) {
-      const sections = getGroupedTopicSectionsForLevel(topics, level)
-      const firstTopicId = sections.find((section) => section.topics.length > 0)?.topics[0]?.id ?? null
-      mapping.set(level, firstTopicId)
+      mapping.set(level, getFirstTopicIdFromLevelSections(getLevelSectionGroups(topics, level)))
     }
 
     return mapping
@@ -178,22 +193,16 @@ export function LangCompassShell({ mode, topics, detailTopicIds }: LangCompassSh
   const groupSummaries = useMemo<GroupSummary[]>(
     () =>
       levelSections
-        .filter((section) => section.topics.length > 0)
-        .map((section) => {
-          const categoryCounts: Record<string, number> = {}
-          for (const topic of section.topics) {
-            categoryCounts[topic.category] = (categoryCounts[topic.category] ?? 0) + 1
-          }
-          const dominantCategory = Object.entries(categoryCounts).sort((a, b) => b[1] - a[1])[0]?.[0] ?? "basics"
-
-          return {
-            group: section.group,
-            category: dominantCategory,
-            totalCount: section.topics.length,
-            introducedCount: section.introducedTopics.length,
-            revisitedCount: section.revisitedTopics.length,
-          }
-        }),
+        .flatMap((section) =>
+          section.groups.map((group) => ({
+            group: group.group,
+            section: section.section,
+            totalCount: group.topics.length,
+            introducedCount: group.introducedTopics.length,
+            revisitedCount: group.revisitedTopics.length,
+          })),
+        )
+        .filter((summary) => summary.totalCount > 0),
     [levelSections],
   )
 
@@ -213,17 +222,37 @@ export function LangCompassShell({ mode, topics, detailTopicIds }: LangCompassSh
   }, [hasActiveSearch, normalizedQuery, searchEngine])
 
   const searchResultsByLevel = useMemo(() => {
-    const grouped = new Map<TopicLevel, TopicCatalogItem[]>()
+    const grouped = new Map<TopicLevel, Map<TopicSection, TopicCatalogItem[]>>()
 
     for (const level of ALLOWED_LEVELS) {
-      grouped.set(level, [])
+      grouped.set(
+        level,
+        new Map(TOPIC_SECTION_ORDER.map((section) => [section, [] as TopicCatalogItem[]])),
+      )
     }
 
     for (const topic of globalSearchResults) {
-      grouped.get(topic.level)?.push(topic)
+      grouped.get(topic.level)?.get(topic.section)?.push(topic)
     }
 
-    return ALLOWED_LEVELS.map((level) => ({ level, topics: grouped.get(level) ?? [] })).filter((entry) => entry.topics.length > 0)
+    return ALLOWED_LEVELS.map((level) => {
+      const sectionMap = grouped.get(level)
+      const sections =
+        sectionMap === undefined
+          ? []
+          : TOPIC_SECTION_ORDER
+              .map((section) => ({
+                section,
+                topics: sectionMap.get(section) ?? [],
+              }))
+              .filter((entry) => entry.topics.length > 0)
+
+      return {
+        level,
+        totalCount: sections.reduce((sum, entry) => sum + entry.topics.length, 0),
+        sections,
+      }
+    }).filter((entry) => entry.totalCount > 0)
   }, [globalSearchResults])
 
   const explorerSections = useMemo(() => {
@@ -233,7 +262,20 @@ export function LangCompassShell({ mode, topics, detailTopicIds }: LangCompassSh
       return withTopics
     }
 
-    return withTopics.filter((section) => section.group === focusedGroup)
+    return withTopics
+      .map((section) => {
+        const groups = section.groups.filter((group) => group.group === focusedGroup)
+        if (groups.length === 0) return null
+
+        return {
+          ...section,
+          groups,
+          introducedTopics: sortTopicsByTitle(groups.flatMap((group) => group.introducedTopics)),
+          revisitedTopics: sortTopicsByTitle(groups.flatMap((group) => group.revisitedTopics)),
+          topics: sortTopicsByTitle(groups.flatMap((group) => group.topics)),
+        }
+      })
+      .filter((section): section is ExplorerLevelSection => Boolean(section))
   }, [focusedGroup, hasActiveSearch, levelSections])
 
   const selectedTopic = useMemo(() => {
@@ -255,13 +297,13 @@ export function LangCompassShell({ mode, topics, detailTopicIds }: LangCompassSh
     : null
 
   const previewRelatedTopics = useMemo(() => {
-    const relatedTopicIds = selectedTopicDetail?.relatedTopicIds ?? []
+    const relatedTopicIds = selectedTopicDetail?.relatedTopicIds ?? selectedTopic?.relatedTopicIds ?? []
     if (relatedTopicIds.length === 0) return []
 
     return relatedTopicIds
       .map((relatedTopicId) => topicsById.get(relatedTopicId))
       .filter((relatedTopic): relatedTopic is TopicCatalogItem => Boolean(relatedTopic))
-  }, [selectedTopicDetail, topicsById])
+  }, [selectedTopic, selectedTopicDetail, topicsById])
 
   useEffect(() => {
     if (!isExplorerMode) return

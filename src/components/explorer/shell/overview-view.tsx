@@ -2,10 +2,10 @@ import { ArrowRight } from "lucide-react"
 import { useMemo } from "react"
 
 import { Button } from "@/components/ui/button"
-import { humanizeGroupLabel } from "@/lib/explorer/labels"
+import { humanizeGroupLabel, humanizeSectionLabel } from "@/lib/explorer/labels"
 import { cn } from "@/lib/utils/cn"
 
-import { CATEGORY_ORDER } from "./constants"
+import { SECTION_ORDER } from "./constants"
 import type { GroupSummary, LevelCounts, LevelProfile } from "./types"
 import type { TopicLevelOrAll } from "@/lib/types/topic"
 import { ALL_LEVEL } from "@/lib/constants/topic"
@@ -19,21 +19,6 @@ interface OverviewViewProps {
   onExploreGroup: (group: string) => void
 }
 
-const getCategoryLabel = (category: string): string => {
-  switch (category.toLowerCase()) {
-    case "basics":
-      return "Basics"
-    case "vocabulary":
-      return "Vocabulary"
-    case "grammar":
-      return "Grammar"
-    case "communication":
-      return "Communication"
-    default:
-      return category.charAt(0).toUpperCase() + category.slice(1)
-  }
-}
-
 export function OverviewView({
   selectedLevel,
   levelProfile,
@@ -42,24 +27,24 @@ export function OverviewView({
   onExploreLevel,
   onExploreGroup,
 }: OverviewViewProps) {
-  const groupedByCategory = useMemo(() => {
+  const groupedBySection = useMemo(() => {
     const grouped = new Map<string, GroupSummary[]>()
     for (const summary of groupSummaries) {
-      const existing = grouped.get(summary.category) ?? []
+      const existing = grouped.get(summary.section) ?? []
       existing.push(summary)
-      grouped.set(summary.category, existing)
+      grouped.set(summary.section, existing)
     }
 
     const ordered = new Map<string, GroupSummary[]>()
-    for (const category of CATEGORY_ORDER) {
-      if (grouped.has(category)) {
-        ordered.set(category, grouped.get(category) ?? [])
+    for (const section of SECTION_ORDER) {
+      if (grouped.has(section)) {
+        ordered.set(section, grouped.get(section) ?? [])
       }
     }
 
-    for (const [category, groups] of grouped) {
-      if (!ordered.has(category)) {
-        ordered.set(category, groups)
+    for (const [section, groups] of grouped) {
+      if (!ordered.has(section)) {
+        ordered.set(section, groups)
       }
     }
 
@@ -103,25 +88,25 @@ export function OverviewView({
       </section>
 
       <div className="space-y-10">
-        {Array.from(groupedByCategory.entries()).map(([category, groups]) => (
-          <section key={category}>
+        {Array.from(groupedBySection.entries()).map(([section, groups]) => (
+          <section key={section}>
             <div className="flex items-center gap-3 mb-5">
               <span
                 className={cn(
                   "inline-block w-2.5 h-2.5 rounded-full",
-                  category === "basics"
+                  section === "themes"
                     ? "bg-syntax-main"
-                    : category === "vocabulary"
-                      ? "bg-vocab-main"
-                      : category === "grammar"
+                    : section === "grammar"
                         ? "bg-grammar-main"
-                        : category === "communication"
+                        : section === "communication"
                           ? "bg-comm-main"
                           : "bg-foreground",
                 )}
                 aria-hidden="true"
               />
-              <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">{getCategoryLabel(category)}</p>
+              <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">
+                {humanizeSectionLabel(section as GroupSummary["section"])}
+              </p>
             </div>
             <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
               {groups.map((groupSummary) => (

@@ -1,4 +1,4 @@
-import type { TopicCatalogItem, TopicDetail, TopicLevel, TopicLevelOrAll } from "@/lib/types/topic"
+import type { TopicCatalogItem, TopicDetail, TopicLevel, TopicLevelOrAll, TopicSection } from "@/lib/types/topic"
 
 export interface TopicDetailResponse {
   detail: TopicDetail | null
@@ -11,7 +11,7 @@ export interface LevelProfile {
 
 export interface GroupSummary {
   group: string
-  category: string
+  section: TopicSection
   totalCount: number
   introducedCount: number
   revisitedCount: number
@@ -28,5 +28,9 @@ export type LevelCounts = Record<
 
 export interface SearchResultGroup {
   level: TopicLevel
-  topics: TopicCatalogItem[]
+  totalCount: number
+  sections: Array<{
+    section: TopicSection
+    topics: TopicCatalogItem[]
+  }>
 }

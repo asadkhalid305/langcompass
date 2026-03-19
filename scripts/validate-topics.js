@@ -11,26 +11,55 @@ const detailsDir = path.join(dataRoot, "topic-details")
 
 const ALLOWED_LEVELS = ["A1.1", "A1.2", "A2.1", "A2.2", "B1.1", "B1.2", "B2.1", "B2.2"]
 const ALLOWED_DIFFICULTY_STAGES = ["intro", "core", "expanded", "combined", "advanced"]
+const ALLOWED_TOPIC_SECTIONS = ["themes", "grammar", "communication"]
+const ALLOWED_TOPIC_TYPES = ["theme", "grammar", "communication"]
+
+const LEGACY_CATEGORY_TO_SECTION = {
+  basics: "themes",
+  vocabulary: "themes",
+  communication: "communication",
+  grammar: "grammar",
+}
+
+const TOPIC_TYPE_BY_SECTION = {
+  themes: "theme",
+  grammar: "grammar",
+  communication: "communication",
+}
 
 const requiredString = z.string().trim().min(1)
+const optionalString = z.string().trim().min(1).optional()
 const topicId = requiredString
 const levelSchema = z.enum(ALLOWED_LEVELS)
 const difficultySchema = z.enum(ALLOWED_DIFFICULTY_STAGES)
+const sectionSchema = z.enum(ALLOWED_TOPIC_SECTIONS)
+const topicTypeSchema = z.enum(ALLOWED_TOPIC_TYPES)
 const datetimeSchema = requiredString
 const levelArray = z.array(levelSchema)
 const progressionLevelSchema = z.union([z.literal("A1"), z.literal("A2"), z.literal("B1"), z.literal("B2"), levelSchema])
+
+const lessonRefSchema = z.object({
+  curriculum: requiredString,
+  module: requiredString,
+  lesson: optionalString,
+})
 
 const topicCatalogItemSchema = z.object({
   id: topicId,
   title: requiredString,
   level: levelSchema,
-  category: requiredString,
+  section: sectionSchema.optional(),
+  topicType: topicTypeSchema.optional(),
+  category: requiredString.optional(),
   group: requiredString,
-  firstIntroducedIn: levelSchema,
-  revisitedIn: levelArray,
-  difficultyStage: difficultySchema,
-  aliases: z.array(requiredString),
-  keywords: z.array(requiredString),
+  summary: requiredString.optional(),
+  relatedTopicIds: z.array(topicId).optional(),
+  lessonRefs: z.array(lessonRefSchema).optional(),
+  firstIntroducedIn: levelSchema.optional(),
+  revisitedIn: levelArray.optional(),
+  difficultyStage: difficultySchema.optional(),
+  aliases: z.array(requiredString).default([]),
+  keywords: z.array(requiredString).default([]),
 })
 
 const topicCatalogSchema = z.array(topicCatalogItemSchema)
@@ -39,7 +68,6 @@ const topicDetailSchema = topicCatalogItemSchema.extend({
   summary: requiredString,
   whyItMatters: requiredString.optional(),
   prerequisiteTopicIds: z.array(topicId).optional(),
-  relatedTopicIds: z.array(topicId).optional(),
   mentalModel: z
     .array(
       z.object({
@@ -49,13 +77,15 @@ const topicDetailSchema = topicCatalogItemSchema.extend({
     )
     .optional(),
   coverageChecklist: z.array(requiredString).optional(),
-  ruleBlocks: z.array(
-    z.object({
-      id: topicId,
-      title: requiredString,
-      content: requiredString,
-    }),
-  ).min(1),
+  ruleBlocks: z
+    .array(
+      z.object({
+        id: topicId,
+        title: requiredString,
+        content: requiredString,
+      }),
+    )
+    .min(1),
   tables: z
     .array(
       z.object({
@@ -71,8 +101,8 @@ const topicDetailSchema = topicCatalogItemSchema.extend({
       z.object({
         id: topicId.optional(),
         de: requiredString,
-        en: z.string().trim().min(1).optional(),
-        note: z.string().trim().min(1).optional(),
+        en: optionalString,
+        note: optionalString,
       }),
     )
     .optional(),
@@ -155,7 +185,7 @@ const topicDetailSchema = topicCatalogItemSchema.extend({
     .object({
       origin: requiredString,
       confidence: z.union([z.literal("low"), z.literal("medium"), z.literal("high")]),
-      notes: z.string().trim().min(1).optional(),
+      notes: optionalString,
     })
     .optional(),
   updatedAt: datetimeSchema,
@@ -167,6 +197,14 @@ const printIssues = (context, issues) => {
   for (const issue of issues) {
     const path = issue.path.length > 0 ? issue.path.join(".") : "(root)"
     console.log(`- ${path}: ${issue.message}`)
+  }
+}
+
+const printMessages = (context, messages) => {
+  if (!messages.length) return
+  console.log(`\n${context}`)
+  for (const message of messages) {
+    console.log(`- ${message}`)
   }
 }
 
@@ -183,6 +221,96 @@ const parseJson = async (filePath) => {
   return JSON.parse(raw)
 }
 
+const deriveTopicSection = (section, topicType, category) => {
+  if (typeof section === "string" && ALLOWED_TOPIC_SECTIONS.includes(section)) {
+    return section
+  }
+
+  if (topicType === "theme") return "themes"
+  if (topicType === "grammar") return "grammar"
+  if (topicType === "communication") return "communication"
+
+  if (typeof category === "string") {
+    const normalizedCategory = category.trim().toLowerCase()
+    if (normalizedCategory in LEGACY_CATEGORY_TO_SECTION) {
+      return LEGACY_CATEGORY_TO_SECTION[normalizedCategory]
+    }
+  }
+
+  return "grammar"
+}
+
+const normalizeTopicType = (section, topicType) => {
+  const expectedTopicType = TOPIC_TYPE_BY_SECTION[section]
+  if (typeof topicType !== "string" || !ALLOWED_TOPIC_TYPES.includes(topicType)) {
+    return expectedTopicType
+  }
+  return topicType === expectedTopicType ? topicType : expectedTopicType
+}
+
+const buildCatalogSummary = ({ title, level, section, group }) => {
+  const groupLabel = group.replace(/[_-]+/g, " ").trim()
+
+  switch (section) {
+    case "themes":
+      return `${title} is a theme in ${level} that supports the ${groupLabel} module path.`
+    case "communication":
+      return `${title} is a communication topic in ${level} for guided practice in ${groupLabel}.`
+    case "grammar":
+    default:
+      return `${title} is a grammar topic in ${level} that supports the ${groupLabel} learning path.`
+  }
+}
+
+const normalizeCatalogItem = (item) => {
+  const section = deriveTopicSection(item.section, item.topicType, item.category)
+  const topicType = normalizeTopicType(section, item.topicType)
+
+  return {
+    id: item.id,
+    title: item.title,
+    level: item.level,
+    section,
+    topicType,
+    group: item.group,
+    summary: item.summary ?? buildCatalogSummary({ title: item.title, level: item.level, section, group: item.group }),
+    relatedTopicIds: item.relatedTopicIds ?? [],
+    lessonRefs: item.lessonRefs,
+    firstIntroducedIn: item.firstIntroducedIn ?? item.level,
+    revisitedIn: item.revisitedIn ?? [],
+    difficultyStage: item.difficultyStage ?? "intro",
+    aliases: item.aliases ?? [],
+    keywords: item.keywords ?? [],
+  }
+}
+
+const collectModelWarnings = (context, rawItem, normalizedItem, validTopicIds = null) => {
+  const warnings = []
+  if (!rawItem.section) {
+    warnings.push(`${context}: missing section, normalized to "${normalizedItem.section}"`)
+  }
+  if (!rawItem.topicType) {
+    warnings.push(`${context}: missing topicType, normalized to "${normalizedItem.topicType}"`)
+  }
+
+  const expectedTopicType = TOPIC_TYPE_BY_SECTION[normalizedItem.section]
+  if (rawItem.topicType && rawItem.topicType !== expectedTopicType) {
+    warnings.push(
+      `${context}: section "${normalizedItem.section}" and topicType "${rawItem.topicType}" mismatch, expected "${expectedTopicType}"`,
+    )
+  }
+
+  if (validTopicIds instanceof Set) {
+    for (const reference of normalizedItem.relatedTopicIds) {
+      if (!validTopicIds.has(reference)) {
+        warnings.push(`${context}: relatedTopicIds references invalid id "${reference}"`)
+      }
+    }
+  }
+
+  return warnings
+}
+
 const validateCatalog = async () => {
   const parsedRaw = await parseJson(catalogPath)
   const parsed = topicCatalogSchema.safeParse(parsedRaw)
@@ -194,17 +322,24 @@ const validateCatalog = async () => {
       ids: [],
       duplicateIds: [],
       issues: parsed.error.issues,
+      warnings: [],
     }
   }
 
-  const ids = parsed.data.map((item) => item.id)
+  const items = parsed.data.map(normalizeCatalogItem)
+  const ids = items.map((item) => item.id)
+  const validTopicIds = new Set(ids)
+  const warnings = parsed.data.flatMap((rawItem, index) =>
+    collectModelWarnings(`topic-catalog.json[${index}] (${rawItem.id})`, rawItem, items[index], validTopicIds),
+  )
 
   return {
     valid: true,
-    items: parsed.data,
+    items,
     ids,
     duplicateIds: duplicates(ids),
     issues: [],
+    warnings,
   }
 }
 
@@ -219,6 +354,7 @@ const validateTopicDetails = async (validTopicIds) => {
   const duplicateIds = []
   const fileIssues = []
   const referenceIssues = []
+  const warnings = []
 
   const seenIds = []
   const checkReference = (fileName, sourceId, fieldPath, reference) => {
@@ -239,6 +375,10 @@ const validateTopicDetails = async (validTopicIds) => {
         continue
       }
 
+      const normalized = normalizeCatalogItem(parsed.data)
+
+      warnings.push(...collectModelWarnings(`topic-details/${file.name} (${parsed.data.id})`, parsed.data, normalized, validIds))
+
       if (parsed.data.id !== fileId) {
         filenameMismatches.push(`${file.name}: id "${parsed.data.id}" != filename "${fileId}"`)
       }
@@ -251,9 +391,6 @@ const validateTopicDetails = async (validTopicIds) => {
 
       for (const reference of parsed.data.prerequisiteTopicIds ?? []) {
         checkReference(file.name, parsed.data.id, "prerequisiteTopicIds", reference)
-      }
-      for (const reference of parsed.data.relatedTopicIds ?? []) {
-        checkReference(file.name, parsed.data.id, "relatedTopicIds", reference)
       }
       for (const [index, comparison] of (parsed.data.comparisons ?? []).entries()) {
         checkReference(file.name, parsed.data.id, `comparisons[${index}].topicId`, comparison.topicId)
@@ -273,6 +410,7 @@ const validateTopicDetails = async (validTopicIds) => {
     filenameMismatches,
     fileIssues,
     referenceIssues,
+    warnings,
   }
 }
 
@@ -289,14 +427,11 @@ async function main() {
 
   if (catalog.duplicateIds.length > 0) {
     hasFailures = true
-    console.log("\nDuplicate topic ids in topic-catalog.json:")
-    for (const duplicate of catalog.duplicateIds) {
-      console.log(`- ${duplicate}`)
-    }
+    printMessages("Duplicate topic ids in topic-catalog.json:", catalog.duplicateIds)
   }
 
   if (!catalog.valid) {
-    console.log("\n❌ Failed: topic-catalog.json must be valid before topic-details can be checked.")
+    console.log("\nValidation status: ❌ failed")
     process.exitCode = 1
     return
   }
@@ -312,35 +447,26 @@ async function main() {
 
   if (details.duplicateIds.length > 0) {
     hasFailures = true
-    console.log("\nDuplicate topic ids in topic-details:")
-    for (const duplicate of details.duplicateIds) {
-      console.log(`- ${duplicate}`)
-    }
+    printMessages("Duplicate topic ids in topic-details:", details.duplicateIds)
   }
 
   if (details.invalidIds.length > 0) {
     hasFailures = true
-    console.log("\ntopic-details files whose id is missing from topic-catalog.json:")
-    for (const invalidId of details.invalidIds) {
-      console.log(`- ${invalidId}`)
-    }
+    printMessages("topic-details files whose id is missing from topic-catalog.json:", details.invalidIds)
   }
 
   if (details.filenameMismatches.length > 0) {
     hasFailures = true
-    console.log("\nFilename/id mismatches in topic-details:")
-    for (const mismatch of details.filenameMismatches) {
-      console.log(`- ${mismatch}`)
-    }
+    printMessages("Filename/id mismatches in topic-details:", details.filenameMismatches)
   }
 
   if (details.referenceIssues.length > 0) {
     hasFailures = true
-    console.log("\nInvalid references in topic-details:")
-    for (const issue of details.referenceIssues) {
-      console.log(`- ${issue}`)
-    }
+    printMessages("Invalid references in topic-details:", details.referenceIssues)
   }
+
+  const warnings = [...catalog.warnings, ...details.warnings]
+  printMessages("Warnings:", warnings)
 
   if (hasFailures) {
     console.log("\nValidation status: ❌ failed")
@@ -351,6 +477,7 @@ async function main() {
   console.log("\nValidation status: ✅ passed")
   console.log(`Catalog entries: ${catalog.items.length}`)
   console.log(`Detail entries: ${details.count}`)
+  console.log(`Warnings: ${warnings.length}`)
 }
 
 main().catch((error) => {

@@ -6,16 +6,27 @@ export type TopicProgressionLevel = "A1" | "A2" | "B1" | "B2" | TopicLevel
 
 export type TopicId = string
 
-export type TopicCategory = string
+export type TopicSection = "themes" | "grammar" | "communication"
+export type TopicType = "theme" | "grammar" | "communication"
 
 export type TopicGroup = string
+
+export interface TopicLessonRef {
+  curriculum: string
+  module: string
+  lesson?: string
+}
 
 export interface TopicCatalogItem {
   id: TopicId
   title: string
   level: TopicLevel
-  category: TopicCategory
+  section: TopicSection
+  topicType: TopicType
   group: TopicGroup
+  summary: string
+  relatedTopicIds: TopicId[]
+  lessonRefs?: TopicLessonRef[]
   firstIntroducedIn: TopicLevel
   revisitedIn: TopicLevel[]
   difficultyStage: TopicDifficultyStage
@@ -95,10 +106,8 @@ export interface TopicComparison {
 }
 
 export interface TopicDetail extends TopicCatalogItem {
-  summary: string
   whyItMatters?: string
   prerequisiteTopicIds?: TopicId[]
-  relatedTopicIds?: TopicId[]
   ruleBlocks: TopicRuleBlock[]
   tables?: TopicTable[]
   examples?: TopicExample[]

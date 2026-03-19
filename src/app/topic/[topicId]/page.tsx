@@ -32,7 +32,7 @@ export default async function TopicDetailPage({ params }: TopicDetailPageProps) 
 
   const detail = await loadTopicDetailById(topic.id)
   const prerequisiteTopics = resolveTopicLinks(detail?.prerequisiteTopicIds, topicsById)
-  const relatedTopics = resolveTopicLinks(detail?.relatedTopicIds, topicsById)
+  const relatedTopics = resolveTopicLinks(detail?.relatedTopicIds ?? topic.relatedTopicIds, topicsById)
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-background via-background to-muted/40">

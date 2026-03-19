@@ -1,5 +1,5 @@
 import { ALLOWED_LEVELS } from "../constants"
-import type { TopicCatalogItem, TopicDifficultyStage, TopicLevel } from "../types"
+import type { TopicCatalogItem, TopicDifficultyStage, TopicLevel, TopicSection, TopicType } from "../types"
 
 const toTitleCase = (value: string): string =>
   value
@@ -29,6 +29,7 @@ export const formatTopicProgressLabels = (topic: Pick<TopicCatalogItem, "firstIn
   revisited: formatRevisitedInLabel(topic.revisitedIn),
 })
 
-export const humanizeCategoryLabel = (category: string): string => humanizeValue(category)
+export const humanizeSectionLabel = (section: TopicSection): string => humanizeValue(section)
 export const humanizeGroupLabel = (group: string): string => humanizeValue(group)
 export const humanizeDifficultyStageLabel = (stage: TopicDifficultyStage): string => humanizeValue(stage)
+export const humanizeTopicTypeLabel = (topicType: TopicType): string => humanizeValue(topicType)

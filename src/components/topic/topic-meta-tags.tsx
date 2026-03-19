@@ -1,13 +1,13 @@
 import { Badge } from "@/components/ui/badge"
 import {
-  humanizeCategoryLabel,
   humanizeDifficultyStageLabel,
   humanizeGroupLabel,
+  humanizeSectionLabel,
 } from "@/lib/explorer/labels"
 import type { TopicCatalogItem } from "@/lib/types/topic"
 
 interface TopicMetaTagsProps {
-  topic: Pick<TopicCatalogItem, "level" | "category" | "group" | "difficultyStage">
+  topic: Pick<TopicCatalogItem, "level" | "section" | "group" | "difficultyStage">
   hasDetailFile?: boolean
   className?: string
 }
@@ -19,7 +19,7 @@ export function TopicMetaTags({ topic, hasDetailFile, className }: TopicMetaTags
         Level {topic.level}
       </Badge>
       <Badge variant="outline" className="rounded-none border-border/80 bg-white/70 text-[11px] uppercase tracking-[0.08em]">
-        {humanizeCategoryLabel(topic.category)}
+        {humanizeSectionLabel(topic.section)}
       </Badge>
       <Badge variant="outline" className="rounded-none border-border/80 bg-white/70 text-[11px] uppercase tracking-[0.08em]">
         {humanizeGroupLabel(topic.group)}

@@ -12,8 +12,8 @@ export function TopicDetailHeader({ topic, detail }: TopicDetailHeaderProps) {
       <p className="text-xs font-bold uppercase tracking-[0.1em] text-muted-foreground">Full lesson page</p>
       <h1 className="mt-4 max-w-4xl text-pretty text-3xl font-display font-bold leading-tight md:text-5xl">{topic.title}</h1>
       <TopicMetaTags topic={topic} hasDetailFile={Boolean(detail)} className="mt-5 flex flex-wrap gap-2" />
-      {detail?.summary ? (
-        <p className="mt-6 max-w-3xl text-base leading-relaxed text-foreground md:text-lg">{detail.summary}</p>
+      {detail?.summary || topic.summary ? (
+        <p className="mt-6 max-w-3xl text-base leading-relaxed text-foreground md:text-lg">{detail?.summary ?? topic.summary}</p>
       ) : (
         <p className="mt-6 max-w-3xl text-base leading-relaxed text-muted-foreground">
           This topic currently has curriculum metadata, and the full lesson content is being prepared.

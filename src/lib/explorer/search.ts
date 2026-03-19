@@ -13,8 +13,10 @@ interface TopicSearchDocument {
   title: string
   aliases: string[]
   keywords: string[]
+  summary: string
   level: string
-  category: string
+  section: string
+  topicType: string
   group: string
 }
 
@@ -31,8 +33,10 @@ const toSearchDocument = (topic: TopicCatalogItem): TopicSearchDocument => ({
   title: normalizeSearchText(topic.title),
   aliases: topic.aliases.map((alias) => normalizeSearchText(alias)),
   keywords: topic.keywords.map((keyword) => normalizeSearchText(keyword)),
+  summary: normalizeSearchText(topic.summary),
   level: normalizeSearchText(topic.level),
-  category: normalizeSearchText(topic.category),
+  section: normalizeSearchText(topic.section),
+  topicType: normalizeSearchText(topic.topicType),
   group: normalizeSearchText(topic.group),
 })
 
@@ -46,10 +50,12 @@ const buildFuseOptions = (config: TopicSearchConfig): IFuseOptions<TopicSearchDo
   keys: [
     { name: "title", weight: 0.42 },
     { name: "aliases", weight: 0.24 },
-    { name: "keywords", weight: 0.2 },
+    { name: "keywords", weight: 0.15 },
+    { name: "summary", weight: 0.09 },
     { name: "group", weight: 0.06 },
-    { name: "category", weight: 0.05 },
-    { name: "level", weight: 0.03 },
+    { name: "section", weight: 0.02 },
+    { name: "topicType", weight: 0.01 },
+    { name: "level", weight: 0.01 },
   ],
 })
 

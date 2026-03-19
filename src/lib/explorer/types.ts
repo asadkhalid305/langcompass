@@ -1,4 +1,4 @@
-import type { TopicCatalogItem, TopicLevel } from "../types"
+import type { TopicCatalogItem, TopicLevel, TopicSection } from "../types"
 export type TopicSearchBoostField = "title" | "alias" | null
 
 export interface TopicSearchConfig {
@@ -21,11 +21,20 @@ export interface TopicSearchResult {
   boostedField: TopicSearchBoostField
 }
 
-export interface ExplorerTopicSection {
+export interface ExplorerTopicGroup {
+  section: TopicSection
   group: string
   introducedTopics: TopicCatalogItem[]
   revisitedTopics: TopicCatalogItem[]
   topics: TopicCatalogItem[]
+}
+
+export interface ExplorerLevelSection {
+  section: TopicSection
+  introducedTopics: TopicCatalogItem[]
+  revisitedTopics: TopicCatalogItem[]
+  topics: TopicCatalogItem[]
+  groups: ExplorerTopicGroup[]
 }
 
 export interface LevelTopicCounts {
@@ -33,6 +42,6 @@ export interface LevelTopicCounts {
   introducedCount: number
   revisitedCount: number
   totalCount: number
-  byCategory: Record<string, number>
+  bySection: Record<TopicSection, number>
   byGroup: Record<string, number>
 }
