@@ -18,7 +18,7 @@
 
 - Main flow: level navigation -> overview/explorer -> topic detail panel -> optional full lesson page.
 - Default browsing starts in `All` level mode (unfiltered across CEFR sub-levels).
-- Search is catalog-based (title, aliases, keywords, group/category/level).
+- Search is catalog-based (title, aliases, keywords, summary, group/section/topicType/level).
 - Topic details are progressively loaded from `/api/topic-details/[topicId]`.
 - Current content status: catalog is broad; detail files are partial (some topics remain metadata-only), while richer files can drive structured lesson sections.
 
@@ -61,7 +61,7 @@
 
 - Two views in one shell:
 - `overview`: level summary + grouped cards
-- `explorer`: grouped topic nodes + global search results
+- `explorer`: section -> group -> topic nodes + global search results grouped by level and section
 - Detail UX:
 - Desktop: right-side sticky panel
 - Mobile: bottom sheet
@@ -73,6 +73,7 @@
 - Keep app static-first; do not add DB/auth/backend services for routine changes.
 - Catalog and detail files share overlapping fields; detail extends catalog shape.
 - `topicId` is the join key across catalog, detail filename, API route, and UI selection state.
+- Topic taxonomy is section-first (`themes`, `grammar`, `communication`) with constrained `topicType`; legacy `category` values are compatibility inputs normalized at load/validation time.
 - CEFR level ordering is fixed by `ALLOWED_LEVELS`; do not infer/sort levels ad hoc.
 - `All` is a UI/navigation pseudo-level (`ALLOWED_LEVEL_OPTIONS`), not a persisted catalog/detail `level` value.
 - Detail comparisons must reference valid catalog `topicId` values (validated by `validate:topics`).
@@ -105,7 +106,8 @@
 
 - `topic-catalog.json`: lightweight index used for navigation, filtering, and search.
 - `topic-details/<topicId>.json`: rich instructional content for one topic.
-- Keep overlapping metadata consistent (`id`, level/category/group, aliases/keywords, etc.).
+- Keep overlapping metadata consistent (`id`, level/section/topicType/group, aliases/keywords, etc.).
+- Catalog is expected to carry navigation/search metadata (`summary`, `relatedTopicIds`, optional `lessonRefs`) even when detail files are sparse.
 - Filename must equal topic `id` (`<id>.json`), and every detail `id` must exist in catalog.
 - Missing detail files are valid; UI already supports metadata-only topics.
 
