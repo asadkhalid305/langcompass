@@ -2,12 +2,12 @@ import { ArrowRight } from "lucide-react"
 import { useMemo } from "react"
 
 import { Button } from "@/components/ui/button"
-import { humanizeGroupLabel, humanizeSectionLabel } from "@/lib/explorer/labels"
+import { humanizeGroupLabel, humanizeSectionLabel, isSectionFallbackGroup } from "@/lib/explorer/labels"
 import { cn } from "@/lib/utils/cn"
 
 import { SECTION_ORDER } from "./constants"
 import type { GroupSummary, LevelCounts, LevelProfile } from "./types"
-import type { TopicLevelOrAll } from "@/lib/types/topic"
+import type { TopicLevelOrAll, TopicSection } from "@/lib/types/topic"
 import { ALL_LEVEL } from "@/lib/constants/topic"
 
 interface OverviewViewProps {
@@ -120,7 +120,11 @@ export function OverviewView({
                     "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground",
                   )}
                 >
-                  <h3 className="text-sm font-bold font-sans group-hover:underline underline-offset-2">{humanizeGroupLabel(groupSummary.group)}</h3>
+                  <h3 className="text-sm font-bold font-sans group-hover:underline underline-offset-2">
+                    {isSectionFallbackGroup(groupSummary.group, groupSummary.section as TopicSection)
+                      ? "All topics"
+                      : humanizeGroupLabel(groupSummary.group)}
+                  </h3>
                   <p className="text-xs tracking-wider text-muted-foreground uppercase font-medium">
                     {groupSummary.introducedCount > 0 ? `${groupSummary.introducedCount} new` : null}
                     {groupSummary.introducedCount > 0 && groupSummary.revisitedCount > 0 ? " · " : null}

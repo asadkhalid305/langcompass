@@ -1,4 +1,4 @@
-import { humanizeGroupLabel, humanizeSectionLabel } from "@/lib/explorer/labels"
+import { humanizeGroupLabel, humanizeSectionLabel, isSectionFallbackGroup } from "@/lib/explorer/labels"
 import type { ExplorerLevelSection } from "@/lib/explorer/types"
 import type { TopicId, TopicLevelOrAll } from "@/lib/types/topic"
 import { ALL_LEVEL } from "@/lib/constants/topic"
@@ -84,17 +84,20 @@ export function ExplorerView({
                   {sectionGroup.groups.map((group) => {
                     const groupHasIntroduced = group.introducedTopics.length > 0
                     const groupHasRevisited = group.revisitedTopics.length > 0
+                    const showGroupHeading = !(sectionGroup.groups.length === 1 && isSectionFallbackGroup(group.group, sectionGroup.section))
 
                     if (!groupHasIntroduced && !groupHasRevisited) return null
 
                     return (
                       <section key={`${sectionGroup.section}:${group.group}`} className="space-y-8">
-                        <header className="mb-6 flex items-baseline gap-4">
-                          <h4 className="text-2xl font-display font-bold">{humanizeGroupLabel(group.group)}</h4>
-                          <p className="text-xs font-medium tracking-widest text-muted-foreground uppercase">
-                            {group.topics.length} topics
-                          </p>
-                        </header>
+                        {showGroupHeading ? (
+                          <header className="mb-6 flex items-baseline gap-4">
+                            <h4 className="text-2xl font-display font-bold">{humanizeGroupLabel(group.group)}</h4>
+                            <p className="text-xs font-medium tracking-widest text-muted-foreground uppercase">
+                              {group.topics.length} topics
+                            </p>
+                          </header>
+                        ) : null}
 
                         <div className="space-y-8">
                           {groupHasIntroduced ? (

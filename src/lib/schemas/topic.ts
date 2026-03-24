@@ -85,8 +85,8 @@ const normalizeTopicType = (section: TopicSection, topicType: unknown): TopicTyp
   return normalized === expectedTopicType ? normalized : expectedTopicType
 }
 
-const buildCatalogSummary = (input: { title: string; level: TopicLevel; section: TopicSection; group: string }): string => {
-  const groupLabel = input.group.replace(/[_-]+/g, " ").trim()
+const buildCatalogSummary = (input: { title: string; level: TopicLevel; section: TopicSection; group?: string }): string => {
+  const groupLabel = (input.group ?? input.section).replace(/[_-]+/g, " ").trim()
 
   switch (input.section) {
     case "themes":
@@ -106,7 +106,7 @@ const baseTopicInputSchema = z.object({
   section: topicSectionSchema.optional(),
   topicType: topicTypeSchema.optional(),
   category: requiredString.optional(),
-  group: requiredString,
+  group: requiredString.optional(),
   summary: requiredString.optional(),
   relatedTopicIds: z.array(TopicIdSchema).default([]).optional(),
   lessonRefs: z
@@ -135,7 +135,7 @@ const normalizeCatalogItem = (item: z.infer<typeof baseTopicInputSchema>): Topic
     level: item.level,
     section,
     topicType,
-    group: item.group,
+    group: item.group ?? section,
     summary: item.summary ?? buildCatalogSummary({ title: item.title, level: item.level, section, group: item.group }),
     relatedTopicIds: item.relatedTopicIds ?? [],
     lessonRefs: item.lessonRefs,

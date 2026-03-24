@@ -51,7 +51,7 @@ const topicCatalogItemSchema = z.object({
   section: sectionSchema.optional(),
   topicType: topicTypeSchema.optional(),
   category: requiredString.optional(),
-  group: requiredString,
+  group: requiredString.optional(),
   summary: requiredString.optional(),
   relatedTopicIds: z.array(topicId).optional(),
   lessonRefs: z.array(lessonRefSchema).optional(),
@@ -249,7 +249,7 @@ const normalizeTopicType = (section, topicType) => {
 }
 
 const buildCatalogSummary = ({ title, level, section, group }) => {
-  const groupLabel = group.replace(/[_-]+/g, " ").trim()
+  const groupLabel = (group ?? section).replace(/[_-]+/g, " ").trim()
 
   switch (section) {
     case "themes":
@@ -272,7 +272,7 @@ const normalizeCatalogItem = (item) => {
     level: item.level,
     section,
     topicType,
-    group: item.group,
+    group: item.group ?? section,
     summary: item.summary ?? buildCatalogSummary({ title: item.title, level: item.level, section, group: item.group }),
     relatedTopicIds: item.relatedTopicIds ?? [],
     lessonRefs: item.lessonRefs,
@@ -349,7 +349,7 @@ const validateTopicDetails = async (validTopicIds) => {
   const jsonFiles = entries.filter((entry) => entry.isFile() && entry.name.endsWith(".json"))
 
   const valid = []
-  const invalidIds = []
+  const orphanDetailIds = []
   const filenameMismatches = []
   const duplicateIds = []
   const fileIssues = []
@@ -383,17 +383,23 @@ const validateTopicDetails = async (validTopicIds) => {
         filenameMismatches.push(`${file.name}: id "${parsed.data.id}" != filename "${fileId}"`)
       }
 
-      if (!validIds.has(parsed.data.id)) {
-        invalidIds.push(parsed.data.id)
+      const isCatalogBackedDetail = validIds.has(parsed.data.id)
+
+      if (!isCatalogBackedDetail) {
+        orphanDetailIds.push(parsed.data.id)
       }
 
       seenIds.push(parsed.data.id)
 
-      for (const reference of parsed.data.prerequisiteTopicIds ?? []) {
-        checkReference(file.name, parsed.data.id, "prerequisiteTopicIds", reference)
-      }
-      for (const [index, comparison] of (parsed.data.comparisons ?? []).entries()) {
-        checkReference(file.name, parsed.data.id, `comparisons[${index}].topicId`, comparison.topicId)
+      if (isCatalogBackedDetail) {
+        for (const reference of parsed.data.prerequisiteTopicIds ?? []) {
+          checkReference(file.name, parsed.data.id, "prerequisiteTopicIds", reference)
+        }
+        for (const [index, comparison] of (parsed.data.comparisons ?? []).entries()) {
+          checkReference(file.name, parsed.data.id, `comparisons[${index}].topicId`, comparison.topicId)
+        }
+      } else {
+        warnings.push(`topic-details/${file.name}: orphan detail file not referenced by current catalog`)
       }
 
       valid.push(parsed.data)
@@ -406,7 +412,7 @@ const validateTopicDetails = async (validTopicIds) => {
     count: valid.length,
     items: valid,
     duplicateIds: duplicates(seenIds),
-    invalidIds,
+    orphanDetailIds,
     filenameMismatches,
     fileIssues,
     referenceIssues,
@@ -450,11 +456,6 @@ async function main() {
     printMessages("Duplicate topic ids in topic-details:", details.duplicateIds)
   }
 
-  if (details.invalidIds.length > 0) {
-    hasFailures = true
-    printMessages("topic-details files whose id is missing from topic-catalog.json:", details.invalidIds)
-  }
-
   if (details.filenameMismatches.length > 0) {
     hasFailures = true
     printMessages("Filename/id mismatches in topic-details:", details.filenameMismatches)
@@ -465,7 +466,11 @@ async function main() {
     printMessages("Invalid references in topic-details:", details.referenceIssues)
   }
 
-  const warnings = [...catalog.warnings, ...details.warnings]
+  const warnings = [
+    ...catalog.warnings,
+    ...details.warnings,
+    ...details.orphanDetailIds.map((id) => `topic-details/${id}.json: detail file is not present in the active catalog`),
+  ]
   printMessages("Warnings:", warnings)
 
   if (hasFailures) {
