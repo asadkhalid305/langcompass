@@ -39,6 +39,7 @@
 - Treat `All` as an aggregate navigation mode, not as a real CEFR value in data contracts.
 - Do not collapse curriculum semantics (introduced vs revisited) into generic lists.
 - Preserve section-aware information architecture in explorer/overview (section -> group -> topics) and section-grouped global search results.
+- Preserve fallback-group UX: when group is normalized to section, avoid redundant section-as-group labeling.
 - Keep search behavior aligned with current weighted Fuse strategy; tune weights/thresholds before replacing search architecture.
 - Favor component extraction only when it reduces coupling/readability costs in `langcompass-shell.tsx`.
 - Preserve the data-driven lesson section model on `/topic/[topicId]` (recommended sections + stable fallback order/aliases) instead of hardcoding per-topic layouts.
@@ -50,7 +51,9 @@
 - `topic-details/*.json` for rich content
 - Zod schemas in `src/lib/schemas/topic.ts` are runtime contract gates.
 - Catalog/topic taxonomy is section-first (`TopicSection`: `themes|grammar|communication`) with constrained `TopicType`; legacy `category` is accepted only as compatibility input and normalized.
+- Catalog `group` is optional in input and is normalized to `section` when omitted.
 - Catalog items now include core discovery metadata (`summary`, `relatedTopicIds`, optional `lessonRefs`) used by search, preview, and navigation even without rich detail files.
+- Active catalog can be a focused subset during data experiments; unmatched detail files can coexist as non-fatal validator warnings.
 - Topic detail supports extended optional instructional blocks (for example `mentalModel`, `coverageChecklist`, usage cues, level progression, comparisons, special cases).
 - `TopicDifficultyStage` includes `core`, and progression levels may be aggregate (`A1`-`B2`) or CEFR sub-levels.
 - Routing is URL-first:
@@ -63,7 +66,7 @@
 - TS types (`src/lib/types/topic.ts`)
 - validator script (`scripts/validate-topics.js`)
 - downstream UI/data usage
-- Cross-topic references in detail payloads (for example `comparisons[].topicId`) must resolve to valid catalog ids.
+- Cross-topic references in catalog-backed detail payloads (for example `comparisons[].topicId`) must resolve to valid catalog ids.
 
 ## Changes To Propose Before Implementing
 

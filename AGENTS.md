@@ -20,7 +20,7 @@
 - Default browsing starts in `All` level mode (unfiltered across CEFR sub-levels).
 - Search is catalog-based (title, aliases, keywords, summary, group/section/topicType/level).
 - Topic details are progressively loaded from `/api/topic-details/[topicId]`.
-- Current content status: catalog is broad; detail files are partial (some topics remain metadata-only), while richer files can drive structured lesson sections.
+- Current content status: active catalog may be a focused test slice; detail files remain partial (some topics metadata-only), while richer files drive structured lesson sections.
 
 ## Routing Model (Current)
 
@@ -74,9 +74,10 @@
 - Catalog and detail files share overlapping fields; detail extends catalog shape.
 - `topicId` is the join key across catalog, detail filename, API route, and UI selection state.
 - Topic taxonomy is section-first (`themes`, `grammar`, `communication`) with constrained `topicType`; legacy `category` values are compatibility inputs normalized at load/validation time.
+- Catalog input may omit `group`; loaders/schemas normalize fallback group to the topic `section`.
 - CEFR level ordering is fixed by `ALLOWED_LEVELS`; do not infer/sort levels ad hoc.
 - `All` is a UI/navigation pseudo-level (`ALLOWED_LEVEL_OPTIONS`), not a persisted catalog/detail `level` value.
-- Detail comparisons must reference valid catalog `topicId` values (validated by `validate:topics`).
+- Detail comparisons must reference valid catalog `topicId` values for catalog-backed detail entries (validated by `validate:topics`).
 
 ## Safe Change Rules
 
@@ -108,7 +109,7 @@
 - `topic-details/<topicId>.json`: rich instructional content for one topic.
 - Keep overlapping metadata consistent (`id`, level/section/topicType/group, aliases/keywords, etc.).
 - Catalog is expected to carry navigation/search metadata (`summary`, `relatedTopicIds`, optional `lessonRefs`) even when detail files are sparse.
-- Filename must equal topic `id` (`<id>.json`), and every detail `id` must exist in catalog.
+- Filename must equal topic `id` (`<id>.json`); detail files not present in the active catalog are tolerated as validator warnings (use intentionally, not accidentally).
 - Missing detail files are valid; UI already supports metadata-only topics.
 
 ## Out Of Scope (For This Repo Stage)
