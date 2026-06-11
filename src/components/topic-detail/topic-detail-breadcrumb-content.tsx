@@ -3,24 +3,24 @@ import { ArrowLeft } from "lucide-react"
 
 import { AppBreadcrumb } from "@/components/navigation/app-breadcrumb"
 import { Button } from "@/components/ui/button"
-import { humanizeGroupLabel } from "@/lib/explorer/labels"
-import type { TopicLevelOrAll } from "@/lib/types/topic"
+import { humanizeSectionLabel } from "@/lib/explorer/labels"
+import type { TopicLevelOrAll, TopicSection } from "@/lib/types/topic"
 
 interface TopicDetailBreadcrumbContentProps {
   level: TopicLevelOrAll
-  group: string
+  section: TopicSection
   topicTitle: string
   explorerHref: string
 }
 
-export function TopicDetailBreadcrumbContent({ level, group, topicTitle, explorerHref }: TopicDetailBreadcrumbContentProps) {
+export function TopicDetailBreadcrumbContent({ level, section, topicTitle, explorerHref }: TopicDetailBreadcrumbContentProps) {
   return (
     <>
       <AppBreadcrumb
         items={[
           { label: "LangCompass", href: "/", variant: "brand" },
           { label: `${level} Explorer`, href: explorerHref },
-          { label: humanizeGroupLabel(group) },
+          { label: humanizeSectionLabel(section) },
           { label: topicTitle },
         ]}
       />

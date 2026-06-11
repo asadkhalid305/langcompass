@@ -9,8 +9,7 @@ export interface LevelProfile {
   description: string
 }
 
-export interface GroupSummary {
-  group: string
+export interface SectionSummary {
   section: TopicSection
   totalCount: number
   introducedCount: number

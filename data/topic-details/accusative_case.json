@@ -1,9 +1,8 @@
 {
   "id": "accusative_case",
   "title": "Accusative Case",
-  "level": "A1.2",
-  "group": "cases",
-  "summary": "The accusative case is used for the direct object in a sentence — the person or thing directly affected by an action. It answers the question 'Wen?' or 'Was?'.",
+  "level": "A1.1",
+  "summary": "Direct object case used with common verbs and food/order situations.",
   "whyItMatters": "Accusative is essential for everyday communication. You need it to express what you see, buy, have, or interact with. It is one of the most frequently used structures in German.",
   "mentalModel": [
     {
@@ -15,7 +14,7 @@
       "content": "Accusative = direct object (what is affected). Dative = indirect object (who receives something)."
     }
   ],
-  "firstIntroducedIn": "A1.2",
+  "firstIntroducedIn": "A1.1",
   "revisitedIn": [
     "A2.1",
     "A2.2",
@@ -226,35 +225,6 @@
       ]
     }
   ],
-  "comparisons": [
-    {
-      "topicId": "dative_case_intro",
-      "summary": "Accusative is the direct object, while dative is the indirect object.",
-      "table": {
-        "columns": [
-          "Case",
-          "Question",
-          "Example"
-        ],
-        "rows": [
-          [
-            "Accusative",
-            "Wen/Was",
-            "Ich sehe den Mann"
-          ],
-          [
-            "Dative",
-            "Wem",
-            "Ich gebe dem Mann das Buch"
-          ]
-        ]
-      }
-    },
-    {
-      "topicId": "nominative_case",
-      "summary": "Nominative is the subject, accusative is the object."
-    }
-  ],
   "examples": [
     {
       "de": "Ich sehe den Mann.",
@@ -294,11 +264,15 @@
     "es as placeholder object"
   ],
   "relatedTopicIds": [
-    "dative_case_intro",
-    "nominative_case",
-    "basic_location_prepositions",
-    "personal_pronouns_accusative",
-    "word_order_modal_verbs"
+    "a1_1_m5_food_restaurant",
+    "a1_1_m5_ordering_restaurant",
+    "personal_pronouns_accusative"
+  ],
+  "lessonRefs": [
+    {
+      "curriculum": "Momente",
+      "module": "M5"
+    }
   ],
   "ui": {
     "recommendedSections": [
@@ -306,7 +280,6 @@
       "ruleBlocks",
       "tables",
       "levelProgression",
-      "comparisons",
       "examples",
       "commonMistakes"
     ]

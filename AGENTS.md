@@ -18,22 +18,23 @@
 
 - Main flow: level navigation -> overview/explorer -> topic detail panel -> optional full lesson page.
 - Default browsing starts in `All` level mode (unfiltered across CEFR sub-levels).
-- Search is catalog-based (title, aliases, keywords, summary, group/section/topicType/level).
+- Search is catalog-based (title, aliases, keywords, summary, section/topicType/level, plus optional legacy group metadata).
 - Topic details are progressively loaded from `/api/topic-details/[topicId]`.
-- Current content status: active catalog may be a focused test slice; detail files remain partial (some topics metadata-only), while richer files drive structured lesson sections.
+- Current content status: the active Momente catalog contains 90 metadata topics across `A1.1` through `B1.2`; rich detail files remain partial, while metadata-only topics use the built-in fallback UI.
 
 ## Routing Model (Current)
 
 - Canonical overview route: `/` (optional `?level=<TopicLevelOrAll>`; omitted level implies `All`).
 - `/overview` is a legacy alias that redirects to `/`.
-- Canonical explorer route: `/explorer` (query-backed state: `level`, `group`, `q`, `topic`; omitted level implies `All`).
-- Topic detail route: `/topic/[topicId]` (optional return context `level` and `group`).
+- Canonical explorer route: `/explorer` (query-backed state: `level`, `q`, `topic`; omitted level implies `All`).
+- Topic detail route: `/topic/[topicId]` (optional return context `level`).
 - Legacy root explorer query links are redirected to `/explorer`.
+- Legacy `group` query values trigger canonicalization but are not retained in generated URLs.
 - Route state is primary for view/navigation; local storage only persists convenience defaults.
 
 ## Route vs Store State
 
-- Route state owns active UI/navigation state (`level`, `group`, `q`, `topic`, page/view).
+- Route state owns active UI/navigation state (`level`, `q`, `topic`, page/view).
 - Explorer preview open/close state is URL-driven via `topic` query in `/explorer`.
 - Local storage (`useExplorerPreferences`) only persists convenience defaults (currently `lastLevel`) and must not override explicit URL state.
 - Deep links and refresh behavior should always resolve from URL first.
@@ -60,8 +61,8 @@
 ## UI Model (High-Level)
 
 - Two views in one shell:
-- `overview`: level summary + grouped cards
-- `explorer`: section -> group -> topic nodes + global search results grouped by level and section
+- `overview`: level summary + section cards
+- `explorer`: section -> topic nodes + global search results grouped by level and section
 - Detail UX:
 - Desktop: right-side sticky panel
 - Mobile: bottom sheet
@@ -74,10 +75,12 @@
 - Catalog and detail files share overlapping fields; detail extends catalog shape.
 - `topicId` is the join key across catalog, detail filename, API route, and UI selection state.
 - Topic taxonomy is section-first (`themes`, `grammar`, `communication`) with constrained `topicType`; legacy `category` values are compatibility inputs normalized at load/validation time.
-- Catalog input may omit `group`; loaders/schemas normalize fallback group to the topic `section`.
+- `group` is optional legacy metadata and is not part of current navigation.
+- Momente provenance uses structured `lessonRefs` (`curriculum`, `module`, optional `lesson`) rather than ambiguous module strings.
 - CEFR level ordering is fixed by `ALLOWED_LEVELS`; do not infer/sort levels ad hoc.
 - `All` is a UI/navigation pseudo-level (`ALLOWED_LEVEL_OPTIONS`), not a persisted catalog/detail `level` value.
-- Detail comparisons must reference valid catalog `topicId` values for catalog-backed detail entries (validated by `validate:topics`).
+- Catalog relationships and detail prerequisites/comparisons must reference valid catalog `topicId` values.
+- Catalog-backed detail files must keep overlapping metadata consistent with the catalog.
 
 ## Safe Change Rules
 
@@ -107,7 +110,7 @@
 
 - `topic-catalog.json`: lightweight index used for navigation, filtering, and search.
 - `topic-details/<topicId>.json`: rich instructional content for one topic.
-- Keep overlapping metadata consistent (`id`, level/section/topicType/group, aliases/keywords, etc.).
+- Keep overlapping metadata consistent (`id`, level/section/topicType, aliases/keywords, progression, references, etc.).
 - Catalog is expected to carry navigation/search metadata (`summary`, `relatedTopicIds`, optional `lessonRefs`) even when detail files are sparse.
 - Filename must equal topic `id` (`<id>.json`); detail files not present in the active catalog are tolerated as validator warnings (use intentionally, not accidentally).
 - Missing detail files are valid; UI already supports metadata-only topics.

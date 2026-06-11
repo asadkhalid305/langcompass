@@ -248,23 +248,32 @@ const normalizeTopicType = (section, topicType) => {
   return topicType === expectedTopicType ? topicType : expectedTopicType
 }
 
+const normalizeTopicGroup = (groupValue) => {
+  if (typeof groupValue === "string" && groupValue.trim().length > 0) {
+    return groupValue.trim()
+  }
+
+  return undefined
+}
+
 const buildCatalogSummary = ({ title, level, section, group }) => {
   const groupLabel = (group ?? section).replace(/[_-]+/g, " ").trim()
 
   switch (section) {
     case "themes":
-      return `${title} is a theme in ${level} that supports the ${groupLabel} module path.`
+      return `${title} is a theme in ${level} within the ${groupLabel} section.`
     case "communication":
       return `${title} is a communication topic in ${level} for guided practice in ${groupLabel}.`
     case "grammar":
     default:
-      return `${title} is a grammar topic in ${level} that supports the ${groupLabel} learning path.`
+      return `${title} is a grammar topic in ${level} within the ${groupLabel} section.`
   }
 }
 
 const normalizeCatalogItem = (item) => {
   const section = deriveTopicSection(item.section, item.topicType, item.category)
   const topicType = normalizeTopicType(section, item.topicType)
+  const group = normalizeTopicGroup(item.group)
 
   return {
     id: item.id,
@@ -272,8 +281,8 @@ const normalizeCatalogItem = (item) => {
     level: item.level,
     section,
     topicType,
-    group: item.group ?? section,
-    summary: item.summary ?? buildCatalogSummary({ title: item.title, level: item.level, section, group: item.group }),
+    group,
+    summary: item.summary ?? buildCatalogSummary({ title: item.title, level: item.level, section, group }),
     relatedTopicIds: item.relatedTopicIds ?? [],
     lessonRefs: item.lessonRefs,
     firstIntroducedIn: item.firstIntroducedIn ?? item.level,
@@ -284,7 +293,7 @@ const normalizeCatalogItem = (item) => {
   }
 }
 
-const collectModelWarnings = (context, rawItem, normalizedItem, validTopicIds = null) => {
+const collectModelWarnings = (context, rawItem, normalizedItem) => {
   const warnings = []
   if (!rawItem.section) {
     warnings.push(`${context}: missing section, normalized to "${normalizedItem.section}"`)
@@ -298,14 +307,6 @@ const collectModelWarnings = (context, rawItem, normalizedItem, validTopicIds = 
     warnings.push(
       `${context}: section "${normalizedItem.section}" and topicType "${rawItem.topicType}" mismatch, expected "${expectedTopicType}"`,
     )
-  }
-
-  if (validTopicIds instanceof Set) {
-    for (const reference of normalizedItem.relatedTopicIds) {
-      if (!validTopicIds.has(reference)) {
-        warnings.push(`${context}: relatedTopicIds references invalid id "${reference}"`)
-      }
-    }
   }
 
   return warnings
@@ -322,6 +323,7 @@ const validateCatalog = async () => {
       ids: [],
       duplicateIds: [],
       issues: parsed.error.issues,
+      referenceIssues: [],
       warnings: [],
     }
   }
@@ -330,7 +332,15 @@ const validateCatalog = async () => {
   const ids = items.map((item) => item.id)
   const validTopicIds = new Set(ids)
   const warnings = parsed.data.flatMap((rawItem, index) =>
-    collectModelWarnings(`topic-catalog.json[${index}] (${rawItem.id})`, rawItem, items[index], validTopicIds),
+    collectModelWarnings(`topic-catalog.json[${index}] (${rawItem.id})`, rawItem, items[index]),
+  )
+  const referenceIssues = items.flatMap((item, index) =>
+    item.relatedTopicIds
+      .filter((reference) => !validTopicIds.has(reference))
+      .map(
+        (reference) =>
+          `topic-catalog.json[${index}] (${item.id}): relatedTopicIds references invalid id "${reference}"`,
+      ),
   )
 
   return {
@@ -339,12 +349,14 @@ const validateCatalog = async () => {
     ids,
     duplicateIds: duplicates(ids),
     issues: [],
+    referenceIssues,
     warnings,
   }
 }
 
-const validateTopicDetails = async (validTopicIds) => {
-  const validIds = new Set(validTopicIds)
+const validateTopicDetails = async (catalogItems) => {
+  const catalogById = new Map(catalogItems.map((item) => [item.id, item]))
+  const validIds = new Set(catalogById.keys())
   const entries = await fs.readdir(detailsDir, { withFileTypes: true })
   const jsonFiles = entries.filter((entry) => entry.isFile() && entry.name.endsWith(".json"))
 
@@ -353,6 +365,7 @@ const validateTopicDetails = async (validTopicIds) => {
   const filenameMismatches = []
   const duplicateIds = []
   const fileIssues = []
+  const metadataMismatches = []
   const referenceIssues = []
   const warnings = []
 
@@ -377,7 +390,7 @@ const validateTopicDetails = async (validTopicIds) => {
 
       const normalized = normalizeCatalogItem(parsed.data)
 
-      warnings.push(...collectModelWarnings(`topic-details/${file.name} (${parsed.data.id})`, parsed.data, normalized, validIds))
+      warnings.push(...collectModelWarnings(`topic-details/${file.name} (${parsed.data.id})`, parsed.data, normalized))
 
       if (parsed.data.id !== fileId) {
         filenameMismatches.push(`${file.name}: id "${parsed.data.id}" != filename "${fileId}"`)
@@ -392,6 +405,31 @@ const validateTopicDetails = async (validTopicIds) => {
       seenIds.push(parsed.data.id)
 
       if (isCatalogBackedDetail) {
+        const catalogItem = catalogById.get(parsed.data.id)
+        const metadataFields = [
+          "title",
+          "level",
+          "section",
+          "topicType",
+          "group",
+          "summary",
+          "relatedTopicIds",
+          "lessonRefs",
+          "firstIntroducedIn",
+          "revisitedIn",
+          "difficultyStage",
+          "aliases",
+          "keywords",
+        ]
+
+        for (const field of metadataFields) {
+          if (JSON.stringify(normalized[field]) !== JSON.stringify(catalogItem[field])) {
+            metadataMismatches.push(
+              `${file.name}: ${parsed.data.id} field "${field}" does not match topic-catalog.json`,
+            )
+          }
+        }
+
         for (const reference of parsed.data.prerequisiteTopicIds ?? []) {
           checkReference(file.name, parsed.data.id, "prerequisiteTopicIds", reference)
         }
@@ -415,6 +453,7 @@ const validateTopicDetails = async (validTopicIds) => {
     orphanDetailIds,
     filenameMismatches,
     fileIssues,
+    metadataMismatches,
     referenceIssues,
     warnings,
   }
@@ -436,13 +475,18 @@ async function main() {
     printMessages("Duplicate topic ids in topic-catalog.json:", catalog.duplicateIds)
   }
 
+  if (catalog.referenceIssues.length > 0) {
+    hasFailures = true
+    printMessages("Invalid references in topic-catalog.json:", catalog.referenceIssues)
+  }
+
   if (!catalog.valid) {
     console.log("\nValidation status: ❌ failed")
     process.exitCode = 1
     return
   }
 
-  const details = await validateTopicDetails(catalog.ids)
+  const details = await validateTopicDetails(catalog.items)
 
   if (details.fileIssues.length > 0) {
     hasFailures = true
@@ -459,6 +503,11 @@ async function main() {
   if (details.filenameMismatches.length > 0) {
     hasFailures = true
     printMessages("Filename/id mismatches in topic-details:", details.filenameMismatches)
+  }
+
+  if (details.metadataMismatches.length > 0) {
+    hasFailures = true
+    printMessages("Catalog/detail metadata mismatches:", details.metadataMismatches)
   }
 
   if (details.referenceIssues.length > 0) {

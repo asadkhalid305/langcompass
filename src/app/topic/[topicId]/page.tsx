@@ -37,8 +37,8 @@ export default async function TopicDetailPage({ params }: TopicDetailPageProps) 
   return (
     <main className="min-h-screen bg-gradient-to-b from-background via-background to-muted/40">
       <div className="mx-auto w-full max-w-[1200px] px-4 py-6 md:px-8 md:py-8">
-        <Suspense fallback={<StaticTopicBreadcrumb topicId={topic.id} topicTitle={topic.title} level={topic.level} group={topic.group} />}>
-          <TopicDetailBreadcrumb topicId={topic.id} topicTitle={topic.title} defaultLevel={topic.level} defaultGroup={topic.group} />
+        <Suspense fallback={<StaticTopicBreadcrumb topicId={topic.id} topicTitle={topic.title} level={topic.level} section={topic.section} />}>
+          <TopicDetailBreadcrumb topicId={topic.id} topicTitle={topic.title} defaultLevel={topic.level} defaultSection={topic.section} />
         </Suspense>
 
         <TopicDetailHeader topic={topic} detail={detail} />

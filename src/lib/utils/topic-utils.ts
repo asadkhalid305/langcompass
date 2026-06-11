@@ -16,8 +16,9 @@ export const getTopicsGroupedByGroup = (topics: TopicCatalogItem[]): Record<stri
   const grouped: Record<string, TopicCatalogItem[]> = {}
 
   for (const topic of topics) {
-    if (!grouped[topic.group]) grouped[topic.group] = []
-    grouped[topic.group].push(topic)
+    const groupKey = topic.group ?? topic.section
+    if (!grouped[groupKey]) grouped[groupKey] = []
+    grouped[groupKey].push(topic)
   }
 
   for (const group of Object.keys(grouped)) {
@@ -70,7 +71,7 @@ export const buildSearchText = (topic: TopicCatalogItem | TopicDetail): string =
   ]
 
   return values
-    .filter((entry) => typeof entry === "string" && entry.trim().length > 0)
+    .filter((entry): entry is string => typeof entry === "string" && entry.trim().length > 0)
     .map((entry) => normalizeSearchText(entry))
     .join(" ")
 }

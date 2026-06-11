@@ -6,17 +6,16 @@ interface StaticTopicBreadcrumbProps {
   topicId: TopicId
   topicTitle: string
   level: TopicCatalogItem["level"]
-  group: string
+  section: TopicCatalogItem["section"]
 }
 
-export function StaticTopicBreadcrumb({ topicId, topicTitle, level, group }: StaticTopicBreadcrumbProps) {
+export function StaticTopicBreadcrumb({ topicId, topicTitle, level, section }: StaticTopicBreadcrumbProps) {
   const explorerHref = buildExplorerHref({
     level,
-    group,
     topicId,
   })
 
   return (
-    <TopicDetailBreadcrumbContent level={level} group={group} topicTitle={topicTitle} explorerHref={explorerHref} />
+    <TopicDetailBreadcrumbContent level={level} section={section} topicTitle={topicTitle} explorerHref={explorerHref} />
   )
 }

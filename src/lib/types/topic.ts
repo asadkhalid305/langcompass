@@ -23,7 +23,7 @@ export interface TopicCatalogItem {
   level: TopicLevel
   section: TopicSection
   topicType: TopicType
-  group: TopicGroup
+  group?: TopicGroup
   summary: string
   relatedTopicIds: TopicId[]
   lessonRefs?: TopicLessonRef[]

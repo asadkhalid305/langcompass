@@ -52,7 +52,6 @@ export const resolveTopicLinks = (topicIds: TopicId[] | undefined, topicsById: M
       title: foundTopic.title,
       href: buildTopicDetailHref(foundTopic.id, {
         level: foundTopic.level,
-        group: foundTopic.group,
       }),
     }
   })

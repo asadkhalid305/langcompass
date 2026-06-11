@@ -22,7 +22,7 @@ export function TopicMetaTags({ topic, hasDetailFile, className }: TopicMetaTags
       <Badge variant="outline" className="rounded-none border-border/80 bg-white/70 text-[11px] uppercase tracking-[0.08em]">
         {humanizeSectionLabel(topic.section)}
       </Badge>
-      {!isSectionFallbackGroup(topic.group, topic.section) ? (
+      {topic.group && !isSectionFallbackGroup(topic.group, topic.section) ? (
         <Badge variant="outline" className="rounded-none border-border/80 bg-white/70 text-[11px] uppercase tracking-[0.08em]">
           {humanizeGroupLabel(topic.group)}
         </Badge>

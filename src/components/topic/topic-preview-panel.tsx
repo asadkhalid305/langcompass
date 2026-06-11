@@ -25,7 +25,7 @@ const clampPreview = (text: string, maxLength: number): string => {
 }
 
 const fallbackSummary = (topic: TopicCatalogItem): string =>
-  `${topic.title} is part of the ${topic.level} ${topic.section} section in the ${topic.group.replace(/[_-]+/g, " ")} path.`
+  `${topic.title} sits in the ${topic.level} ${topic.section} section of the LangCompass map.`
 
 const fallbackWhyItMatters = (topic: TopicCatalogItem): string =>
   `This topic supports ${topic.section.replace(/[_-]+/g, " ")} fluency and appears in guided practice across the curriculum.`

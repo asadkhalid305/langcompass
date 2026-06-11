@@ -1,105 +1,1643 @@
 [
   {
-    "id": "a1_1_introductions",
+    "id": "a1_1_m1_identity",
     "title": "Introductions and Identity",
     "level": "A1.1",
     "section": "themes",
     "topicType": "theme",
-    "summary": "Talking about yourself, names, origin, and basic personal information.",
+    "summary": "Names, origin, languages, and basic personal information.",
     "relatedTopicIds": [
-      "present_tense_common_verbs",
-      "personal_pronouns_nominative"
+      "a1_1_m1_present_basic",
+      "a1_1_m1_question_words"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M1"
+      }
     ]
   },
   {
-    "id": "a1_1_accusative",
+    "id": "a1_1_m1_present_basic",
+    "title": "Present Tense Basics",
+    "level": "A1.1",
+    "section": "grammar",
+    "topicType": "grammar",
+    "summary": "Core present-tense forms for high-frequency verbs used in introductions.",
+    "relatedTopicIds": [
+      "a1_1_m1_identity",
+      "a1_1_m1_question_words"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M1"
+      }
+    ]
+  },
+  {
+    "id": "a1_1_m1_question_words",
+    "title": "Basic Questions (Wer, Wie, Woher)",
+    "level": "A1.1",
+    "section": "communication",
+    "topicType": "communication",
+    "summary": "Asking and answering introductory questions.",
+    "relatedTopicIds": [
+      "a1_1_m1_identity",
+      "a1_1_m1_present_basic"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M1"
+      }
+    ]
+  },
+  {
+    "id": "a1_1_m2_shopping_objects",
+    "title": "Furniture, Objects, and Shopping",
+    "level": "A1.1",
+    "section": "themes",
+    "topicType": "theme",
+    "summary": "Common objects, products, prices, and shopping situations.",
+    "relatedTopicIds": [
+      "a1_1_m2_articles",
+      "a1_1_m2_asking_prices"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M2"
+      }
+    ]
+  },
+  {
+    "id": "a1_1_m2_articles",
+    "title": "Articles and Noun Gender",
+    "level": "A1.1",
+    "section": "grammar",
+    "topicType": "grammar",
+    "summary": "Definite and indefinite articles with noun gender and singular/plural awareness.",
+    "relatedTopicIds": [
+      "a1_1_m2_shopping_objects",
+      "a1_1_m2_asking_prices"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M2"
+      }
+    ]
+  },
+  {
+    "id": "a1_1_m2_asking_prices",
+    "title": "Asking Prices and Describing Objects",
+    "level": "A1.1",
+    "section": "communication",
+    "topicType": "communication",
+    "summary": "Asking what something costs and describing color, size, and basic properties.",
+    "relatedTopicIds": [
+      "a1_1_m2_shopping_objects",
+      "a1_1_m2_articles"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M2"
+      }
+    ]
+  },
+  {
+    "id": "a1_1_m3_office_technology",
+    "title": "Office and Technology",
+    "level": "A1.1",
+    "section": "themes",
+    "topicType": "theme",
+    "summary": "Basic workplace objects, devices, and simple actions around technology.",
+    "relatedTopicIds": [
+      "a1_1_m3_negation_kein",
+      "a1_1_m3_asking_for_repetition"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M3"
+      }
+    ]
+  },
+  {
+    "id": "a1_1_m3_negation_kein",
+    "title": "Negation with kein / nicht",
+    "level": "A1.1",
+    "section": "grammar",
+    "topicType": "grammar",
+    "summary": "Negating nouns and simple statements in everyday contexts.",
+    "relatedTopicIds": [
+      "a1_1_m3_office_technology",
+      "a1_1_m3_asking_for_repetition"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M3"
+      }
+    ]
+  },
+  {
+    "id": "a1_1_m3_asking_for_repetition",
+    "title": "Asking for Repetition and Clarification",
+    "level": "A1.1",
+    "section": "communication",
+    "topicType": "communication",
+    "summary": "Saying you do not understand and asking someone to repeat or spell something.",
+    "relatedTopicIds": [
+      "a1_1_m3_office_technology",
+      "a1_1_m3_negation_kein"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M3"
+      }
+    ]
+  },
+  {
+    "id": "a1_1_m4_hobbies_time",
+    "title": "Hobbies and Free Time",
+    "level": "A1.1",
+    "section": "themes",
+    "topicType": "theme",
+    "summary": "Interests, hobbies, frequency, and arranging to meet.",
+    "relatedTopicIds": [
+      "a1_1_m4_modal_koennen",
+      "a1_1_m4_arranging_meetings"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M4"
+      }
+    ]
+  },
+  {
+    "id": "a1_1_m4_modal_koennen",
+    "title": "Modal Verb: können",
+    "level": "A1.1",
+    "section": "grammar",
+    "topicType": "grammar",
+    "summary": "Talking about ability and possibility with können and infinitive word order.",
+    "relatedTopicIds": [
+      "a1_1_m4_hobbies_time",
+      "a1_1_m4_arranging_meetings"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M4"
+      }
+    ]
+  },
+  {
+    "id": "a1_1_m4_arranging_meetings",
+    "title": "Arranging Meetings and Talking About Frequency",
+    "level": "A1.1",
+    "section": "communication",
+    "topicType": "communication",
+    "summary": "Making simple plans and talking about when or how often you do something.",
+    "relatedTopicIds": [
+      "a1_1_m4_hobbies_time",
+      "a1_1_m4_modal_koennen"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M4"
+      }
+    ]
+  },
+  {
+    "id": "a1_1_m5_food_restaurant",
+    "title": "Food and Drinks",
+    "level": "A1.1",
+    "section": "themes",
+    "topicType": "theme",
+    "summary": "Meals, preferences, restaurant situations, and everyday food vocabulary.",
+    "relatedTopicIds": [
+      "accusative_case",
+      "a1_1_m5_ordering_restaurant"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M5"
+      }
+    ]
+  },
+  {
+    "id": "accusative_case",
     "title": "Accusative Case",
     "level": "A1.1",
     "section": "grammar",
     "topicType": "grammar",
-    "summary": "Direct object case answering Wen/Was.",
+    "summary": "Direct object case used with common verbs and food/order situations.",
     "relatedTopicIds": [
-      "dative_case",
+      "a1_1_m5_food_restaurant",
+      "a1_1_m5_ordering_restaurant",
       "personal_pronouns_accusative"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M5"
+      }
+    ],
+    "firstIntroducedIn": "A1.1",
+    "revisitedIn": [
+      "A2.1",
+      "A2.2",
+      "B1.1"
+    ],
+    "difficultyStage": "core",
+    "aliases": [
+      "Akkusativ",
+      "direct object case"
+    ],
+    "keywords": [
+      "wen",
+      "was",
+      "mich",
+      "dich",
+      "den",
+      "einen"
     ]
   },
   {
-    "id": "a1_1_ordering_food",
+    "id": "a1_1_m5_ordering_restaurant",
     "title": "Ordering in a Restaurant",
     "level": "A1.1",
     "section": "communication",
     "topicType": "communication",
-    "summary": "Making simple orders, asking for food and drinks.",
+    "summary": "Expressing preferences, ordering, and responding in a simple restaurant setting.",
     "relatedTopicIds": [
-      "food_and_drinks"
+      "a1_1_m5_food_restaurant",
+      "accusative_case"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M5"
+      }
     ]
   },
   {
-    "id": "a2_1_travel",
+    "id": "a1_2_m1_city_orientation",
+    "title": "City and Orientation",
+    "level": "A1.2",
+    "section": "themes",
+    "topicType": "theme",
+    "summary": "Places in the city, directions, and getting around.",
+    "relatedTopicIds": [
+      "a1_2_m1_temporal_prepositions",
+      "a1_2_m1_offering_help"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M1"
+      }
+    ]
+  },
+  {
+    "id": "a1_2_m1_temporal_prepositions",
+    "title": "Basic Temporal and Modal Prepositions",
+    "level": "A1.2",
+    "section": "grammar",
+    "topicType": "grammar",
+    "summary": "Everyday prepositions such as in, vor, nach, mit, and ohne in common expressions.",
+    "relatedTopicIds": [
+      "a1_2_m1_city_orientation",
+      "a1_2_m1_offering_help"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M1"
+      }
+    ]
+  },
+  {
+    "id": "a1_2_m1_offering_help",
+    "title": "Offering and Asking for Help",
+    "level": "A1.2",
+    "section": "communication",
+    "topicType": "communication",
+    "summary": "Offering help, asking for help, and reacting appropriately.",
+    "relatedTopicIds": [
+      "a1_2_m1_city_orientation",
+      "a1_2_m1_temporal_prepositions"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M1"
+      }
+    ]
+  },
+  {
+    "id": "a1_2_m2_plans_wishes",
+    "title": "Plans, Wishes, and Appointments",
+    "level": "A1.2",
+    "section": "themes",
+    "topicType": "theme",
+    "summary": "Plans, wishes, appointments, devices, and everyday scheduling.",
+    "relatedTopicIds": [
+      "a1_2_m2_werden_wollen",
+      "a1_2_m2_making_appointments"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M2"
+      }
+    ]
+  },
+  {
+    "id": "a1_2_m2_werden_wollen",
+    "title": "werden and wollen",
+    "level": "A1.2",
+    "section": "grammar",
+    "topicType": "grammar",
+    "summary": "Talking about intentions, plans, and simple future-oriented meaning.",
+    "relatedTopicIds": [
+      "a1_2_m2_plans_wishes",
+      "a1_2_m2_making_appointments"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M2"
+      }
+    ]
+  },
+  {
+    "id": "a1_2_m2_making_appointments",
+    "title": "Making, Changing, and Confirming Appointments",
+    "level": "A1.2",
+    "section": "communication",
+    "topicType": "communication",
+    "summary": "Scheduling meetings and reacting when plans change.",
+    "relatedTopicIds": [
+      "a1_2_m2_plans_wishes",
+      "a1_2_m2_werden_wollen"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M2"
+      }
+    ]
+  },
+  {
+    "id": "a1_2_m3_health_household",
+    "title": "Health and Household",
+    "level": "A1.2",
+    "section": "themes",
+    "topicType": "theme",
+    "summary": "Illness, body, home tasks, requests, and rules at home.",
+    "relatedTopicIds": [
+      "personal_pronouns_accusative",
+      "a1_2_m3_requests_instructions"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M3"
+      }
+    ]
+  },
+  {
+    "id": "personal_pronouns_accusative",
+    "title": "Personal Pronouns in the Accusative",
+    "level": "A1.2",
+    "section": "grammar",
+    "topicType": "grammar",
+    "summary": "Using mich, dich, ihn, sie, es, uns, euch, sie/Sie as direct objects.",
+    "relatedTopicIds": [
+      "accusative_case",
+      "a1_2_m3_health_household",
+      "a1_2_m3_requests_instructions"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M3"
+      }
+    ]
+  },
+  {
+    "id": "a1_2_m3_requests_instructions",
+    "title": "Requests, Instructions, and Advice",
+    "level": "A1.2",
+    "section": "communication",
+    "topicType": "communication",
+    "summary": "Making requests, giving simple instructions, and asking for or giving advice.",
+    "relatedTopicIds": [
+      "a1_2_m3_health_household",
+      "personal_pronouns_accusative"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M3"
+      }
+    ]
+  },
+  {
+    "id": "a1_2_m4_people_clothes_weather",
+    "title": "People, Clothing, and Weather",
+    "level": "A1.2",
+    "section": "themes",
+    "topicType": "theme",
+    "summary": "Describing people, appearance, clothing, weather, and comparisons.",
+    "relatedTopicIds": [
+      "a1_2_m4_comparison",
+      "a1_2_m4_describing_people"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M4"
+      }
+    ]
+  },
+  {
+    "id": "a1_2_m4_comparison",
+    "title": "Comparative Forms",
+    "level": "A1.2",
+    "section": "grammar",
+    "topicType": "grammar",
+    "summary": "Making basic comparisons with adjectives in everyday situations.",
+    "relatedTopicIds": [
+      "a1_2_m4_people_clothes_weather",
+      "a1_2_m4_describing_people"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M4"
+      }
+    ]
+  },
+  {
+    "id": "a1_2_m4_describing_people",
+    "title": "Describing People and Reacting to Statements",
+    "level": "A1.2",
+    "section": "communication",
+    "topicType": "communication",
+    "summary": "Talking about people’s appearance and character and reacting in conversation.",
+    "relatedTopicIds": [
+      "a1_2_m4_people_clothes_weather",
+      "a1_2_m4_comparison"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M4"
+      }
+    ]
+  },
+  {
+    "id": "a1_2_m5_celebrations_rules",
+    "title": "Celebrations, Dates, and Rules",
+    "level": "A1.2",
+    "section": "themes",
+    "topicType": "theme",
+    "summary": "Festivals, dates, congratulations, and rules in everyday life.",
+    "relatedTopicIds": [
+      "a1_2_m5_imperative",
+      "a1_2_m5_congratulating"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M5"
+      }
+    ]
+  },
+  {
+    "id": "a1_2_m5_imperative",
+    "title": "Imperative and Basic Two-Way Prepositions",
+    "level": "A1.2",
+    "section": "grammar",
+    "topicType": "grammar",
+    "summary": "Giving instructions and using an/auf/in in simple directional contexts.",
+    "relatedTopicIds": [
+      "a1_2_m5_celebrations_rules",
+      "a1_2_m5_congratulating"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M5"
+      }
+    ]
+  },
+  {
+    "id": "a1_2_m5_congratulating",
+    "title": "Congratulating and Giving Good Wishes",
+    "level": "A1.2",
+    "section": "communication",
+    "topicType": "communication",
+    "summary": "Congratulating, wishing well, and reacting in celebration contexts.",
+    "relatedTopicIds": [
+      "a1_2_m5_celebrations_rules",
+      "a1_2_m5_imperative"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M5"
+      }
+    ]
+  },
+  {
+    "id": "a2_1_m1_workday_events",
+    "title": "Workday and Events",
+    "level": "A2.1",
+    "section": "themes",
+    "topicType": "theme",
+    "summary": "Work routines, events, evaluation, and coordination with others.",
+    "relatedTopicIds": [
+      "a2_1_m1_deshalb",
+      "a2_1_m1_reacting_to_suggestions"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M1"
+      }
+    ]
+  },
+  {
+    "id": "a2_1_m1_deshalb",
+    "title": "Connector: deshalb",
+    "level": "A2.1",
+    "section": "grammar",
+    "topicType": "grammar",
+    "summary": "Explaining consequences and linking ideas in everyday speech.",
+    "relatedTopicIds": [
+      "a2_1_m1_workday_events",
+      "a2_1_m1_reacting_to_suggestions"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M1"
+      }
+    ]
+  },
+  {
+    "id": "a2_1_m1_reacting_to_suggestions",
+    "title": "Making and Reacting to Suggestions",
+    "level": "A2.1",
+    "section": "communication",
+    "topicType": "communication",
+    "summary": "Proposing ideas, reacting, persuading, and evaluating plans.",
+    "relatedTopicIds": [
+      "a2_1_m1_workday_events",
+      "a2_1_m1_deshalb"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M1"
+      }
+    ]
+  },
+  {
+    "id": "a2_1_m2_sport_habits",
+    "title": "Sport, Fitness, and Habits",
+    "level": "A2.1",
+    "section": "themes",
+    "topicType": "theme",
+    "summary": "Lifestyle, routines, habits, and advice around health and fitness.",
+    "relatedTopicIds": [
+      "a2_1_m2_konjunktiv_ii_advice",
+      "a2_1_m2_giving_advice"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M2"
+      }
+    ]
+  },
+  {
+    "id": "a2_1_m2_konjunktiv_ii_advice",
+    "title": "Konjunktiv II for Advice",
+    "level": "A2.1",
+    "section": "grammar",
+    "topicType": "grammar",
+    "summary": "Using könnte and sollte for suggestions and advice.",
+    "relatedTopicIds": [
+      "a2_1_m2_sport_habits",
+      "a2_1_m2_giving_advice"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M2"
+      }
+    ]
+  },
+  {
+    "id": "a2_1_m2_giving_advice",
+    "title": "Asking For and Giving Advice",
+    "level": "A2.1",
+    "section": "communication",
+    "topicType": "communication",
+    "summary": "Discussing habits and offering recommendations politely.",
+    "relatedTopicIds": [
+      "a2_1_m2_sport_habits",
+      "a2_1_m2_konjunktiv_ii_advice"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M2"
+      }
+    ]
+  },
+  {
+    "id": "a2_1_m3_food_breaks",
+    "title": "Lunch Breaks and Ordering Food",
+    "level": "A2.1",
+    "section": "themes",
+    "topicType": "theme",
+    "summary": "Snack bars, lunch breaks, ordering, and everyday service interactions.",
+    "relatedTopicIds": [
+      "a2_1_m3_dass_wenn",
+      "a2_1_m3_ordering_paying"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M3"
+      }
+    ]
+  },
+  {
+    "id": "a2_1_m3_dass_wenn",
+    "title": "Connectors: dass and wenn",
+    "level": "A2.1",
+    "section": "grammar",
+    "topicType": "grammar",
+    "summary": "Building more complex sentences for opinions, wishes, and conditions.",
+    "relatedTopicIds": [
+      "a2_1_m3_food_breaks",
+      "a2_1_m3_ordering_paying"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M3"
+      }
+    ]
+  },
+  {
+    "id": "a2_1_m3_ordering_paying",
+    "title": "Ordering, Paying, and Reporting Opinions",
+    "level": "A2.1",
+    "section": "communication",
+    "topicType": "communication",
+    "summary": "Handling everyday service interactions and relaying what others say or think.",
+    "relatedTopicIds": [
+      "a2_1_m3_food_breaks",
+      "a2_1_m3_dass_wenn"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M3"
+      }
+    ]
+  },
+  {
+    "id": "a2_1_m4_city_mobility",
+    "title": "Mobility in the City",
+    "level": "A2.1",
+    "section": "themes",
+    "topicType": "theme",
+    "summary": "Routes, city transport, local movement, and navigation.",
+    "relatedTopicIds": [
+      "a2_1_m4_wechselpraepositionen",
+      "a2_1_m4_describing_routes"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M4"
+      }
+    ]
+  },
+  {
+    "id": "a2_1_m4_wechselpraepositionen",
+    "title": "Two-Way Prepositions with Movement",
+    "level": "A2.1",
+    "section": "grammar",
+    "topicType": "grammar",
+    "summary": "Using location and direction with verbs like legen, stellen, hängen, and fahren.",
+    "relatedTopicIds": [
+      "a2_1_m4_city_mobility",
+      "a2_1_m4_describing_routes"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M4"
+      }
+    ]
+  },
+  {
+    "id": "a2_1_m4_describing_routes",
+    "title": "Describing Routes and City Movement",
+    "level": "A2.1",
+    "section": "communication",
+    "topicType": "communication",
+    "summary": "Explaining directions, routes, and movement through the city.",
+    "relatedTopicIds": [
+      "a2_1_m4_city_mobility",
+      "a2_1_m4_wechselpraepositionen"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M4"
+      }
+    ]
+  },
+  {
+    "id": "a2_1_m5_travel_holidays",
     "title": "Travel and Holidays",
     "level": "A2.1",
     "section": "themes",
     "topicType": "theme",
-    "summary": "Talking about trips, destinations, and experiences.",
+    "summary": "Travel planning, destinations, preferences, and holiday experiences.",
     "relatedTopicIds": [
-      "perfect_tense",
-      "modal_verbs"
+      "a2_1_m5_wishes_haette_waere",
+      "a2_1_m5_expressing_preferences"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M5"
+      }
     ]
   },
   {
-    "id": "a2_1_connectors",
-    "title": "Basic Connectors (weil, dass, wenn)",
+    "id": "a2_1_m5_wishes_haette_waere",
+    "title": "Wishes with hätte / wäre gern",
     "level": "A2.1",
     "section": "grammar",
     "topicType": "grammar",
-    "summary": "Combining sentences using connectors.",
+    "summary": "Expressing wishes, imagined preferences, and polite desire.",
     "relatedTopicIds": [
-      "subordinate_clauses"
+      "a2_1_m5_travel_holidays",
+      "a2_1_m5_expressing_preferences"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M5"
+      }
     ]
   },
   {
-    "id": "a2_1_giving_opinions",
-    "title": "Giving Opinions",
+    "id": "a2_1_m5_expressing_preferences",
+    "title": "Expressing Wishes and Preferences",
     "level": "A2.1",
     "section": "communication",
     "topicType": "communication",
-    "summary": "Expressing opinions and reactions in conversations.",
+    "summary": "Talking about dream trips, plans, and preferred travel experiences.",
     "relatedTopicIds": [
-      "connectors"
+      "a2_1_m5_travel_holidays",
+      "a2_1_m5_wishes_haette_waere"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M5"
+      }
     ]
   },
   {
-    "id": "b1_1_work",
-    "title": "Work and Career",
+    "id": "a2_2_m1_media_entertainment",
+    "title": "Media and Entertainment",
+    "level": "A2.2",
+    "section": "themes",
+    "topicType": "theme",
+    "summary": "Series, films, media habits, and evaluating entertainment.",
+    "relatedTopicIds": [
+      "a2_2_m1_reflexive_verbs",
+      "a2_2_m1_evaluating_series"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M1"
+      }
+    ]
+  },
+  {
+    "id": "a2_2_m1_reflexive_verbs",
+    "title": "Reflexive Verbs",
+    "level": "A2.2",
+    "section": "grammar",
+    "topicType": "grammar",
+    "summary": "Using reflexive verbs in everyday contexts and talking about habits and reactions.",
+    "relatedTopicIds": [
+      "a2_2_m1_media_entertainment",
+      "a2_2_m1_evaluating_series"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M1"
+      }
+    ]
+  },
+  {
+    "id": "a2_2_m1_evaluating_series",
+    "title": "Describing and Evaluating Media",
+    "level": "A2.2",
+    "section": "communication",
+    "topicType": "communication",
+    "summary": "Comparing, evaluating, and reacting to films, series, and media habits.",
+    "relatedTopicIds": [
+      "a2_2_m1_media_entertainment",
+      "a2_2_m1_reflexive_verbs"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M1"
+      }
+    ]
+  },
+  {
+    "id": "a2_2_m2_teamwork_life_experience",
+    "title": "Teamwork and Life Experience",
+    "level": "A2.2",
+    "section": "themes",
+    "topicType": "theme",
+    "summary": "Cooperation, collaboration, biography, and life experiences.",
+    "relatedTopicIds": [
+      "a2_2_m2_verb_preposition",
+      "a2_2_m2_cooperating"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M2"
+      }
+    ]
+  },
+  {
+    "id": "a2_2_m2_verb_preposition",
+    "title": "Verbs, Adjectives, and Expressions with Prepositions",
+    "level": "A2.2",
+    "section": "grammar",
+    "topicType": "grammar",
+    "summary": "High-frequency verb and adjective constructions that require specific prepositions.",
+    "relatedTopicIds": [
+      "a2_2_m2_teamwork_life_experience",
+      "a2_2_m2_cooperating"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M2"
+      }
+    ]
+  },
+  {
+    "id": "a2_2_m2_cooperating",
+    "title": "Cooperating and Asking Follow-up Questions",
+    "level": "A2.2",
+    "section": "communication",
+    "topicType": "communication",
+    "summary": "Working together, clarifying meaning, and sustaining collaborative conversation.",
+    "relatedTopicIds": [
+      "a2_2_m2_teamwork_life_experience",
+      "a2_2_m2_verb_preposition"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M2"
+      }
+    ]
+  },
+  {
+    "id": "a2_2_m3_career_change",
+    "title": "Professional Changes and New Beginnings",
+    "level": "A2.2",
+    "section": "themes",
+    "topicType": "theme",
+    "summary": "Career change, dissatisfaction, proposals, and fresh starts.",
+    "relatedTopicIds": [
+      "a2_2_m3_praeteritum_review",
+      "a2_2_m3_expressing_dissatisfaction"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M3"
+      }
+    ]
+  },
+  {
+    "id": "a2_2_m3_praeteritum_review",
+    "title": "Präteritum Review and lassen",
+    "level": "A2.2",
+    "section": "grammar",
+    "topicType": "grammar",
+    "summary": "Extending past-tense forms and using lassen in common everyday patterns.",
+    "relatedTopicIds": [
+      "a2_2_m3_career_change",
+      "a2_2_m3_expressing_dissatisfaction"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M3"
+      }
+    ]
+  },
+  {
+    "id": "a2_2_m3_expressing_dissatisfaction",
+    "title": "Expressing Dissatisfaction and Making Proposals",
+    "level": "A2.2",
+    "section": "communication",
+    "topicType": "communication",
+    "summary": "Stating problems, discussing changes, and proposing alternatives.",
+    "relatedTopicIds": [
+      "a2_2_m3_career_change",
+      "a2_2_m3_praeteritum_review"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M3"
+      }
+    ]
+  },
+  {
+    "id": "a2_2_m4_sustainability_engagement",
+    "title": "Sustainability and Engagement",
+    "level": "A2.2",
+    "section": "themes",
+    "topicType": "theme",
+    "summary": "Sustainability, projects, engagement, and community action.",
+    "relatedTopicIds": [
+      "a2_2_m4_relative_clauses_basic",
+      "a2_2_m4_disagreeing"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M4"
+      }
+    ]
+  },
+  {
+    "id": "a2_2_m4_relative_clauses_basic",
+    "title": "Relative Clauses (Nominative and Accusative)",
+    "level": "A2.2",
+    "section": "grammar",
+    "topicType": "grammar",
+    "summary": "Connecting ideas and describing people or things with relative clauses.",
+    "relatedTopicIds": [
+      "a2_2_m4_sustainability_engagement",
+      "a2_2_m4_disagreeing"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M4"
+      }
+    ]
+  },
+  {
+    "id": "a2_2_m4_disagreeing",
+    "title": "Disagreeing and Contradicting",
+    "level": "A2.2",
+    "section": "communication",
+    "topicType": "communication",
+    "summary": "Expressing disagreement, uncertainty, and alternative views.",
+    "relatedTopicIds": [
+      "a2_2_m4_sustainability_engagement",
+      "a2_2_m4_relative_clauses_basic"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M4"
+      }
+    ]
+  },
+  {
+    "id": "a2_2_m5_biography_business",
+    "title": "Biography, Family Business, and Shops",
+    "level": "A2.2",
+    "section": "themes",
+    "topicType": "theme",
+    "summary": "Biographies, family businesses, shops, and personal histories.",
+    "relatedTopicIds": [
+      "a2_2_m5_passive_present",
+      "a2_2_m5_talking_about_biography"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M5"
+      }
+    ]
+  },
+  {
+    "id": "a2_2_m5_passive_present",
+    "title": "Passive Voice (Present)",
+    "level": "A2.2",
+    "section": "grammar",
+    "topicType": "grammar",
+    "summary": "Talking about processes, services, and what is done in a place or context.",
+    "relatedTopicIds": [
+      "a2_2_m5_biography_business",
+      "a2_2_m5_talking_about_biography"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M5"
+      }
+    ]
+  },
+  {
+    "id": "a2_2_m5_talking_about_biography",
+    "title": "Talking About Biography and New Beginnings",
+    "level": "A2.2",
+    "section": "communication",
+    "topicType": "communication",
+    "summary": "Narrating biography and discussing how something started or changed.",
+    "relatedTopicIds": [
+      "a2_2_m5_biography_business",
+      "a2_2_m5_passive_present"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M5"
+      }
+    ]
+  },
+  {
+    "id": "b1_1_m1_politics_society",
+    "title": "Politics and Society",
     "level": "B1.1",
     "section": "themes",
     "topicType": "theme",
-    "summary": "Talking about jobs, work environment, and career.",
+    "summary": "Engagement, politics, participation, and social discussion.",
     "relatedTopicIds": [
-      "relative_clauses",
-      "passive_voice"
+      "b1_1_m1_infinitive_zu",
+      "b1_1_m1_stating_opinion"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M1"
+      }
     ]
   },
   {
-    "id": "b1_1_relative_clauses",
-    "title": "Relative Clauses",
+    "id": "b1_1_m1_infinitive_zu",
+    "title": "Infinitive with zu",
     "level": "B1.1",
     "section": "grammar",
     "topicType": "grammar",
-    "summary": "Describing nouns with additional information.",
+    "summary": "Expressing plans, intentions, necessity, and purpose with infinitive constructions.",
     "relatedTopicIds": [
-      "pronouns"
+      "b1_1_m1_politics_society",
+      "b1_1_m1_stating_opinion"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M1"
+      }
     ]
   },
   {
-    "id": "b1_1_agree_disagree",
-    "title": "Agreeing and Disagreeing",
+    "id": "b1_1_m1_stating_opinion",
+    "title": "Stating Opinion, Agreeing, and Disagreeing",
     "level": "B1.1",
     "section": "communication",
     "topicType": "communication",
-    "summary": "Expressing agreement, disagreement, and arguments.",
+    "summary": "Joining discussions, taking a stance, and managing turn-taking.",
     "relatedTopicIds": [
-      "giving_opinions"
+      "b1_1_m1_politics_society",
+      "b1_1_m1_infinitive_zu"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M1"
+      }
+    ]
+  },
+  {
+    "id": "b1_1_m2_study_abroad",
+    "title": "Study Abroad and Academic Life",
+    "level": "B1.1",
+    "section": "themes",
+    "topicType": "theme",
+    "summary": "Study situations, academic communication, and formal requests.",
+    "relatedTopicIds": [
+      "b1_1_m2_genitive_prepositions",
+      "b1_1_m2_semi_formal_email"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M2"
+      }
+    ]
+  },
+  {
+    "id": "b1_1_m2_genitive_prepositions",
+    "title": "Genitive Basics and Prepositions",
+    "level": "B1.1",
+    "section": "grammar",
+    "topicType": "grammar",
+    "summary": "Introducing genitive-focused forms and prepositions such as wegen and trotz.",
+    "relatedTopicIds": [
+      "b1_1_m2_study_abroad",
+      "b1_1_m2_semi_formal_email"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M2"
+      }
+    ]
+  },
+  {
+    "id": "b1_1_m2_semi_formal_email",
+    "title": "Writing Semi-Formal Emails",
+    "level": "B1.1",
+    "section": "communication",
+    "topicType": "communication",
+    "summary": "Apologizing politely, justifying, thanking, and asking follow-up questions in email form.",
+    "relatedTopicIds": [
+      "b1_1_m2_study_abroad",
+      "b1_1_m2_genitive_prepositions"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M2"
+      }
+    ]
+  },
+  {
+    "id": "b1_1_m3_work_satisfaction",
+    "title": "Work Satisfaction and Everyday Work",
+    "level": "B1.1",
+    "section": "themes",
+    "topicType": "theme",
+    "summary": "Workplace life, satisfaction, complaints, causes, and consequences.",
+    "relatedTopicIds": [
+      "b1_1_m3_temporal_connectors",
+      "b1_1_m3_describing_statistics"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M3"
+      }
+    ]
+  },
+  {
+    "id": "b1_1_m3_temporal_connectors",
+    "title": "Temporal Connectors (bis, seit, bevor, während)",
+    "level": "B1.1",
+    "section": "grammar",
+    "topicType": "grammar",
+    "summary": "Linking events and describing time relationships in more complex sentences.",
+    "relatedTopicIds": [
+      "b1_1_m3_work_satisfaction",
+      "b1_1_m3_describing_statistics"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M3"
+      }
+    ]
+  },
+  {
+    "id": "b1_1_m3_describing_statistics",
+    "title": "Describing Statistics and Justifying Opinions",
+    "level": "B1.1",
+    "section": "communication",
+    "topicType": "communication",
+    "summary": "Explaining trends, supporting opinions, and making structured arguments.",
+    "relatedTopicIds": [
+      "b1_1_m3_work_satisfaction",
+      "b1_1_m3_temporal_connectors"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M3"
+      }
+    ]
+  },
+  {
+    "id": "b1_1_m4_products_functions",
+    "title": "Everyday Products and Their Functions",
+    "level": "B1.1",
+    "section": "themes",
+    "topicType": "theme",
+    "summary": "Describing products, functions, qualities, and recommendations.",
+    "relatedTopicIds": [
+      "b1_1_m4_relative_clauses_dative",
+      "b1_1_m4_describing_functions"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M4"
+      }
+    ]
+  },
+  {
+    "id": "b1_1_m4_relative_clauses_dative",
+    "title": "Relative Clauses with Dative and Prepositions",
+    "level": "B1.1",
+    "section": "grammar",
+    "topicType": "grammar",
+    "summary": "Extending relative clauses to more complex reference patterns.",
+    "relatedTopicIds": [
+      "b1_1_m4_products_functions",
+      "b1_1_m4_describing_functions"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M4"
+      }
+    ]
+  },
+  {
+    "id": "b1_1_m4_describing_functions",
+    "title": "Describing Objects and Functions",
+    "level": "B1.1",
+    "section": "communication",
+    "topicType": "communication",
+    "summary": "Describing what products do, how they work, and recommending them.",
+    "relatedTopicIds": [
+      "b1_1_m4_products_functions",
+      "b1_1_m4_relative_clauses_dative"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M4"
+      }
+    ]
+  },
+  {
+    "id": "b1_1_m5_food_preparation",
+    "title": "Food Preparation and Dishes",
+    "level": "B1.1",
+    "section": "themes",
+    "topicType": "theme",
+    "summary": "Recipes, dishes, preparation steps, and food comparison.",
+    "relatedTopicIds": [
+      "b1_1_m5_sodass",
+      "b1_1_m5_recommending_dishes"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M5"
+      }
+    ]
+  },
+  {
+    "id": "b1_1_m5_sodass",
+    "title": "Result Clauses with sodass / so ... dass",
+    "level": "B1.1",
+    "section": "grammar",
+    "topicType": "grammar",
+    "summary": "Expressing cause-result relationships with stronger sentence linking.",
+    "relatedTopicIds": [
+      "b1_1_m5_food_preparation",
+      "b1_1_m5_recommending_dishes"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M5"
+      }
+    ]
+  },
+  {
+    "id": "b1_1_m5_recommending_dishes",
+    "title": "Recommending Dishes and Comparing Foods",
+    "level": "B1.1",
+    "section": "communication",
+    "topicType": "communication",
+    "summary": "Explaining tastes, recommending dishes, and comparing food preferences.",
+    "relatedTopicIds": [
+      "b1_1_m5_food_preparation",
+      "b1_1_m5_sodass"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M5"
+      }
+    ]
+  },
+  {
+    "id": "b1_2_m1_animals",
+    "title": "Animals and Remarkable Things",
+    "level": "B1.2",
+    "section": "themes",
+    "topicType": "theme",
+    "summary": "Animals, notable qualities, and describing abilities or unusual facts.",
+    "relatedTopicIds": [
+      "b1_2_m1_two_part_connectors",
+      "b1_2_m1_describing_animals"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M1"
+      }
+    ]
+  },
+  {
+    "id": "b1_2_m1_two_part_connectors",
+    "title": "Two-Part Connectors I",
+    "level": "B1.2",
+    "section": "grammar",
+    "topicType": "grammar",
+    "summary": "Using structures like weder ... noch and nicht nur ... sondern auch.",
+    "relatedTopicIds": [
+      "b1_2_m1_animals",
+      "b1_2_m1_describing_animals"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M1"
+      }
+    ]
+  },
+  {
+    "id": "b1_2_m1_describing_animals",
+    "title": "Describing Abilities and Remarkable Features",
+    "level": "B1.2",
+    "section": "communication",
+    "topicType": "communication",
+    "summary": "Talking about what is special or noteworthy and giving feedback.",
+    "relatedTopicIds": [
+      "b1_2_m1_animals",
+      "b1_2_m1_two_part_connectors"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M1"
+      }
+    ]
+  },
+  {
+    "id": "b1_2_m2_job_applications",
+    "title": "Job Applications and Skills",
+    "level": "B1.2",
+    "section": "themes",
+    "topicType": "theme",
+    "summary": "Applications, job motivation, qualifications, and professional presentation.",
+    "relatedTopicIds": [
+      "b1_2_m2_relative_was_wo",
+      "b1_2_m2_talking_about_skills"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M2"
+      }
+    ]
+  },
+  {
+    "id": "b1_2_m2_relative_was_wo",
+    "title": "Relative Clauses with was and wo",
+    "level": "B1.2",
+    "section": "grammar",
+    "topicType": "grammar",
+    "summary": "Using wider relative reference patterns in more natural B1-style language.",
+    "relatedTopicIds": [
+      "b1_2_m2_job_applications",
+      "b1_2_m2_talking_about_skills"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M2"
+      }
+    ]
+  },
+  {
+    "id": "b1_2_m2_talking_about_skills",
+    "title": "Talking About Skills and Motivation",
+    "level": "B1.2",
+    "section": "communication",
+    "topicType": "communication",
+    "summary": "Explaining why you want a role and what skills you bring.",
+    "relatedTopicIds": [
+      "b1_2_m2_job_applications",
+      "b1_2_m2_relative_was_wo"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M2"
+      }
+    ]
+  },
+  {
+    "id": "b1_2_m3_love_finance",
+    "title": "Love, Partnership, Banks, and Insurance",
+    "level": "B1.2",
+    "section": "themes",
+    "topicType": "theme",
+    "summary": "Relationships, finances, choices, and alternatives in life decisions.",
+    "relatedTopicIds": [
+      "b1_2_m3_plusquamperfekt",
+      "b1_2_m3_relativizing_statements"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M3"
+      }
+    ]
+  },
+  {
+    "id": "b1_2_m3_plusquamperfekt",
+    "title": "Plusquamperfekt and Connector nachdem",
+    "level": "B1.2",
+    "section": "grammar",
+    "topicType": "grammar",
+    "summary": "Expressing earlier past events and sequencing past actions more precisely.",
+    "relatedTopicIds": [
+      "b1_2_m3_love_finance",
+      "b1_2_m3_relativizing_statements"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M3"
+      }
+    ]
+  },
+  {
+    "id": "b1_2_m3_relativizing_statements",
+    "title": "Naming Alternatives and Relativizing Statements",
+    "level": "B1.2",
+    "section": "communication",
+    "topicType": "communication",
+    "summary": "Comparing options, softening claims, and referring to alternatives.",
+    "relatedTopicIds": [
+      "b1_2_m3_love_finance",
+      "b1_2_m3_plusquamperfekt"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M3"
+      }
+    ]
+  },
+  {
+    "id": "b1_2_m4_art_health_training",
+    "title": "Art, Health, and Training",
+    "level": "B1.2",
+    "section": "themes",
+    "topicType": "theme",
+    "summary": "Art and street art, medical care, routines, training, and institutions.",
+    "relatedTopicIds": [
+      "b1_2_m4_passive_extended",
+      "b1_2_m4_presenting_art"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M4"
+      }
+    ]
+  },
+  {
+    "id": "b1_2_m4_passive_extended",
+    "title": "Passive Voice Extended",
+    "level": "B1.2",
+    "section": "grammar",
+    "topicType": "grammar",
+    "summary": "Using passive in Präteritum/Perfekt and with modal verbs in formal or factual contexts.",
+    "relatedTopicIds": [
+      "b1_2_m4_art_health_training",
+      "b1_2_m4_presenting_art"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M4"
+      }
+    ]
+  },
+  {
+    "id": "b1_2_m4_presenting_art",
+    "title": "Presenting, Describing, and Summarizing",
+    "level": "B1.2",
+    "section": "communication",
+    "topicType": "communication",
+    "summary": "Presenting artwork, summarizing information, and adding new information clearly.",
+    "relatedTopicIds": [
+      "b1_2_m4_art_health_training",
+      "b1_2_m4_passive_extended"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M4"
+      }
+    ]
+  },
+  {
+    "id": "b1_2_m5_fake_news_school_politics",
+    "title": "Fake News, School, and Politics",
+    "level": "B1.2",
+    "section": "themes",
+    "topicType": "theme",
+    "summary": "Media trust, education, politics, negotiation, and reaching consensus.",
+    "relatedTopicIds": [
+      "b1_2_m5_advanced_connectors",
+      "b1_2_m5_consensus"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M5"
+      }
+    ]
+  },
+  {
+    "id": "b1_2_m5_advanced_connectors",
+    "title": "Advanced Connectors and Word Formation",
+    "level": "B1.2",
+    "section": "grammar",
+    "topicType": "grammar",
+    "summary": "Using indem, ohne ... zu, anstatt ... zu, als ob, and selected B1 word formation patterns.",
+    "relatedTopicIds": [
+      "b1_2_m5_fake_news_school_politics",
+      "b1_2_m5_consensus"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M5"
+      }
+    ]
+  },
+  {
+    "id": "b1_2_m5_consensus",
+    "title": "Expressing Doubt, Correcting, and Reaching Consensus",
+    "level": "B1.2",
+    "section": "communication",
+    "topicType": "communication",
+    "summary": "Negotiating carefully, confirming or correcting, and making counterproposals.",
+    "relatedTopicIds": [
+      "b1_2_m5_fake_news_school_politics",
+      "b1_2_m5_advanced_connectors"
+    ],
+    "lessonRefs": [
+      {
+        "curriculum": "Momente",
+        "module": "M5"
+      }
     ]
   }
 ]

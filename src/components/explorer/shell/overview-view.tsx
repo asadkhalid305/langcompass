@@ -2,54 +2,50 @@ import { ArrowRight } from "lucide-react"
 import { useMemo } from "react"
 
 import { Button } from "@/components/ui/button"
-import { humanizeGroupLabel, humanizeSectionLabel, isSectionFallbackGroup } from "@/lib/explorer/labels"
+import { humanizeSectionLabel } from "@/lib/explorer/labels"
 import { cn } from "@/lib/utils/cn"
 
 import { SECTION_ORDER } from "./constants"
-import type { GroupSummary, LevelCounts, LevelProfile } from "./types"
-import type { TopicLevelOrAll, TopicSection } from "@/lib/types/topic"
+import type { LevelCounts, LevelProfile, SectionSummary } from "./types"
+import type { TopicLevelOrAll } from "@/lib/types/topic"
 import { ALL_LEVEL } from "@/lib/constants/topic"
 
 interface OverviewViewProps {
   selectedLevel: TopicLevelOrAll
   levelProfile: LevelProfile
   selectedLevelCounts: LevelCounts[TopicLevelOrAll]
-  groupSummaries: GroupSummary[]
+  sectionSummaries: SectionSummary[]
   onExploreLevel: () => void
-  onExploreGroup: (group: string) => void
 }
 
 export function OverviewView({
   selectedLevel,
   levelProfile,
   selectedLevelCounts,
-  groupSummaries,
+  sectionSummaries,
   onExploreLevel,
-  onExploreGroup,
 }: OverviewViewProps) {
   const groupedBySection = useMemo(() => {
-    const grouped = new Map<string, GroupSummary[]>()
-    for (const summary of groupSummaries) {
-      const existing = grouped.get(summary.section) ?? []
-      existing.push(summary)
-      grouped.set(summary.section, existing)
+    const grouped = new Map<string, SectionSummary>()
+    for (const summary of sectionSummaries) {
+      grouped.set(summary.section, summary)
     }
 
-    const ordered = new Map<string, GroupSummary[]>()
+    const ordered = new Map<string, SectionSummary>()
     for (const section of SECTION_ORDER) {
       if (grouped.has(section)) {
-        ordered.set(section, grouped.get(section) ?? [])
+        ordered.set(section, grouped.get(section) as SectionSummary)
       }
     }
 
-    for (const [section, groups] of grouped) {
+    for (const [section, summary] of grouped) {
       if (!ordered.has(section)) {
-        ordered.set(section, groups)
+        ordered.set(section, summary)
       }
     }
 
     return ordered
-  }, [groupSummaries])
+  }, [sectionSummaries])
 
   return (
     <div className="space-y-8 p-4 md:p-6">
@@ -88,7 +84,7 @@ export function OverviewView({
       </section>
 
       <div className="space-y-10">
-        {Array.from(groupedBySection.entries()).map(([section, groups]) => (
+        {Array.from(groupedBySection.entries()).map(([section, summary]) => (
           <section key={section}>
             <div className="flex items-center gap-3 mb-5">
               <span
@@ -105,34 +101,30 @@ export function OverviewView({
                 aria-hidden="true"
               />
               <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">
-                {humanizeSectionLabel(section as GroupSummary["section"])}
+                {humanizeSectionLabel(section as SectionSummary["section"])}
               </p>
             </div>
-            <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
-              {groups.map((groupSummary) => (
-                <button
-                  key={groupSummary.group}
-                  type="button"
-                  onClick={() => onExploreGroup(groupSummary.group)}
-                  className={cn(
-                    "group flex flex-col gap-1.5 p-5 bg-white border border-border text-left transition-all duration-200",
-                    "hover:shadow-[4px_4px_0px_#111827] hover:-translate-x-[2px] hover:-translate-y-[2px]",
-                    "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground",
-                  )}
-                >
-                  <h3 className="text-sm font-bold font-sans group-hover:underline underline-offset-2">
-                    {isSectionFallbackGroup(groupSummary.group, groupSummary.section as TopicSection)
-                      ? "All topics"
-                      : humanizeGroupLabel(groupSummary.group)}
-                  </h3>
-                  <p className="text-xs tracking-wider text-muted-foreground uppercase font-medium">
-                    {groupSummary.introducedCount > 0 ? `${groupSummary.introducedCount} new` : null}
-                    {groupSummary.introducedCount > 0 && groupSummary.revisitedCount > 0 ? " · " : null}
-                    {groupSummary.revisitedCount > 0 ? `${groupSummary.revisitedCount} revisited` : null}
-                  </p>
-                </button>
-              ))}
-            </div>
+            <button
+              type="button"
+              onClick={onExploreLevel}
+              className={cn(
+                "group flex w-full flex-col gap-1.5 bg-white border border-border p-5 text-left transition-all duration-200",
+                "hover:shadow-[4px_4px_0px_#111827] hover:-translate-x-[2px] hover:-translate-y-[2px]",
+                "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground",
+              )}
+            >
+              <h3 className="text-sm font-bold font-sans group-hover:underline underline-offset-2">
+                {humanizeSectionLabel(summary.section)}
+              </h3>
+              <p className="text-xs tracking-wider text-muted-foreground uppercase font-medium">
+                {summary.totalCount} topics
+              </p>
+              <p className="text-xs tracking-wider text-muted-foreground uppercase font-medium">
+                {summary.introducedCount > 0 ? `${summary.introducedCount} new` : null}
+                {summary.introducedCount > 0 && summary.revisitedCount > 0 ? " · " : null}
+                {summary.revisitedCount > 0 ? `${summary.revisitedCount} revisited` : null}
+              </p>
+            </button>
           </section>
         ))}
       </div>

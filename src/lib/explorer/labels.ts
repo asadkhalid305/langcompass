@@ -33,4 +33,4 @@ export const humanizeSectionLabel = (section: TopicSection): string => humanizeV
 export const humanizeGroupLabel = (group: string): string => humanizeValue(group)
 export const humanizeDifficultyStageLabel = (stage: TopicDifficultyStage): string => humanizeValue(stage)
 export const humanizeTopicTypeLabel = (topicType: TopicType): string => humanizeValue(topicType)
-export const isSectionFallbackGroup = (group: string, section: TopicSection): boolean => group === section
+export const isSectionFallbackGroup = (group: string | undefined, section: TopicSection): boolean => group === section

@@ -37,7 +37,7 @@ const toSearchDocument = (topic: TopicCatalogItem): TopicSearchDocument => ({
   level: normalizeSearchText(topic.level),
   section: normalizeSearchText(topic.section),
   topicType: normalizeSearchText(topic.topicType),
-  group: normalizeSearchText(topic.group),
+  group: normalizeSearchText(topic.group ?? ""),
 })
 
 const buildFuseOptions = (config: TopicSearchConfig): IFuseOptions<TopicSearchDocument> => ({
@@ -53,7 +53,7 @@ const buildFuseOptions = (config: TopicSearchConfig): IFuseOptions<TopicSearchDo
     { name: "keywords", weight: 0.15 },
     { name: "summary", weight: 0.09 },
     { name: "group", weight: 0.06 },
-    { name: "section", weight: 0.02 },
+    { name: "section", weight: 0.05 },
     { name: "topicType", weight: 0.01 },
     { name: "level", weight: 0.01 },
   ],

@@ -24,7 +24,6 @@ export default async function HomePage({ searchParams }: HomePageProps = {}) {
     redirect(
       buildExplorerHref({
         level: legacyExplorerState.level,
-        group: legacyExplorerState.group,
         query: legacyExplorerState.query,
         topicId: legacyExplorerState.topicId,
       }),

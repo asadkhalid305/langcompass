@@ -4,27 +4,24 @@ import { useSearchParams } from "next/navigation"
 
 import { TopicDetailBreadcrumbContent } from "@/components/topic-detail/topic-detail-breadcrumb-content"
 import { buildExplorerHref, parseTopicLevelOrAll } from "@/lib/explorer/navigation"
-import type { TopicId, TopicLevel } from "@/lib/types/topic"
+import type { TopicId, TopicLevel, TopicSection } from "@/lib/types/topic"
 
 interface TopicDetailBreadcrumbProps {
   topicId: TopicId
   topicTitle: string
   defaultLevel: TopicLevel
-  defaultGroup: string
+  defaultSection: TopicSection
 }
 
-export function TopicDetailBreadcrumb({ topicId, topicTitle, defaultLevel, defaultGroup }: TopicDetailBreadcrumbProps) {
+export function TopicDetailBreadcrumb({ topicId, topicTitle, defaultLevel, defaultSection }: TopicDetailBreadcrumbProps) {
   const searchParams = useSearchParams()
   const contextLevel = parseTopicLevelOrAll(searchParams.get("level")) ?? defaultLevel
-  const requestedGroup = searchParams.get("group")?.trim()
-  const contextGroup = requestedGroup && requestedGroup.length > 0 ? requestedGroup : defaultGroup
   const explorerHref = buildExplorerHref({
     level: contextLevel,
-    group: contextGroup,
     topicId,
   })
 
   return (
-    <TopicDetailBreadcrumbContent level={contextLevel} group={contextGroup} topicTitle={topicTitle} explorerHref={explorerHref} />
+    <TopicDetailBreadcrumbContent level={contextLevel} section={defaultSection} topicTitle={topicTitle} explorerHref={explorerHref} />
   )
 }

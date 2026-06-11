@@ -85,19 +85,38 @@ const normalizeTopicType = (section: TopicSection, topicType: unknown): TopicTyp
   return normalized === expectedTopicType ? normalized : expectedTopicType
 }
 
-const buildCatalogSummary = (input: { title: string; level: TopicLevel; section: TopicSection; group?: string }): string => {
+const normalizeTopicGroup = (groupValue: unknown): string | undefined => {
+  if (typeof groupValue === "string" && groupValue.trim().length > 0) {
+    return groupValue.trim()
+  }
+
+  return undefined
+}
+
+const buildCatalogSummary = (input: {
+  title: string
+  level: TopicLevel
+  section: TopicSection
+  group?: string
+}): string => {
   const groupLabel = (input.group ?? input.section).replace(/[_-]+/g, " ").trim()
 
   switch (input.section) {
     case "themes":
-      return `${input.title} is a theme in ${input.level} that supports the ${groupLabel} module path.`
+      return `${input.title} is a theme in ${input.level} within the ${groupLabel} section.`
     case "communication":
       return `${input.title} is a communication topic in ${input.level} for guided practice in ${groupLabel}.`
     case "grammar":
     default:
-      return `${input.title} is a grammar topic in ${input.level} that supports the ${groupLabel} learning path.`
+      return `${input.title} is a grammar topic in ${input.level} within the ${groupLabel} section.`
   }
 }
+
+const lessonRefInputSchema = z.object({
+  curriculum: requiredString,
+  module: requiredString,
+  lesson: optionalString,
+})
 
 const baseTopicInputSchema = z.object({
   id: TopicIdSchema,
@@ -109,15 +128,7 @@ const baseTopicInputSchema = z.object({
   group: requiredString.optional(),
   summary: requiredString.optional(),
   relatedTopicIds: z.array(TopicIdSchema).default([]).optional(),
-  lessonRefs: z
-    .array(
-      z.object({
-        curriculum: requiredString,
-        module: requiredString,
-        lesson: optionalString,
-      }),
-    )
-    .optional(),
+  lessonRefs: z.array(lessonRefInputSchema).optional(),
   firstIntroducedIn: topicLevelSchema.optional(),
   revisitedIn: topicLevelArraySchema.default([]).optional(),
   difficultyStage: topicDifficultyStageSchema.default("intro").optional(),
@@ -128,6 +139,7 @@ const baseTopicInputSchema = z.object({
 const normalizeCatalogItem = (item: z.infer<typeof baseTopicInputSchema>): TopicCatalogItem => {
   const section = deriveTopicSection(item.section, item.topicType, item.category)
   const topicType = normalizeTopicType(section, item.topicType)
+  const group = normalizeTopicGroup(item.group)
 
   return {
     id: item.id,
@@ -135,8 +147,8 @@ const normalizeCatalogItem = (item: z.infer<typeof baseTopicInputSchema>): Topic
     level: item.level,
     section,
     topicType,
-    group: item.group ?? section,
-    summary: item.summary ?? buildCatalogSummary({ title: item.title, level: item.level, section, group: item.group }),
+    group,
+    summary: item.summary ?? buildCatalogSummary({ title: item.title, level: item.level, section, group }),
     relatedTopicIds: item.relatedTopicIds ?? [],
     lessonRefs: item.lessonRefs,
     firstIntroducedIn: item.firstIntroducedIn ?? item.level,
@@ -217,11 +229,7 @@ export const TopicUISchema = z.object({
   recommendedSections: z.array(requiredString),
 })
 
-export const TopicLessonRefSchema: z.ZodType<TopicLessonRef> = z.object({
-  curriculum: requiredString,
-  module: requiredString,
-  lesson: optionalString,
-})
+export const TopicLessonRefSchema: z.ZodType<TopicLessonRef> = lessonRefInputSchema
 
 export const TopicSourceStyleSchema = z.object({
   origin: requiredString,

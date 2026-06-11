@@ -3,11 +3,15 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
+  "engines": {
+    "node": ">=20.9.0"
+  },
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --webpack",
     "build": "next build",
     "start": "next start",
     "lint": "eslint . --ext .js,.ts,.tsx",
+    "test": "tsx --test tests/*.test.ts",
     "validate:topics": "node scripts/validate-topics.js",
     "promote:worktree": "bash scripts/codex-promote-worktree.sh"
   },
@@ -33,6 +37,7 @@
     "eslint-config-next": "^16.0.0",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.17",
+    "tsx": "^4.22.4",
     "typescript": "^5.8.2"
   }
 }

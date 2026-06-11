@@ -13,7 +13,6 @@ export interface RouteQueryInput {
 
 export interface ExplorerQueryState {
   level?: TopicLevelOrAll
-  group?: string
   query?: string
   topicId?: TopicId
 }
@@ -24,14 +23,12 @@ export interface OverviewQueryState {
 
 interface ExplorerHrefOptions {
   level?: TopicLevelOrAll | null
-  group?: string | null
   query?: string | null
   topicId?: TopicId | null
 }
 
 interface TopicHrefContext {
   level?: TopicLevelOrAll | null
-  group?: string | null
 }
 
 interface OverviewHrefOptions {
@@ -68,11 +65,10 @@ export const parseOverviewQueryState = (query: RouteQueryInput): OverviewQuerySt
 
 export const parseExplorerQueryState = (query: RouteQueryInput): ExplorerQueryState => {
   const level = parseTopicLevelOrAll(query.level) ?? ALL_LEVEL
-  const group = asSingleString(query.group)
   const topicId = asSingleString(query.topic)
   const requestedQuery = asSingleString(query.q)
 
-  return { level, group, topicId, query: requestedQuery }
+  return { level, topicId, query: requestedQuery }
 }
 
 export const hasLegacyExplorerSignal = (query: RouteQueryInput): boolean => {
@@ -92,11 +88,10 @@ export const buildOverviewHref = ({ level }: OverviewHrefOptions = {}): string =
   return query.length > 0 ? `/?${query}` : "/"
 }
 
-export const buildExplorerHref = ({ level, group, query: searchQuery, topicId }: ExplorerHrefOptions): string => {
+export const buildExplorerHref = ({ level, query: searchQuery, topicId }: ExplorerHrefOptions): string => {
   const params = new URLSearchParams()
 
   if (level && level !== ALL_LEVEL) params.set("level", level)
-  if (group) params.set("group", group)
   if (searchQuery) params.set("q", searchQuery)
   if (topicId) params.set("topic", topicId)
 
@@ -108,7 +103,6 @@ export const buildTopicDetailHref = (topicId: TopicId, context: TopicHrefContext
   const params = new URLSearchParams()
 
   if (context.level) params.set("level", context.level)
-  if (context.group) params.set("group", context.group)
 
   const query = params.toString()
   const base = `/topic/${encodeURIComponent(topicId)}`
