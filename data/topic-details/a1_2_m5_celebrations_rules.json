@@ -1,0 +1,58 @@
+{
+  "id": "a1_2_m5_celebrations_rules",
+  "title": "Celebrations, Dates, and Rules",
+  "level": "A1.2",
+  "section": "themes",
+  "topicType": "theme",
+  "summary": "Festivals, dates, congratulations, and rules in everyday life.",
+  "relatedTopicIds": ["a1_2_m5_imperative", "a1_2_m5_congratulating"],
+  "lessonRefs": [{"curriculum": "Momente", "module": "M5"}],
+  "whyItMatters": "Celebrations combine dates, invitations, gifts, food, social expectations, and good wishes. Knowing the event vocabulary and basic rules helps you participate appropriately and understand what guests should do.",
+  "prerequisiteTopicIds": ["a1_2_m2_plans_wishes", "a1_2_m3_requests_instructions"],
+  "mentalModel": [
+    {"title": "Build an event card", "content": "For every celebration, identify the occasion, date, time, place, host, guests, and any requested action."},
+    {"title": "Separate custom from rule", "content": "A custom describes what people often do; a rule or instruction states what guests must, should, or must not do."},
+    {"title": "Move through the event", "content": "Practice language for invitation, arrival, congratulations, participation, thanks, and departure."}
+  ],
+  "coverageChecklist": ["birthdays", "weddings", "holidays", "ordinal dates", "invitations", "gifts and food", "event rules", "host and guest roles"],
+  "ruleBlocks": [
+    {"id": "events", "title": "Learn occasions with event actions", "content": "Connect Geburtstag feiern, zur Hochzeit einladen, ein Geschenk mitbringen, and eine Party organisieren."},
+    {"id": "dates", "title": "State calendar dates clearly", "content": "Use ordinal forms in date chunks: am ersten Mai, am zwölften Juni, vom dritten bis zum fünften August."},
+    {"id": "invitation", "title": "Read the complete invitation", "content": "Find the occasion, host, date, time, place, response deadline, and any request about food, clothing, or gifts."},
+    {"id": "rules", "title": "Distinguish positive and negative rules", "content": "Use instructions such as 'Bitte Schuhe ausziehen' and prohibitions such as 'Hier nicht rauchen'."}
+  ],
+  "tables": [
+    {"id": "celebrations", "title": "Celebration Vocabulary", "columns": ["Occasion", "Useful language"], "rows": [["der Geburtstag", "Geburtstag feiern"], ["die Hochzeit", "zur Hochzeit gratulieren"], ["das Jubiläum", "ein Jubiläum feiern"], ["Weihnachten", "Frohe Weihnachten wünschen"], ["Silvester", "das neue Jahr begrüßen"], ["die Einladung", "eine Einladung annehmen"]]},
+    {"id": "dates_rules", "title": "Dates and Event Rules", "columns": ["Function", "Example"], "rows": [["Date", "Die Feier ist am zwölften Juni."], ["Time", "Sie beginnt um 18 Uhr."], ["Bring", "Bitte bringt etwas zu trinken mit."], ["Location rule", "Stellt die Geschenke auf den Tisch."], ["Prohibition", "Bitte raucht nicht in der Wohnung."]]}
+  ],
+  "patterns": ["am + ordinal date", "zu + celebration", "jemanden einladen", "etwas mitbringen", "event + beginnt/findet statt", "Bitte + instruction", "nicht + prohibited action"],
+  "verbs": ["feiern", "einladen", "gratulieren", "schenken", "mitbringen", "beginnen", "stattfinden", "dekorieren"],
+  "sentenceStructure": ["Use 'am' with calendar dates.", "Separable event verbs split in main clauses.", "Instructions commonly begin with the action or polite 'bitte'.", "Put a location phrase after the item or action when explaining event setup."],
+  "levelProgression": [
+    {"level": "A1.2", "concepts": ["name common celebrations", "understand dates and invitation details", "follow simple event rules"]},
+    {"level": "A2", "concepts": ["describe traditions and past celebrations", "explain event organization and etiquette"]},
+    {"level": "B1", "concepts": ["compare cultural customs", "plan and negotiate complex events"]}
+  ],
+  "comparisons": [
+    {"topicId": "a1_2_m5_imperative", "summary": "The grammar lesson provides command forms and basic placement language for event rules."},
+    {"topicId": "a1_2_m5_congratulating", "summary": "The communication lesson supplies good wishes and natural responses for each occasion."}
+  ],
+  "examples": [
+    {"id": "birthday", "de": "Mein Geburtstag ist am dreiundzwanzigsten September.", "en": "My birthday is on September 23rd."},
+    {"id": "invitation", "de": "Wir laden euch am Samstag um 18 Uhr zu unserer Feier ein.", "en": "We invite you to our celebration on Saturday at 6 p.m."},
+    {"id": "gift", "de": "Soll ich ein Geschenk oder etwas zu essen mitbringen?", "en": "Should I bring a gift or something to eat?"},
+    {"id": "rule", "de": "Bitte stellt die Getränke in den Kühlschrank.", "en": "Please put the drinks in the refrigerator."},
+    {"id": "prohibition", "de": "In diesem Raum dürft ihr nicht rauchen.", "en": "You may not smoke in this room."}
+  ],
+  "commonMistakes": [
+    {"id": "date", "wrong": "am zwölf Juni", "correct": "am zwölften Juni", "reason": "Spoken dates use an ordinal form after 'am'."},
+    {"id": "invite", "wrong": "Ich einlade dich.", "correct": "Ich lade dich ein.", "reason": "'Einladen' is separable in a main clause."},
+    {"id": "missing_details", "wrong": "Komm zu meiner Party!", "correct": "Add the date, time, place, and response information.", "reason": "An invitation must be actionable."}
+  ],
+  "specialCases": ["Ordinal endings vary by grammatical context; this lesson prioritizes fixed date chunks after 'am'.", "Customs around gifts, punctuality, shoes, and food vary by event and community.", "'Feier' is a general celebration; 'Party' is common but often more informal."],
+  "tips": ["Create a complete invitation for a real or fictional event.", "Practice reading dates aloud.", "Sort event statements into invitation detail, custom, instruction, or prohibition."],
+  "searchHints": ["Feste", "Datum", "Geburtstag", "Einladung", "German celebrations"],
+  "ui": {"status": "ready", "recommendedSections": ["mentalModel", "coreRules", "tables", "patternsAndUsage", "examples", "commonMistakes", "comparisons", "levelProgression", "advancedSpecialCases"]},
+  "sourceStyle": {"origin": "LangCompass editorial lesson aligned to the Momente A1.2 M5 catalog topic", "confidence": "high", "notes": "The lesson treats celebrations as a sequence of invitation details, participation, and rules."},
+  "updatedAt": "2026-06-12"
+}

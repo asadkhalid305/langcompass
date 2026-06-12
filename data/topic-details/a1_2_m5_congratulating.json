@@ -1,0 +1,58 @@
+{
+  "id": "a1_2_m5_congratulating",
+  "title": "Congratulating and Giving Good Wishes",
+  "level": "A1.2",
+  "section": "communication",
+  "topicType": "communication",
+  "summary": "Congratulating, wishing well, and reacting in celebration contexts.",
+  "relatedTopicIds": ["a1_2_m5_celebrations_rules", "a1_2_m5_imperative"],
+  "lessonRefs": [{"curriculum": "Momente", "module": "M5"}],
+  "whyItMatters": "Good wishes are short but socially important. Choosing a phrase that matches the occasion, adding a personal detail, and responding warmly makes celebration language feel natural rather than memorized.",
+  "prerequisiteTopicIds": ["a1_2_m5_celebrations_rules"],
+  "mentalModel": [
+    {"title": "Match phrase to occasion", "content": "Birthday, wedding, holiday, exam, recovery, and journey wishes use different conventional phrases."},
+    {"title": "Add one personal line", "content": "After the standard wish, mention health, happiness, success, enjoyment, or a shared plan."},
+    {"title": "Receive the wish actively", "content": "Thank the person and, when natural, respond to the personal detail or include them in the celebration."}
+  ],
+  "coverageChecklist": ["birthday wishes", "congratulations", "holidays", "weddings", "success", "recovery", "journeys", "responses"],
+  "ruleBlocks": [
+    {"id": "occasion", "title": "Choose the conventional opening", "content": "Use 'Alles Gute zum Geburtstag', 'Herzlichen Glückwunsch', 'Frohe Weihnachten', or another occasion-specific phrase."},
+    {"id": "personalize", "title": "Add a personal wish", "content": "Continue with 'Ich wünsche dir/Ihnen ...' plus Gesundheit, Glück, Erfolg, or a good experience."},
+    {"id": "register", "title": "Keep address consistent", "content": "Use 'dir/dein' informally and 'Ihnen/Ihr' formally throughout the message."},
+    {"id": "respond", "title": "Thank and acknowledge", "content": "Respond with 'Vielen Dank', 'Das ist lieb/nett von dir/Ihnen', or a short relevant reply."}
+  ],
+  "tables": [
+    {"id": "toolkit", "title": "Conversation Toolkit", "columns": ["Occasion", "Good wish"], "rows": [["Birthday", "Alles Gute zum Geburtstag!"], ["General achievement", "Herzlichen Glückwunsch!"], ["Wedding", "Alles Gute zur Hochzeit!"], ["Christmas", "Frohe Weihnachten!"], ["New Year", "Frohes neues Jahr!"], ["Recovery", "Gute Besserung!"], ["Journey", "Gute Reise!"], ["Exam or task", "Viel Erfolg!"]]},
+    {"id": "responses", "title": "Responding to Good Wishes", "columns": ["Situation", "Response"], "rows": [["Informal thanks", "Danke, das ist lieb von dir."], ["Formal thanks", "Vielen Dank, das ist sehr nett von Ihnen."], ["Shared holiday", "Danke, gleichfalls!"], ["Invitation follows", "Danke! Komm doch später zur Feier."]]}
+  ],
+  "patterns": ["Alles Gute zu/zum/zur + occasion", "Herzlichen Glückwunsch zu + dative", "Ich wünsche dir/Ihnen + noun", "Gute/Frohe/Viel + fixed wish", "Danke, gleichfalls."],
+  "verbs": ["gratulieren", "wünschen", "feiern", "danken", "hoffen", "genießen"],
+  "sentenceStructure": ["Begin with the conventional wish.", "Use 'zu' plus the appropriate article form for many occasions.", "Add an optional personal sentence.", "Respond with thanks and consistent register."],
+  "levelProgression": [
+    {"level": "A1.2", "concepts": ["give common good wishes", "personalize a short message", "respond appropriately"]},
+    {"level": "A2", "concepts": ["write longer cards and messages", "express hopes and reasons"]},
+    {"level": "B1", "concepts": ["adapt tone to formal and personal contexts", "deliver nuanced congratulations and condolences"]}
+  ],
+  "comparisons": [
+    {"topicId": "a1_2_m5_celebrations_rules", "summary": "The theme lesson supplies the occasions, dates, invitations, and customs that frame each wish."},
+    {"topicId": "a1_2_m5_imperative", "summary": "Short hospitable instructions often surround a celebration exchange: 'Komm rein', 'Nimm dir Kuchen', or 'Feiern Sie schön'."}
+  ],
+  "examples": [
+    {"id": "birthday", "de": "A: Alles Gute zum Geburtstag! Ich wünsche dir viel Glück und Gesundheit. B: Danke, das ist lieb von dir.", "en": "A: Happy birthday! I wish you lots of happiness and health. B: Thank you, that is kind of you."},
+    {"id": "wedding", "de": "Herzlichen Glückwunsch zur Hochzeit! Alles Gute für eure gemeinsame Zukunft.", "en": "Congratulations on your wedding! All the best for your future together."},
+    {"id": "holiday", "de": "A: Frohe Weihnachten! B: Danke, gleichfalls!", "en": "A: Merry Christmas! B: Thank you, same to you!"},
+    {"id": "recovery", "de": "Gute Besserung! Ich hoffe, du bist bald wieder gesund.", "en": "Get well soon! I hope you are healthy again soon."},
+    {"id": "success", "de": "Viel Erfolg bei der Prüfung! Du schaffst das.", "en": "Good luck with the exam! You can do it."}
+  ],
+  "commonMistakes": [
+    {"id": "occasion", "wrong": "Use 'Alles Gute zum Geburtstag' for every occasion.", "correct": "Choose a wish that matches the event.", "reason": "Conventional phrases are occasion-specific."},
+    {"id": "register", "wrong": "Ich wünsche Ihnen viel Glück für deine Zukunft.", "correct": "Ich wünsche Ihnen viel Glück für Ihre Zukunft.", "reason": "Formal address must remain consistent."},
+    {"id": "bare_thanks", "wrong": "Receive a personal wish with silence or an unrelated response.", "correct": "Acknowledge it with thanks and, if appropriate, a reciprocal wish.", "reason": "The response completes the social exchange."}
+  ],
+  "specialCases": ["'Gleichfalls' works when the same wish logically applies to both people.", "'Herzlichen Glückwunsch' is used for achievements and milestones, not ordinary holidays.", "Condolence language is distinct from congratulations and belongs to a later, more sensitive context."],
+  "tips": ["Build a phrase card for each occasion.", "Add one genuine personal wish to every standard formula.", "Practice both giving and receiving the message."],
+  "searchHints": ["Gratulieren", "Glückwünsche", "Alles Gute", "Gute Besserung", "German congratulations"],
+  "ui": {"status": "ready", "recommendedSections": ["mentalModel", "coreRules", "tables", "patternsAndUsage", "examples", "commonMistakes", "comparisons", "levelProgression", "advancedSpecialCases"]},
+  "sourceStyle": {"origin": "LangCompass editorial lesson aligned to the Momente A1.2 M5 catalog topic", "confidence": "high", "notes": "The lesson pairs conventional wishes with personalization, register, and natural responses."},
+  "updatedAt": "2026-06-12"
+}

@@ -1,0 +1,59 @@
+{
+  "id": "a1_2_m5_imperative",
+  "title": "Imperative and Basic Two-Way Prepositions",
+  "level": "A1.2",
+  "section": "grammar",
+  "topicType": "grammar",
+  "summary": "Giving instructions and using an/auf/in in simple directional contexts.",
+  "relatedTopicIds": ["a1_2_m5_celebrations_rules", "a1_2_m5_congratulating"],
+  "lessonRefs": [{"curriculum": "Momente", "module": "M5"}],
+  "whyItMatters": "Imperatives make event instructions direct and efficient. Basic two-way prepositions add the crucial distinction between putting or moving something somewhere and describing where it already is.",
+  "prerequisiteTopicIds": ["accusative_case", "a1_2_m1_temporal_prepositions", "a1_2_m3_requests_instructions"],
+  "mentalModel": [
+    {"title": "Imperative starts with action", "content": "The action verb leads; the subject is usually omitted with 'du' and 'ihr' but included after the verb with formal 'Sie'."},
+    {"title": "Movement asks wohin", "content": "Use accusative after an, auf, or in when something moves to a destination."},
+    {"title": "Location asks wo", "content": "Use dative after the same prepositions when something is already located there."}
+  ],
+  "coverageChecklist": ["du imperative", "ihr imperative", "Sie imperative", "negative commands", "an/auf/in", "wo versus wohin", "accusative direction", "dative location"],
+  "ruleBlocks": [
+    {"id": "du", "title": "Form the du imperative from the verb stem", "content": "Usually remove '-st' and the subject: 'Du kommst' becomes 'Komm!' and 'Du nimmst' becomes 'Nimm!'."},
+    {"id": "ihr_sie", "title": "Use familiar plural and formal forms", "content": "The 'ihr' imperative matches the present form without 'ihr': 'Kommt!' Formal commands use infinitive plus 'Sie': 'Kommen Sie!'"},
+    {"id": "negative", "title": "Add nicht or kein for prohibitions", "content": "Use 'Kommt nicht zu spät' or 'Bringt keine Getränke mit'."},
+    {"id": "two_way", "title": "Choose case from movement or location", "content": "Use accusative for destination ('auf den Tisch') and dative for location ('auf dem Tisch')."}
+  ],
+  "tables": [
+    {"id": "imperatives", "title": "Imperative Forms", "columns": ["Verb", "du", "ihr", "Sie"], "rows": [["kommen", "Komm!", "Kommt!", "Kommen Sie!"], ["nehmen", "Nimm!", "Nehmt!", "Nehmen Sie!"], ["sein", "Sei!", "Seid!", "Seien Sie!"], ["mitbringen", "Bring mit!", "Bringt mit!", "Bringen Sie mit!"], ["warten", "Warte!", "Wartet!", "Warten Sie!"]]},
+    {"id": "two_way", "title": "Direction and Location", "columns": ["Question", "Case", "Example"], "rows": [["Wohin? onto the table", "accusative", "Stell die Gläser auf den Tisch."], ["Wo? on the table", "dative", "Die Gläser stehen auf dem Tisch."], ["Wohin? into the room", "accusative", "Geh in das Zimmer."], ["Wo? in the room", "dative", "Die Gäste sind in dem Zimmer."], ["Wohin? onto the wall", "accusative", "Häng das Bild an die Wand."], ["Wo? on the wall", "dative", "Das Bild hängt an der Wand."]]}
+  ],
+  "patterns": ["verb stem + !", "present ihr-form without ihr", "infinitive + Sie", "imperative + nicht/kein", "wohin + accusative", "wo + dative"],
+  "prepositions": ["an", "auf", "in"],
+  "twoWayPrepositions": ["an", "auf", "in"],
+  "sentenceStructure": ["The imperative verb normally occupies first position.", "Separable prefixes close the command.", "Formal 'Sie' follows the verb.", "The preposition's case follows meaning: destination versus location."],
+  "levelProgression": [
+    {"level": "A1.2", "concepts": ["form common imperatives", "make negative commands", "distinguish basic destination and location phrases"]},
+    {"level": "A2", "concepts": ["use all two-way prepositions", "combine commands with pronouns and particles"]},
+    {"level": "B1", "concepts": ["soften directives stylistically", "control spatial case in complex descriptions"]}
+  ],
+  "comparisons": [
+    {"topicId": "a1_2_m5_celebrations_rules", "summary": "The theme lesson supplies event setup and rule contexts for imperatives and placement phrases."},
+    {"topicId": "a1_2_m5_congratulating", "summary": "Celebration exchanges include short invitations and hospitable instructions such as 'Komm rein' and 'Setzen Sie sich'."}
+  ],
+  "examples": [
+    {"id": "du", "de": "Komm bitte um sechs Uhr und bring deine Schwester mit.", "en": "Please come at six and bring your sister."},
+    {"id": "ihr", "de": "Stellt die Geschenke auf den Tisch.", "en": "Put the gifts on the table."},
+    {"id": "formal", "de": "Kommen Sie bitte herein und nehmen Sie Platz.", "en": "Please come in and take a seat."},
+    {"id": "location", "de": "Die Getränke stehen im Kühlschrank.", "en": "The drinks are in the refrigerator."},
+    {"id": "contrast", "de": "Häng die Dekoration an die Wand; das Bild hängt schon an der Wand.", "en": "Hang the decoration on the wall; the picture is already hanging on the wall."}
+  ],
+  "commonMistakes": [
+    {"id": "subject", "wrong": "Du komm bitte.", "correct": "Komm bitte.", "reason": "The subject is normally omitted in the 'du' imperative."},
+    {"id": "formal", "wrong": "Kommen bitte!", "correct": "Kommen Sie bitte!", "reason": "The formal imperative includes 'Sie'."},
+    {"id": "case", "wrong": "Stell die Gläser auf dem Tisch.", "correct": "Stell die Gläser auf den Tisch.", "reason": "Movement to a destination requires accusative."}
+  ],
+  "specialCases": ["Some 'du' imperatives change the stem vowel: 'nehmen' becomes 'Nimm!'.", "The distinction is semantic, not simply based on the verb: movement within a location can still answer 'wo'.", "Contractions include 'ins' for 'in das' and 'im' for 'in dem'."],
+  "tips": ["Convert present-tense forms into all three imperative registers.", "Ask 'wo' or 'wohin' before choosing the case.", "Practice each location as a movement/location pair."],
+  "searchHints": ["Imperativ", "Wechselpräpositionen", "wo wohin", "auf den auf dem", "German commands"],
+  "ui": {"status": "ready", "recommendedSections": ["mentalModel", "coreRules", "tables", "patternsAndUsage", "examples", "commonMistakes", "comparisons", "levelProgression", "advancedSpecialCases"]},
+  "sourceStyle": {"origin": "LangCompass editorial lesson aligned to the Momente A1.2 M5 catalog topic", "confidence": "high", "notes": "The lesson combines high-frequency command forms with the first explicit destination-location case contrast."},
+  "updatedAt": "2026-06-12"
+}
