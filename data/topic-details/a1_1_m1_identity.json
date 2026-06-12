@@ -1,0 +1,284 @@
+{
+  "id": "a1_1_m1_identity",
+  "title": "Introductions and Identity",
+  "level": "A1.1",
+  "section": "themes",
+  "topicType": "theme",
+  "summary": "Names, origin, languages, and basic personal information.",
+  "relatedTopicIds": [
+    "a1_1_m1_present_basic",
+    "a1_1_m1_question_words"
+  ],
+  "lessonRefs": [
+    {
+      "curriculum": "Momente",
+      "module": "M1"
+    }
+  ],
+  "whyItMatters": "Introducing yourself is the first reusable situation in a new language. With a small set of identity words, you can give your name, origin, place of residence, and languages, then understand the same information from someone else.",
+  "mentalModel": [
+    {
+      "title": "Build a four-part identity card",
+      "content": "Organize a basic introduction into four pieces: name, origin, residence, and languages. You can add or remove a piece depending on the situation."
+    },
+    {
+      "title": "Learn countries and languages as pairs",
+      "content": "Connect the country with its language: Deutschland–Deutsch, Spanien–Spanisch, Italien–Italienisch. The forms are related but not always identical."
+    },
+    {
+      "title": "Separate origin from residence",
+      "content": "'Ich komme aus ...' says where you are from. 'Ich wohne in ...' says where you live now. They can name different places."
+    }
+  ],
+  "coverageChecklist": [
+    "names",
+    "countries",
+    "cities",
+    "languages",
+    "origin",
+    "place of residence",
+    "formal and informal identity language"
+  ],
+  "ruleBlocks": [
+    {
+      "id": "name",
+      "title": "Give your name",
+      "content": "Use 'Ich heiße ...' or 'Mein Name ist ...'. In everyday introductions, 'Ich bin ...' is also common."
+    },
+    {
+      "id": "origin",
+      "title": "State your origin",
+      "content": "Use 'Ich komme aus ...' with a country or city: 'Ich komme aus Pakistan' or 'Ich komme aus Lahore.'"
+    },
+    {
+      "id": "residence",
+      "title": "Say where you live",
+      "content": "Use 'Ich wohne in ...' with a city or place: 'Ich wohne in Berlin.'"
+    },
+    {
+      "id": "languages",
+      "title": "Name the languages you speak",
+      "content": "Use 'Ich spreche ...' followed by a language: 'Ich spreche Urdu, Englisch und ein bisschen Deutsch.'"
+    }
+  ],
+  "tables": [
+    {
+      "id": "identity_building_blocks",
+      "title": "Identity Building Blocks",
+      "columns": [
+        "Information",
+        "German pattern",
+        "Example"
+      ],
+      "rows": [
+        [
+          "Name",
+          "Ich heiße ...",
+          "Ich heiße Sara."
+        ],
+        [
+          "Origin",
+          "Ich komme aus ...",
+          "Ich komme aus Spanien."
+        ],
+        [
+          "Residence",
+          "Ich wohne in ...",
+          "Ich wohne in Hamburg."
+        ],
+        [
+          "Language",
+          "Ich spreche ...",
+          "Ich spreche Spanisch und Deutsch."
+        ]
+      ]
+    },
+    {
+      "id": "countries_languages",
+      "title": "Countries and Languages",
+      "columns": [
+        "Country",
+        "Language"
+      ],
+      "rows": [
+        [
+          "Deutschland",
+          "Deutsch"
+        ],
+        [
+          "England",
+          "Englisch"
+        ],
+        [
+          "Spanien",
+          "Spanisch"
+        ],
+        [
+          "Italien",
+          "Italienisch"
+        ],
+        [
+          "Frankreich",
+          "Französisch"
+        ],
+        [
+          "die Türkei",
+          "Türkisch"
+        ]
+      ]
+    }
+  ],
+  "patterns": [
+    "Ich heiße + name",
+    "Ich komme aus + country or city",
+    "Ich wohne in + city",
+    "Ich spreche + language",
+    "Ich spreche ein bisschen + language"
+  ],
+  "verbs": [
+    "heißen",
+    "sein",
+    "kommen",
+    "wohnen",
+    "sprechen"
+  ],
+  "prepositions": [
+    "aus",
+    "in"
+  ],
+  "sentenceStructure": [
+    "Keep one piece of personal information in each short sentence.",
+    "Use 'aus' for origin and 'in' for residence.",
+    "Join languages with 'und': 'Ich spreche Englisch und Deutsch.'",
+    "Use 'ein bisschen' before a language to express limited ability."
+  ],
+  "levelProgression": [
+    {
+      "level": "A1.1",
+      "concepts": [
+        "give a name, origin, residence, and languages",
+        "understand a short personal profile"
+      ]
+    },
+    {
+      "level": "A1.2",
+      "concepts": [
+        "add family, occupation, and contact information",
+        "describe other people in simple terms"
+      ]
+    },
+    {
+      "level": "A2",
+      "concepts": [
+        "describe personal background and experiences",
+        "explain changes in residence, work, or language learning"
+      ]
+    }
+  ],
+  "comparisons": [
+    {
+      "topicId": "a1_1_m1_present_basic",
+      "summary": "The identity lesson supplies the personal information. The grammar lesson explains the verb forms used to express it, including 'ich heiße', 'ich komme', and 'ich spreche'."
+    },
+    {
+      "topicId": "a1_1_m1_question_words",
+      "summary": "The communication lesson turns this identity card into a two-way exchange by asking for each piece of information."
+    }
+  ],
+  "examples": [
+    {
+      "id": "short_profile",
+      "de": "Hallo, ich heiße Leila. Ich komme aus Marokko.",
+      "en": "Hello, my name is Leila. I come from Morocco."
+    },
+    {
+      "id": "origin_residence",
+      "de": "Ich komme aus Italien, aber ich wohne in Köln.",
+      "en": "I come from Italy, but I live in Cologne."
+    },
+    {
+      "id": "languages",
+      "de": "Ich spreche Italienisch, Englisch und ein bisschen Deutsch.",
+      "en": "I speak Italian, English, and a little German."
+    },
+    {
+      "id": "name_alternative",
+      "de": "Mein Name ist Daniel. Ich bin neu hier.",
+      "en": "My name is Daniel. I am new here."
+    },
+    {
+      "id": "third_person_profile",
+      "de": "Das ist Ana. Sie kommt aus Spanien und wohnt in München.",
+      "en": "This is Ana. She comes from Spain and lives in Munich."
+    }
+  ],
+  "commonMistakes": [
+    {
+      "id": "origin_in",
+      "wrong": "Ich komme in Spanien.",
+      "correct": "Ich komme aus Spanien.",
+      "reason": "Use 'aus' to express where someone comes from."
+    },
+    {
+      "id": "residence_aus",
+      "wrong": "Ich wohne aus Berlin.",
+      "correct": "Ich wohne in Berlin.",
+      "reason": "Use 'in' to state the place where someone lives."
+    },
+    {
+      "id": "country_language",
+      "wrong": "Ich spreche Deutschland.",
+      "correct": "Ich spreche Deutsch.",
+      "reason": "'Deutschland' is the country; 'Deutsch' is the language."
+    }
+  ],
+  "specialCases": [
+    "Most country names are used without an article after 'aus', but some countries use one, such as 'aus der Türkei'.",
+    "'Woher kommen Sie?' is formal; 'Woher kommst du?' is informal.",
+    "A person may choose not to share every part of the identity card. A name alone can be enough for a brief introduction."
+  ],
+  "tips": [
+    "Write a four-sentence profile about yourself and practice it until the order feels flexible.",
+    "Create country-language pairs for the places most relevant to your life.",
+    "Practice one true profile and one fictional profile so you learn the pattern rather than one memorized answer."
+  ],
+  "memoryHooks": [
+    {
+      "id": "identity_card",
+      "title": "The four-line identity card",
+      "content": "Name, origin, residence, language: heiße, komme aus, wohne in, spreche."
+    },
+    {
+      "id": "from_vs_in",
+      "title": "From uses aus; living uses in",
+      "content": "Picture movement out of your origin with 'aus' and your current location inside a place with 'in'."
+    }
+  ],
+  "searchHints": [
+    "sich vorstellen",
+    "Herkunft",
+    "Sprachen",
+    "Ich heiße",
+    "personal information"
+  ],
+  "ui": {
+    "status": "ready",
+    "recommendedSections": [
+      "mentalModel",
+      "coreRules",
+      "tables",
+      "patternsAndUsage",
+      "examples",
+      "commonMistakes",
+      "comparisons",
+      "levelProgression",
+      "advancedSpecialCases"
+    ]
+  },
+  "sourceStyle": {
+    "origin": "LangCompass editorial lesson aligned to the Momente A1.1 M1 catalog topic",
+    "confidence": "high",
+    "notes": "Vocabulary focuses on the minimum personal information needed for first introductions."
+  },
+  "updatedAt": "2026-06-12"
+}

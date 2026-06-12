@@ -1,0 +1,309 @@
+{
+  "id": "a1_1_m1_question_words",
+  "title": "Basic Questions (Wer, Wie, Woher)",
+  "level": "A1.1",
+  "section": "communication",
+  "topicType": "communication",
+  "summary": "Asking and answering introductory questions.",
+  "relatedTopicIds": [
+    "a1_1_m1_identity",
+    "a1_1_m1_present_basic"
+  ],
+  "lessonRefs": [
+    {
+      "curriculum": "Momente",
+      "module": "M1"
+    }
+  ],
+  "whyItMatters": "An introduction becomes a conversation only when you can ask for information as well as give it. A small group of question words lets you learn someone's name, identity, origin, residence, and languages.",
+  "prerequisiteTopicIds": [
+    "a1_1_m1_identity",
+    "a1_1_m1_present_basic"
+  ],
+  "mentalModel": [
+    {
+      "title": "Match one question word to one information type",
+      "content": "Use 'wer' for a person or identity, 'wie' for a name or manner, 'woher' for origin, and 'wo' for location or residence."
+    },
+    {
+      "title": "Question word, verb, subject",
+      "content": "Build the core question in three steps: question word first, conjugated verb second, subject third: 'Woher kommen Sie?'"
+    },
+    {
+      "title": "Ask, answer, return",
+      "content": "A natural first meeting alternates between one question and one short answer. After answering, return the question with 'Und du?' or 'Und Sie?'"
+    }
+  ],
+  "coverageChecklist": [
+    "wer",
+    "wie",
+    "wo",
+    "woher",
+    "informal du",
+    "formal Sie",
+    "short introductory exchanges",
+    "returning a question"
+  ],
+  "ruleBlocks": [
+    {
+      "id": "wie_name",
+      "title": "Ask a name with 'wie'",
+      "content": "Use 'Wie heißt du?' informally and 'Wie heißen Sie?' formally."
+    },
+    {
+      "id": "woher_origin",
+      "title": "Ask origin with 'woher'",
+      "content": "Use 'Woher kommst du?' or 'Woher kommen Sie?' to ask where someone comes from."
+    },
+    {
+      "id": "wo_residence",
+      "title": "Ask residence with 'wo'",
+      "content": "Use 'Wo wohnst du?' or 'Wo wohnen Sie?' to ask where someone lives."
+    },
+    {
+      "id": "wer_identity",
+      "title": "Ask identity with 'wer'",
+      "content": "Use 'Wer ist das?' when asking who a person is. The answer can begin with 'Das ist ...'."
+    }
+  ],
+  "tables": [
+    {
+      "id": "question_word_map",
+      "title": "Question Word Map",
+      "columns": [
+        "Question word",
+        "Information",
+        "Example"
+      ],
+      "rows": [
+        [
+          "wer",
+          "person or identity",
+          "Wer ist das?"
+        ],
+        [
+          "wie",
+          "name or manner",
+          "Wie heißen Sie?"
+        ],
+        [
+          "wo",
+          "place or residence",
+          "Wo wohnst du?"
+        ],
+        [
+          "woher",
+          "origin",
+          "Woher kommen Sie?"
+        ]
+      ]
+    },
+    {
+      "id": "du_sie_questions",
+      "title": "Informal and Formal Questions",
+      "columns": [
+        "Information",
+        "du",
+        "Sie"
+      ],
+      "rows": [
+        [
+          "Name",
+          "Wie heißt du?",
+          "Wie heißen Sie?"
+        ],
+        [
+          "Origin",
+          "Woher kommst du?",
+          "Woher kommen Sie?"
+        ],
+        [
+          "Residence",
+          "Wo wohnst du?",
+          "Wo wohnen Sie?"
+        ],
+        [
+          "Language",
+          "Welche Sprachen sprichst du?",
+          "Welche Sprachen sprechen Sie?"
+        ]
+      ]
+    }
+  ],
+  "patterns": [
+    "Wie + heißen + subject?",
+    "Woher + kommen + subject?",
+    "Wo + wohnen + subject?",
+    "Wer + sein + person?",
+    "Answer + Und du? / Und Sie?"
+  ],
+  "verbs": [
+    "heißen",
+    "kommen",
+    "wohnen",
+    "sein",
+    "sprechen"
+  ],
+  "sentenceStructure": [
+    "Place the question word first.",
+    "Place the conjugated verb immediately after the question word.",
+    "Place the subject after the verb: 'Woher kommen Sie?'",
+    "Answer with a short statement and optionally return the question."
+  ],
+  "levelProgression": [
+    {
+      "level": "A1.1",
+      "concepts": [
+        "ask for basic identity information",
+        "distinguish informal du from formal Sie",
+        "sustain a short first-meeting exchange"
+      ]
+    },
+    {
+      "level": "A1.2",
+      "concepts": [
+        "ask follow-up questions about family, work, and routines",
+        "clarify information when an answer is unclear"
+      ]
+    },
+    {
+      "level": "A2",
+      "concepts": [
+        "ask open follow-up questions",
+        "manage longer conversations with reasons and details"
+      ]
+    }
+  ],
+  "comparisons": [
+    {
+      "topicId": "a1_1_m1_identity",
+      "summary": "The identity lesson provides the answer content. This lesson supplies the questions that request each piece of information."
+    },
+    {
+      "topicId": "a1_1_m1_present_basic",
+      "summary": "Question-word questions use the same conjugated verbs as statements, but the verb comes before the subject.",
+      "table": {
+        "columns": [
+          "Answer",
+          "Question"
+        ],
+        "rows": [
+          [
+            "Ich heiße Lina.",
+            "Wie heißt du?"
+          ],
+          [
+            "Ich komme aus Polen.",
+            "Woher kommen Sie?"
+          ],
+          [
+            "Ich wohne in Leipzig.",
+            "Wo wohnen Sie?"
+          ]
+        ]
+      }
+    }
+  ],
+  "examples": [
+    {
+      "id": "informal_name",
+      "de": "A: Wie heißt du? B: Ich heiße Samir. Und du?",
+      "en": "A: What is your name? B: My name is Samir. And you?"
+    },
+    {
+      "id": "formal_origin",
+      "de": "A: Woher kommen Sie? B: Ich komme aus Österreich.",
+      "en": "A: Where are you from? B: I come from Austria."
+    },
+    {
+      "id": "residence",
+      "de": "A: Wo wohnst du? B: Ich wohne in Bremen.",
+      "en": "A: Where do you live? B: I live in Bremen."
+    },
+    {
+      "id": "identity",
+      "de": "A: Wer ist das? B: Das ist Frau Neumann.",
+      "en": "A: Who is that? B: That is Ms Neumann."
+    },
+    {
+      "id": "full_exchange",
+      "de": "A: Guten Tag. Wie heißen Sie? B: Ich heiße Elena Rossi. A: Woher kommen Sie? B: Aus Italien.",
+      "en": "A: Good day. What is your name? B: My name is Elena Rossi. A: Where are you from? B: From Italy."
+    }
+  ],
+  "commonMistakes": [
+    {
+      "id": "wo_for_origin",
+      "wrong": "Wo kommen Sie?",
+      "correct": "Woher kommen Sie?",
+      "reason": "Use 'woher' to ask about origin or movement from a place."
+    },
+    {
+      "id": "statement_order",
+      "wrong": "Woher Sie kommen?",
+      "correct": "Woher kommen Sie?",
+      "reason": "In a direct question, the conjugated verb comes before the subject."
+    },
+    {
+      "id": "du_sie_mismatch",
+      "wrong": "Wie heißt Sie?",
+      "correct": "Wie heißen Sie?",
+      "reason": "Formal 'Sie' requires the verb form ending in '-en'."
+    },
+    {
+      "id": "wer_name",
+      "wrong": "Wer heißt du?",
+      "correct": "Wie heißt du?",
+      "reason": "German asks someone's name with 'wie', not 'wer'."
+    }
+  ],
+  "specialCases": [
+    "'Woher?' can stand alone as a brief follow-up when the context is already clear.",
+    "Short answers such as 'Aus Spanien' are natural after a clear question even though they omit the full sentence.",
+    "'Wer sind Sie?' asks who someone is and can sound more direct than asking their name with 'Wie heißen Sie?'."
+  ],
+  "tips": [
+    "Practice question and answer as one pair so word order becomes automatic.",
+    "Choose either du or Sie for an exchange and keep the pronoun and verb form consistent.",
+    "Use 'Und du?' or 'Und Sie?' to keep a conversation moving with very little language."
+  ],
+  "memoryHooks": [
+    {
+      "id": "four_question_words",
+      "title": "Who, how, where, from where",
+      "content": "Wer asks who; wie asks the name; wo asks location; woher asks origin."
+    },
+    {
+      "id": "qvs",
+      "title": "Q-V-S",
+      "content": "For these questions, remember the order: question word, verb, subject."
+    }
+  ],
+  "searchHints": [
+    "W-Fragen",
+    "Wer Wie Wo Woher",
+    "sich vorstellen Fragen",
+    "du oder Sie",
+    "German introduction questions"
+  ],
+  "ui": {
+    "status": "ready",
+    "recommendedSections": [
+      "mentalModel",
+      "coreRules",
+      "tables",
+      "patternsAndUsage",
+      "examples",
+      "commonMistakes",
+      "comparisons",
+      "levelProgression",
+      "advancedSpecialCases"
+    ]
+  },
+  "sourceStyle": {
+    "origin": "LangCompass editorial lesson aligned to the Momente A1.1 M1 catalog topic",
+    "confidence": "high",
+    "notes": "The interaction model prioritizes short first-meeting questions with consistent du and Sie forms."
+  },
+  "updatedAt": "2026-06-12"
+}

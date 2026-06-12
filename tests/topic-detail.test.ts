@@ -9,43 +9,64 @@ import { TopicCatalogSchema, TopicDetailSchema } from "../src/lib/schemas/topic"
 const repoRoot = process.cwd()
 const catalogPath = path.join(repoRoot, "data", "topic-catalog.json")
 const detailsDir = path.join(repoRoot, "data", "topic-details")
-const pilotTopicIds = [
-  "a1_1_m5_food_restaurant",
-  "accusative_case",
-  "a1_1_m5_ordering_restaurant",
+const completedModules = [
+  {
+    level: "A1.1",
+    module: "M1",
+    topicIds: [
+      "a1_1_m1_identity",
+      "a1_1_m1_present_basic",
+      "a1_1_m1_question_words",
+    ],
+  },
+  {
+    level: "A1.1",
+    module: "M5",
+    topicIds: [
+      "a1_1_m5_food_restaurant",
+      "accusative_case",
+      "a1_1_m5_ordering_restaurant",
+    ],
+  },
 ] as const
 
 const readJson = async (filePath: string): Promise<unknown> =>
   JSON.parse(await readFile(filePath, "utf8")) as unknown
 
-test("A1.1 M5 is a complete rich-content pilot module", async () => {
+test("completed modules contain ready theme, grammar, and communication lessons", async () => {
   const catalog = TopicCatalogSchema.parse(await readJson(catalogPath))
-  const pilotTopics = catalog.filter(
-    (topic) =>
-      topic.level === "A1.1" &&
-      topic.lessonRefs?.some(
-        (reference) => reference.curriculum === "Momente" && reference.module === "M5",
-      ),
-  )
 
-  assert.deepEqual(
-    pilotTopics.map((topic) => topic.id),
-    [...pilotTopicIds],
-  )
-  assert.deepEqual(
-    new Set(pilotTopics.map((topic) => topic.topicType)),
-    new Set(["theme", "grammar", "communication"]),
-  )
-
-  for (const topicId of pilotTopicIds) {
-    const detail = TopicDetailSchema.parse(
-      await readJson(path.join(detailsDir, `${topicId}.json`)),
+  for (const completedModule of completedModules) {
+    const moduleTopics = catalog.filter(
+      (topic) =>
+        topic.level === completedModule.level &&
+        topic.lessonRefs?.some(
+          (reference) =>
+            reference.curriculum === "Momente" &&
+            reference.module === completedModule.module,
+        ),
     )
 
-    assert.equal(detail.ui?.status, "ready", `${topicId} should be editorially ready`)
-    assert.ok((detail.mentalModel?.length ?? 0) >= 2, `${topicId} should establish a clear starting model`)
-    assert.ok(detail.ruleBlocks.length >= 2, `${topicId} should contain substantial building blocks`)
-    assert.ok((detail.examples?.length ?? 0) >= 3, `${topicId} should contain practical examples`)
+    assert.deepEqual(
+      moduleTopics.map((topic) => topic.id),
+      [...completedModule.topicIds],
+      `${completedModule.level} ${completedModule.module} should contain the expected topics`,
+    )
+    assert.deepEqual(
+      new Set(moduleTopics.map((topic) => topic.topicType)),
+      new Set(["theme", "grammar", "communication"]),
+    )
+
+    for (const topicId of completedModule.topicIds) {
+      const detail = TopicDetailSchema.parse(
+        await readJson(path.join(detailsDir, `${topicId}.json`)),
+      )
+
+      assert.equal(detail.ui?.status, "ready", `${topicId} should be editorially ready`)
+      assert.ok((detail.mentalModel?.length ?? 0) >= 2, `${topicId} should establish a clear starting model`)
+      assert.ok(detail.ruleBlocks.length >= 2, `${topicId} should contain substantial building blocks`)
+      assert.ok((detail.examples?.length ?? 0) >= 3, `${topicId} should contain practical examples`)
+    }
   }
 })
 

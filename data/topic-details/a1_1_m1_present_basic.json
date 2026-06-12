@@ -1,0 +1,307 @@
+{
+  "id": "a1_1_m1_present_basic",
+  "title": "Present Tense Basics",
+  "level": "A1.1",
+  "section": "grammar",
+  "topicType": "grammar",
+  "summary": "Core present-tense forms for high-frequency verbs used in introductions.",
+  "relatedTopicIds": [
+    "a1_1_m1_identity",
+    "a1_1_m1_question_words"
+  ],
+  "lessonRefs": [
+    {
+      "curriculum": "Momente",
+      "module": "M1"
+    }
+  ],
+  "whyItMatters": "The present tense powers nearly every beginner introduction. Once you can match a subject with the correct verb ending, you can say who you are, where you live, where you come from, and which languages you speak.",
+  "prerequisiteTopicIds": [
+    "a1_1_m1_identity"
+  ],
+  "mentalModel": [
+    {
+      "title": "Stem plus person ending",
+      "content": "For many verbs, remove '-en' to find the stem, then add an ending that matches the subject: wohnen → wohn- → ich wohne, du wohnst."
+    },
+    {
+      "title": "The subject controls the verb",
+      "content": "The ending changes because the subject changes. Think of the subject and verb as a matched pair: ich komme, du kommst, Sie kommen."
+    },
+    {
+      "title": "Learn common irregular forms as chunks",
+      "content": "High-frequency verbs such as 'sein' do not follow the regular pattern. Learn 'ich bin', 'du bist', and 'Sie sind' as complete units."
+    }
+  ],
+  "coverageChecklist": [
+    "verb stems",
+    "ich endings",
+    "du endings",
+    "formal Sie endings",
+    "regular present tense",
+    "sein",
+    "heißen",
+    "basic statement word order"
+  ],
+  "ruleBlocks": [
+    {
+      "id": "regular_stem",
+      "title": "Find the regular verb stem",
+      "content": "Most infinitives end in '-en'. Remove that ending to find the stem: kommen → komm-, wohnen → wohn-, sprechen → sprech-."
+    },
+    {
+      "id": "regular_endings",
+      "title": "Match the ending to the subject",
+      "content": "At this stage, focus on 'ich' with '-e', 'du' with '-st', and formal 'Sie' with the infinitive ending '-en'."
+    },
+    {
+      "id": "sein",
+      "title": "Treat 'sein' as irregular",
+      "content": "The key forms are 'ich bin', 'du bist', and 'Sie sind'. These forms must be learned rather than built from a regular stem."
+    },
+    {
+      "id": "heissen",
+      "title": "Notice the spelling of 'heißen'",
+      "content": "The informal form is 'du heißt', not 'du heißst'. The verb already ends in an s-sound, so the form uses only '-t'."
+    }
+  ],
+  "tables": [
+    {
+      "id": "regular_endings",
+      "title": "Core Present-Tense Endings",
+      "columns": [
+        "Subject",
+        "Ending",
+        "kommen",
+        "wohnen"
+      ],
+      "rows": [
+        [
+          "ich",
+          "-e",
+          "komme",
+          "wohne"
+        ],
+        [
+          "du",
+          "-st",
+          "kommst",
+          "wohnst"
+        ],
+        [
+          "Sie",
+          "-en",
+          "kommen",
+          "wohnen"
+        ]
+      ]
+    },
+    {
+      "id": "introduction_verbs",
+      "title": "High-Frequency Introduction Verbs",
+      "columns": [
+        "Subject",
+        "sein",
+        "heißen",
+        "sprechen"
+      ],
+      "rows": [
+        [
+          "ich",
+          "bin",
+          "heiße",
+          "spreche"
+        ],
+        [
+          "du",
+          "bist",
+          "heißt",
+          "sprichst"
+        ],
+        [
+          "Sie",
+          "sind",
+          "heißen",
+          "sprechen"
+        ]
+      ]
+    }
+  ],
+  "patterns": [
+    "ich + verb stem + e",
+    "du + verb stem + st",
+    "Sie + infinitive form",
+    "Subject + conjugated verb + additional information",
+    "Question word + conjugated verb + subject?"
+  ],
+  "verbs": [
+    "sein",
+    "heißen",
+    "kommen",
+    "wohnen",
+    "sprechen"
+  ],
+  "sentenceStructure": [
+    "In a basic statement, the conjugated verb is in position two: 'Ich wohne in Berlin.'",
+    "In a question with a question word, the verb follows the question word: 'Wo wohnen Sie?'",
+    "The subject usually comes directly before the verb in statements and directly after it in question-word questions.",
+    "Only the conjugated verb changes; the rest of the personal information can stay the same."
+  ],
+  "levelProgression": [
+    {
+      "level": "A1.1",
+      "concepts": [
+        "use ich, du, and formal Sie forms",
+        "build short present-tense statements and questions"
+      ]
+    },
+    {
+      "level": "A1.2",
+      "concepts": [
+        "expand to er, sie, es, wir, and ihr",
+        "use modal and separable verbs"
+      ]
+    },
+    {
+      "level": "A2",
+      "concepts": [
+        "use present tense across longer clauses",
+        "contrast present meaning with past and future contexts"
+      ]
+    }
+  ],
+  "comparisons": [
+    {
+      "topicId": "a1_1_m1_identity",
+      "summary": "The identity lesson provides the information you want to express. Present-tense conjugation makes each sentence grammatically match its speaker."
+    },
+    {
+      "topicId": "a1_1_m1_question_words",
+      "summary": "The same conjugated forms appear in introductory questions, but the word order changes.",
+      "table": {
+        "columns": [
+          "Statement",
+          "Question"
+        ],
+        "rows": [
+          [
+            "Sie wohnen in Berlin.",
+            "Wo wohnen Sie?"
+          ],
+          [
+            "Du kommst aus Spanien.",
+            "Woher kommst du?"
+          ],
+          [
+            "Sie heißen Frau Keller.",
+            "Wie heißen Sie?"
+          ]
+        ]
+      }
+    }
+  ],
+  "examples": [
+    {
+      "id": "ich_heisse",
+      "de": "Ich heiße Mina.",
+      "en": "My name is Mina."
+    },
+    {
+      "id": "du_wohnst",
+      "de": "Du wohnst in Bonn.",
+      "en": "You live in Bonn."
+    },
+    {
+      "id": "formal_kommen",
+      "de": "Sie kommen aus Kanada.",
+      "en": "You come from Canada.",
+      "note": "Formal Sie uses the infinitive form and is capitalized."
+    },
+    {
+      "id": "sein",
+      "de": "Ich bin neu hier.",
+      "en": "I am new here."
+    },
+    {
+      "id": "sprechen",
+      "de": "Sprichst du Deutsch?",
+      "en": "Do you speak German?",
+      "note": "The du form of sprechen changes its stem vowel."
+    }
+  ],
+  "commonMistakes": [
+    {
+      "id": "infinitive_with_ich",
+      "wrong": "Ich wohnen in Berlin.",
+      "correct": "Ich wohne in Berlin.",
+      "reason": "The subject 'ich' takes the ending '-e'."
+    },
+    {
+      "id": "ich_bist",
+      "wrong": "Ich bist neu.",
+      "correct": "Ich bin neu.",
+      "reason": "'Sein' is irregular; the ich form is 'bin'."
+    },
+    {
+      "id": "du_heisst",
+      "wrong": "Du heißst Amir.",
+      "correct": "Du heißt Amir.",
+      "reason": "With 'heißen', the du form is 'heißt' without an extra s."
+    },
+    {
+      "id": "formal_lowercase",
+      "wrong": "sie kommen aus Wien, Herr Berger.",
+      "correct": "Sie kommen aus Wien, Herr Berger.",
+      "reason": "Formal 'Sie' is always capitalized."
+    }
+  ],
+  "specialCases": [
+    "Some verbs change their stem vowel in the du form, such as 'sprechen' → 'du sprichst'.",
+    "Formal 'Sie' uses the same verb form as plural 'sie', but capitalization distinguishes the formal pronoun.",
+    "German present tense can describe both what happens generally and what is happening now."
+  ],
+  "tips": [
+    "Practice verbs in subject-verb pairs rather than as isolated endings.",
+    "Start with three columns: ich, du, Sie. Add the remaining persons only when the first pattern is stable.",
+    "Transform one identity sentence between speakers: 'Ich wohne ...' → 'Du wohnst ...' → 'Sie wohnen ...'."
+  ],
+  "memoryHooks": [
+    {
+      "id": "ich_du_sie",
+      "title": "E, ST, EN",
+      "content": "For regular verbs, remember the beginner sequence: ich -e, du -st, Sie -en."
+    },
+    {
+      "id": "verb_second",
+      "title": "The verb takes the second seat",
+      "content": "In a simple statement, place one idea first, then the conjugated verb: 'Ich wohne ...' or 'In Berlin wohne ich.'"
+    }
+  ],
+  "searchHints": [
+    "Präsens",
+    "Verbkonjugation",
+    "ich du Sie",
+    "sein",
+    "present tense German"
+  ],
+  "ui": {
+    "status": "ready",
+    "recommendedSections": [
+      "mentalModel",
+      "coreRules",
+      "tables",
+      "patternsAndUsage",
+      "examples",
+      "commonMistakes",
+      "comparisons",
+      "levelProgression",
+      "advancedSpecialCases"
+    ]
+  },
+  "sourceStyle": {
+    "origin": "LangCompass editorial lesson aligned to the Momente A1.1 M1 catalog topic",
+    "confidence": "high",
+    "notes": "The paradigm is intentionally limited to ich, du, and formal Sie before later expansion."
+  },
+  "updatedAt": "2026-06-12"
+}
