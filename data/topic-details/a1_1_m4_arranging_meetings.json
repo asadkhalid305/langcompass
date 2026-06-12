@@ -1,0 +1,334 @@
+{
+  "id": "a1_1_m4_arranging_meetings",
+  "title": "Arranging Meetings and Talking About Frequency",
+  "level": "A1.1",
+  "section": "communication",
+  "topicType": "communication",
+  "summary": "Making simple plans and talking about when or how often you do something.",
+  "relatedTopicIds": [
+    "a1_1_m4_hobbies_time",
+    "a1_1_m4_modal_koennen"
+  ],
+  "lessonRefs": [
+    {
+      "curriculum": "Momente",
+      "module": "M4"
+    }
+  ],
+  "whyItMatters": "Making a plan requires more than naming an activity. You need to invite someone, ask when they are free, accept or reject a suggestion, offer an alternative, and confirm the final time and place.",
+  "prerequisiteTopicIds": [
+    "a1_1_m4_hobbies_time",
+    "a1_1_m4_modal_koennen"
+  ],
+  "mentalModel": [
+    {
+      "title": "Activity, time, confirmation",
+      "content": "A complete plan answers three questions: What are you doing? When? Is the plan agreed?"
+    },
+    {
+      "title": "Treat no as a bridge",
+      "content": "When a time does not work, add an alternative immediately: 'Am Samstag kann ich nicht. Aber am Sonntag habe ich Zeit.'"
+    },
+    {
+      "title": "Separate routine from appointment",
+      "content": "Frequency words describe habits, while a day or clock time fixes one meeting: 'Ich spiele oft Tennis' versus 'Wir spielen am Freitag um sechs.'"
+    }
+  ],
+  "coverageChecklist": [
+    "inviting someone",
+    "asking about availability",
+    "suggesting a day and time",
+    "accepting",
+    "declining politely",
+    "offering an alternative",
+    "confirming time and place",
+    "talking about frequency"
+  ],
+  "ruleBlocks": [
+    {
+      "id": "invite",
+      "title": "Start with an activity or invitation",
+      "content": "Use a direct question such as 'Gehen wir ins Kino?' or 'Möchtest du Tennis spielen?'"
+    },
+    {
+      "id": "availability",
+      "title": "Ask when the other person is free",
+      "content": "Use 'Wann kannst du?' or a specific proposal such as 'Kannst du am Freitagabend?'"
+    },
+    {
+      "id": "alternative",
+      "title": "Decline and offer another time",
+      "content": "Combine a polite refusal with an alternative: 'Am Freitag kann ich leider nicht. Geht Samstag?'"
+    },
+    {
+      "id": "confirm",
+      "title": "Repeat the final details",
+      "content": "Close by confirming the day, time, and place: 'Also Samstag um 18 Uhr vor dem Kino.'"
+    }
+  ],
+  "tables": [
+    {
+      "id": "planning_toolkit",
+      "title": "Conversation Toolkit",
+      "columns": [
+        "Goal",
+        "Useful phrase",
+        "Meaning"
+      ],
+      "rows": [
+        [
+          "Invite",
+          "Gehen wir ins Kino?",
+          "Shall we go to the cinema?"
+        ],
+        [
+          "Ask availability",
+          "Wann kannst du?",
+          "When are you available?"
+        ],
+        [
+          "Suggest",
+          "Wie wäre es am Samstag?",
+          "How about Saturday?"
+        ],
+        [
+          "Accept",
+          "Ja, gern. Das passt.",
+          "Yes, gladly. That works."
+        ],
+        [
+          "Decline",
+          "Da kann ich leider nicht.",
+          "Unfortunately, I cannot then."
+        ],
+        [
+          "Offer alternative",
+          "Aber am Sonntag habe ich Zeit.",
+          "But I have time on Sunday."
+        ],
+        [
+          "Confirm",
+          "Gut, dann bis Sonntag um drei.",
+          "Good, see you Sunday at three."
+        ]
+      ]
+    },
+    {
+      "id": "frequency_toolkit",
+      "title": "Talking About Frequency",
+      "columns": [
+        "Frequency",
+        "Useful answer"
+      ],
+      "rows": [
+        [
+          "immer",
+          "Ich trainiere immer am Montag."
+        ],
+        [
+          "oft",
+          "Wir treffen uns oft am Wochenende."
+        ],
+        [
+          "manchmal",
+          "Manchmal gehe ich ins Kino."
+        ],
+        [
+          "selten",
+          "Ich spiele selten Tennis."
+        ],
+        [
+          "nie",
+          "Am Morgen schwimme ich nie."
+        ]
+      ]
+    }
+  ],
+  "patterns": [
+    "Gehen wir + activity?",
+    "Möchtest du + infinitive?",
+    "Kannst du am + day?",
+    "Wie wäre es am + day?",
+    "Da kann ich leider nicht.",
+    "Aber am + day + habe ich Zeit.",
+    "Dann bis + day/time.",
+    "Wie oft + verb + subject?"
+  ],
+  "verbs": [
+    "gehen",
+    "treffen",
+    "kommen",
+    "spielen",
+    "können",
+    "passen",
+    "beginnen",
+    "trainieren"
+  ],
+  "sentenceStructure": [
+    "Open with an invitation or activity proposal.",
+    "Use a day, part of day, or clock time to make the proposal concrete.",
+    "Put the conjugated verb in position two when time begins a statement: 'Am Samstag kann ich.'",
+    "Repeat the agreed details at the end to prevent misunderstandings."
+  ],
+  "levelProgression": [
+    {
+      "level": "A1.1",
+      "concepts": [
+        "invite someone and ask about availability",
+        "accept, decline, and offer a simple alternative",
+        "confirm a day and time",
+        "describe basic frequency"
+      ]
+    },
+    {
+      "level": "A1.2",
+      "concepts": [
+        "coordinate more detailed appointments",
+        "give reasons and negotiate several options"
+      ]
+    },
+    {
+      "level": "A2",
+      "concepts": [
+        "reschedule and cancel plans",
+        "discuss routines and availability with greater precision"
+      ]
+    }
+  ],
+  "comparisons": [
+    {
+      "topicId": "a1_1_m4_hobbies_time",
+      "summary": "The theme lesson supplies activities and frequency expressions for invitations and routine descriptions."
+    },
+    {
+      "topicId": "a1_1_m4_modal_koennen",
+      "summary": "The modal lesson provides the sentence frame used to ask about and describe availability.",
+      "table": {
+        "columns": [
+          "Step",
+          "Example"
+        ],
+        "rows": [
+          [
+            "Invite",
+            "Gehen wir am Samstag ins Kino?"
+          ],
+          [
+            "Decline",
+            "Am Samstag kann ich leider nicht."
+          ],
+          [
+            "Alternative",
+            "Können wir am Sonntag gehen?"
+          ],
+          [
+            "Confirm",
+            "Ja, Sonntag um 18 Uhr."
+          ]
+        ]
+      }
+    }
+  ],
+  "examples": [
+    {
+      "id": "cinema",
+      "de": "A: Gehen wir am Freitag ins Kino? B: Ja, gern. Um wie viel Uhr?",
+      "en": "A: Shall we go to the cinema on Friday? B: Yes, gladly. At what time?"
+    },
+    {
+      "id": "alternative",
+      "de": "A: Kannst du am Samstag? B: Leider nicht. Aber am Sonntag habe ich Zeit.",
+      "en": "A: Are you available on Saturday? B: Unfortunately not. But I have time on Sunday."
+    },
+    {
+      "id": "confirm",
+      "de": "A: Dann treffen wir uns am Sonntag um drei vor dem Café. B: Gut, bis Sonntag!",
+      "en": "A: Then we will meet on Sunday at three in front of the café. B: Good, see you Sunday!"
+    },
+    {
+      "id": "frequency",
+      "de": "A: Wie oft spielst du Tennis? B: Zweimal pro Woche.",
+      "en": "A: How often do you play tennis? B: Twice a week."
+    },
+    {
+      "id": "routine",
+      "de": "Wir treffen uns oft am Wochenende, aber nie am Morgen.",
+      "en": "We often meet at the weekend, but never in the morning."
+    }
+  ],
+  "commonMistakes": [
+    {
+      "id": "decline_only",
+      "wrong": "Nein.",
+      "correct": "Da kann ich leider nicht. Aber am Sonntag habe ich Zeit.",
+      "reason": "A brief reason or alternative keeps the planning conversation moving."
+    },
+    {
+      "id": "missing_time",
+      "wrong": "Wir treffen uns am Samstag.",
+      "correct": "Wir treffen uns am Samstag um 15 Uhr.",
+      "reason": "Add a clock time when the plan needs to be actionable."
+    },
+    {
+      "id": "time_first_order",
+      "wrong": "Am Sonntag ich kann.",
+      "correct": "Am Sonntag kann ich.",
+      "reason": "The conjugated verb remains in position two when a time expression comes first."
+    },
+    {
+      "id": "no_confirmation",
+      "wrong": "End after several suggestions without repeating the result.",
+      "correct": "Also Sonntag um drei vor dem Café.",
+      "reason": "A final confirmation makes the agreed plan explicit."
+    }
+  ],
+  "specialCases": [
+    "'Wie wäre es ...?' is a useful fixed suggestion phrase before learners study the conditional form systematically.",
+    "'Möchtest du ...?' can be learned as an invitation chunk before the broader modal system is complete.",
+    "German commonly uses the 24-hour clock in schedules, while casual speech may use forms such as 'um drei'."
+  ],
+  "tips": [
+    "Always practice invitations with one acceptance and one alternative response.",
+    "Use a real weekly calendar to answer availability questions.",
+    "End every role-play by repeating the final activity, day, time, and place."
+  ],
+  "memoryHooks": [
+    {
+      "id": "plan_four",
+      "title": "Invite, negotiate, agree, confirm",
+      "content": "Use these four steps as a checklist for every planning dialogue."
+    },
+    {
+      "id": "no_plus_option",
+      "title": "No plus a new option",
+      "content": "Attach 'aber' and an alternative whenever the first suggestion does not work."
+    }
+  ],
+  "searchHints": [
+    "Treffen vereinbaren",
+    "Wann kannst du",
+    "Wie oft",
+    "am Samstag um",
+    "German making plans"
+  ],
+  "ui": {
+    "status": "ready",
+    "recommendedSections": [
+      "mentalModel",
+      "coreRules",
+      "tables",
+      "patternsAndUsage",
+      "examples",
+      "commonMistakes",
+      "comparisons",
+      "levelProgression",
+      "advancedSpecialCases"
+    ]
+  },
+  "sourceStyle": {
+    "origin": "LangCompass editorial lesson aligned to the Momente A1.1 M4 catalog topic",
+    "confidence": "high",
+    "notes": "The lesson presents planning as a complete conversational workflow and distinguishes routine frequency from one appointment."
+  },
+  "updatedAt": "2026-06-12"
+}

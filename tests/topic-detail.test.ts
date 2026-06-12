@@ -39,6 +39,15 @@ const completedModules = [
   },
   {
     level: "A1.1",
+    module: "M4",
+    topicIds: [
+      "a1_1_m4_hobbies_time",
+      "a1_1_m4_modal_koennen",
+      "a1_1_m4_arranging_meetings",
+    ],
+  },
+  {
+    level: "A1.1",
     module: "M5",
     topicIds: [
       "a1_1_m5_food_restaurant",

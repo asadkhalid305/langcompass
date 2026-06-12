@@ -1,0 +1,325 @@
+{
+  "id": "a1_1_m4_modal_koennen",
+  "title": "Modal Verb: können",
+  "level": "A1.1",
+  "section": "grammar",
+  "topicType": "grammar",
+  "summary": "Talking about ability and possibility with können and infinitive word order.",
+  "relatedTopicIds": [
+    "a1_1_m4_hobbies_time",
+    "a1_1_m4_arranging_meetings"
+  ],
+  "lessonRefs": [
+    {
+      "curriculum": "Momente",
+      "module": "M4"
+    }
+  ],
+  "whyItMatters": "The modal verb 'können' lets you say what someone is able to do, what is possible, and whether a proposed time works. It also introduces a central German sentence pattern: a conjugated modal in position two and the main verb as an infinitive at the end.",
+  "prerequisiteTopicIds": [
+    "a1_1_m1_present_basic",
+    "a1_1_m4_hobbies_time"
+  ],
+  "mentalModel": [
+    {
+      "title": "The modal opens a verb frame",
+      "content": "The conjugated form of 'können' stands near the front, while the activity verb moves to the end: 'Ich kann heute schwimmen.'"
+    },
+    {
+      "title": "Conjugate only können",
+      "content": "The modal changes for the subject. The second verb stays in the infinitive: ich kann spielen, wir können spielen."
+    },
+    {
+      "title": "Ability and possibility share one tool",
+      "content": "'Können' can describe skill ('Sie kann gut tanzen') or practical possibility ('Wir können uns am Freitag treffen')."
+    }
+  ],
+  "coverageChecklist": [
+    "können conjugation",
+    "modal plus infinitive",
+    "sentence bracket",
+    "ability",
+    "possibility",
+    "yes-no questions",
+    "negative statements"
+  ],
+  "ruleBlocks": [
+    {
+      "id": "conjugation",
+      "title": "Conjugate können for the subject",
+      "content": "Use kann with ich and er/sie/es, kannst with du, and können with wir, Sie, and sie. Use könnt with ihr."
+    },
+    {
+      "id": "infinitive_end",
+      "title": "Put the activity infinitive at the end",
+      "content": "In a statement, the conjugated modal is in position two and the main verb remains an infinitive at the end: 'Wir können heute Tennis spielen.'"
+    },
+    {
+      "id": "questions",
+      "title": "Move the modal first in yes-no questions",
+      "content": "Begin a yes-no question with the conjugated modal: 'Kannst du am Samstag kommen?'"
+    },
+    {
+      "id": "negation",
+      "title": "Use nicht to negate ability or possibility",
+      "content": "Place 'nicht' before the final infinitive or near the element being negated: 'Ich kann heute nicht kommen.'"
+    }
+  ],
+  "tables": [
+    {
+      "id": "conjugation",
+      "title": "Present Tense of können",
+      "columns": [
+        "Subject",
+        "Form",
+        "Example"
+      ],
+      "rows": [
+        [
+          "ich",
+          "kann",
+          "Ich kann schwimmen."
+        ],
+        [
+          "du",
+          "kannst",
+          "Du kannst tanzen."
+        ],
+        [
+          "er / sie / es",
+          "kann",
+          "Sie kann gut singen."
+        ],
+        [
+          "wir",
+          "können",
+          "Wir können kommen."
+        ],
+        [
+          "ihr",
+          "könnt",
+          "Ihr könnt mitspielen."
+        ],
+        [
+          "Sie / sie",
+          "können",
+          "Können Sie morgen kommen?"
+        ]
+      ]
+    },
+    {
+      "id": "sentence_frame",
+      "title": "The Modal Sentence Frame",
+      "columns": [
+        "Position 1",
+        "Conjugated modal",
+        "Middle",
+        "Final infinitive"
+      ],
+      "rows": [
+        [
+          "Ich",
+          "kann",
+          "gut",
+          "schwimmen."
+        ],
+        [
+          "Wir",
+          "können",
+          "am Freitag Fußball",
+          "spielen."
+        ],
+        [
+          "Heute",
+          "kann",
+          "ich nicht",
+          "kommen."
+        ],
+        [
+          "Wann",
+          "könnt",
+          "ihr",
+          "kommen?"
+        ]
+      ]
+    }
+  ],
+  "patterns": [
+    "Subject + kann/kannst/können + ... + infinitive",
+    "Time + modal + subject + ... + infinitive",
+    "Kannst du + ... + infinitive?",
+    "Wann können wir + ... + infinitive?",
+    "Subject + modal + ... + nicht + infinitive"
+  ],
+  "verbs": [
+    "können",
+    "spielen",
+    "schwimmen",
+    "tanzen",
+    "kommen",
+    "treffen",
+    "gehen"
+  ],
+  "sentenceStructure": [
+    "The conjugated modal carries person and number.",
+    "The main action stays in the infinitive and closes the sentence.",
+    "In yes-no questions, the conjugated modal comes first.",
+    "In a question with a question word, the modal remains in position two: 'Wann kannst du kommen?'"
+  ],
+  "levelProgression": [
+    {
+      "level": "A1.1",
+      "concepts": [
+        "conjugate können in the present tense",
+        "build statements and questions with a final infinitive",
+        "express simple ability and possibility"
+      ]
+    },
+    {
+      "level": "A1.2",
+      "concepts": [
+        "use additional modal verbs",
+        "distinguish ability, permission, obligation, and desire"
+      ]
+    },
+    {
+      "level": "A2",
+      "concepts": [
+        "use modal verbs in past and subordinate-clause structures",
+        "express nuanced possibilities and polite proposals"
+      ]
+    }
+  ],
+  "comparisons": [
+    {
+      "topicId": "a1_1_m4_hobbies_time",
+      "summary": "The theme lesson supplies activities that become the final infinitive in sentences with 'können'."
+    },
+    {
+      "topicId": "a1_1_m4_arranging_meetings",
+      "summary": "The communication lesson uses 'können' to propose activities, ask about availability, and reject a time politely.",
+      "table": {
+        "columns": [
+          "Function",
+          "Example"
+        ],
+        "rows": [
+          [
+            "Ability",
+            "Ich kann gut schwimmen."
+          ],
+          [
+            "Possibility",
+            "Wir können uns am Samstag treffen."
+          ],
+          [
+            "Availability question",
+            "Kannst du am Abend kommen?"
+          ]
+        ]
+      }
+    }
+  ],
+  "examples": [
+    {
+      "id": "swim",
+      "de": "Ich kann gut schwimmen.",
+      "en": "I can swim well."
+    },
+    {
+      "id": "football",
+      "de": "Wir können am Sonntag Fußball spielen.",
+      "en": "We can play football on Sunday."
+    },
+    {
+      "id": "question",
+      "de": "Kannst du morgen ins Kino gehen?",
+      "en": "Can you go to the cinema tomorrow?"
+    },
+    {
+      "id": "negative",
+      "de": "Heute kann ich leider nicht kommen.",
+      "en": "Unfortunately, I cannot come today."
+    },
+    {
+      "id": "when",
+      "de": "Wann können Sie uns treffen?",
+      "en": "When can you meet us?"
+    }
+  ],
+  "commonMistakes": [
+    {
+      "id": "double_conjugation",
+      "wrong": "Ich kann schwimme.",
+      "correct": "Ich kann schwimmen.",
+      "reason": "Only the modal is conjugated; the activity verb stays in the infinitive."
+    },
+    {
+      "id": "infinitive_middle",
+      "wrong": "Wir können spielen heute Fußball.",
+      "correct": "Wir können heute Fußball spielen.",
+      "reason": "The main infinitive closes the sentence."
+    },
+    {
+      "id": "ich_form",
+      "wrong": "Ich könne tanzen.",
+      "correct": "Ich kann tanzen.",
+      "reason": "The present-tense form for 'ich' is 'kann'."
+    },
+    {
+      "id": "question_order",
+      "wrong": "Du kannst morgen kommen?",
+      "correct": "Kannst du morgen kommen?",
+      "reason": "A neutral yes-no question begins with the conjugated verb."
+    }
+  ],
+  "specialCases": [
+    "The singular forms lose the umlaut: ich kann, du kannst, er/sie/es kann.",
+    "'Können Sie ...?' is also a common polite request pattern, not only a literal question about ability.",
+    "Spoken German can use statement word order with question intonation, but verb-first order is the reliable beginner pattern."
+  ],
+  "tips": [
+    "Draw a bracket around the modal and final infinitive in every example.",
+    "Practice one sentence through all subjects to learn the irregular forms.",
+    "Transform statements into questions by moving the modal before the subject."
+  ],
+  "memoryHooks": [
+    {
+      "id": "verb_bracket",
+      "title": "Können opens, the action closes",
+      "content": "Imagine the modal and infinitive holding the middle of the sentence between them."
+    },
+    {
+      "id": "one_conjugation",
+      "title": "One sentence, one conjugated verb",
+      "content": "When 'können' is conjugated, the activity verb can relax into its infinitive form."
+    }
+  ],
+  "searchHints": [
+    "können Konjugation",
+    "Modalverb",
+    "Satzklammer",
+    "kann kannst",
+    "German can"
+  ],
+  "ui": {
+    "status": "ready",
+    "recommendedSections": [
+      "mentalModel",
+      "coreRules",
+      "tables",
+      "patternsAndUsage",
+      "examples",
+      "commonMistakes",
+      "comparisons",
+      "levelProgression",
+      "advancedSpecialCases"
+    ]
+  },
+  "sourceStyle": {
+    "origin": "LangCompass editorial lesson aligned to the Momente A1.1 M4 catalog topic",
+    "confidence": "high",
+    "notes": "The lesson emphasizes the modal sentence frame and distinguishes ability from practical possibility."
+  },
+  "updatedAt": "2026-06-12"
+}

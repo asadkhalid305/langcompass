@@ -1,0 +1,300 @@
+{
+  "id": "a1_1_m4_hobbies_time",
+  "title": "Hobbies and Free Time",
+  "level": "A1.1",
+  "section": "themes",
+  "topicType": "theme",
+  "summary": "Interests, hobbies, frequency, and arranging to meet.",
+  "relatedTopicIds": [
+    "a1_1_m4_modal_koennen",
+    "a1_1_m4_arranging_meetings"
+  ],
+  "lessonRefs": [
+    {
+      "curriculum": "Momente",
+      "module": "M4"
+    }
+  ],
+  "whyItMatters": "Hobbies are a natural way to introduce yourself, find shared interests, and make plans. A small set of activity verbs and time expressions lets you say what you enjoy, what you can do, and when you are free.",
+  "prerequisiteTopicIds": [
+    "a1_1_m1_present_basic"
+  ],
+  "mentalModel": [
+    {
+      "title": "Build an activity menu",
+      "content": "Group hobbies by what you do: sport, music, media, social activities, and quiet activities. This makes vocabulary easier to retrieve in conversation."
+    },
+    {
+      "title": "Attach a time to every hobby",
+      "content": "Turn a hobby word into a useful sentence by adding when or how often: 'Ich schwimme am Samstag' or 'Ich lese oft.'"
+    },
+    {
+      "title": "Move from interest to invitation",
+      "content": "A short conversation can progress from 'Was machst du gern?' to a shared activity and then a meeting time."
+    }
+  ],
+  "coverageChecklist": [
+    "sports",
+    "music",
+    "reading and media",
+    "social activities",
+    "gern and lieber",
+    "days and parts of the day",
+    "frequency words"
+  ],
+  "ruleBlocks": [
+    {
+      "id": "activity_chunks",
+      "title": "Learn hobbies as activity chunks",
+      "content": "Learn the complete expression you need: Fußball spielen, Musik hören, Bücher lesen, Freunde treffen, and ins Kino gehen."
+    },
+    {
+      "id": "gern",
+      "title": "Use gern to express enjoyment",
+      "content": "Place 'gern' after the conjugated verb to say that you like doing an activity: 'Ich tanze gern.'"
+    },
+    {
+      "id": "time",
+      "title": "Add a simple time expression",
+      "content": "Use 'am' with days and many parts of the day: am Montag, am Wochenende, am Abend. Use 'heute' and 'morgen' without 'am'."
+    },
+    {
+      "id": "frequency",
+      "title": "Show how often",
+      "content": "Use beginner frequency words such as immer, oft, manchmal, selten, and nie to describe routines."
+    }
+  ],
+  "tables": [
+    {
+      "id": "hobby_bank",
+      "title": "Essential Hobby Vocabulary",
+      "columns": [
+        "Activity",
+        "English",
+        "Example"
+      ],
+      "rows": [
+        [
+          "Fußball spielen",
+          "play football",
+          "Ich spiele gern Fußball."
+        ],
+        [
+          "schwimmen",
+          "swim",
+          "Wir schwimmen am Samstag."
+        ],
+        [
+          "Musik hören",
+          "listen to music",
+          "Sie hört oft Musik."
+        ],
+        [
+          "Bücher lesen",
+          "read books",
+          "Er liest am Abend."
+        ],
+        [
+          "Freunde treffen",
+          "meet friends",
+          "Ich treffe heute Freunde."
+        ],
+        [
+          "ins Kino gehen",
+          "go to the cinema",
+          "Gehen wir morgen ins Kino?"
+        ]
+      ]
+    },
+    {
+      "id": "time_frequency",
+      "title": "Time and Frequency",
+      "columns": [
+        "Function",
+        "Words",
+        "Example"
+      ],
+      "rows": [
+        [
+          "Day",
+          "am Montag / am Samstag",
+          "Am Samstag spiele ich Tennis."
+        ],
+        [
+          "Part of day",
+          "am Morgen / am Abend",
+          "Ich lese am Abend."
+        ],
+        [
+          "Direct time",
+          "heute / morgen",
+          "Heute höre ich Musik."
+        ],
+        [
+          "Frequent",
+          "immer / oft",
+          "Wir tanzen oft."
+        ],
+        [
+          "Occasional or rare",
+          "manchmal / selten / nie",
+          "Ich spiele selten Karten."
+        ]
+      ]
+    }
+  ],
+  "patterns": [
+    "Ich + verb + gern.",
+    "Was machst du gern?",
+    "am + day / part of day",
+    "heute / morgen + activity",
+    "immer / oft / manchmal / selten / nie",
+    "Wir + activity + time."
+  ],
+  "verbs": [
+    "spielen",
+    "schwimmen",
+    "tanzen",
+    "lesen",
+    "hören",
+    "sehen",
+    "treffen",
+    "gehen"
+  ],
+  "sentenceStructure": [
+    "Conjugate the activity verb in position two: 'Ich spiele Fußball.'",
+    "Place 'gern' after the conjugated verb: 'Ich spiele gern Fußball.'",
+    "A time expression can begin the sentence; the verb still remains in position two: 'Am Samstag spiele ich Fußball.'",
+    "Frequency words usually appear after the conjugated verb in simple beginner sentences: 'Ich schwimme oft.'"
+  ],
+  "levelProgression": [
+    {
+      "level": "A1.1",
+      "concepts": [
+        "name common hobbies",
+        "express enjoyment and simple frequency",
+        "connect activities to basic times"
+      ]
+    },
+    {
+      "level": "A1.2",
+      "concepts": [
+        "describe routines in more detail",
+        "compare preferences and leisure options"
+      ]
+    },
+    {
+      "level": "A2",
+      "concepts": [
+        "tell short stories about free-time experiences",
+        "explain reasons for interests and preferences"
+      ]
+    }
+  ],
+  "comparisons": [
+    {
+      "topicId": "a1_1_m4_modal_koennen",
+      "summary": "The hobby lesson names activities; the grammar lesson adds ability and possibility with 'können'."
+    },
+    {
+      "topicId": "a1_1_m4_arranging_meetings",
+      "summary": "The communication lesson turns hobbies, days, and frequency words into invitations and agreed plans."
+    }
+  ],
+  "examples": [
+    {
+      "id": "football",
+      "de": "Ich spiele gern Fußball.",
+      "en": "I like playing football."
+    },
+    {
+      "id": "weekend",
+      "de": "Am Wochenende treffe ich oft Freunde.",
+      "en": "I often meet friends at the weekend."
+    },
+    {
+      "id": "music",
+      "de": "Meine Schwester hört jeden Abend Musik.",
+      "en": "My sister listens to music every evening."
+    },
+    {
+      "id": "rarely",
+      "de": "Wir gehen selten ins Kino.",
+      "en": "We rarely go to the cinema."
+    },
+    {
+      "id": "question",
+      "de": "Was machst du am Samstag gern?",
+      "en": "What do you like doing on Saturday?"
+    }
+  ],
+  "commonMistakes": [
+    {
+      "id": "gern_like",
+      "wrong": "Ich gern schwimme.",
+      "correct": "Ich schwimme gern.",
+      "reason": "The conjugated verb occupies position two; 'gern' follows it."
+    },
+    {
+      "id": "day_preposition",
+      "wrong": "in Montag",
+      "correct": "am Montag",
+      "reason": "Use 'am' with days of the week."
+    },
+    {
+      "id": "time_first_order",
+      "wrong": "Am Samstag ich spiele Fußball.",
+      "correct": "Am Samstag spiele ich Fußball.",
+      "reason": "When time is first, the conjugated verb remains in position two and the subject follows."
+    }
+  ],
+  "specialCases": [
+    "'Gern' describes enjoyment of an action; 'mögen' is often used with nouns and is developed further later.",
+    "'Lieber' expresses a preference between activities: 'Ich lese lieber.'",
+    "Some hobby expressions are separable or use fixed prepositions; learn them initially as complete chunks."
+  ],
+  "tips": [
+    "Create a personal list of five real hobbies instead of memorizing an abstract list.",
+    "Practice each hobby with 'gern', one day, and one frequency word.",
+    "Ask and answer 'Was machst du gern?' with different partners or imagined profiles."
+  ],
+  "memoryHooks": [
+    {
+      "id": "activity_calendar",
+      "title": "Put hobbies on a calendar",
+      "content": "Imagine one activity on each day and describe the week aloud."
+    },
+    {
+      "id": "verb_gern_time",
+      "title": "Verb, gern, time",
+      "content": "Build sentences in three layers: the activity, enjoyment, and when it happens."
+    }
+  ],
+  "searchHints": [
+    "Hobbys",
+    "Freizeit",
+    "gern",
+    "oft manchmal nie",
+    "German hobbies"
+  ],
+  "ui": {
+    "status": "ready",
+    "recommendedSections": [
+      "mentalModel",
+      "coreRules",
+      "tables",
+      "patternsAndUsage",
+      "examples",
+      "commonMistakes",
+      "comparisons",
+      "levelProgression",
+      "advancedSpecialCases"
+    ]
+  },
+  "sourceStyle": {
+    "origin": "LangCompass editorial lesson aligned to the Momente A1.1 M4 catalog topic",
+    "confidence": "high",
+    "notes": "Vocabulary is organized around useful activity chunks, personal interests, and beginner time expressions."
+  },
+  "updatedAt": "2026-06-12"
+}
