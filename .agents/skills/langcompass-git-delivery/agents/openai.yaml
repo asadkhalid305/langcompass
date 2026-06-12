@@ -1,0 +1,4 @@
+interface:
+  display_name: "LangCompass Git Delivery"
+  short_description: "Commit and deliver changes safely"
+  default_prompt: "Use $langcompass-git-delivery to prepare and commit the current changes."

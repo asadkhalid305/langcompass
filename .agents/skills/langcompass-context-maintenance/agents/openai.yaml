@@ -1,0 +1,4 @@
+interface:
+  display_name: "LangCompass Context Maintenance"
+  short_description: "Maintain lean agent context and documentation"
+  default_prompt: "Use $langcompass-context-maintenance to audit the repository context setup."

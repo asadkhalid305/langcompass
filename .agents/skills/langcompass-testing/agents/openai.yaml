@@ -1,0 +1,4 @@
+interface:
+  display_name: "LangCompass Testing"
+  short_description: "Test and verify LangCompass changes"
+  default_prompt: "Use $langcompass-testing to verify these LangCompass changes."
