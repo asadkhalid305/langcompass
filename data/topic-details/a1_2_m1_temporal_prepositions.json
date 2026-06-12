@@ -1,0 +1,319 @@
+{
+  "id": "a1_2_m1_temporal_prepositions",
+  "title": "Basic Temporal and Modal Prepositions",
+  "level": "A1.2",
+  "section": "grammar",
+  "topicType": "grammar",
+  "summary": "Everyday prepositions such as in, vor, nach, mit, and ohne in common expressions.",
+  "relatedTopicIds": [
+    "a1_2_m1_city_orientation",
+    "a1_2_m1_offering_help"
+  ],
+  "lessonRefs": [
+    {
+      "curriculum": "Momente",
+      "module": "M1"
+    }
+  ],
+  "whyItMatters": "Prepositions connect events to time and actions to their circumstances. At this level, a small set of reliable chunks lets you say when something happens, what happens before or after another event, and whether you travel or act with or without something.",
+  "prerequisiteTopicIds": [
+    "accusative_case",
+    "a1_1_m2_articles"
+  ],
+  "mentalModel": [
+    {
+      "title": "Time prepositions place events on a line",
+      "content": "Use 'vor' for before, 'nach' for after, and 'in' for a future interval or a period: vor dem Kurs, nach der Arbeit, in einer Stunde."
+    },
+    {
+      "title": "Modal prepositions describe how",
+      "content": "Use 'mit' to include a means, person, or tool and 'ohne' to exclude one: mit dem Bus, mit Anna, ohne Auto."
+    },
+    {
+      "title": "Learn the preposition with its case",
+      "content": "Treat each pattern as a package: mit + dative, nach + dative, vor + dative, in + dative for these time expressions, and ohne + accusative."
+    }
+  ],
+  "coverageChecklist": [
+    "in for future time",
+    "vor for before",
+    "nach for after",
+    "mit plus dative",
+    "ohne plus accusative",
+    "article changes",
+    "common contractions",
+    "everyday time and transport chunks"
+  ],
+  "ruleBlocks": [
+    {
+      "id": "in_time",
+      "title": "Use in for a future interval",
+      "content": "Use 'in' with the dative to say how long from now: in einer Stunde, in zwei Tagen, in einer Woche."
+    },
+    {
+      "id": "before_after",
+      "title": "Use vor and nach around events",
+      "content": "Use dative chunks such as 'vor dem Termin', 'vor der Arbeit', 'nach dem Kurs', and 'nach der Pause'."
+    },
+    {
+      "id": "mit",
+      "title": "Use mit for company, tools, and transport",
+      "content": "'Mit' always takes the dative: mit dem Bus, mit der Bahn, mit einem Stadtplan, mit Freunden."
+    },
+    {
+      "id": "ohne",
+      "title": "Use ohne for what is absent",
+      "content": "'Ohne' takes the accusative: ohne den Stadtplan, ohne eine Fahrkarte, ohne mein Handy."
+    }
+  ],
+  "tables": [
+    {
+      "id": "preposition_map",
+      "title": "Preposition and Case Map",
+      "columns": [
+        "Preposition",
+        "Meaning",
+        "Case",
+        "Example"
+      ],
+      "rows": [
+        [
+          "in",
+          "in / from now",
+          "dative",
+          "in einer Stunde"
+        ],
+        [
+          "vor",
+          "before",
+          "dative",
+          "vor dem Termin"
+        ],
+        [
+          "nach",
+          "after",
+          "dative",
+          "nach der Arbeit"
+        ],
+        [
+          "mit",
+          "with / by",
+          "dative",
+          "mit dem Bus"
+        ],
+        [
+          "ohne",
+          "without",
+          "accusative",
+          "ohne einen Stadtplan"
+        ]
+      ]
+    },
+    {
+      "id": "article_forms",
+      "title": "Common Article Forms",
+      "columns": [
+        "Base noun",
+        "Dative chunk",
+        "Accusative chunk"
+      ],
+      "rows": [
+        [
+          "der Bus",
+          "mit dem Bus",
+          "ohne den Bus"
+        ],
+        [
+          "die Bahn",
+          "mit der Bahn",
+          "ohne die Bahn"
+        ],
+        [
+          "das Handy",
+          "mit dem Handy",
+          "ohne das Handy"
+        ],
+        [
+          "die Freunde",
+          "mit den Freunden",
+          "ohne die Freunde"
+        ]
+      ]
+    }
+  ],
+  "patterns": [
+    "in + dative time expression",
+    "vor + dative event",
+    "nach + dative event",
+    "mit + dative person/tool/transport",
+    "ohne + accusative noun",
+    "im = in dem",
+    "nach der Arbeit / vor dem Kurs"
+  ],
+  "sentenceStructure": [
+    "A prepositional phrase can appear in the middle or at the beginning of a sentence.",
+    "When the phrase comes first, the conjugated verb remains in position two: 'Nach dem Kurs fahre ich nach Hause.'",
+    "The preposition determines the article form in these patterns.",
+    "Plural dative nouns often add '-n' when possible: mit den Freunden."
+  ],
+  "levelProgression": [
+    {
+      "level": "A1.2",
+      "concepts": [
+        "use in, vor, and nach in common time expressions",
+        "use mit plus dative and ohne plus accusative",
+        "recognize common article changes"
+      ]
+    },
+    {
+      "level": "A2",
+      "concepts": [
+        "use a broader range of temporal and modal prepositions",
+        "distinguish location and direction with two-way prepositions"
+      ]
+    },
+    {
+      "level": "B1",
+      "concepts": [
+        "choose precise prepositions in abstract and idiomatic contexts",
+        "manage complex time relationships across clauses"
+      ]
+    }
+  ],
+  "comparisons": [
+    {
+      "topicId": "a1_2_m1_city_orientation",
+      "summary": "The city lesson supplies concrete transport and schedule contexts for 'mit', 'ohne', 'vor', and 'nach'."
+    },
+    {
+      "topicId": "a1_2_m1_offering_help",
+      "summary": "Help exchanges use these chunks to explain timing and means: 'Ich komme in fünf Minuten' or 'Wir fahren mit dem Bus'.",
+      "table": {
+        "columns": [
+          "Question",
+          "Useful answer"
+        ],
+        "rows": [
+          [
+            "Wann kommen Sie?",
+            "In zehn Minuten."
+          ],
+          [
+            "Wann treffen wir uns?",
+            "Nach dem Kurs."
+          ],
+          [
+            "Wie fahren wir?",
+            "Mit der U-Bahn."
+          ],
+          [
+            "Geht es ohne Stadtplan?",
+            "Ja, aber mit dem Handy ist es leichter."
+          ]
+        ]
+      }
+    }
+  ],
+  "examples": [
+    {
+      "id": "future",
+      "de": "Der Bus kommt in zehn Minuten.",
+      "en": "The bus is coming in ten minutes."
+    },
+    {
+      "id": "before",
+      "de": "Wir treffen uns vor dem Bahnhof.",
+      "en": "We are meeting in front of the station."
+    },
+    {
+      "id": "after",
+      "de": "Nach dem Kurs fahre ich ins Zentrum.",
+      "en": "After the course, I am going into the city center."
+    },
+    {
+      "id": "with",
+      "de": "Sie fährt mit der Straßenbahn zur Arbeit.",
+      "en": "She takes the tram to work."
+    },
+    {
+      "id": "without",
+      "de": "Ohne einen Stadtplan finde ich das Museum nicht.",
+      "en": "Without a city map, I cannot find the museum."
+    }
+  ],
+  "commonMistakes": [
+    {
+      "id": "mit_case",
+      "wrong": "mit den Bus",
+      "correct": "mit dem Bus",
+      "reason": "'Mit' requires the dative; masculine and neuter definite articles become 'dem'."
+    },
+    {
+      "id": "ohne_case",
+      "wrong": "ohne einem Stadtplan",
+      "correct": "ohne einen Stadtplan",
+      "reason": "'Ohne' requires the accusative; a masculine indefinite article becomes 'einen'."
+    },
+    {
+      "id": "nach_article",
+      "wrong": "nach die Arbeit",
+      "correct": "nach der Arbeit",
+      "reason": "'Nach' takes the dative."
+    },
+    {
+      "id": "first_position",
+      "wrong": "Nach dem Kurs ich fahre nach Hause.",
+      "correct": "Nach dem Kurs fahre ich nach Hause.",
+      "reason": "The conjugated verb remains in position two when the prepositional phrase comes first."
+    }
+  ],
+  "specialCases": [
+    "'Vor dem Bahnhof' can mean spatially in front of the station, while 'vor dem Kurs' is temporal; context determines the meaning.",
+    "'Nach' also appears in destination expressions such as 'nach Berlin' and 'nach Hause'.",
+    "In spoken German, contractions such as 'im' for 'in dem' and 'vorm' for 'vor dem' are common; use standard forms when unsure."
+  ],
+  "tips": [
+    "Color-code dative and accusative chunks instead of memorizing prepositions alone.",
+    "Practice each preposition with one city noun and one time expression.",
+    "Move the prepositional phrase to the front and check that the verb stays second."
+  ],
+  "memoryHooks": [
+    {
+      "id": "mit_dative",
+      "title": "Mit brings dative company",
+      "content": "Whenever 'mit' brings someone or something along, bring a dative form too."
+    },
+    {
+      "id": "without_accusative",
+      "title": "Ohne removes an accusative object",
+      "content": "Picture 'ohne' taking something away in the accusative."
+    }
+  ],
+  "searchHints": [
+    "Präpositionen",
+    "mit Dativ",
+    "ohne Akkusativ",
+    "vor nach in",
+    "German time prepositions"
+  ],
+  "ui": {
+    "status": "ready",
+    "recommendedSections": [
+      "mentalModel",
+      "coreRules",
+      "tables",
+      "patternsAndUsage",
+      "examples",
+      "commonMistakes",
+      "comparisons",
+      "levelProgression",
+      "advancedSpecialCases"
+    ]
+  },
+  "sourceStyle": {
+    "origin": "LangCompass editorial lesson aligned to the Momente A1.2 M1 catalog topic",
+    "confidence": "high",
+    "notes": "The lesson teaches high-frequency preposition-and-case packages and avoids expanding into the full two-way-preposition system."
+  },
+  "updatedAt": "2026-06-12"
+}

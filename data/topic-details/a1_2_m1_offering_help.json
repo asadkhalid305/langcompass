@@ -1,0 +1,323 @@
+{
+  "id": "a1_2_m1_offering_help",
+  "title": "Offering and Asking for Help",
+  "level": "A1.2",
+  "section": "communication",
+  "topicType": "communication",
+  "summary": "Offering help, asking for help, and reacting appropriately.",
+  "relatedTopicIds": [
+    "a1_2_m1_city_orientation",
+    "a1_2_m1_temporal_prepositions"
+  ],
+  "lessonRefs": [
+    {
+      "curriculum": "Momente",
+      "module": "M1"
+    }
+  ],
+  "whyItMatters": "Help exchanges are useful when someone is lost, cannot carry something, does not understand a machine, or needs practical information. A complete exchange identifies the problem, makes a clear request or offer, agrees on an action, and closes politely.",
+  "prerequisiteTopicIds": [
+    "a1_1_m3_asking_for_repetition",
+    "a1_1_m4_modal_koennen",
+    "a1_2_m1_city_orientation"
+  ],
+  "mentalModel": [
+    {
+      "title": "Notice, offer, specify",
+      "content": "When offering help, first signal availability, then ask what is needed: 'Kann ich Ihnen helfen? Was suchen Sie?'"
+    },
+    {
+      "title": "Make the request actionable",
+      "content": "A useful request names the task, object, or information: 'Können Sie mir den Weg zum Bahnhof zeigen?'"
+    },
+    {
+      "title": "Confirm the next action",
+      "content": "Before closing, make the solution explicit: 'Wir fahren zusammen mit dem Bus. Er kommt in fünf Minuten.'"
+    }
+  ],
+  "coverageChecklist": [
+    "offering help",
+    "asking for help",
+    "explaining a problem",
+    "formal and informal forms",
+    "accepting help",
+    "declining help",
+    "checking understanding",
+    "thanking someone"
+  ],
+  "ruleBlocks": [
+    {
+      "id": "offer",
+      "title": "Offer help with a direct question",
+      "content": "Use 'Kann ich Ihnen helfen?' formally or 'Kann ich dir helfen?' informally."
+    },
+    {
+      "id": "request",
+      "title": "Ask for one concrete action",
+      "content": "Use 'Können Sie mir bitte helfen?' and add the task or information you need."
+    },
+    {
+      "id": "respond",
+      "title": "Accept or decline clearly",
+      "content": "Accept with 'Ja, bitte' or 'Das wäre nett'. Decline with 'Nein, danke. Es geht schon.'"
+    },
+    {
+      "id": "confirm",
+      "title": "Check and close",
+      "content": "Repeat the important detail, ask a short confirmation question, and finish with thanks."
+    }
+  ],
+  "tables": [
+    {
+      "id": "help_toolkit",
+      "title": "Conversation Toolkit",
+      "columns": [
+        "Goal",
+        "Formal phrase",
+        "Informal phrase"
+      ],
+      "rows": [
+        [
+          "Offer help",
+          "Kann ich Ihnen helfen?",
+          "Kann ich dir helfen?"
+        ],
+        [
+          "Ask for help",
+          "Können Sie mir bitte helfen?",
+          "Kannst du mir bitte helfen?"
+        ],
+        [
+          "Ask what is needed",
+          "Was brauchen Sie?",
+          "Was brauchst du?"
+        ],
+        [
+          "Accept",
+          "Ja, bitte. Das wäre sehr nett.",
+          "Ja, gern. Danke."
+        ],
+        [
+          "Decline",
+          "Nein, danke. Es geht schon.",
+          "Nein, danke. Alles gut."
+        ]
+      ]
+    },
+    {
+      "id": "problem_solution",
+      "title": "From Problem to Solution",
+      "columns": [
+        "Problem",
+        "Useful request or response"
+      ],
+      "rows": [
+        [
+          "Lost",
+          "Ich suche den Bahnhof. Können Sie mir den Weg zeigen?"
+        ],
+        [
+          "Cannot read the map",
+          "Können Sie mir das auf dem Stadtplan zeigen?"
+        ],
+        [
+          "Heavy bag",
+          "Soll ich Ihnen mit der Tasche helfen?"
+        ],
+        [
+          "Need transport information",
+          "Welchen Bus muss ich nehmen?"
+        ],
+        [
+          "Need more time",
+          "Ich komme in fünf Minuten."
+        ]
+      ]
+    }
+  ],
+  "patterns": [
+    "Kann ich Ihnen / dir helfen?",
+    "Können Sie / Kannst du mir bitte helfen?",
+    "Ich brauche Hilfe mit + dative.",
+    "Können Sie mir + object + zeigen?",
+    "Ja, bitte. Das wäre nett.",
+    "Nein, danke. Es geht schon.",
+    "Vielen Dank für Ihre / deine Hilfe."
+  ],
+  "verbs": [
+    "helfen",
+    "brauchen",
+    "suchen",
+    "zeigen",
+    "tragen",
+    "nehmen",
+    "warten",
+    "verstehen"
+  ],
+  "sentenceStructure": [
+    "Choose formal 'Sie/Ihnen' with strangers and informal 'du/dir' with familiar people.",
+    "Use a modal question to soften a request or offer.",
+    "Name the concrete problem after the opening phrase.",
+    "Close by confirming the solution or thanking the helper."
+  ],
+  "levelProgression": [
+    {
+      "level": "A1.2",
+      "concepts": [
+        "offer and request practical help",
+        "accept or decline politely",
+        "explain a simple problem and confirm a solution"
+      ]
+    },
+    {
+      "level": "A2",
+      "concepts": [
+        "describe problems in more detail",
+        "negotiate responsibilities and follow-up actions"
+      ]
+    },
+    {
+      "level": "B1",
+      "concepts": [
+        "handle service problems and misunderstandings",
+        "offer nuanced advice and conditional assistance"
+      ]
+    }
+  ],
+  "comparisons": [
+    {
+      "topicId": "a1_2_m1_city_orientation",
+      "summary": "The city lesson supplies realistic problems such as finding a destination, reading a route, or choosing transport."
+    },
+    {
+      "topicId": "a1_2_m1_temporal_prepositions",
+      "summary": "The preposition lesson helps specify when and how the solution happens.",
+      "table": {
+        "columns": [
+          "Help detail",
+          "Example"
+        ],
+        "rows": [
+          [
+            "Time",
+            "Der Bus kommt in fünf Minuten."
+          ],
+          [
+            "Sequence",
+            "Nach der Ampel gehen Sie rechts."
+          ],
+          [
+            "Transport",
+            "Sie können mit der U-Bahn fahren."
+          ],
+          [
+            "Missing tool",
+            "Ohne Stadtplan ist es schwierig."
+          ]
+        ]
+      }
+    }
+  ],
+  "examples": [
+    {
+      "id": "lost",
+      "de": "A: Entschuldigung, können Sie mir helfen? Ich suche den Bahnhof. B: Ja, natürlich.",
+      "en": "A: Excuse me, can you help me? I am looking for the station. B: Yes, of course."
+    },
+    {
+      "id": "offer",
+      "de": "A: Kann ich Ihnen mit der Tasche helfen? B: Ja, bitte. Das wäre sehr nett.",
+      "en": "A: Can I help you with the bag? B: Yes, please. That would be very kind."
+    },
+    {
+      "id": "map",
+      "de": "A: Können Sie mir das auf dem Stadtplan zeigen? B: Gern. Wir sind hier.",
+      "en": "A: Can you show me that on the city map? B: Gladly. We are here."
+    },
+    {
+      "id": "decline",
+      "de": "A: Brauchst du Hilfe? B: Nein, danke. Es geht schon.",
+      "en": "A: Do you need help? B: No, thank you. I can manage."
+    },
+    {
+      "id": "confirm",
+      "de": "A: Also mit dem Bus bis zum Rathaus? B: Genau. Dort steigen Sie aus.",
+      "en": "A: So by bus as far as the town hall? B: Exactly. You get off there."
+    }
+  ],
+  "commonMistakes": [
+    {
+      "id": "register_mix",
+      "wrong": "Kann ich Ihnen helfen? Was brauchst du?",
+      "correct": "Kann ich Ihnen helfen? Was brauchen Sie?",
+      "reason": "Keep formal or informal address consistent within the exchange."
+    },
+    {
+      "id": "helfen_object",
+      "wrong": "Können Sie mich helfen?",
+      "correct": "Können Sie mir helfen?",
+      "reason": "The verb 'helfen' takes a dative person: mir, dir, Ihnen."
+    },
+    {
+      "id": "vague_request",
+      "wrong": "Hilfe!",
+      "correct": "Können Sie mir bitte den Weg zum Bahnhof zeigen?",
+      "reason": "A specific request tells the other person what action is needed."
+    },
+    {
+      "id": "missing_close",
+      "wrong": "Leave immediately after receiving the information.",
+      "correct": "Repeat the key detail and say 'Vielen Dank'.",
+      "reason": "Confirmation checks accuracy and closes the exchange politely."
+    }
+  ],
+  "specialCases": [
+    "'Soll ich ...?' is a common way to offer a specific action and can be learned as a fixed chunk before 'sollen' is studied fully.",
+    "'Das wäre nett' uses a conditional form but functions well as a polite fixed response.",
+    "In an urgent emergency, direct language is appropriate: 'Hilfe!' or 'Rufen Sie bitte die Polizei!'"
+  ],
+  "tips": [
+    "Practice the same situation once formally and once informally.",
+    "Replace vague 'help' with a visible action: show, carry, explain, call, or wait.",
+    "Repeat one route or timing detail before thanking the helper."
+  ],
+  "memoryHooks": [
+    {
+      "id": "help_loop",
+      "title": "Problem, action, confirmation",
+      "content": "Name what is wrong, request or offer one action, then confirm what happens next."
+    },
+    {
+      "id": "helfen_mir",
+      "title": "Help reaches mir",
+      "content": "Remember the common pair 'mir helfen' to anchor the dative person."
+    }
+  ],
+  "searchHints": [
+    "Hilfe anbieten",
+    "Können Sie mir helfen",
+    "Kann ich Ihnen helfen",
+    "mir helfen",
+    "German asking for help"
+  ],
+  "ui": {
+    "status": "ready",
+    "recommendedSections": [
+      "mentalModel",
+      "coreRules",
+      "tables",
+      "patternsAndUsage",
+      "examples",
+      "commonMistakes",
+      "comparisons",
+      "levelProgression",
+      "advancedSpecialCases"
+    ]
+  },
+  "sourceStyle": {
+    "origin": "LangCompass editorial lesson aligned to the Momente A1.2 M1 catalog topic",
+    "confidence": "high",
+    "notes": "The lesson focuses on complete practical help exchanges, consistent register, and specific actionable requests."
+  },
+  "updatedAt": "2026-06-12"
+}

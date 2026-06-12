@@ -1,0 +1,299 @@
+{
+  "id": "a1_2_m1_city_orientation",
+  "title": "City and Orientation",
+  "level": "A1.2",
+  "section": "themes",
+  "topicType": "theme",
+  "summary": "Places in the city, directions, and getting around.",
+  "relatedTopicIds": [
+    "a1_2_m1_temporal_prepositions",
+    "a1_2_m1_offering_help"
+  ],
+  "lessonRefs": [
+    {
+      "curriculum": "Momente",
+      "module": "M1"
+    }
+  ],
+  "whyItMatters": "City language lets you find essential places, understand short directions, and choose how to travel. The most useful beginner strategy is to connect each destination with a location phrase, a route instruction, and a means of transport.",
+  "prerequisiteTopicIds": [
+    "a1_1_m3_asking_for_repetition"
+  ],
+  "mentalModel": [
+    {
+      "title": "Read the city as landmarks and links",
+      "content": "First identify recognizable places such as the station, pharmacy, bank, or museum. Then connect them with simple route words: geradeaus, links, rechts, and an der Ecke."
+    },
+    {
+      "title": "Ask, follow, confirm",
+      "content": "A successful direction exchange has three steps: ask where something is, follow one instruction at a time, and repeat the destination or final turn to confirm."
+    },
+    {
+      "title": "Separate destination from transport",
+      "content": "Say where you are going and how you travel as two pieces: 'Ich fahre zum Bahnhof. Ich fahre mit dem Bus.'"
+    }
+  ],
+  "coverageChecklist": [
+    "city places",
+    "public services",
+    "direction words",
+    "landmarks",
+    "asking where something is",
+    "public transport",
+    "route confirmation"
+  ],
+  "ruleBlocks": [
+    {
+      "id": "place_packages",
+      "title": "Learn each place with its article",
+      "content": "Keep the noun package together: der Bahnhof, die Apotheke, das Rathaus, die Bank, and das Museum."
+    },
+    {
+      "id": "direction_sequence",
+      "title": "Follow directions as a sequence",
+      "content": "Break a route into short commands: zuerst geradeaus, dann links, an der Ampel rechts."
+    },
+    {
+      "id": "location_questions",
+      "title": "Use a reliable location question",
+      "content": "Ask 'Wo ist ...?' for a place and 'Wie komme ich zu ...?' when you need the route."
+    },
+    {
+      "id": "transport",
+      "title": "Name the means of transport with mit",
+      "content": "Use common chunks such as mit dem Bus, mit der U-Bahn, mit dem Fahrrad, and zu Fuß."
+    }
+  ],
+  "tables": [
+    {
+      "id": "city_places",
+      "title": "Essential City Vocabulary",
+      "columns": [
+        "Place",
+        "Purpose",
+        "Example"
+      ],
+      "rows": [
+        [
+          "der Bahnhof",
+          "station",
+          "Der Bahnhof ist im Zentrum."
+        ],
+        [
+          "die Apotheke",
+          "pharmacy",
+          "Die Apotheke ist neben der Bank."
+        ],
+        [
+          "das Rathaus",
+          "town hall",
+          "Das Rathaus ist am Marktplatz."
+        ],
+        [
+          "die Bushaltestelle",
+          "bus stop",
+          "Die Bushaltestelle ist dort."
+        ],
+        [
+          "das Museum",
+          "museum",
+          "Das Museum ist heute geöffnet."
+        ],
+        [
+          "der Supermarkt",
+          "supermarket",
+          "Der Supermarkt ist an der Ecke."
+        ]
+      ]
+    },
+    {
+      "id": "route_language",
+      "title": "Route and Transport Language",
+      "columns": [
+        "Function",
+        "Useful language"
+      ],
+      "rows": [
+        [
+          "Continue",
+          "Gehen Sie geradeaus."
+        ],
+        [
+          "Turn",
+          "Gehen Sie links / rechts."
+        ],
+        [
+          "Landmark",
+          "an der Ampel / an der Ecke"
+        ],
+        [
+          "Sequence",
+          "zuerst / dann / danach"
+        ],
+        [
+          "Public transport",
+          "mit dem Bus / mit der U-Bahn"
+        ],
+        [
+          "Walking",
+          "zu Fuß"
+        ]
+      ]
+    }
+  ],
+  "patterns": [
+    "Wo ist + place?",
+    "Wie komme ich zu + place?",
+    "Gehen Sie geradeaus.",
+    "Dann links / rechts.",
+    "place + ist an der Ecke.",
+    "mit dem Bus / mit der U-Bahn",
+    "zu Fuß gehen"
+  ],
+  "verbs": [
+    "gehen",
+    "fahren",
+    "kommen",
+    "abbiegen",
+    "nehmen",
+    "suchen",
+    "finden",
+    "aussteigen"
+  ],
+  "sentenceStructure": [
+    "Use 'Wo ist ...?' for a direct location question.",
+    "Use short imperative chunks to give directions clearly.",
+    "Sequence route steps with 'zuerst', 'dann', and 'danach'.",
+    "Use 'mit' for transport and the fixed phrase 'zu Fuß' for walking."
+  ],
+  "levelProgression": [
+    {
+      "level": "A1.2",
+      "concepts": [
+        "name common city places",
+        "ask for and follow short directions",
+        "describe basic transport choices"
+      ]
+    },
+    {
+      "level": "A2",
+      "concepts": [
+        "explain longer routes and transfers",
+        "describe location and movement with more precise prepositions"
+      ]
+    },
+    {
+      "level": "B1",
+      "concepts": [
+        "compare transport options and urban services",
+        "handle disruptions and detailed travel problems"
+      ]
+    }
+  ],
+  "comparisons": [
+    {
+      "topicId": "a1_2_m1_temporal_prepositions",
+      "summary": "The grammar lesson explains useful chunks for transport and route timing, including 'mit dem Bus', 'vor dem Bahnhof', and 'nach der Arbeit'."
+    },
+    {
+      "topicId": "a1_2_m1_offering_help",
+      "summary": "The communication lesson turns city vocabulary into exchanges where someone asks for, offers, and confirms help."
+    }
+  ],
+  "examples": [
+    {
+      "id": "station",
+      "de": "Entschuldigung, wie komme ich zum Bahnhof?",
+      "en": "Excuse me, how do I get to the station?"
+    },
+    {
+      "id": "route",
+      "de": "Gehen Sie zuerst geradeaus und dann an der Ampel links.",
+      "en": "First go straight ahead and then turn left at the traffic light."
+    },
+    {
+      "id": "pharmacy",
+      "de": "Die Apotheke ist neben der Bank.",
+      "en": "The pharmacy is next to the bank."
+    },
+    {
+      "id": "transport",
+      "de": "Wir fahren mit der U-Bahn ins Zentrum.",
+      "en": "We are taking the underground into the city center."
+    },
+    {
+      "id": "walking",
+      "de": "Das Museum ist nah. Sie können zu Fuß gehen.",
+      "en": "The museum is nearby. You can walk."
+    }
+  ],
+  "commonMistakes": [
+    {
+      "id": "article",
+      "wrong": "die Bahnhof",
+      "correct": "der Bahnhof",
+      "reason": "Learn city nouns together with their articles."
+    },
+    {
+      "id": "transport_article",
+      "wrong": "mit der Bus",
+      "correct": "mit dem Bus",
+      "reason": "'Mit' takes the dative; masculine 'der Bus' becomes 'dem Bus'."
+    },
+    {
+      "id": "route_overload",
+      "wrong": "Give a long route as one sentence without sequence words.",
+      "correct": "Use short steps with 'zuerst', 'dann', and 'danach'.",
+      "reason": "Short sequenced instructions are easier to understand and confirm."
+    }
+  ],
+  "specialCases": [
+    "'Zum Bahnhof' is the contraction of 'zu dem Bahnhof'; destination prepositions are developed more fully later.",
+    "'U-Bahn', 'S-Bahn', 'Straßenbahn', and regional transport terms vary by city.",
+    "Formal 'Gehen Sie ...' is useful with strangers; informal directions use 'Geh ...'."
+  ],
+  "tips": [
+    "Draw a five-place street map and practice two routes across it.",
+    "Repeat the last landmark after receiving directions.",
+    "Learn transport expressions as complete chunks rather than isolated prepositions."
+  ],
+  "memoryHooks": [
+    {
+      "id": "route_beats",
+      "title": "Route in beats",
+      "content": "Hear every route as a rhythm: straight, landmark, turn, destination."
+    },
+    {
+      "id": "place_route_transport",
+      "title": "Place, route, transport",
+      "content": "For every city destination, practice its name, one route sentence, and one way to get there."
+    }
+  ],
+  "searchHints": [
+    "Stadt",
+    "Wegbeschreibung",
+    "geradeaus links rechts",
+    "Bahnhof",
+    "German directions"
+  ],
+  "ui": {
+    "status": "ready",
+    "recommendedSections": [
+      "mentalModel",
+      "coreRules",
+      "tables",
+      "patternsAndUsage",
+      "examples",
+      "commonMistakes",
+      "comparisons",
+      "levelProgression",
+      "advancedSpecialCases"
+    ]
+  },
+  "sourceStyle": {
+    "origin": "LangCompass editorial lesson aligned to the Momente A1.2 M1 catalog topic",
+    "confidence": "high",
+    "notes": "The lesson emphasizes practical landmarks, short route sequences, and common transport chunks."
+  },
+  "updatedAt": "2026-06-12"
+}

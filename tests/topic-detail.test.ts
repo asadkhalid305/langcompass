@@ -55,6 +55,15 @@ const completedModules = [
       "a1_1_m5_ordering_restaurant",
     ],
   },
+  {
+    level: "A1.2",
+    module: "M1",
+    topicIds: [
+      "a1_2_m1_city_orientation",
+      "a1_2_m1_temporal_prepositions",
+      "a1_2_m1_offering_help",
+    ],
+  },
 ] as const
 
 const readJson = async (filePath: string): Promise<unknown> =>
