@@ -10,6 +10,7 @@ import {
   hasPatternsAndUsage,
   hasRows,
   resolveDetailSectionOrder,
+  resolveDetailSectionPresentation,
   type DetailSectionId,
 } from "./topic-detail-page-helpers"
 
@@ -156,6 +157,7 @@ export function TopicDetailContent({ detail, topicId, topicsById }: TopicDetailC
   }
 
   const sectionOrder = resolveDetailSectionOrder(detail)
+  const presentation = resolveDetailSectionPresentation(detail.topicType)
   const renderSection = (sectionId: DetailSectionId): React.ReactNode => {
     switch (sectionId) {
       case "mentalModel":
@@ -164,8 +166,8 @@ export function TopicDetailContent({ detail, topicId, topicsById }: TopicDetailC
         return (
           <DetailSection
             key={sectionId}
-            title="Mental Model"
-            eyebrow="Start here"
+            title={presentation.mentalModel.title}
+            eyebrow={presentation.mentalModel.eyebrow}
             accentClassName="border-amber-300 bg-[linear-gradient(180deg,rgba(254,243,199,0.72),rgba(255,255,255,1))]"
           >
             <div className="mt-4 grid gap-4 md:grid-cols-2">
@@ -183,7 +185,11 @@ export function TopicDetailContent({ detail, topicId, topicsById }: TopicDetailC
         if (!hasCoreRules(detail)) return null
 
         return (
-          <DetailSection key={sectionId} title="Core Rules" eyebrow="Essentials">
+          <DetailSection
+            key={sectionId}
+            title={presentation.coreRules.title}
+            eyebrow={presentation.coreRules.eyebrow}
+          >
             {detail.whyItMatters ? (
               <p className="mt-4 rounded-none border border-border bg-muted/15 px-4 py-3 text-sm leading-relaxed text-foreground md:text-base">
                 {detail.whyItMatters}
@@ -212,7 +218,11 @@ export function TopicDetailContent({ detail, topicId, topicsById }: TopicDetailC
         if (!hasArticlesAndForms(detail)) return null
 
         return (
-          <DetailSection key={sectionId} title="Articles & Forms" eyebrow="Reference tables">
+          <DetailSection
+            key={sectionId}
+            title={presentation.articlesAndForms.title}
+            eyebrow={presentation.articlesAndForms.eyebrow}
+          >
             <div className="mt-4 grid gap-6">
               {detail.tables?.map((table) => <DetailTable key={table.id} table={table} />)}
             </div>
@@ -223,11 +233,17 @@ export function TopicDetailContent({ detail, topicId, topicsById }: TopicDetailC
         if (!hasPatternsAndUsage(detail)) return null
 
         return (
-          <DetailSection key={sectionId} title="Patterns & Usage" eyebrow="How it shows up">
+          <DetailSection
+            key={sectionId}
+            title={presentation.patternsAndUsage.title}
+            eyebrow={presentation.patternsAndUsage.eyebrow}
+          >
             <div className="mt-4 grid gap-4 xl:grid-cols-2">
               {hasRows(detail.patterns) ? (
                 <article className="border border-border bg-muted/10 p-4">
-                  <h3 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted-foreground">Sentence patterns</h3>
+                  <h3 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted-foreground">
+                    {presentation.patternsAndUsage.patternsLabel}
+                  </h3>
                   <ul className="mt-3 space-y-2 text-sm leading-relaxed text-foreground">
                     {detail.patterns.map((pattern) => (
                       <li key={pattern} className="border-l-2 border-border/80 pl-3">
@@ -239,7 +255,9 @@ export function TopicDetailContent({ detail, topicId, topicsById }: TopicDetailC
               ) : null}
               {hasRows(detail.sentenceStructure) ? (
                 <article className="border border-border bg-muted/10 p-4">
-                  <h3 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted-foreground">Sentence structure</h3>
+                  <h3 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted-foreground">
+                    {presentation.patternsAndUsage.sentenceStructureLabel}
+                  </h3>
                   <ul className="mt-3 space-y-2 text-sm leading-relaxed text-foreground">
                     {detail.sentenceStructure.map((item) => (
                       <li key={item} className="border-l-2 border-border/80 pl-3">
@@ -252,19 +270,25 @@ export function TopicDetailContent({ detail, topicId, topicsById }: TopicDetailC
             </div>
             {hasRows(detail.verbs) ? (
               <div className="mt-5">
-                <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-muted-foreground">Common verbs</p>
+                <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-muted-foreground">
+                  {presentation.patternsAndUsage.verbsLabel}
+                </p>
                 <TokenList items={detail.verbs} />
               </div>
             ) : null}
             {hasRows(detail.prepositions) ? (
               <div className="mt-5">
-                <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-muted-foreground">Accusative prepositions</p>
+                <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-muted-foreground">
+                  {presentation.patternsAndUsage.prepositionsLabel}
+                </p>
                 <TokenList items={detail.prepositions} />
               </div>
             ) : null}
             {hasRows(detail.twoWayPrepositions) ? (
               <div className="mt-5">
-                <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-muted-foreground">Two-way prepositions</p>
+                <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-muted-foreground">
+                  {presentation.patternsAndUsage.twoWayPrepositionsLabel}
+                </p>
                 <TokenList items={detail.twoWayPrepositions} />
               </div>
             ) : null}
@@ -275,7 +299,11 @@ export function TopicDetailContent({ detail, topicId, topicsById }: TopicDetailC
         if (!hasRows(detail.levelProgression)) return null
 
         return (
-          <DetailSection key={sectionId} title="Level Progression" eyebrow="How this topic grows">
+          <DetailSection
+            key={sectionId}
+            title={presentation.levelProgression.title}
+            eyebrow={presentation.levelProgression.eyebrow}
+          >
             <div className="mt-5 grid gap-4 lg:grid-cols-3">
               {detail.levelProgression.map((step, index) => (
                 <article key={`${step.level}-${index}`} className="relative border border-border bg-white p-4">
@@ -300,7 +328,15 @@ export function TopicDetailContent({ detail, topicId, topicsById }: TopicDetailC
         if (!hasRows(detail.comparisons)) return null
 
         return (
-          <DetailSection key={sectionId} title="Comparisons" eyebrow={hasComparisonTables(detail) ? "Contrast the cases" : "Connections"}>
+          <DetailSection
+            key={sectionId}
+            title={presentation.comparisons.title}
+            eyebrow={
+              detail.topicType === "grammar" && hasComparisonTables(detail)
+                ? "Contrast the cases"
+                : presentation.comparisons.eyebrow
+            }
+          >
             <div className="mt-4 grid gap-4">
               {detail.comparisons.map((comparison, index) => (
                 <ComparisonCard key={`${comparison.topicId}-${index}`} comparison={comparison} topicsById={topicsById} />
@@ -313,7 +349,11 @@ export function TopicDetailContent({ detail, topicId, topicsById }: TopicDetailC
         if (!hasRows(detail.examples)) return null
 
         return (
-          <DetailSection key={sectionId} title="Examples" eyebrow="Scan and compare">
+          <DetailSection
+            key={sectionId}
+            title={presentation.examples.title}
+            eyebrow={presentation.examples.eyebrow}
+          >
             <div className="mt-4 grid gap-3">
               {detail.examples.map((example, index) => (
                 <article key={example.id ?? `${example.de}-${index}`} className="border border-border bg-muted/15 p-4">
@@ -332,7 +372,11 @@ export function TopicDetailContent({ detail, topicId, topicsById }: TopicDetailC
         if (!hasRows(detail.commonMistakes)) return null
 
         return (
-          <DetailSection key={sectionId} title="Common Mistakes" eyebrow="Catch the trap">
+          <DetailSection
+            key={sectionId}
+            title={presentation.commonMistakes.title}
+            eyebrow={presentation.commonMistakes.eyebrow}
+          >
             <div className="mt-4 grid gap-3">
               {detail.commonMistakes.map((mistake, index) => (
                 <article
@@ -340,11 +384,15 @@ export function TopicDetailContent({ detail, topicId, topicsById }: TopicDetailC
                   className="grid gap-3 border border-border bg-muted/10 p-4 md:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)]"
                 >
                   <div className="space-y-2 border border-red-200 bg-red-50/70 p-3">
-                    <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-red-700">Wrong</p>
+                    <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-red-700">
+                      {presentation.commonMistakes.wrongLabel}
+                    </p>
                     <p className="text-sm font-medium text-red-950">{mistake.wrong}</p>
                   </div>
                   <div className="space-y-2 border border-emerald-200 bg-emerald-50/80 p-3">
-                    <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-emerald-700">Correct</p>
+                    <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-emerald-700">
+                      {presentation.commonMistakes.correctLabel}
+                    </p>
                     <p className="text-sm font-medium text-emerald-950">{mistake.correct}</p>
                     <p className="text-sm text-foreground">{mistake.reason}</p>
                   </div>
@@ -358,11 +406,17 @@ export function TopicDetailContent({ detail, topicId, topicsById }: TopicDetailC
         if (!hasAdvancedSpecialCases(detail)) return null
 
         return (
-          <DetailSection key={sectionId} title="Advanced & Special Cases" eyebrow="Optional depth">
+          <DetailSection
+            key={sectionId}
+            title={presentation.advancedSpecialCases.title}
+            eyebrow={presentation.advancedSpecialCases.eyebrow}
+          >
             <div className="mt-4 space-y-3">
               {hasRows(detail.specialCases) ? (
                 <details className="border border-border bg-muted/10 p-4">
-                  <summary className="cursor-pointer text-sm font-semibold text-foreground">Special cases and edge patterns</summary>
+                  <summary className="cursor-pointer text-sm font-semibold text-foreground">
+                    {presentation.advancedSpecialCases.detailsLabel}
+                  </summary>
                   <ul className="mt-4 space-y-2 text-sm leading-relaxed text-foreground">
                     {detail.specialCases.map((item) => (
                       <li key={item} className="border-l-2 border-border/80 pl-3">

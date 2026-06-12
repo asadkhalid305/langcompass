@@ -1,0 +1,322 @@
+{
+  "id": "a1_1_m5_ordering_restaurant",
+  "title": "Ordering in a Restaurant",
+  "level": "A1.1",
+  "section": "communication",
+  "topicType": "communication",
+  "summary": "Expressing preferences, ordering, and responding in a simple restaurant setting.",
+  "relatedTopicIds": [
+    "a1_1_m5_food_restaurant",
+    "accusative_case"
+  ],
+  "lessonRefs": [
+    {
+      "curriculum": "Momente",
+      "module": "M5"
+    }
+  ],
+  "whyItMatters": "A restaurant exchange is a compact real-world conversation with a predictable sequence. A few polite phrases let you ask for the menu, order food and drinks, respond to questions, and request the bill without building every sentence from scratch.",
+  "prerequisiteTopicIds": [
+    "a1_1_m5_food_restaurant",
+    "accusative_case"
+  ],
+  "mentalModel": [
+    {
+      "title": "Follow the restaurant flow",
+      "content": "Think in four stages: get attention, order, respond to a short question, and close the interaction. You only need a few reliable phrases for each stage."
+    },
+    {
+      "title": "Use polite chunks",
+      "content": "Learn phrases such as 'Ich möchte ...', 'Für mich ...', and 'Die Rechnung, bitte' as complete communication tools. They reduce hesitation and sound natural."
+    },
+    {
+      "title": "Listen for the choice",
+      "content": "Service questions often offer a small choice: 'Mit oder ohne Milch?' or 'Sonst noch etwas?' You can answer with one short phrase instead of a full sentence."
+    }
+  ],
+  "coverageChecklist": [
+    "getting attention",
+    "asking for the menu",
+    "ordering food",
+    "ordering drinks",
+    "responding to service questions",
+    "asking for the bill",
+    "polite restaurant language"
+  ],
+  "ruleBlocks": [
+    {
+      "id": "polite_order",
+      "title": "Order with 'ich möchte'",
+      "content": "Use 'Ich möchte ...' for a polite, neutral order: 'Ich möchte einen Salat und ein Wasser, bitte.'"
+    },
+    {
+      "id": "short_order",
+      "title": "Use a short order when the context is clear",
+      "content": "In a restaurant, 'Für mich die Suppe, bitte' or 'Einen Kaffee, bitte' works because everyone understands that you are ordering."
+    },
+    {
+      "id": "service_responses",
+      "title": "Keep responses short and complete",
+      "content": "Answer small service questions directly: 'Ja, gern', 'Nein, danke', 'Mit Milch, bitte', or 'Das ist alles, danke.'"
+    },
+    {
+      "id": "close_interaction",
+      "title": "Close with the bill",
+      "content": "Use 'Die Rechnung, bitte' to request the bill. Add 'Danke' when the server brings something or completes the interaction."
+    }
+  ],
+  "tables": [
+    {
+      "id": "restaurant_phrase_bank",
+      "title": "Restaurant Phrase Bank",
+      "columns": [
+        "Situation",
+        "Useful phrase",
+        "Meaning"
+      ],
+      "rows": [
+        [
+          "Ask for the menu",
+          "Die Speisekarte, bitte.",
+          "The menu, please."
+        ],
+        [
+          "Order politely",
+          "Ich möchte einen Salat.",
+          "I would like a salad."
+        ],
+        [
+          "Choose for yourself",
+          "Für mich die Suppe, bitte.",
+          "The soup for me, please."
+        ],
+        [
+          "Add another item",
+          "Und noch ein Wasser, bitte.",
+          "And another water, please."
+        ],
+        [
+          "Decline more",
+          "Nein, danke. Das ist alles.",
+          "No, thank you. That is all."
+        ],
+        [
+          "Ask for the bill",
+          "Die Rechnung, bitte.",
+          "The bill, please."
+        ]
+      ]
+    },
+    {
+      "id": "service_questions",
+      "title": "Common Service Questions",
+      "columns": [
+        "Question",
+        "Possible answer"
+      ],
+      "rows": [
+        [
+          "Was möchten Sie?",
+          "Ich möchte die Pizza, bitte."
+        ],
+        [
+          "Was trinken Sie?",
+          "Ein Wasser, bitte."
+        ],
+        [
+          "Mit oder ohne Milch?",
+          "Mit Milch, bitte."
+        ],
+        [
+          "Sonst noch etwas?",
+          "Nein, danke. Das ist alles."
+        ]
+      ]
+    }
+  ],
+  "patterns": [
+    "Ich möchte + accusative object + bitte",
+    "Für mich + item + bitte",
+    "Und noch + item + bitte",
+    "Mit / ohne + item + bitte",
+    "Nein, danke. Das ist alles.",
+    "Die Rechnung, bitte."
+  ],
+  "verbs": [
+    "möchten",
+    "nehmen",
+    "bestellen",
+    "trinken",
+    "essen",
+    "zahlen"
+  ],
+  "sentenceStructure": [
+    "Open with a greeting or a polite attention phrase.",
+    "Name the requested item with 'Ich möchte ...' or a short order.",
+    "Answer follow-up questions with the relevant choice plus 'bitte'.",
+    "Close the order with 'Das ist alles, danke' and later request the bill."
+  ],
+  "levelProgression": [
+    {
+      "level": "A1.1",
+      "concepts": [
+        "order one or two items",
+        "respond to predictable service questions",
+        "ask for the menu and bill"
+      ]
+    },
+    {
+      "level": "A1.2",
+      "concepts": [
+        "make simple requests and clarify a problem",
+        "ask about ingredients or availability"
+      ]
+    },
+    {
+      "level": "A2",
+      "concepts": [
+        "express detailed preferences and complaints",
+        "manage less predictable restaurant interactions"
+      ]
+    }
+  ],
+  "comparisons": [
+    {
+      "topicId": "a1_1_m5_food_restaurant",
+      "summary": "The theme lesson gives you the food, drink, meal, and menu vocabulary. This lesson organizes those words into a predictable conversation."
+    },
+    {
+      "topicId": "accusative_case",
+      "summary": "Many ordered items are direct objects. The accusative lesson explains forms such as 'einen Salat' while neuter and feminine forms remain 'ein Wasser' and 'eine Suppe'.",
+      "table": {
+        "columns": [
+          "Menu item",
+          "Order"
+        ],
+        "rows": [
+          [
+            "der Salat",
+            "Ich möchte einen Salat."
+          ],
+          [
+            "die Suppe",
+            "Ich möchte eine Suppe."
+          ],
+          [
+            "das Wasser",
+            "Ich möchte ein Wasser."
+          ]
+        ]
+      }
+    }
+  ],
+  "examples": [
+    {
+      "id": "menu_exchange",
+      "de": "Gast: Entschuldigung, die Speisekarte, bitte. Bedienung: Ja, gern.",
+      "en": "Guest: Excuse me, the menu, please. Server: Yes, of course.",
+      "note": "Get attention briefly, then state the request."
+    },
+    {
+      "id": "basic_order",
+      "de": "Bedienung: Was möchten Sie? Gast: Ich möchte einen Salat und ein Wasser, bitte.",
+      "en": "Server: What would you like? Guest: I would like a salad and a water, please."
+    },
+    {
+      "id": "short_order",
+      "de": "Gast: Für mich die Suppe, bitte.",
+      "en": "Guest: The soup for me, please.",
+      "note": "A compact alternative when the ordering context is already clear."
+    },
+    {
+      "id": "follow_up",
+      "de": "Bedienung: Sonst noch etwas? Gast: Nein, danke. Das ist alles.",
+      "en": "Server: Anything else? Guest: No, thank you. That is all."
+    },
+    {
+      "id": "drink_choice",
+      "de": "Bedienung: Mit oder ohne Milch? Gast: Ohne Milch, bitte.",
+      "en": "Server: With or without milk? Guest: Without milk, please."
+    },
+    {
+      "id": "bill",
+      "de": "Gast: Die Rechnung, bitte. Bedienung: Zusammen oder getrennt?",
+      "en": "Guest: The bill, please. Server: Together or separately?"
+    }
+  ],
+  "commonMistakes": [
+    {
+      "id": "direct_want",
+      "wrong": "Ich will einen Kaffee.",
+      "correct": "Ich möchte einen Kaffee, bitte.",
+      "reason": "'Ich will' can sound too direct in a service interaction. 'Ich möchte' is the reliable polite choice."
+    },
+    {
+      "id": "bare_item",
+      "wrong": "Kaffee!",
+      "correct": "Einen Kaffee, bitte.",
+      "reason": "Add the appropriate article and 'bitte' so the order sounds complete and polite."
+    },
+    {
+      "id": "masculine_article",
+      "wrong": "Ich möchte ein Salat.",
+      "correct": "Ich möchte einen Salat.",
+      "reason": "'Der Salat' is masculine and becomes 'einen Salat' as the direct object."
+    },
+    {
+      "id": "literal_bill",
+      "wrong": "Ich will bezahlen.",
+      "correct": "Die Rechnung, bitte.",
+      "reason": "The standard restaurant phrase directly requests the bill and is easier to recognize."
+    }
+  ],
+  "specialCases": [
+    "'Bedienung' is a neutral textbook label for service staff; in a real exchange you normally address the person without using that noun.",
+    "'Ich nehme ...' is also common for choosing an item, while 'Ich möchte ...' is the most broadly useful beginner phrase.",
+    "In German-speaking restaurants, 'Zusammen oder getrennt?' asks whether the group will pay together or separately."
+  ],
+  "tips": [
+    "Practice the exchange as a four-step script: menu, order, follow-up, bill.",
+    "Swap only the food and drink items while keeping the sentence frame stable.",
+    "Say short answers with natural final intonation instead of forcing a long sentence."
+  ],
+  "memoryHooks": [
+    {
+      "id": "restaurant_four_steps",
+      "title": "The four-step restaurant script",
+      "content": "Menu, order, answer, bill. If you can manage one phrase for each stage, you can complete the whole interaction."
+    },
+    {
+      "id": "bitte_frame",
+      "title": "Put the request inside a bitte frame",
+      "content": "Start with a useful request form and finish with 'bitte': 'Ich möchte ... bitte' or 'Für mich ... bitte'."
+    }
+  ],
+  "searchHints": [
+    "im Restaurant bestellen",
+    "Speisekarte",
+    "Ich möchte",
+    "Die Rechnung bitte",
+    "restaurant German"
+  ],
+  "ui": {
+    "status": "ready",
+    "recommendedSections": [
+      "mentalModel",
+      "coreRules",
+      "tables",
+      "patternsAndUsage",
+      "examples",
+      "commonMistakes",
+      "comparisons",
+      "levelProgression",
+      "advancedSpecialCases"
+    ]
+  },
+  "sourceStyle": {
+    "origin": "LangCompass editorial lesson aligned to the Momente A1.1 M5 catalog topic",
+    "confidence": "high",
+    "notes": "Phrases prioritize predictable, polite A1 restaurant interactions and reusable conversational chunks."
+  },
+  "updatedAt": "2026-06-12"
+}

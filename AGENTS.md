@@ -115,6 +115,16 @@
 - Filename must equal topic `id` (`<id>.json`); detail files not present in the active catalog are tolerated as validator warnings (use intentionally, not accidentally).
 - Missing detail files are valid; UI already supports metadata-only topics.
 
+## Lesson Content Expansion Workflow
+
+- Expand rich lesson content one complete Momente module at a time.
+- A module is complete only when its theme, grammar, and communication topics all have reviewed detail files.
+- Keep each completed module as its own tested Conventional Commit; do not mix unrelated modules in one commit.
+- After committing a module, propose the next module explicitly before starting it.
+- Use the established topic-type presentation profiles rather than forcing grammar headings onto theme or communication lessons.
+- Scale in curriculum order within a level once a pilot module is stable, then continue level by level.
+- Every module commit must pass topic validation, tests, lint, production build, and browser smoke checks for its three lesson pages.
+
 ## Out Of Scope (For This Repo Stage)
 
 - Auth, user progress tracking, persistence layer

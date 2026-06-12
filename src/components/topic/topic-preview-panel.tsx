@@ -113,17 +113,19 @@ export function TopicPreviewPanel({
 
             {previewMentalModel ? (
               <section className="space-y-3 border-t border-border pt-5">
-                <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Mental model</p>
+              <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Lesson focus</p>
                 <p className="text-sm leading-relaxed text-foreground">{clampPreview(previewMentalModel, 180)}</p>
               </section>
             ) : null}
 
             <section className="space-y-3 border-t border-border pt-5">
               <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Learning structure</p>
-              <p className="text-sm text-muted-foreground">Built for concept clarity first, then patterns, contrasts, and examples.</p>
+              <p className="text-sm text-muted-foreground">
+                Built for a clear starting point, practical language, connections, and examples.
+              </p>
               {loadedDetail ? (
                 <p className="text-xs text-muted-foreground">
-                  {loadedDetail.ruleBlocks.length} core rules · {loadedDetail.examples?.length ?? 0} examples · {loadedDetail.tables?.length ?? 0} tables
+                  {loadedDetail.ruleBlocks.length} building blocks · {loadedDetail.examples?.length ?? 0} examples · {loadedDetail.tables?.length ?? 0} reference tables
                   {previewPatternsCount > 0 ? ` · ${previewPatternsCount} usage cues` : ""}
                 </p>
               ) : null}

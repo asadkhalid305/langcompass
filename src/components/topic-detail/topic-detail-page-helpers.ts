@@ -1,5 +1,11 @@
 import { buildTopicDetailHref } from "@/lib/explorer/navigation"
-import type { TopicCatalogItem, TopicDetail, TopicId, TopicProgressionLevel } from "@/lib/types/topic"
+import type {
+  TopicCatalogItem,
+  TopicDetail,
+  TopicId,
+  TopicProgressionLevel,
+  TopicType,
+} from "@/lib/types/topic"
 
 export const DETAIL_SECTION_ORDER = [
   "mentalModel",
@@ -20,6 +26,122 @@ export interface TopicLinkItem {
   title: string
   href: string | null
 }
+
+export interface DetailSectionPresentation {
+  mentalModel: { title: string; eyebrow: string }
+  coreRules: { title: string; eyebrow: string }
+  articlesAndForms: { title: string; eyebrow: string }
+  patternsAndUsage: {
+    title: string
+    eyebrow: string
+    patternsLabel: string
+    sentenceStructureLabel: string
+    verbsLabel: string
+    prepositionsLabel: string
+    twoWayPrepositionsLabel: string
+  }
+  levelProgression: { title: string; eyebrow: string }
+  comparisons: { title: string; eyebrow: string }
+  examples: { title: string; eyebrow: string }
+  commonMistakes: {
+    title: string
+    eyebrow: string
+    wrongLabel: string
+    correctLabel: string
+  }
+  advancedSpecialCases: { title: string; eyebrow: string; detailsLabel: string }
+}
+
+const DETAIL_PRESENTATION_BY_TOPIC_TYPE: Record<TopicType, DetailSectionPresentation> = {
+  grammar: {
+    mentalModel: { title: "Mental Model", eyebrow: "Start here" },
+    coreRules: { title: "Core Rules", eyebrow: "Essentials" },
+    articlesAndForms: { title: "Articles & Forms", eyebrow: "Reference tables" },
+    patternsAndUsage: {
+      title: "Patterns & Usage",
+      eyebrow: "How it shows up",
+      patternsLabel: "Sentence patterns",
+      sentenceStructureLabel: "Sentence structure",
+      verbsLabel: "Common verbs",
+      prepositionsLabel: "Accusative prepositions",
+      twoWayPrepositionsLabel: "Two-way prepositions",
+    },
+    levelProgression: { title: "Level Progression", eyebrow: "How this topic grows" },
+    comparisons: { title: "Comparisons", eyebrow: "Connections" },
+    examples: { title: "Examples", eyebrow: "Scan and compare" },
+    commonMistakes: {
+      title: "Common Mistakes",
+      eyebrow: "Catch the trap",
+      wrongLabel: "Wrong",
+      correctLabel: "Correct",
+    },
+    advancedSpecialCases: {
+      title: "Advanced & Special Cases",
+      eyebrow: "Optional depth",
+      detailsLabel: "Special cases and edge patterns",
+    },
+  },
+  theme: {
+    mentalModel: { title: "Topic Map", eyebrow: "Start here" },
+    coreRules: { title: "Essential Vocabulary", eyebrow: "Build the topic" },
+    articlesAndForms: { title: "Vocabulary & Categories", eyebrow: "Reference" },
+    patternsAndUsage: {
+      title: "Language in Context",
+      eyebrow: "How it shows up",
+      patternsLabel: "Useful combinations",
+      sentenceStructureLabel: "Context cues",
+      verbsLabel: "Useful verbs",
+      prepositionsLabel: "Useful prepositions",
+      twoWayPrepositionsLabel: "Location language",
+    },
+    levelProgression: { title: "Topic Progression", eyebrow: "How the theme grows" },
+    comparisons: { title: "Connections", eyebrow: "Link the topic" },
+    examples: { title: "Examples in Context", eyebrow: "See the vocabulary work" },
+    commonMistakes: {
+      title: "Common Mix-ups",
+      eyebrow: "Keep meanings clear",
+      wrongLabel: "Mix-up",
+      correctLabel: "Use instead",
+    },
+    advancedSpecialCases: {
+      title: "Extra Depth",
+      eyebrow: "Optional expansion",
+      detailsLabel: "Nuance and useful distinctions",
+    },
+  },
+  communication: {
+    mentalModel: { title: "Communication Goal", eyebrow: "Start here" },
+    coreRules: { title: "Conversation Toolkit", eyebrow: "Essential moves" },
+    articlesAndForms: { title: "Phrase Bank", eyebrow: "Ready-to-use language" },
+    patternsAndUsage: {
+      title: "Conversation Patterns",
+      eyebrow: "Build the exchange",
+      patternsLabel: "Useful moves",
+      sentenceStructureLabel: "Conversation flow",
+      verbsLabel: "Useful verbs",
+      prepositionsLabel: "Useful connectors",
+      twoWayPrepositionsLabel: "Location phrases",
+    },
+    levelProgression: { title: "Communication Progression", eyebrow: "How the skill grows" },
+    comparisons: { title: "Related Situations", eyebrow: "Choose the right move" },
+    examples: { title: "Model Exchanges", eyebrow: "Hear the interaction" },
+    commonMistakes: {
+      title: "Communication Repairs",
+      eyebrow: "Sound clearer",
+      wrongLabel: "Less natural",
+      correctLabel: "Better",
+    },
+    advancedSpecialCases: {
+      title: "Strategy & Variations",
+      eyebrow: "Optional flexibility",
+      detailsLabel: "Situational variations",
+    },
+  },
+}
+
+export const resolveDetailSectionPresentation = (
+  topicType: TopicType,
+): DetailSectionPresentation => DETAIL_PRESENTATION_BY_TOPIC_TYPE[topicType]
 
 const fallbackTitleFromId = (id: string): string =>
   id

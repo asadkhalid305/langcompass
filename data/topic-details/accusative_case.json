@@ -275,6 +275,7 @@
     }
   ],
   "ui": {
+    "status": "ready",
     "recommendedSections": [
       "mentalModel",
       "ruleBlocks",

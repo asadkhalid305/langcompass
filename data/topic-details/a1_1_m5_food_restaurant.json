@@ -1,0 +1,284 @@
+{
+  "id": "a1_1_m5_food_restaurant",
+  "title": "Food and Drinks",
+  "level": "A1.1",
+  "section": "themes",
+  "topicType": "theme",
+  "summary": "Meals, preferences, restaurant situations, and everyday food vocabulary.",
+  "relatedTopicIds": [
+    "accusative_case",
+    "a1_1_m5_ordering_restaurant"
+  ],
+  "lessonRefs": [
+    {
+      "curriculum": "Momente",
+      "module": "M5"
+    }
+  ],
+  "whyItMatters": "Food language appears every day: at breakfast, while shopping, at home, and in cafés or restaurants. A small, well-organized vocabulary gives you enough language to state preferences, understand a simple menu, and choose what you want.",
+  "mentalModel": [
+    {
+      "title": "Organize by situation",
+      "content": "Do not learn one long food list. Group words by situations you can picture: breakfast, drinks, a simple meal, and a restaurant order."
+    },
+    {
+      "title": "Learn nouns with their article",
+      "content": "Treat the article as part of the word: der Kaffee, die Suppe, das Brot. This prepares you for later grammar and makes phrases easier to build."
+    },
+    {
+      "title": "Connect items to actions",
+      "content": "Food vocabulary becomes usable when it is paired with verbs and preferences: Kaffee trinken, Brot essen, Pizza mögen, Wasser nehmen."
+    }
+  ],
+  "coverageChecklist": [
+    "common foods",
+    "common drinks",
+    "noun gender",
+    "meals",
+    "preferences",
+    "restaurant vocabulary",
+    "useful food combinations"
+  ],
+  "ruleBlocks": [
+    {
+      "id": "food_with_articles",
+      "title": "Learn the article with the noun",
+      "content": "German food nouns have grammatical gender. Say and record them as one unit, for example 'der Käse', 'die Suppe', and 'das Brot', rather than learning the noun alone."
+    },
+    {
+      "id": "meals_and_moments",
+      "title": "Anchor vocabulary to meal moments",
+      "content": "Use breakfast, lunch, dinner, and café situations as memory groups. A word is easier to recall when you know where and when you would use it."
+    },
+    {
+      "id": "preferences",
+      "title": "Separate liking from doing",
+      "content": "Use 'Ich mag ...' to name something you like. Use 'gern' with an activity: 'Ich trinke gern Tee' or 'Ich esse gern Pizza'."
+    }
+  ],
+  "tables": [
+    {
+      "id": "food_by_article",
+      "title": "Everyday Food by Article",
+      "columns": [
+        "der",
+        "die",
+        "das"
+      ],
+      "rows": [
+        [
+          "der Kaffee",
+          "die Suppe",
+          "das Brot"
+        ],
+        [
+          "der Tee",
+          "die Pizza",
+          "das Wasser"
+        ],
+        [
+          "der Käse",
+          "die Milch",
+          "das Gemüse"
+        ],
+        [
+          "der Salat",
+          "die Banane",
+          "das Ei"
+        ]
+      ]
+    },
+    {
+      "id": "meal_vocabulary",
+      "title": "Meal and Restaurant Vocabulary",
+      "columns": [
+        "German",
+        "English",
+        "Useful connection"
+      ],
+      "rows": [
+        [
+          "das Frühstück",
+          "breakfast",
+          "frühstücken"
+        ],
+        [
+          "das Mittagessen",
+          "lunch",
+          "zu Mittag essen"
+        ],
+        [
+          "das Abendessen",
+          "dinner",
+          "zu Abend essen"
+        ],
+        [
+          "die Speisekarte",
+          "menu",
+          "die Speisekarte lesen"
+        ],
+        [
+          "die Rechnung",
+          "bill",
+          "die Rechnung, bitte"
+        ]
+      ]
+    }
+  ],
+  "patterns": [
+    "Kaffee / Tee / Wasser trinken",
+    "Brot / Pizza / Salat essen",
+    "Ich mag + food or drink",
+    "Ich esse / trinke gern + item",
+    "Zum Frühstück esse / trinke ich + item"
+  ],
+  "verbs": [
+    "essen",
+    "trinken",
+    "mögen",
+    "nehmen",
+    "bestellen",
+    "kochen"
+  ],
+  "sentenceStructure": [
+    "Use 'gern' after the conjugated verb to describe an activity you enjoy: 'Ich trinke gern Kaffee.'",
+    "Use 'nicht gern' to describe an activity you do not enjoy: 'Ich esse nicht gern Fisch.'",
+    "Use 'zum Frühstück', 'zum Mittagessen', or 'zum Abendessen' to place food in a meal context.",
+    "When a masculine noun is a direct object, its article may change: 'der Salat' becomes 'einen Salat' in an order."
+  ],
+  "levelProgression": [
+    {
+      "level": "A1.1",
+      "concepts": [
+        "name common foods and drinks",
+        "state simple likes and dislikes",
+        "recognize basic menu and meal words"
+      ]
+    },
+    {
+      "level": "A1.2",
+      "concepts": [
+        "talk about quantities and household food",
+        "describe simple eating habits and needs"
+      ]
+    },
+    {
+      "level": "A2",
+      "concepts": [
+        "discuss recipes, ingredients, and preferences in more detail",
+        "describe food experiences and give reasons for choices"
+      ]
+    }
+  ],
+  "comparisons": [
+    {
+      "topicId": "a1_1_m5_ordering_restaurant",
+      "summary": "This theme supplies the words for foods, drinks, meals, and menu items. The communication lesson turns that vocabulary into a restaurant exchange."
+    },
+    {
+      "topicId": "accusative_case",
+      "summary": "Food words often become direct objects after verbs such as essen, trinken, nehmen, and bestellen. The accusative lesson explains why masculine forms change in phrases such as 'einen Salat'."
+    }
+  ],
+  "examples": [
+    {
+      "id": "breakfast",
+      "de": "Zum Frühstück esse ich Brot und Käse.",
+      "en": "For breakfast I eat bread and cheese."
+    },
+    {
+      "id": "drink_preference",
+      "de": "Ich trinke gern Tee, aber keinen Kaffee.",
+      "en": "I like drinking tea, but no coffee."
+    },
+    {
+      "id": "food_like",
+      "de": "Ich mag Pizza sehr.",
+      "en": "I like pizza very much."
+    },
+    {
+      "id": "menu",
+      "de": "Auf der Speisekarte stehen Suppe, Salat und Pasta.",
+      "en": "The menu has soup, salad, and pasta."
+    },
+    {
+      "id": "simple_choice",
+      "de": "Ich nehme das Gemüse und ein Wasser.",
+      "en": "I will have the vegetables and a water."
+    },
+    {
+      "id": "cooking",
+      "de": "Am Abend kochen wir eine Suppe.",
+      "en": "In the evening we cook a soup."
+    }
+  ],
+  "commonMistakes": [
+    {
+      "id": "eat_coffee",
+      "wrong": "Ich esse Kaffee.",
+      "correct": "Ich trinke Kaffee.",
+      "reason": "Use 'trinken' for beverages and 'essen' for food."
+    },
+    {
+      "id": "gern_noun",
+      "wrong": "Ich gern Pizza.",
+      "correct": "Ich esse gern Pizza.",
+      "reason": "'Gern' describes how you do an activity, so it needs a verb such as 'essen'."
+    },
+    {
+      "id": "missing_article_learning",
+      "wrong": "Learn: Suppe = soup.",
+      "correct": "Learn: die Suppe = soup.",
+      "reason": "Learning the article with the noun makes later article and case choices much easier."
+    }
+  ],
+  "specialCases": [
+    "Some food words are often used without an article when speaking generally: 'Ich trinke Kaffee' and 'Ich esse gern Brot'.",
+    "In cafés and restaurants, countable portions can use an article: 'einen Kaffee' or 'ein Wasser'.",
+    "Regional vocabulary can vary, but the core words in this lesson are broadly understood."
+  ],
+  "tips": [
+    "Build a personal mini-menu with five foods and three drinks you actually choose.",
+    "Say each noun aloud with its article and one useful verb.",
+    "Sort new vocabulary into meal moments instead of maintaining one alphabetical list."
+  ],
+  "memoryHooks": [
+    {
+      "id": "article_is_part",
+      "title": "The article belongs to the word",
+      "content": "Picture each noun wearing its article as a name tag: der Kaffee, die Suppe, das Brot."
+    },
+    {
+      "id": "menu_method",
+      "title": "Use a menu, not a dictionary",
+      "content": "A small imaginary menu naturally groups drinks, starters, main dishes, and prices into one memorable scene."
+    }
+  ],
+  "searchHints": [
+    "Essen und Trinken",
+    "Lebensmittel",
+    "Frühstück",
+    "Speisekarte",
+    "food vocabulary"
+  ],
+  "ui": {
+    "status": "ready",
+    "recommendedSections": [
+      "mentalModel",
+      "coreRules",
+      "tables",
+      "patternsAndUsage",
+      "examples",
+      "commonMistakes",
+      "comparisons",
+      "levelProgression",
+      "advancedSpecialCases"
+    ]
+  },
+  "sourceStyle": {
+    "origin": "LangCompass editorial lesson aligned to the Momente A1.1 M5 catalog topic",
+    "confidence": "high",
+    "notes": "Vocabulary is limited to high-frequency A1 food, drink, meal, and restaurant contexts."
+  },
+  "updatedAt": "2026-06-12"
+}
