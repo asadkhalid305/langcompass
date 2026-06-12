@@ -1,0 +1,86 @@
+{
+  "id": "a1_2_m2_plans_wishes",
+  "title": "Plans, Wishes, and Appointments",
+  "level": "A1.2",
+  "section": "themes",
+  "topicType": "theme",
+  "summary": "Plans, wishes, appointments, devices, and everyday scheduling.",
+  "relatedTopicIds": ["a1_2_m2_werden_wollen", "a1_2_m2_making_appointments"],
+  "lessonRefs": [{"curriculum": "Momente", "module": "M2"}],
+  "whyItMatters": "Everyday planning connects intentions to concrete dates, times, contacts, and reminders. This vocabulary helps you explain what you want to do, record an appointment, and manage simple schedule changes.",
+  "prerequisiteTopicIds": ["a1_1_m4_arranging_meetings", "a1_2_m1_temporal_prepositions"],
+  "mentalModel": [
+    {"title": "Turn a wish into a calendar entry", "content": "Move from an idea to an action, then add a date, time, place, and contact person."},
+    {"title": "Separate flexible plans from fixed appointments", "content": "A plan can still change; an appointment normally has agreed details that must be confirmed or rescheduled."},
+    {"title": "Use devices as planning tools", "content": "Connect phone and calendar vocabulary to actions such as anrufen, schreiben, speichern, erinnern, and absagen."}
+  ],
+  "coverageChecklist": ["plans and intentions", "wishes", "appointments", "calendar details", "phone and messages", "reminders", "schedule changes"],
+  "ruleBlocks": [
+    {"id": "plan_package", "title": "Build a complete plan", "content": "State the activity and add when, where, and with whom: 'Ich besuche am Samstag mit Lea das Museum.'"},
+    {"id": "appointment_details", "title": "Record appointment details", "content": "Keep the day, clock time, place, and contact together so the appointment can be confirmed or changed."},
+    {"id": "device_actions", "title": "Connect devices to planning actions", "content": "Use chunks such as einen Termin speichern, eine Nachricht schreiben, jemanden anrufen, and eine Erinnerung einstellen."},
+    {"id": "change_language", "title": "Mark changes explicitly", "content": "Use verschieben, absagen, bestätigen, früher, später, and neuer Termin when a plan changes."}
+  ],
+  "tables": [
+    {
+      "id": "planning_vocabulary",
+      "title": "Essential Planning Vocabulary",
+      "columns": ["German", "English", "Useful combination"],
+      "rows": [
+        ["der Plan", "plan", "einen Plan machen"],
+        ["der Wunsch", "wish", "einen Wunsch haben"],
+        ["der Termin", "appointment", "einen Termin vereinbaren"],
+        ["der Kalender", "calendar", "im Kalender speichern"],
+        ["die Nachricht", "message", "eine Nachricht schreiben"],
+        ["die Erinnerung", "reminder", "eine Erinnerung einstellen"]
+      ]
+    },
+    {
+      "id": "schedule_actions",
+      "title": "Appointment Actions",
+      "columns": ["Action", "Example"],
+      "rows": [
+        ["vereinbaren", "Wir vereinbaren einen Termin."],
+        ["bestätigen", "Ich bestätige den Termin per Nachricht."],
+        ["verschieben", "Können wir den Termin verschieben?"],
+        ["absagen", "Sie muss den Termin absagen."],
+        ["notieren", "Bitte notieren Sie die neue Uhrzeit."]
+      ]
+    }
+  ],
+  "patterns": ["einen Plan / Wunsch / Termin haben", "am + day + um + time", "per Telefon / per Nachricht", "einen Termin vereinbaren / bestätigen / verschieben / absagen"],
+  "verbs": ["planen", "wünschen", "vereinbaren", "bestätigen", "verschieben", "absagen", "anrufen", "speichern"],
+  "sentenceStructure": [
+    "Use present tense with a future time expression for many plans.",
+    "Place the time early when it organizes the message: 'Am Dienstag habe ich einen Termin.'",
+    "Keep the key appointment details close together.",
+    "Use modal verbs or 'wollen' to distinguish possibility from intention."
+  ],
+  "levelProgression": [
+    {"level": "A1.2", "concepts": ["describe plans and wishes", "record and change simple appointments", "use everyday planning devices"]},
+    {"level": "A2", "concepts": ["explain reasons for schedule changes", "coordinate several constraints and alternatives"]},
+    {"level": "B1", "concepts": ["negotiate complex schedules", "distinguish tentative, intended, and confirmed plans"]}
+  ],
+  "comparisons": [
+    {"topicId": "a1_2_m2_werden_wollen", "summary": "The grammar lesson supplies the forms for intentions, desired actions, and changes of state."},
+    {"topicId": "a1_2_m2_making_appointments", "summary": "The communication lesson turns planning vocabulary into complete scheduling and rescheduling exchanges."}
+  ],
+  "examples": [
+    {"id": "calendar", "de": "Ich habe am Dienstag um zehn Uhr einen Termin.", "en": "I have an appointment on Tuesday at ten."},
+    {"id": "wish", "de": "Mein Wunsch ist eine Reise nach Wien.", "en": "My wish is a trip to Vienna."},
+    {"id": "message", "de": "Bitte schicken Sie mir eine Nachricht mit der neuen Uhrzeit.", "en": "Please send me a message with the new time."},
+    {"id": "reminder", "de": "Ich speichere den Termin im Kalender und stelle eine Erinnerung ein.", "en": "I save the appointment in the calendar and set a reminder."},
+    {"id": "change", "de": "Der Termin am Freitag fällt aus; wir brauchen einen neuen Termin.", "en": "Friday's appointment is cancelled; we need a new appointment."}
+  ],
+  "commonMistakes": [
+    {"id": "details", "wrong": "Wir treffen uns nächste Woche.", "correct": "Wir treffen uns am Dienstag um 10 Uhr im Büro.", "reason": "A usable appointment needs concrete details."},
+    {"id": "false_friend", "wrong": "der Termin = deadline only", "correct": "der Termin = appointment or scheduled date/time", "reason": "'Termin' commonly means an agreed appointment."},
+    {"id": "change_without_new", "wrong": "Cancel without discussing what happens next.", "correct": "State the cancellation and propose or request a new time.", "reason": "The planning task remains incomplete without a next step."}
+  ],
+  "specialCases": ["German often uses the present tense plus a future time expression for planned events.", "'Verabredung' is often a social arrangement, while 'Termin' is common for formal or service appointments.", "'Ausfallen' means an event does not take place; 'absagen' is what a person does to cancel it."],
+  "tips": ["Practice with a real weekly calendar.", "Say every appointment as day, time, place, and purpose.", "Create paired messages: original appointment and changed appointment."],
+  "searchHints": ["Pläne", "Wünsche", "Termin", "Kalender", "appointment German"],
+  "ui": {"status": "ready", "recommendedSections": ["mentalModel", "coreRules", "tables", "patternsAndUsage", "examples", "commonMistakes", "comparisons", "levelProgression", "advancedSpecialCases"]},
+  "sourceStyle": {"origin": "LangCompass editorial lesson aligned to the Momente A1.2 M2 catalog topic", "confidence": "high", "notes": "Content connects intentions to concrete appointment and device workflows."},
+  "updatedAt": "2026-06-12"
+}

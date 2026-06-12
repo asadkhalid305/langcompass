@@ -1,0 +1,78 @@
+{
+  "id": "a1_2_m2_werden_wollen",
+  "title": "werden and wollen",
+  "level": "A1.2",
+  "section": "grammar",
+  "topicType": "grammar",
+  "summary": "Talking about intentions, plans, and simple future-oriented meaning.",
+  "relatedTopicIds": ["a1_2_m2_plans_wishes", "a1_2_m2_making_appointments"],
+  "lessonRefs": [{"curriculum": "Momente", "module": "M2"}],
+  "whyItMatters": "'Wollen' states a clear intention, while 'werden' describes becoming or, with an infinitive, explicitly marks a future event. Both verbs help distinguish a desired action from a predicted or developing situation.",
+  "prerequisiteTopicIds": ["a1_1_m4_modal_koennen", "a1_2_m2_plans_wishes"],
+  "mentalModel": [
+    {"title": "Wollen points to intention", "content": "Use 'wollen' when the subject actively intends or wants to do something: 'Ich will den Termin ändern.'"},
+    {"title": "Werden points to change or future", "content": "Use 'werden' alone with a noun or adjective for becoming, and with a final infinitive to mark future meaning."},
+    {"title": "Both verbs create a sentence frame", "content": "When another verb is present, the conjugated verb stands in position two and the infinitive closes the sentence."}
+  ],
+  "coverageChecklist": ["wollen conjugation", "werden conjugation", "intention", "becoming", "future with infinitive", "sentence bracket", "questions and negation"],
+  "ruleBlocks": [
+    {"id": "wollen", "title": "Use wollen for a firm intention", "content": "Conjugate 'wollen' and place the intended action as an infinitive at the end: 'Wir wollen morgen anrufen.'"},
+    {"id": "werden_change", "title": "Use werden for becoming", "content": "Combine 'werden' with a noun or adjective: 'Sie wird Ärztin' or 'Der Termin wird später.'"},
+    {"id": "werden_future", "title": "Use werden plus infinitive for explicit future", "content": "Place the infinitive at the end: 'Ich werde den Termin morgen bestätigen.'"},
+    {"id": "present_alternative", "title": "Prefer present tense when time is already clear", "content": "German often says 'Morgen rufe ich an'; future 'werden' adds emphasis, prediction, or explicit future framing."}
+  ],
+  "tables": [
+    {
+      "id": "conjugation",
+      "title": "Present-Tense Forms",
+      "columns": ["Subject", "wollen", "werden"],
+      "rows": [["ich", "will", "werde"], ["du", "willst", "wirst"], ["er / sie / es", "will", "wird"], ["wir", "wollen", "werden"], ["ihr", "wollt", "werdet"], ["Sie / sie", "wollen", "werden"]]
+    },
+    {
+      "id": "meaning",
+      "title": "Choosing the Meaning",
+      "columns": ["Function", "Pattern", "Example"],
+      "rows": [
+        ["Intention", "wollen + infinitive", "Ich will einen Termin machen."],
+        ["Change", "werden + adjective/noun", "Es wird spät."],
+        ["Explicit future", "werden + infinitive", "Wir werden morgen anrufen."],
+        ["Scheduled future", "present + future time", "Morgen rufen wir an."]
+      ]
+    }
+  ],
+  "patterns": ["Subject + will/wollen + ... + infinitive", "Subject + wird/werden + adjective or noun", "Subject + wird/werden + ... + infinitive", "Wann willst du + infinitive?"],
+  "verbs": ["wollen", "werden", "planen", "anrufen", "bestätigen", "verschieben", "kommen"],
+  "sentenceStructure": [
+    "Only the conjugated verb carries person and number.",
+    "With another verb, the infinitive closes the sentence.",
+    "Yes-no questions begin with the conjugated form.",
+    "A future time expression often makes the simple present sufficient."
+  ],
+  "levelProgression": [
+    {"level": "A1.2", "concepts": ["express intention with wollen", "describe becoming with werden", "recognize explicit future with werden plus infinitive"]},
+    {"level": "A2", "concepts": ["contrast predictions, intentions, and arrangements", "use modal and future forms in longer sentences"]},
+    {"level": "B1", "concepts": ["use werden for passive and nuanced prediction", "choose future forms according to discourse purpose"]}
+  ],
+  "comparisons": [
+    {"topicId": "a1_2_m2_plans_wishes", "summary": "The theme lesson provides plans and schedule changes that require intention and future language."},
+    {"topicId": "a1_2_m2_making_appointments", "summary": "Appointment exchanges contrast what someone wants to do with what will happen next."}
+  ],
+  "examples": [
+    {"id": "want", "de": "Ich will einen Termin vereinbaren.", "en": "I want to arrange an appointment."},
+    {"id": "future", "de": "Wir werden Sie morgen anrufen.", "en": "We will call you tomorrow."},
+    {"id": "change", "de": "Der Termin wird später.", "en": "The appointment is becoming later / is being moved later."},
+    {"id": "question", "de": "Wann willst du den Arzt anrufen?", "en": "When do you want to call the doctor?"},
+    {"id": "present", "de": "Am Freitag treffe ich meine Kollegin.", "en": "I am meeting my colleague on Friday."}
+  ],
+  "commonMistakes": [
+    {"id": "double", "wrong": "Ich will vereinbare einen Termin.", "correct": "Ich will einen Termin vereinbaren.", "reason": "The second verb remains an infinitive at the end."},
+    {"id": "ich_wollen", "wrong": "Ich wolle anrufen.", "correct": "Ich will anrufen.", "reason": "The present form for 'ich' is 'will'."},
+    {"id": "overfuture", "wrong": "Use werden for every future event.", "correct": "Use present tense when a future time expression already makes the timing clear.", "reason": "Simple present is the normal choice for many scheduled plans."}
+  ],
+  "specialCases": ["'Ich will ...' can sound firm; 'ich möchte ...' is often more polite for requests.", "'Werden' has several later uses, including passive voice.", "Profession nouns after 'werden' normally appear without an article: 'Sie wird Ärztin.'"],
+  "tips": ["Underline the conjugated verb and circle the final infinitive.", "Transform one plan through present, wollen, and werden.", "Practice irregular singular forms separately."],
+  "searchHints": ["werden", "wollen", "future German", "will wirst wird", "German intentions"],
+  "ui": {"status": "ready", "recommendedSections": ["mentalModel", "coreRules", "tables", "patternsAndUsage", "examples", "commonMistakes", "comparisons", "levelProgression", "advancedSpecialCases"]},
+  "sourceStyle": {"origin": "LangCompass editorial lesson aligned to the Momente A1.2 M2 catalog topic", "confidence": "high", "notes": "The lesson separates intention, becoming, explicit future, and scheduled present-tense meaning."},
+  "updatedAt": "2026-06-12"
+}

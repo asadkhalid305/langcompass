@@ -1,0 +1,81 @@
+{
+  "id": "a1_2_m2_making_appointments",
+  "title": "Making, Changing, and Confirming Appointments",
+  "level": "A1.2",
+  "section": "communication",
+  "topicType": "communication",
+  "summary": "Scheduling meetings and reacting when plans change.",
+  "relatedTopicIds": ["a1_2_m2_plans_wishes", "a1_2_m2_werden_wollen"],
+  "lessonRefs": [{"curriculum": "Momente", "module": "M2"}],
+  "whyItMatters": "A successful appointment exchange must identify the purpose, compare available times, respond to changes, and repeat the final agreement. These phrases work for medical, service, work, and personal appointments.",
+  "prerequisiteTopicIds": ["a1_1_m4_arranging_meetings", "a1_2_m2_werden_wollen"],
+  "mentalModel": [
+    {"title": "Purpose, options, agreement", "content": "Start by naming why you need the appointment, compare specific options, and finish with one agreed slot."},
+    {"title": "A change needs a replacement", "content": "When cancelling or moving an appointment, state the problem and immediately ask for or propose another time."},
+    {"title": "Confirmation is a read-back", "content": "Repeat the day, date, time, place, and any preparation so both sides hold the same plan."}
+  ],
+  "coverageChecklist": ["requesting an appointment", "asking availability", "proposing options", "accepting", "rescheduling", "cancelling", "confirming details"],
+  "ruleBlocks": [
+    {"id": "request", "title": "State the appointment purpose", "content": "Use 'Ich möchte einen Termin für ... vereinbaren' or 'Ich brauche einen Termin bei ...'."},
+    {"id": "options", "title": "Offer concrete options", "content": "Ask about a day or present two alternatives: 'Geht Dienstagvormittag oder Mittwoch um drei?'"},
+    {"id": "change", "title": "Explain and repair a change", "content": "Use 'Ich muss den Termin leider verschieben/absagen' and request a new appointment."},
+    {"id": "confirm", "title": "Read back the final agreement", "content": "Confirm with 'Also am ... um ... bei ...' and ask whether anything must be brought."}
+  ],
+  "tables": [
+    {
+      "id": "appointment_toolkit",
+      "title": "Conversation Toolkit",
+      "columns": ["Goal", "Useful phrase"],
+      "rows": [
+        ["Request", "Ich möchte einen Termin vereinbaren."],
+        ["Ask availability", "Haben Sie am Dienstag etwas frei?"],
+        ["Offer option", "Wie wäre es am Mittwoch um 15 Uhr?"],
+        ["Accept", "Ja, der Termin passt gut."],
+        ["Reschedule", "Können wir den Termin verschieben?"],
+        ["Cancel", "Ich muss den Termin leider absagen."],
+        ["Confirm", "Also Freitag, den 12., um 10 Uhr."]
+      ]
+    },
+    {
+      "id": "change_responses",
+      "title": "Reacting to Changes",
+      "columns": ["Situation", "Response"],
+      "rows": [
+        ["Suggested time is impossible", "Da kann ich leider nicht. Haben Sie später etwas frei?"],
+        ["Earlier time requested", "Wäre ein Termin am Vormittag möglich?"],
+        ["Provider changes time", "Ja, die neue Uhrzeit passt."],
+        ["Need written confirmation", "Können Sie mir den Termin per E-Mail bestätigen?"]
+      ]
+    }
+  ],
+  "patterns": ["einen Termin vereinbaren", "Haben Sie ... frei?", "Wäre ... möglich?", "den Termin verschieben / absagen / bestätigen", "Also + date + time + place"],
+  "verbs": ["vereinbaren", "passen", "verschieben", "absagen", "bestätigen", "kommen", "mitbringen"],
+  "sentenceStructure": ["Open with purpose and desired service.", "Use exact date and time expressions.", "Add an alternative when rejecting a proposal.", "Close with a complete read-back."],
+  "levelProgression": [
+    {"level": "A1.2", "concepts": ["make and confirm an appointment", "request a simple change", "respond to available time options"]},
+    {"level": "A2", "concepts": ["explain reasons and negotiate constraints", "handle preparation and follow-up instructions"]},
+    {"level": "B1", "concepts": ["resolve scheduling conflicts formally", "manage cancellations, policies, and complex arrangements"]}
+  ],
+  "comparisons": [
+    {"topicId": "a1_2_m2_plans_wishes", "summary": "The theme lesson supplies calendar, message, and schedule-change vocabulary."},
+    {"topicId": "a1_2_m2_werden_wollen", "summary": "The grammar lesson distinguishes intended actions from what will happen next."}
+  ],
+  "examples": [
+    {"id": "doctor", "de": "A: Ich möchte einen Termin bei Frau Dr. Klein vereinbaren. B: Passt Ihnen Dienstag um neun?", "en": "A: I would like to arrange an appointment with Dr. Klein. B: Does Tuesday at nine suit you?"},
+    {"id": "alternative", "de": "A: Am Dienstag kann ich leider nicht. Haben Sie am Mittwoch etwas frei?", "en": "A: Unfortunately I cannot on Tuesday. Do you have anything available on Wednesday?"},
+    {"id": "reschedule", "de": "A: Ich muss meinen Termin verschieben. B: Wann können Sie kommen?", "en": "A: I have to reschedule my appointment. B: When can you come?"},
+    {"id": "confirm", "de": "A: Also Donnerstag, den 18., um 14 Uhr. B: Genau.", "en": "A: So Thursday the 18th at 2 p.m. B: Exactly."},
+    {"id": "email", "de": "Können Sie mir den neuen Termin bitte per E-Mail bestätigen?", "en": "Can you please confirm the new appointment by email?"}
+  ],
+  "commonMistakes": [
+    {"id": "vague", "wrong": "Ich brauche einen Termin irgendwann nächste Woche.", "correct": "Haben Sie am Dienstag- oder Mittwochvormittag etwas frei?", "reason": "Concrete options make scheduling efficient."},
+    {"id": "cancel_only", "wrong": "Ich komme nicht.", "correct": "Ich muss den Termin leider absagen. Können wir einen neuen Termin vereinbaren?", "reason": "Name the appointment change and request the next step."},
+    {"id": "no_readback", "wrong": "End after saying 'okay'.", "correct": "Repeat the date and time before closing.", "reason": "Read-back prevents schedule errors."}
+  ],
+  "specialCases": ["'Den' before a date is common in formal confirmation: 'Dienstag, den 12. Mai'.", "'Etwas frei haben' means having an available appointment slot.", "Use 'bei' for an appointment with a professional or at a practice."],
+  "tips": ["Keep a blank calendar visible during role-play.", "Practice one original appointment and two changes.", "Always finish with a spoken or written confirmation."],
+  "searchHints": ["Termin vereinbaren", "Termin verschieben", "Termin absagen", "appointment German", "Haben Sie etwas frei"],
+  "ui": {"status": "ready", "recommendedSections": ["mentalModel", "coreRules", "tables", "patternsAndUsage", "examples", "commonMistakes", "comparisons", "levelProgression", "advancedSpecialCases"]},
+  "sourceStyle": {"origin": "LangCompass editorial lesson aligned to the Momente A1.2 M2 catalog topic", "confidence": "high", "notes": "The lesson models appointment handling as purpose, options, repair, and confirmation."},
+  "updatedAt": "2026-06-12"
+}
