@@ -1,0 +1,320 @@
+{
+  "id": "a1_1_m2_asking_prices",
+  "title": "Asking Prices and Describing Objects",
+  "level": "A1.1",
+  "section": "communication",
+  "topicType": "communication",
+  "summary": "Asking what something costs and describing color, size, and basic properties.",
+  "relatedTopicIds": [
+    "a1_1_m2_shopping_objects",
+    "a1_1_m2_articles"
+  ],
+  "lessonRefs": [
+    {
+      "curriculum": "Momente",
+      "module": "M2"
+    }
+  ],
+  "whyItMatters": "Price questions and simple descriptions let you participate in a real shopping exchange even with limited German. You can identify an item, ask its cost, understand the answer, and clarify which color or size you mean.",
+  "prerequisiteTopicIds": [
+    "a1_1_m2_shopping_objects",
+    "a1_1_m2_articles"
+  ],
+  "mentalModel": [
+    {
+      "title": "Point, identify, ask",
+      "content": "A basic shopping exchange has three moves: identify the object, make sure both people mean the same item, then ask the price."
+    },
+    {
+      "title": "Match kostet to one and kosten to many",
+      "content": "Use 'kostet' for one item and 'kosten' for plural items: 'Wie viel kostet der Tisch?' but 'Wie viel kosten die Stühle?'"
+    },
+    {
+      "title": "Describe with simple sein sentences",
+      "content": "At A1, use 'sein' plus a property: 'Die Lampe ist weiß.' This avoids adjective-ending complexity while still communicating clearly."
+    }
+  ],
+  "coverageChecklist": [
+    "asking prices",
+    "singular and plural price questions",
+    "euro amounts",
+    "colors",
+    "size",
+    "condition",
+    "identifying an object",
+    "reacting to a price"
+  ],
+  "ruleBlocks": [
+    {
+      "id": "singular_price",
+      "title": "Ask the price of one item",
+      "content": "Use 'Wie viel kostet ...?' with a singular noun: 'Wie viel kostet die Lampe?'"
+    },
+    {
+      "id": "plural_price",
+      "title": "Ask the price of several items",
+      "content": "Use 'Wie viel kosten ...?' with a plural noun: 'Wie viel kosten die Stühle?'"
+    },
+    {
+      "id": "identify_object",
+      "title": "Clarify which object you mean",
+      "content": "Use a short description such as 'die schwarze Tasche' or point with 'dieser Tisch / diese Lampe / dieses Sofa' when needed."
+    },
+    {
+      "id": "react_price",
+      "title": "React with a simple evaluation",
+      "content": "Use 'Das ist billig', 'Das ist teuer', or 'Das ist okay' to respond to the price."
+    }
+  ],
+  "tables": [
+    {
+      "id": "shopping_phrase_bank",
+      "title": "Shopping Phrase Bank",
+      "columns": [
+        "Goal",
+        "Useful phrase",
+        "Meaning"
+      ],
+      "rows": [
+        [
+          "Ask a singular price",
+          "Wie viel kostet die Lampe?",
+          "How much does the lamp cost?"
+        ],
+        [
+          "Ask a plural price",
+          "Wie viel kosten die Stühle?",
+          "How much do the chairs cost?"
+        ],
+        [
+          "Ask which item",
+          "Welche Lampe?",
+          "Which lamp?"
+        ],
+        [
+          "Identify an item",
+          "Die kleine weiße Lampe.",
+          "The small white lamp."
+        ],
+        [
+          "React positively",
+          "Das ist günstig.",
+          "That is reasonably priced."
+        ],
+        [
+          "React negatively",
+          "Das ist zu teuer.",
+          "That is too expensive."
+        ]
+      ]
+    },
+    {
+      "id": "property_language",
+      "title": "Useful Object Properties",
+      "columns": [
+        "Category",
+        "German"
+      ],
+      "rows": [
+        [
+          "Color",
+          "rot, blau, grün, weiß, schwarz"
+        ],
+        [
+          "Size",
+          "groß, klein"
+        ],
+        [
+          "Condition",
+          "neu, gebraucht"
+        ],
+        [
+          "Price",
+          "billig, günstig, teuer"
+        ],
+        [
+          "Opinion",
+          "schön, modern, praktisch"
+        ]
+      ]
+    }
+  ],
+  "patterns": [
+    "Wie viel kostet + singular noun?",
+    "Wie viel kosten + plural noun?",
+    "Welcher / Welche / Welches + noun?",
+    "Der / Die / Das + noun + ist + property",
+    "Das kostet + amount + Euro",
+    "Das ist zu + property"
+  ],
+  "verbs": [
+    "kosten",
+    "sein",
+    "suchen",
+    "brauchen",
+    "nehmen",
+    "kaufen"
+  ],
+  "sentenceStructure": [
+    "Begin a price question with 'Wie viel'.",
+    "Use singular 'kostet' or plural 'kosten' to match the item.",
+    "Identify the product with its article and noun.",
+    "Describe it in a separate 'sein' sentence when clarity is more important than compact phrasing."
+  ],
+  "levelProgression": [
+    {
+      "level": "A1.1",
+      "concepts": [
+        "ask and understand simple prices",
+        "identify products by color, size, and condition",
+        "react to a price"
+      ]
+    },
+    {
+      "level": "A1.2",
+      "concepts": [
+        "ask for alternatives and quantities",
+        "compare products and express preferences"
+      ]
+    },
+    {
+      "level": "A2",
+      "concepts": [
+        "ask detailed product questions",
+        "manage purchases, returns, and complaints"
+      ]
+    }
+  ],
+  "comparisons": [
+    {
+      "topicId": "a1_1_m2_shopping_objects",
+      "summary": "The theme lesson provides object names and properties. This lesson arranges them into a practical buyer-seller exchange."
+    },
+    {
+      "topicId": "a1_1_m2_articles",
+      "summary": "Articles help identify the product and its number. The verb changes between singular 'kostet' and plural 'kosten'.",
+      "table": {
+        "columns": [
+          "Item",
+          "Question"
+        ],
+        "rows": [
+          [
+            "der Tisch",
+            "Wie viel kostet der Tisch?"
+          ],
+          [
+            "die Lampe",
+            "Wie viel kostet die Lampe?"
+          ],
+          [
+            "die Sofas",
+            "Wie viel kosten die Sofas?"
+          ]
+        ]
+      }
+    }
+  ],
+  "examples": [
+    {
+      "id": "lamp_price",
+      "de": "A: Wie viel kostet die Lampe? B: Sie kostet 29 Euro.",
+      "en": "A: How much does the lamp cost? B: It costs 29 euros."
+    },
+    {
+      "id": "chairs_price",
+      "de": "A: Wie viel kosten die Stühle? B: Sie kosten zusammen 80 Euro.",
+      "en": "A: How much do the chairs cost? B: Together they cost 80 euros."
+    },
+    {
+      "id": "which_bag",
+      "de": "A: Welche Tasche? B: Die kleine schwarze Tasche.",
+      "en": "A: Which bag? B: The small black bag."
+    },
+    {
+      "id": "price_reaction",
+      "de": "A: Das Sofa kostet 900 Euro. B: Das ist zu teuer.",
+      "en": "A: The sofa costs 900 euros. B: That is too expensive."
+    },
+    {
+      "id": "simple_description",
+      "de": "Der Tisch ist groß, modern und günstig.",
+      "en": "The table is large, modern, and reasonably priced."
+    }
+  ],
+  "commonMistakes": [
+    {
+      "id": "plural_kostet",
+      "wrong": "Wie viel kostet die Stühle?",
+      "correct": "Wie viel kosten die Stühle?",
+      "reason": "The plural subject 'die Stühle' requires the plural verb form 'kosten'."
+    },
+    {
+      "id": "missing_subject",
+      "wrong": "Wie viel kostet?",
+      "correct": "Wie viel kostet die Lampe?",
+      "reason": "Name or clearly identify the item whose price you are asking."
+    },
+    {
+      "id": "euro_plural",
+      "wrong": "29 Euros",
+      "correct": "29 Euro",
+      "reason": "After a number, the German currency name normally remains 'Euro'."
+    },
+    {
+      "id": "direct_adjective",
+      "wrong": "Die Lampe ist eine weiß.",
+      "correct": "Die Lampe ist weiß.",
+      "reason": "After 'sein', use the basic adjective form without an article."
+    }
+  ],
+  "specialCases": [
+    "'Was kostet ...?' is also common and means the same as 'Wie viel kostet ...?' in a price question.",
+    "German decimal prices are written with a comma, for example '12,50 Euro'.",
+    "Demonstratives such as dieser, diese, and dieses are useful for pointing but change form with gender."
+  ],
+  "tips": [
+    "Practice prices aloud with real products around you.",
+    "Always switch between one item and several items to train kostet versus kosten.",
+    "When adjective endings feel difficult, split the description into two sentences: 'Das ist eine Lampe. Die Lampe ist weiß.'"
+  ],
+  "memoryHooks": [
+    {
+      "id": "one_many",
+      "title": "One costs, many cost",
+      "content": "One item uses 'kostet'; several items use 'kosten'."
+    },
+    {
+      "id": "shopping_sequence",
+      "title": "Item, property, price",
+      "content": "Identify the object, clarify its visible property, then ask or state the price."
+    }
+  ],
+  "searchHints": [
+    "Wie viel kostet",
+    "Preise fragen",
+    "Farben und Größen",
+    "teuer billig",
+    "shopping German"
+  ],
+  "ui": {
+    "status": "ready",
+    "recommendedSections": [
+      "mentalModel",
+      "coreRules",
+      "tables",
+      "patternsAndUsage",
+      "examples",
+      "commonMistakes",
+      "comparisons",
+      "levelProgression",
+      "advancedSpecialCases"
+    ]
+  },
+  "sourceStyle": {
+    "origin": "LangCompass editorial lesson aligned to the Momente A1.1 M2 catalog topic",
+    "confidence": "high",
+    "notes": "The lesson emphasizes reliable price exchanges and predicate descriptions before more complex adjective endings."
+  },
+  "updatedAt": "2026-06-12"
+}

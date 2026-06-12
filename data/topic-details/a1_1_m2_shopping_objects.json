@@ -1,0 +1,290 @@
+{
+  "id": "a1_1_m2_shopping_objects",
+  "title": "Furniture, Objects, and Shopping",
+  "level": "A1.1",
+  "section": "themes",
+  "topicType": "theme",
+  "summary": "Common objects, products, prices, and shopping situations.",
+  "relatedTopicIds": [
+    "a1_1_m2_articles",
+    "a1_1_m2_asking_prices"
+  ],
+  "lessonRefs": [
+    {
+      "curriculum": "Momente",
+      "module": "M2"
+    }
+  ],
+  "whyItMatters": "Everyday objects give you immediate language for your home, classroom, office, and shops. Learning them with articles, plurals, colors, and practical categories makes the vocabulary usable rather than a disconnected list.",
+  "mentalModel": [
+    {
+      "title": "Organize objects by place",
+      "content": "Group vocabulary into scenes you can picture: furniture in a room, technology on a desk, and products in a shop."
+    },
+    {
+      "title": "Learn a three-part noun package",
+      "content": "Record each noun with its article and plural: der Tisch – die Tische, die Lampe – die Lampen, das Sofa – die Sofas."
+    },
+    {
+      "title": "Attach one visible property",
+      "content": "Make each object memorable with a color, size, or condition: der rote Stuhl, die kleine Lampe, das neue Handy."
+    }
+  ],
+  "coverageChecklist": [
+    "furniture",
+    "everyday objects",
+    "technology products",
+    "noun articles",
+    "plural forms",
+    "colors",
+    "size and condition",
+    "shopping vocabulary"
+  ],
+  "ruleBlocks": [
+    {
+      "id": "noun_package",
+      "title": "Learn article, noun, and plural together",
+      "content": "A useful vocabulary entry contains three parts: 'der Stuhl – die Stühle'. This prepares you to recognize gender and talk about more than one object."
+    },
+    {
+      "id": "place_groups",
+      "title": "Build vocabulary around places",
+      "content": "Use a room, desk, or shop as a visual map. Place each new noun in a scene instead of memorizing it in isolation."
+    },
+    {
+      "id": "product_properties",
+      "title": "Describe what buyers can see",
+      "content": "At A1, the most useful properties are color, size, age or condition, and price: blau, groß, neu, gebraucht, billig, teuer."
+    }
+  ],
+  "tables": [
+    {
+      "id": "furniture_objects",
+      "title": "Furniture and Everyday Objects",
+      "columns": [
+        "Singular",
+        "Plural",
+        "English"
+      ],
+      "rows": [
+        [
+          "der Tisch",
+          "die Tische",
+          "table"
+        ],
+        [
+          "der Stuhl",
+          "die Stühle",
+          "chair"
+        ],
+        [
+          "die Lampe",
+          "die Lampen",
+          "lamp"
+        ],
+        [
+          "die Tasche",
+          "die Taschen",
+          "bag"
+        ],
+        [
+          "das Sofa",
+          "die Sofas",
+          "sofa"
+        ],
+        [
+          "das Regal",
+          "die Regale",
+          "shelf"
+        ]
+      ]
+    },
+    {
+      "id": "shopping_products",
+      "title": "Products and Useful Properties",
+      "columns": [
+        "Product",
+        "Useful description",
+        "Meaning"
+      ],
+      "rows": [
+        [
+          "das Handy",
+          "neu / gebraucht",
+          "new / used"
+        ],
+        [
+          "der Computer",
+          "schnell / langsam",
+          "fast / slow"
+        ],
+        [
+          "die Uhr",
+          "schön / modern",
+          "beautiful / modern"
+        ],
+        [
+          "die Tasche",
+          "groß / klein",
+          "large / small"
+        ],
+        [
+          "der Stuhl",
+          "billig / teuer",
+          "cheap / expensive"
+        ]
+      ]
+    }
+  ],
+  "patterns": [
+    "article + noun: der Tisch, die Lampe, das Sofa",
+    "singular → plural: der Stuhl → die Stühle",
+    "object + sein + property",
+    "color + object association",
+    "in a shop: product + price + basic property"
+  ],
+  "verbs": [
+    "sein",
+    "haben",
+    "brauchen",
+    "kaufen",
+    "suchen",
+    "finden"
+  ],
+  "sentenceStructure": [
+    "Use a short 'sein' sentence to describe an object: 'Die Lampe ist modern.'",
+    "Use 'haben' to state what is available: 'Wir haben einen Tisch.'",
+    "Use 'suchen' or 'brauchen' to name a shopping goal.",
+    "Keep the article attached when naming an unfamiliar object."
+  ],
+  "levelProgression": [
+    {
+      "level": "A1.1",
+      "concepts": [
+        "name common furniture and products",
+        "recognize noun gender and basic plurals",
+        "describe visible properties"
+      ]
+    },
+    {
+      "level": "A1.2",
+      "concepts": [
+        "describe rooms, ownership, and household needs",
+        "compare products and quantities"
+      ]
+    },
+    {
+      "level": "A2",
+      "concepts": [
+        "discuss product functions and problems",
+        "manage returns, recommendations, and detailed comparisons"
+      ]
+    }
+  ],
+  "comparisons": [
+    {
+      "topicId": "a1_1_m2_articles",
+      "summary": "This theme supplies the nouns. The grammar lesson explains why each noun uses der, die, or das and how indefinite articles work."
+    },
+    {
+      "topicId": "a1_1_m2_asking_prices",
+      "summary": "The communication lesson uses these objects and properties in practical shopping questions and answers."
+    }
+  ],
+  "examples": [
+    {
+      "id": "room",
+      "de": "Im Zimmer sind ein Tisch, zwei Stühle und eine Lampe.",
+      "en": "There are a table, two chairs, and a lamp in the room."
+    },
+    {
+      "id": "phone",
+      "de": "Das Handy ist neu und sehr teuer.",
+      "en": "The phone is new and very expensive."
+    },
+    {
+      "id": "bag",
+      "de": "Ich suche eine kleine schwarze Tasche.",
+      "en": "I am looking for a small black bag."
+    },
+    {
+      "id": "used_computer",
+      "de": "Der Computer ist gebraucht, aber schnell.",
+      "en": "The computer is used but fast."
+    },
+    {
+      "id": "chairs",
+      "de": "Die Stühle sind modern und bequem.",
+      "en": "The chairs are modern and comfortable."
+    }
+  ],
+  "commonMistakes": [
+    {
+      "id": "noun_without_article",
+      "wrong": "Learn: Tisch = table.",
+      "correct": "Learn: der Tisch – die Tische = table.",
+      "reason": "The article and plural are part of the practical noun package."
+    },
+    {
+      "id": "plural_article",
+      "wrong": "der Stühle",
+      "correct": "die Stühle",
+      "reason": "The definite article for all plural nouns is 'die' in the basic nominative form."
+    },
+    {
+      "id": "country_gender_logic",
+      "wrong": "Guess an article from the object's meaning.",
+      "correct": "Learn the article with each noun.",
+      "reason": "Grammatical gender is a property of the German noun and often cannot be predicted from meaning."
+    }
+  ],
+  "specialCases": [
+    "Plural formation varies: some nouns add -e or -en, some change a vowel, and some remain similar. Learn the plural with the noun.",
+    "Loanwords such as 'das Sofa' and 'das Handy' have German articles and German plural patterns.",
+    "Colors are written in lowercase when used as ordinary adjectives: blau, rot, schwarz."
+  ],
+  "tips": [
+    "Label five real objects around you with article, noun, and plural.",
+    "Create a tiny product card containing a noun, color, condition, and imagined price.",
+    "Review vocabulary by room or shopping category rather than alphabetically."
+  ],
+  "memoryHooks": [
+    {
+      "id": "three_part_package",
+      "title": "Every noun travels as a trio",
+      "content": "Article, singular, plural: der Tisch, der Tisch, die Tische."
+    },
+    {
+      "id": "visual_shop",
+      "title": "Build a mental showroom",
+      "content": "Place furniture and products in an imaginary shop, then attach one visible property to each item."
+    }
+  ],
+  "searchHints": [
+    "Möbel",
+    "Gegenstände",
+    "Einkaufen",
+    "Farben",
+    "furniture vocabulary"
+  ],
+  "ui": {
+    "status": "ready",
+    "recommendedSections": [
+      "mentalModel",
+      "coreRules",
+      "tables",
+      "patternsAndUsage",
+      "examples",
+      "commonMistakes",
+      "comparisons",
+      "levelProgression",
+      "advancedSpecialCases"
+    ]
+  },
+  "sourceStyle": {
+    "origin": "LangCompass editorial lesson aligned to the Momente A1.1 M2 catalog topic",
+    "confidence": "high",
+    "notes": "Vocabulary focuses on high-frequency furniture, objects, technology, and visible product properties."
+  },
+  "updatedAt": "2026-06-12"
+}

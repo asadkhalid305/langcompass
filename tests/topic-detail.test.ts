@@ -21,6 +21,15 @@ const completedModules = [
   },
   {
     level: "A1.1",
+    module: "M2",
+    topicIds: [
+      "a1_1_m2_shopping_objects",
+      "a1_1_m2_articles",
+      "a1_1_m2_asking_prices",
+    ],
+  },
+  {
+    level: "A1.1",
     module: "M5",
     topicIds: [
       "a1_1_m5_food_restaurant",

@@ -1,0 +1,293 @@
+{
+  "id": "a1_1_m2_articles",
+  "title": "Articles and Noun Gender",
+  "level": "A1.1",
+  "section": "grammar",
+  "topicType": "grammar",
+  "summary": "Definite and indefinite articles with noun gender and singular/plural awareness.",
+  "relatedTopicIds": [
+    "a1_1_m2_shopping_objects",
+    "a1_1_m2_asking_prices"
+  ],
+  "lessonRefs": [
+    {
+      "curriculum": "Momente",
+      "module": "M2"
+    }
+  ],
+  "whyItMatters": "German articles identify a noun's grammatical gender and help listeners understand whether you mean a specific item, one unspecified item, or several items. Learning the article with every noun creates the foundation for later case grammar.",
+  "prerequisiteTopicIds": [
+    "a1_1_m2_shopping_objects"
+  ],
+  "mentalModel": [
+    {
+      "title": "Every noun has a grammatical category",
+      "content": "German sorts singular nouns into masculine, feminine, or neuter. The basic definite articles are der, die, and das."
+    },
+    {
+      "title": "Articles act like labels",
+      "content": "A definite article points to a known or specific noun; an indefinite article introduces one nonspecific noun: der Tisch versus ein Tisch."
+    },
+    {
+      "title": "Plural has one definite article",
+      "content": "In the basic nominative form, all plural nouns use 'die'. There is no plural form of 'ein' or 'eine'."
+    }
+  ],
+  "coverageChecklist": [
+    "masculine nouns",
+    "feminine nouns",
+    "neuter nouns",
+    "definite articles",
+    "indefinite articles",
+    "plural article",
+    "noun learning strategy",
+    "basic nominative use"
+  ],
+  "ruleBlocks": [
+    {
+      "id": "definite_articles",
+      "title": "Use der, die, and das for specific singular nouns",
+      "content": "The basic definite articles are 'der' for masculine, 'die' for feminine, and 'das' for neuter nouns."
+    },
+    {
+      "id": "indefinite_articles",
+      "title": "Use ein and eine for one unspecified item",
+      "content": "Masculine and neuter nouns use 'ein'; feminine nouns use 'eine': ein Tisch, eine Lampe, ein Sofa."
+    },
+    {
+      "id": "plural",
+      "title": "Use die for definite plurals",
+      "content": "All plural nouns use 'die' in the basic nominative form: die Tische, die Lampen, die Sofas."
+    },
+    {
+      "id": "learn_together",
+      "title": "Store the article with the noun",
+      "content": "Gender often cannot be predicted reliably, so learn 'der Tisch' as one vocabulary unit rather than learning 'Tisch' alone."
+    }
+  ],
+  "tables": [
+    {
+      "id": "article_system",
+      "title": "Basic Nominative Articles",
+      "columns": [
+        "Number / gender",
+        "Definite",
+        "Indefinite",
+        "Example"
+      ],
+      "rows": [
+        [
+          "Masculine singular",
+          "der",
+          "ein",
+          "der Tisch / ein Tisch"
+        ],
+        [
+          "Feminine singular",
+          "die",
+          "eine",
+          "die Lampe / eine Lampe"
+        ],
+        [
+          "Neuter singular",
+          "das",
+          "ein",
+          "das Sofa / ein Sofa"
+        ],
+        [
+          "Plural",
+          "die",
+          "—",
+          "die Tische"
+        ]
+      ]
+    },
+    {
+      "id": "known_unknown",
+      "title": "Specific and Unspecified Objects",
+      "columns": [
+        "First mention or nonspecific",
+        "Known or specific"
+      ],
+      "rows": [
+        [
+          "Das ist ein Tisch.",
+          "Der Tisch ist groß."
+        ],
+        [
+          "Das ist eine Lampe.",
+          "Die Lampe ist neu."
+        ],
+        [
+          "Das ist ein Handy.",
+          "Das Handy ist teuer."
+        ]
+      ]
+    }
+  ],
+  "patterns": [
+    "der + masculine singular noun",
+    "die + feminine singular noun",
+    "das + neuter singular noun",
+    "ein + masculine or neuter singular noun",
+    "eine + feminine singular noun",
+    "die + plural noun"
+  ],
+  "sentenceStructure": [
+    "Use an indefinite article when introducing one object: 'Das ist eine Lampe.'",
+    "Use a definite article when referring to the now-known object: 'Die Lampe ist schön.'",
+    "The article appears directly before the noun in these basic noun phrases.",
+    "Article forms will change in later case lessons; this page focuses on the nominative foundation."
+  ],
+  "levelProgression": [
+    {
+      "level": "A1.1",
+      "concepts": [
+        "recognize der, die, das, ein, and eine",
+        "learn gender and plural with each noun",
+        "distinguish specific from unspecified objects"
+      ]
+    },
+    {
+      "level": "A1.2",
+      "concepts": [
+        "apply articles in accusative and dative contexts",
+        "use possessive and negative article forms"
+      ]
+    },
+    {
+      "level": "A2",
+      "concepts": [
+        "control article endings across cases",
+        "connect articles with adjective endings"
+      ]
+    }
+  ],
+  "comparisons": [
+    {
+      "topicId": "a1_1_m2_shopping_objects",
+      "summary": "The theme lesson provides concrete nouns and plural forms. This lesson explains the article system attached to those nouns."
+    },
+    {
+      "topicId": "a1_1_m2_asking_prices",
+      "summary": "Price questions require the correct subject and singular or plural verb form. Knowing the noun and article makes the question easier to build.",
+      "table": {
+        "columns": [
+          "Noun phrase",
+          "Price question"
+        ],
+        "rows": [
+          [
+            "der Tisch",
+            "Wie viel kostet der Tisch?"
+          ],
+          [
+            "die Lampe",
+            "Wie viel kostet die Lampe?"
+          ],
+          [
+            "die Stühle",
+            "Wie viel kosten die Stühle?"
+          ]
+        ]
+      }
+    }
+  ],
+  "examples": [
+    {
+      "id": "masculine",
+      "de": "Das ist ein Tisch. Der Tisch ist groß.",
+      "en": "That is a table. The table is large."
+    },
+    {
+      "id": "feminine",
+      "de": "Das ist eine Lampe. Die Lampe ist modern.",
+      "en": "That is a lamp. The lamp is modern."
+    },
+    {
+      "id": "neuter",
+      "de": "Das ist ein Sofa. Das Sofa ist bequem.",
+      "en": "That is a sofa. The sofa is comfortable."
+    },
+    {
+      "id": "plural",
+      "de": "Das sind Stühle. Die Stühle sind neu.",
+      "en": "Those are chairs. The chairs are new."
+    }
+  ],
+  "commonMistakes": [
+    {
+      "id": "feminine_ein",
+      "wrong": "ein Lampe",
+      "correct": "eine Lampe",
+      "reason": "Feminine singular nouns use the indefinite article 'eine'."
+    },
+    {
+      "id": "neuter_der",
+      "wrong": "der Sofa",
+      "correct": "das Sofa",
+      "reason": "'Sofa' is a neuter noun and uses 'das'."
+    },
+    {
+      "id": "plural_eine",
+      "wrong": "eine Stühle",
+      "correct": "Stühle / die Stühle",
+      "reason": "German has no plural indefinite article equivalent to 'ein/eine'."
+    },
+    {
+      "id": "meaning_guess",
+      "wrong": "Choose the article from natural gender or object shape.",
+      "correct": "Learn the grammatical article with the noun.",
+      "reason": "Grammatical gender is attached to the word and is often not predictable from meaning."
+    }
+  ],
+  "specialCases": [
+    "Some noun endings give useful gender clues, but beginners should not depend on guesses.",
+    "The article 'die' can mean feminine singular or plural; the noun and context show which one applies.",
+    "The forms on this page are nominative. Masculine articles change in the accusative, introduced in A1.1 M5."
+  ],
+  "tips": [
+    "Color-code der, die, and das only if you use the colors consistently.",
+    "Always review the plural beside the singular noun.",
+    "Practice first mention followed by known reference: 'Das ist ein ... Der/Die/Das ... ist ...'."
+  ],
+  "memoryHooks": [
+    {
+      "id": "article_name_tag",
+      "title": "The article is the noun's name tag",
+      "content": "Do not separate the tag from the noun: der Tisch, die Lampe, das Sofa."
+    },
+    {
+      "id": "plural_die",
+      "title": "Plural gathers under die",
+      "content": "Whatever the singular gender, the basic definite plural article is always 'die'."
+    }
+  ],
+  "searchHints": [
+    "Artikel",
+    "der die das",
+    "ein eine",
+    "Genus",
+    "German noun gender"
+  ],
+  "ui": {
+    "status": "ready",
+    "recommendedSections": [
+      "mentalModel",
+      "coreRules",
+      "tables",
+      "patternsAndUsage",
+      "examples",
+      "commonMistakes",
+      "comparisons",
+      "levelProgression",
+      "advancedSpecialCases"
+    ]
+  },
+  "sourceStyle": {
+    "origin": "LangCompass editorial lesson aligned to the Momente A1.1 M2 catalog topic",
+    "confidence": "high",
+    "notes": "The lesson deliberately establishes nominative articles before later case-driven article changes."
+  },
+  "updatedAt": "2026-06-12"
+}
