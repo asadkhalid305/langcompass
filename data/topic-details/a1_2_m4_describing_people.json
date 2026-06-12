@@ -1,0 +1,58 @@
+{
+  "id": "a1_2_m4_describing_people",
+  "title": "Describing People and Reacting to Statements",
+  "level": "A1.2",
+  "section": "communication",
+  "topicType": "communication",
+  "summary": "Talking about people’s appearance and character and reacting in conversation.",
+  "relatedTopicIds": ["a1_2_m4_people_clothes_weather", "a1_2_m4_comparison"],
+  "lessonRefs": [{"curriculum": "Momente", "module": "M4"}],
+  "whyItMatters": "Descriptions help identify someone and exchange impressions, but wording matters. A useful description combines observable details, relevant character information, and reactions that show agreement, uncertainty, or a different perspective.",
+  "prerequisiteTopicIds": ["a1_2_m4_people_clothes_weather", "a1_2_m4_comparison"],
+  "mentalModel": [
+    {"title": "Identify before evaluating", "content": "Begin with neutral appearance or clothing details that help the listener know who you mean."},
+    {"title": "Support character words with context", "content": "Instead of only saying 'nett', add a behavior or situation that explains the impression."},
+    {"title": "React without ending the conversation", "content": "Agree, qualify, or disagree politely and add one reason or question."}
+  ],
+  "coverageChecklist": ["identifying a person", "appearance", "clothing", "character", "agreement", "surprise", "qualified disagreement", "comparison"],
+  "ruleBlocks": [
+    {"id": "identify", "title": "Identify with relevant visible details", "content": "Use clothing, hair, location, or an accessory: 'Die Frau mit der grünen Jacke'."},
+    {"id": "character", "title": "Describe character carefully", "content": "Use phrases such as 'Ich finde ihn freundlich' and add evidence or a situation."},
+    {"id": "react", "title": "Choose an active reaction", "content": "Use 'Das finde ich auch', 'Wirklich?', 'Vielleicht', or 'Ich sehe das etwas anders'."},
+    {"id": "compare", "title": "Use comparisons for clarification", "content": "Say 'Er ist größer als Ben' when a comparison helps identify or distinguish someone."}
+  ],
+  "tables": [
+    {"id": "toolkit", "title": "Conversation Toolkit", "columns": ["Goal", "Phrase"], "rows": [["Identify", "Meinst du die Frau mit der roten Jacke?"], ["Give impression", "Ich finde sie sehr freundlich."], ["Agree", "Ja, das finde ich auch."], ["Show surprise", "Wirklich? Das wusste ich nicht."], ["Qualify", "Vielleicht, aber heute ist er sehr ruhig."], ["Disagree politely", "Ich sehe das etwas anders."]]},
+    {"id": "description", "title": "Building a Description", "columns": ["Layer", "Example"], "rows": [["Appearance", "Er ist groß und hat kurze Haare."], ["Clothing", "Er trägt einen grauen Pullover."], ["Character", "Er wirkt ruhig und freundlich."], ["Comparison", "Er ist etwas älter als Tom."], ["Context", "Er hilft den neuen Kollegen oft."]]}
+  ],
+  "patterns": ["Meinst du + person description?", "Person + ist/hat/trägt ...", "Ich finde + pronoun + adjective.", "Das finde ich auch.", "Ich sehe das anders.", "comparative + als"],
+  "verbs": ["meinen", "aussehen", "tragen", "finden", "wirken", "kennen", "zustimmen", "helfen"],
+  "sentenceStructure": ["Move from identification to impression.", "Use accusative pronouns after the person is established.", "Add a reason or example to subjective character descriptions.", "Use softening words such as 'vielleicht', 'etwas', and 'eher'."],
+  "levelProgression": [
+    {"level": "A1.2", "concepts": ["identify and describe a person", "give a basic impression", "agree or disagree politely"]},
+    {"level": "A2", "concepts": ["describe behavior and relationships", "qualify opinions and comparisons"]},
+    {"level": "B1", "concepts": ["give balanced character portraits", "discuss stereotypes and differing perceptions"]}
+  ],
+  "comparisons": [
+    {"topicId": "a1_2_m4_people_clothes_weather", "summary": "The theme lesson supplies neutral appearance and clothing language."},
+    {"topicId": "a1_2_m4_comparison", "summary": "Comparative forms help distinguish people and qualify observations."}
+  ],
+  "examples": [
+    {"id": "identify", "de": "A: Wer ist Nora? B: Die Frau mit der grünen Jacke und der Brille.", "en": "A: Who is Nora? B: The woman with the green jacket and glasses."},
+    {"id": "impression", "de": "A: Wie findest du sie? B: Sie wirkt freundlich und sehr ruhig.", "en": "A: What do you think of her? B: She seems friendly and very calm."},
+    {"id": "agree", "de": "A: Paul ist sehr hilfsbereit. B: Ja, das finde ich auch.", "en": "A: Paul is very helpful. B: Yes, I think so too."},
+    {"id": "different", "de": "A: Er ist immer ernst. B: Ich sehe das etwas anders; er lacht oft.", "en": "A: He is always serious. B: I see that somewhat differently; he often laughs."},
+    {"id": "compare", "de": "Mina ist kleiner als Lea, aber sie trägt den längeren Mantel.", "en": "Mina is shorter than Lea, but she is wearing the longer coat."}
+  ],
+  "commonMistakes": [
+    {"id": "judgment", "wrong": "Use a harsh label without context.", "correct": "Use a neutral observation or soften a personal impression.", "reason": "Descriptions should remain relevant and respectful."},
+    {"id": "pronoun", "wrong": "Ich finde er nett.", "correct": "Ich finde ihn nett.", "reason": "'Finden' takes an accusative object."},
+    {"id": "reaction", "wrong": "Respond only with 'ja' or 'nein'.", "correct": "Add agreement, qualification, or a reason.", "reason": "An active reaction keeps the exchange meaningful."}
+  ],
+  "specialCases": ["'Wirken' expresses an impression rather than a confirmed fact.", "'Aussehen' often uses 'wie' or an adjective: 'Sie sieht müde aus'.", "Avoid unnecessary comments about sensitive personal characteristics."],
+  "tips": ["Describe fictional or pictured people before real acquaintances.", "Practice three reactions to the same statement.", "Support one character adjective with a concrete behavior."],
+  "searchHints": ["Personen beschreiben", "Aussehen Charakter", "Das finde ich auch", "German reactions"],
+  "ui": {"status": "ready", "recommendedSections": ["mentalModel", "coreRules", "tables", "patternsAndUsage", "examples", "commonMistakes", "comparisons", "levelProgression", "advancedSpecialCases"]},
+  "sourceStyle": {"origin": "LangCompass editorial lesson aligned to the Momente A1.2 M4 catalog topic", "confidence": "high", "notes": "The lesson combines identification, evidence-based impressions, and socially appropriate reactions."},
+  "updatedAt": "2026-06-12"
+}

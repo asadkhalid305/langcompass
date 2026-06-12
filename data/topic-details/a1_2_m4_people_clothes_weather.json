@@ -1,0 +1,58 @@
+{
+  "id": "a1_2_m4_people_clothes_weather",
+  "title": "People, Clothing, and Weather",
+  "level": "A1.2",
+  "section": "themes",
+  "topicType": "theme",
+  "summary": "Describing people, appearance, clothing, weather, and comparisons.",
+  "relatedTopicIds": ["a1_2_m4_comparison", "a1_2_m4_describing_people"],
+  "lessonRefs": [{"curriculum": "Momente", "module": "M4"}],
+  "whyItMatters": "Appearance, clothing, and weather vocabulary helps identify people, discuss what someone is wearing, and choose suitable clothes. Neutral observation plus precise adjectives is more useful than vague judgments.",
+  "prerequisiteTopicIds": ["a1_1_m2_articles", "a1_1_m1_present_basic"],
+  "mentalModel": [
+    {"title": "Describe from stable to temporary", "content": "Start with general appearance, then clothing, then the current weather or situation."},
+    {"title": "Build noun packages", "content": "Learn clothing with article, plural, color, and a common verb: die Jacke, die Jacken, eine blaue Jacke, eine Jacke tragen."},
+    {"title": "Connect weather to clothing choice", "content": "Turn weather words into decisions: 'Es ist kalt, deshalb trage ich einen Mantel.'"}
+  ],
+  "coverageChecklist": ["appearance", "hair and height", "character adjectives", "clothing", "colors", "wearing", "weather", "seasonal choices"],
+  "ruleBlocks": [
+    {"id": "appearance", "title": "Use neutral descriptive features", "content": "Describe observable features with 'sein' and 'haben': groß, klein, jung, lange Haare, eine Brille."},
+    {"id": "clothes", "title": "Use tragen for what someone is wearing", "content": "Say 'Sie trägt eine rote Jacke' and learn the clothing noun with its article."},
+    {"id": "weather", "title": "Use fixed weather patterns", "content": "Use 'Es ist warm/kalt/windig', 'Es regnet', and 'Die Sonne scheint'."},
+    {"id": "choice", "title": "Link weather and clothing", "content": "Use simple reasons or consequences: 'Bei Regen brauche ich einen Regenschirm.'"}
+  ],
+  "tables": [
+    {"id": "people_clothes", "title": "People and Clothing Vocabulary", "columns": ["Category", "German", "Example"], "rows": [["Appearance", "groß / klein", "Er ist groß."], ["Hair", "kurze / lange Haare", "Sie hat kurze Haare."], ["Accessory", "die Brille", "Er trägt eine Brille."], ["Outerwear", "die Jacke / der Mantel", "Sie trägt einen Mantel."], ["Footwear", "die Schuhe / die Stiefel", "Die Stiefel sind schwarz."], ["Weather item", "der Regenschirm", "Ich brauche einen Regenschirm."]]},
+    {"id": "weather", "title": "Weather and Clothing Choices", "columns": ["Weather", "Useful clothing"], "rows": [["Es ist kalt.", "Mantel, Mütze, Schal"], ["Es ist warm.", "T-Shirt, leichte Hose"], ["Es regnet.", "Regenjacke, Regenschirm"], ["Es schneit.", "Stiefel, Handschuhe"], ["Es ist windig.", "Jacke"]]}
+  ],
+  "patterns": ["Person + ist + adjective.", "Person + hat + hair/feature.", "Person + trägt + clothing.", "Es ist + weather adjective.", "Bei + weather noun + clothing choice."],
+  "verbs": ["sein", "haben", "tragen", "anziehen", "ausziehen", "regnen", "schneien", "scheinen"],
+  "sentenceStructure": ["Use 'sein' with adjectives and 'haben' with noun features.", "Use 'tragen' with an accusative clothing object.", "Many weather statements use impersonal 'es'.", "Adjective endings inside noun phrases are introduced through useful chunks here."],
+  "levelProgression": [
+    {"level": "A1.2", "concepts": ["describe basic appearance and clothing", "state common weather", "connect clothing to conditions"]},
+    {"level": "A2", "concepts": ["use adjective endings more systematically", "describe style, materials, and changing weather"]},
+    {"level": "B1", "concepts": ["give nuanced portraits", "discuss fashion, identity, and climate"]}
+  ],
+  "comparisons": [
+    {"topicId": "a1_2_m4_comparison", "summary": "The grammar lesson turns descriptive adjectives into comparisons."},
+    {"topicId": "a1_2_m4_describing_people", "summary": "The communication lesson organizes descriptions and appropriate reactions."}
+  ],
+  "examples": [
+    {"id": "appearance", "de": "Mara ist groß und hat lange dunkle Haare.", "en": "Mara is tall and has long dark hair."},
+    {"id": "clothing", "de": "Heute trägt sie eine grüne Jacke und schwarze Schuhe.", "en": "Today she is wearing a green jacket and black shoes."},
+    {"id": "rain", "de": "Es regnet, deshalb nehme ich einen Regenschirm.", "en": "It is raining, so I am taking an umbrella."},
+    {"id": "cold", "de": "Bei kaltem Wetter trage ich einen Mantel und einen Schal.", "en": "In cold weather I wear a coat and scarf."},
+    {"id": "identify", "de": "Ist das der Mann mit der roten Mütze?", "en": "Is that the man with the red hat?"}
+  ],
+  "commonMistakes": [
+    {"id": "wear", "wrong": "Sie hat eine Jacke an tragen.", "correct": "Sie trägt eine Jacke. / Sie hat eine Jacke an.", "reason": "Use one complete wearing pattern."},
+    {"id": "weather", "wrong": "Ist kalt.", "correct": "Es ist kalt.", "reason": "The weather expression needs impersonal 'es'."},
+    {"id": "hair", "wrong": "Sie ist lange Haare.", "correct": "Sie hat lange Haare.", "reason": "Hair is expressed with 'haben'."}
+  ],
+  "specialCases": ["Descriptions of people should remain relevant and respectful.", "'Anhaben' is common conversationally for wearing clothes.", "Color and adjective endings vary with article, gender, and case and are expanded later."],
+  "tips": ["Describe people in photos using only observable details.", "Build a weather-to-outfit chart.", "Learn every clothing noun with article and plural."],
+  "searchHints": ["Aussehen", "Kleidung", "Wetter", "tragen", "German clothing"],
+  "ui": {"status": "ready", "recommendedSections": ["mentalModel", "coreRules", "tables", "patternsAndUsage", "examples", "commonMistakes", "comparisons", "levelProgression", "advancedSpecialCases"]},
+  "sourceStyle": {"origin": "LangCompass editorial lesson aligned to the Momente A1.2 M4 catalog topic", "confidence": "high", "notes": "The lesson prioritizes neutral description and practical weather-clothing connections."},
+  "updatedAt": "2026-06-12"
+}

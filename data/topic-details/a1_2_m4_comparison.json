@@ -1,0 +1,57 @@
+{
+  "id": "a1_2_m4_comparison",
+  "title": "Comparative Forms",
+  "level": "A1.2",
+  "section": "grammar",
+  "topicType": "grammar",
+  "summary": "Making basic comparisons with adjectives in everyday situations.",
+  "relatedTopicIds": ["a1_2_m4_people_clothes_weather", "a1_2_m4_describing_people"],
+  "lessonRefs": [{"curriculum": "Momente", "module": "M4"}],
+  "whyItMatters": "Comparatives let you choose between clothes, describe differences between people, and compare weather or objects. The core pattern is adjective plus '-er', followed by 'als' when both sides are named.",
+  "prerequisiteTopicIds": ["a1_2_m4_people_clothes_weather"],
+  "mentalModel": [
+    {"title": "Turn up one quality", "content": "The comparative marks more of a quality: warm becomes wärmer, groß becomes größer."},
+    {"title": "Use als as the comparison bridge", "content": "When naming both sides, connect them with 'als': 'Die Jacke ist wärmer als der Pullover.'"},
+    {"title": "Memorize high-frequency irregular forms", "content": "Treat gut-besser, viel-mehr, and gern-lieber as complete pairs."}
+  ],
+  "coverageChecklist": ["regular -er", "umlaut changes", "als", "so ... wie", "gut-besser", "viel-mehr", "gern-lieber"],
+  "ruleBlocks": [
+    {"id": "regular", "title": "Add -er for the comparative", "content": "Most short adjectives form the comparative with '-er': klein-kleiner, schnell-schneller, warm-wärmer."},
+    {"id": "als", "title": "Use als for difference", "content": "Name the comparison standard after 'als': 'Heute ist es kälter als gestern.'"},
+    {"id": "equal", "title": "Use so ... wie for equality", "content": "Use 'so + adjective + wie' when the quality is equal: 'Die Schuhe sind so teuer wie die Stiefel.'"},
+    {"id": "irregular", "title": "Learn irregular comparison pairs", "content": "Important forms include gut-besser, viel-mehr, gern-lieber, hoch-höher, and nah-näher."}
+  ],
+  "tables": [
+    {"id": "forms", "title": "Common Comparative Forms", "columns": ["Base", "Comparative", "Example"], "rows": [["klein", "kleiner", "Das Kind ist kleiner."], ["groß", "größer", "Der Mantel ist größer."], ["warm", "wärmer", "Heute ist es wärmer."], ["kalt", "kälter", "Morgen wird es kälter."], ["gut", "besser", "Diese Jacke ist besser."], ["gern", "lieber", "Ich trage lieber Blau."]]},
+    {"id": "patterns", "title": "Difference and Equality", "columns": ["Meaning", "Pattern", "Example"], "rows": [["Different", "comparative + als", "Anna ist größer als Mia."], ["Equal", "so + adjective + wie", "Mia ist so sportlich wie Anna."], ["Preference", "lieber + action/object", "Ich trage lieber Stiefel."]]}
+  ],
+  "patterns": ["adjective + er", "comparative + als", "so + adjective + wie", "lieber + verb/object", "mehr / weniger + noun"],
+  "sentenceStructure": ["The comparative adjective usually remains predicative and uninflected after 'sein'.", "'Als' introduces the unequal comparison standard.", "'Wie' belongs to the equality pattern 'so ... wie'.", "The compared categories should be logically parallel."],
+  "levelProgression": [
+    {"level": "A1.2", "concepts": ["form common comparatives", "compare with als", "express equality with so ... wie"]},
+    {"level": "A2", "concepts": ["use superlatives", "use comparative adjectives inside noun phrases"]},
+    {"level": "B1", "concepts": ["make nuanced and qualified comparisons", "compare complex situations and trends"]}
+  ],
+  "comparisons": [
+    {"topicId": "a1_2_m4_people_clothes_weather", "summary": "The theme lesson supplies people, clothing, and weather qualities to compare."},
+    {"topicId": "a1_2_m4_describing_people", "summary": "The communication lesson uses comparisons carefully in descriptions and reactions."}
+  ],
+  "examples": [
+    {"id": "height", "de": "Lena ist größer als ihre Schwester.", "en": "Lena is taller than her sister."},
+    {"id": "weather", "de": "Heute ist es wärmer als gestern.", "en": "Today it is warmer than yesterday."},
+    {"id": "clothes", "de": "Der Mantel ist teurer, aber auch wärmer.", "en": "The coat is more expensive but also warmer."},
+    {"id": "equal", "de": "Die schwarze Jacke ist so bequem wie die blaue.", "en": "The black jacket is as comfortable as the blue one."},
+    {"id": "preference", "de": "Ich trage lieber helle Farben.", "en": "I prefer wearing light colors."}
+  ],
+  "commonMistakes": [
+    {"id": "wie", "wrong": "größer wie", "correct": "größer als", "reason": "Standard German uses 'als' after an unequal comparative."},
+    {"id": "double", "wrong": "mehr wärmer", "correct": "wärmer", "reason": "Do not add 'mehr' to an adjective that already has a comparative form."},
+    {"id": "good", "wrong": "guter als", "correct": "besser als", "reason": "'Gut' has the irregular comparative 'besser'."}
+  ],
+  "specialCases": ["Many one-syllable adjectives add an umlaut, but not all do.", "Regional speech may use 'wie' after comparatives; standard written German uses 'als'.", "Adjective endings on comparative forms are a later expansion."],
+  "tips": ["Learn base and comparative as a pair.", "Compare two real objects using three qualities.", "Practice 'als' and 'so ... wie' in contrast."],
+  "searchHints": ["Komparativ", "als wie", "größer", "besser", "German comparison"],
+  "ui": {"status": "ready", "recommendedSections": ["mentalModel", "coreRules", "tables", "patternsAndUsage", "examples", "commonMistakes", "comparisons", "levelProgression", "advancedSpecialCases"]},
+  "sourceStyle": {"origin": "LangCompass editorial lesson aligned to the Momente A1.2 M4 catalog topic", "confidence": "high", "notes": "The lesson establishes regular, umlaut, irregular, unequal, and equal comparison patterns."},
+  "updatedAt": "2026-06-12"
+}
