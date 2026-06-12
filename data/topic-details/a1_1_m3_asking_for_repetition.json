@@ -1,0 +1,314 @@
+{
+  "id": "a1_1_m3_asking_for_repetition",
+  "title": "Asking for Repetition and Clarification",
+  "level": "A1.1",
+  "section": "communication",
+  "topicType": "communication",
+  "summary": "Saying you do not understand and asking someone to repeat or spell something.",
+  "relatedTopicIds": [
+    "a1_1_m3_office_technology",
+    "a1_1_m3_negation_kein"
+  ],
+  "lessonRefs": [
+    {
+      "curriculum": "Momente",
+      "module": "M3"
+    }
+  ],
+  "whyItMatters": "Conversation does not require perfect understanding. Repair phrases let you stay in the interaction, identify what was unclear, and ask for repetition, slower speech, spelling, or a meaning.",
+  "prerequisiteTopicIds": [
+    "a1_1_m3_negation_kein"
+  ],
+  "mentalModel": [
+    {
+      "title": "Signal, specify, request",
+      "content": "First signal the problem, then say what you need, and finally confirm the answer: 'Entschuldigung, ich verstehe nicht. Noch einmal, bitte. Ah, danke.'"
+    },
+    {
+      "title": "Choose the smallest repair",
+      "content": "Use 'Wie bitte?' for a quick repeat, 'Langsamer, bitte' for speed, and 'Wie schreibt man das?' for spelling."
+    },
+    {
+      "title": "Keep the conversation open",
+      "content": "A repair phrase is not a failure; it is a tool that gives the other person clear instructions for helping you."
+    }
+  ],
+  "coverageChecklist": [
+    "saying you do not understand",
+    "asking for repetition",
+    "asking for slower speech",
+    "asking for spelling",
+    "asking for meaning",
+    "confirming information",
+    "formal polite requests"
+  ],
+  "ruleBlocks": [
+    {
+      "id": "signal",
+      "title": "Signal the problem politely",
+      "content": "Use 'Entschuldigung' followed by 'Ich verstehe nicht' or a short 'Wie bitte?'."
+    },
+    {
+      "id": "repeat",
+      "title": "Request repetition",
+      "content": "Use 'Noch einmal, bitte' or the fuller chunk 'Können Sie das bitte wiederholen?'."
+    },
+    {
+      "id": "slow",
+      "title": "Ask for slower speech",
+      "content": "Use 'Langsamer, bitte' or 'Bitte sprechen Sie langsamer.'"
+    },
+    {
+      "id": "spell_meaning",
+      "title": "Ask for spelling or meaning",
+      "content": "Use 'Wie schreibt man das?' for spelling and 'Was bedeutet ...?' for meaning."
+    }
+  ],
+  "tables": [
+    {
+      "id": "repair_phrase_bank",
+      "title": "Clarification Phrase Bank",
+      "columns": [
+        "Problem",
+        "Useful phrase",
+        "Meaning"
+      ],
+      "rows": [
+        [
+          "General misunderstanding",
+          "Ich verstehe nicht.",
+          "I do not understand."
+        ],
+        [
+          "Quick repetition",
+          "Wie bitte?",
+          "Pardon?"
+        ],
+        [
+          "Repeat the message",
+          "Noch einmal, bitte.",
+          "Once again, please."
+        ],
+        [
+          "Speech is too fast",
+          "Langsamer, bitte.",
+          "More slowly, please."
+        ],
+        [
+          "Need spelling",
+          "Wie schreibt man das?",
+          "How do you spell that?"
+        ],
+        [
+          "Need meaning",
+          "Was bedeutet das?",
+          "What does that mean?"
+        ]
+      ]
+    },
+    {
+      "id": "confirming",
+      "title": "Confirming What You Heard",
+      "columns": [
+        "Goal",
+        "Phrase"
+      ],
+      "rows": [
+        [
+          "Check a word",
+          "Heißt das 'Drucker'?"
+        ],
+        [
+          "Check spelling",
+          "D-R-U-C-K-E-R?"
+        ],
+        [
+          "Confirm understanding",
+          "Ah, jetzt verstehe ich."
+        ],
+        [
+          "Thank the speaker",
+          "Danke für die Erklärung."
+        ]
+      ]
+    }
+  ],
+  "patterns": [
+    "Entschuldigung, ich verstehe nicht.",
+    "Noch einmal, bitte.",
+    "Können Sie das bitte wiederholen?",
+    "Bitte sprechen Sie langsamer.",
+    "Wie schreibt man + word?",
+    "Was bedeutet + word?"
+  ],
+  "verbs": [
+    "verstehen",
+    "wiederholen",
+    "sprechen",
+    "schreiben",
+    "bedeuten",
+    "buchstabieren"
+  ],
+  "sentenceStructure": [
+    "Begin with a polite signal when interrupting.",
+    "Name the specific help you need: repeat, slower speech, spelling, or meaning.",
+    "Repeat the information back when accuracy matters.",
+    "Close the repair with confirmation or thanks."
+  ],
+  "levelProgression": [
+    {
+      "level": "A1.1",
+      "concepts": [
+        "signal non-understanding",
+        "request repetition, slower speech, or spelling",
+        "confirm a short piece of information"
+      ]
+    },
+    {
+      "level": "A1.2",
+      "concepts": [
+        "ask targeted follow-up questions",
+        "clarify instructions and requests"
+      ]
+    },
+    {
+      "level": "A2",
+      "concepts": [
+        "paraphrase what was understood",
+        "repair longer or more abstract misunderstandings"
+      ]
+    }
+  ],
+  "comparisons": [
+    {
+      "topicId": "a1_1_m3_office_technology",
+      "summary": "Office and technology terms provide realistic words to spell, repeat, and clarify."
+    },
+    {
+      "topicId": "a1_1_m3_negation_kein",
+      "summary": "Several repair phrases use 'nicht' because the problem is an action or state, not a missing noun.",
+      "table": {
+        "columns": [
+          "Problem",
+          "Repair"
+        ],
+        "rows": [
+          [
+            "Ich verstehe nicht.",
+            "Noch einmal, bitte."
+          ],
+          [
+            "Ich höre das Wort nicht.",
+            "Bitte sprechen Sie lauter."
+          ],
+          [
+            "Ich kenne das Wort nicht.",
+            "Was bedeutet das?"
+          ]
+        ]
+      }
+    }
+  ],
+  "examples": [
+    {
+      "id": "repeat",
+      "de": "A: Öffnen Sie das Dokument. B: Wie bitte? Noch einmal, bitte.",
+      "en": "A: Open the document. B: Pardon? Once again, please."
+    },
+    {
+      "id": "slow",
+      "de": "A: Verstehen Sie? B: Noch nicht. Bitte sprechen Sie langsamer.",
+      "en": "A: Do you understand? B: Not yet. Please speak more slowly."
+    },
+    {
+      "id": "spell",
+      "de": "A: Das Wort ist 'Drucker'. B: Wie schreibt man das?",
+      "en": "A: The word is 'Drucker'. B: How do you spell that?"
+    },
+    {
+      "id": "meaning",
+      "de": "A: Das Handy ist kaputt. B: Was bedeutet 'kaputt'?",
+      "en": "A: The mobile phone is broken. B: What does 'kaputt' mean?"
+    },
+    {
+      "id": "confirmation",
+      "de": "A: D-R-U-C-K-E-R. B: Ah, Drucker. Jetzt verstehe ich. Danke.",
+      "en": "A: D-R-U-C-K-E-R. B: Ah, printer. Now I understand. Thank you."
+    }
+  ],
+  "commonMistakes": [
+    {
+      "id": "bare_what",
+      "wrong": "Was?",
+      "correct": "Wie bitte? / Noch einmal, bitte.",
+      "reason": "The repair phrases are clearer and more polite than a bare 'Was?'."
+    },
+    {
+      "id": "fast_request",
+      "wrong": "Nicht schnell!",
+      "correct": "Langsamer, bitte.",
+      "reason": "The standard request directly tells the speaker what would help."
+    },
+    {
+      "id": "meaning_order",
+      "wrong": "Was das bedeutet?",
+      "correct": "Was bedeutet das?",
+      "reason": "In a direct question, the conjugated verb comes before the subject."
+    },
+    {
+      "id": "no_confirmation",
+      "wrong": "Ask repeatedly without checking the answer.",
+      "correct": "Repeat the word or spelling back once.",
+      "reason": "Confirmation shows whether the repair was successful."
+    }
+  ],
+  "specialCases": [
+    "'Können Sie ...?' is introduced here as a polite fixed chunk before the modal verb is studied systematically in M4.",
+    "'Wie bitte?' can request repetition or express surprise; tone and context determine the meaning.",
+    "In informal situations, use 'Kannst du das wiederholen?' instead of formal 'Können Sie ...?'."
+  ],
+  "tips": [
+    "Choose one repair phrase for each problem type and practice it until automatic.",
+    "Do not apologize repeatedly; give the speaker a specific helpful request.",
+    "Practice spelling names, email addresses, and device vocabulary aloud."
+  ],
+  "memoryHooks": [
+    {
+      "id": "repair_ladder",
+      "title": "The repair ladder",
+      "content": "Repeat, slower, spell, explain: move to the next tool only if the first one does not solve the problem."
+    },
+    {
+      "id": "signal_request_confirm",
+      "title": "Signal, request, confirm",
+      "content": "Say there is a problem, ask for one specific kind of help, then confirm what you heard."
+    }
+  ],
+  "searchHints": [
+    "Wie bitte",
+    "noch einmal",
+    "langsamer sprechen",
+    "buchstabieren",
+    "German clarification phrases"
+  ],
+  "ui": {
+    "status": "ready",
+    "recommendedSections": [
+      "mentalModel",
+      "coreRules",
+      "tables",
+      "patternsAndUsage",
+      "examples",
+      "commonMistakes",
+      "comparisons",
+      "levelProgression",
+      "advancedSpecialCases"
+    ]
+  },
+  "sourceStyle": {
+    "origin": "LangCompass editorial lesson aligned to the Momente A1.1 M3 catalog topic",
+    "confidence": "high",
+    "notes": "Phrases prioritize practical conversation repair and treat modal requests as learnable chunks."
+  },
+  "updatedAt": "2026-06-12"
+}

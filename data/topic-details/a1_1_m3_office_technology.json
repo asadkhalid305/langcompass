@@ -1,0 +1,289 @@
+{
+  "id": "a1_1_m3_office_technology",
+  "title": "Office and Technology",
+  "level": "A1.1",
+  "section": "themes",
+  "topicType": "theme",
+  "summary": "Basic workplace objects, devices, and simple actions around technology.",
+  "relatedTopicIds": [
+    "a1_1_m3_negation_kein",
+    "a1_1_m3_asking_for_repetition"
+  ],
+  "lessonRefs": [
+    {
+      "curriculum": "Momente",
+      "module": "M3"
+    }
+  ],
+  "whyItMatters": "Office and technology vocabulary helps you manage simple tasks at work, in class, and at home. With a small set of devices, documents, and actions, you can describe what you have, what you need, and where a basic problem occurs.",
+  "mentalModel": [
+    {
+      "title": "Build a desk scene",
+      "content": "Picture one workspace and place each noun in it: computer, screen, keyboard, telephone, paper, pen, and printer."
+    },
+    {
+      "title": "Connect every device to an action",
+      "content": "Technology words become useful when paired with verbs: den Computer benutzen, eine E-Mail schreiben, ein Dokument drucken."
+    },
+    {
+      "title": "Separate object, task, and problem",
+      "content": "Describe what the thing is, what you do with it, and whether it works: 'Das ist der Drucker. Ich drucke ein Dokument. Der Drucker funktioniert nicht.'"
+    }
+  ],
+  "coverageChecklist": [
+    "office furniture",
+    "computer devices",
+    "documents",
+    "communication tools",
+    "basic technology actions",
+    "availability",
+    "simple technical problems"
+  ],
+  "ruleBlocks": [
+    {
+      "id": "noun_package",
+      "title": "Learn devices with article and plural",
+      "content": "Keep the noun package intact: der Computer – die Computer, die Tastatur – die Tastaturen, das Handy – die Handys."
+    },
+    {
+      "id": "action_pairs",
+      "title": "Pair objects with common actions",
+      "content": "Build useful combinations such as 'eine E-Mail schreiben', 'ein Dokument öffnen', and 'den Drucker benutzen'."
+    },
+    {
+      "id": "problem_language",
+      "title": "Describe a problem simply",
+      "content": "Use 'funktioniert nicht', 'ist kaputt', or 'geht nicht' to signal that a device or process has a problem."
+    }
+  ],
+  "tables": [
+    {
+      "id": "office_devices",
+      "title": "Office and Technology Objects",
+      "columns": [
+        "Singular",
+        "Plural",
+        "English"
+      ],
+      "rows": [
+        [
+          "der Computer",
+          "die Computer",
+          "computer"
+        ],
+        [
+          "der Bildschirm",
+          "die Bildschirme",
+          "screen"
+        ],
+        [
+          "der Drucker",
+          "die Drucker",
+          "printer"
+        ],
+        [
+          "die Tastatur",
+          "die Tastaturen",
+          "keyboard"
+        ],
+        [
+          "die E-Mail",
+          "die E-Mails",
+          "email"
+        ],
+        [
+          "das Handy",
+          "die Handys",
+          "mobile phone"
+        ],
+        [
+          "das Dokument",
+          "die Dokumente",
+          "document"
+        ]
+      ]
+    },
+    {
+      "id": "device_actions",
+      "title": "Objects and Actions",
+      "columns": [
+        "Object",
+        "Useful action"
+      ],
+      "rows": [
+        [
+          "der Computer",
+          "benutzen / einschalten"
+        ],
+        [
+          "die E-Mail",
+          "schreiben / lesen"
+        ],
+        [
+          "das Dokument",
+          "öffnen / speichern / drucken"
+        ],
+        [
+          "das Handy",
+          "benutzen / laden"
+        ],
+        [
+          "der Drucker",
+          "benutzen / prüfen"
+        ]
+      ]
+    }
+  ],
+  "patterns": [
+    "article + office noun",
+    "object + action combination",
+    "Ich brauche + object",
+    "Ich habe + object",
+    "device + funktioniert / funktioniert nicht"
+  ],
+  "verbs": [
+    "arbeiten",
+    "benutzen",
+    "schreiben",
+    "lesen",
+    "öffnen",
+    "speichern",
+    "drucken",
+    "funktionieren"
+  ],
+  "sentenceStructure": [
+    "Use 'haben' to state what is available and 'brauchen' to state what is needed.",
+    "Use a direct object after many technology actions: 'Ich öffne das Dokument.'",
+    "Place 'nicht' near the problem description: 'Der Drucker funktioniert nicht.'",
+    "Use short separate sentences when describing a task and its problem."
+  ],
+  "levelProgression": [
+    {
+      "level": "A1.1",
+      "concepts": [
+        "name common devices and office objects",
+        "describe simple actions and problems"
+      ]
+    },
+    {
+      "level": "A1.2",
+      "concepts": [
+        "give instructions and make workplace requests",
+        "describe routine digital tasks"
+      ]
+    },
+    {
+      "level": "A2",
+      "concepts": [
+        "explain technical problems in more detail",
+        "coordinate tasks and solutions at work"
+      ]
+    }
+  ],
+  "comparisons": [
+    {
+      "topicId": "a1_1_m3_negation_kein",
+      "summary": "This theme provides the objects and situations. The grammar lesson distinguishes having no object from an action or device not working."
+    },
+    {
+      "topicId": "a1_1_m3_asking_for_repetition",
+      "summary": "The communication lesson helps when a device name, spelling, or instruction is not understood."
+    }
+  ],
+  "examples": [
+    {
+      "id": "desk",
+      "de": "Auf dem Schreibtisch sind ein Computer, eine Tastatur und ein Handy.",
+      "en": "There are a computer, a keyboard, and a mobile phone on the desk."
+    },
+    {
+      "id": "email",
+      "de": "Ich schreibe eine E-Mail.",
+      "en": "I am writing an email."
+    },
+    {
+      "id": "document",
+      "de": "Bitte öffnen und speichern Sie das Dokument.",
+      "en": "Please open and save the document."
+    },
+    {
+      "id": "printer_problem",
+      "de": "Der Drucker funktioniert nicht.",
+      "en": "The printer is not working."
+    },
+    {
+      "id": "need",
+      "de": "Ich brauche Papier und einen Stift.",
+      "en": "I need paper and a pen."
+    }
+  ],
+  "commonMistakes": [
+    {
+      "id": "false_friend_handy",
+      "wrong": "das Handy = handy",
+      "correct": "das Handy = mobile phone",
+      "reason": "'Handy' is a German noun for a mobile phone, not the English adjective."
+    },
+    {
+      "id": "email_gender",
+      "wrong": "der E-Mail",
+      "correct": "die E-Mail",
+      "reason": "'E-Mail' is normally feminine in standard German."
+    },
+    {
+      "id": "device_without_action",
+      "wrong": "Memorize only: der Drucker.",
+      "correct": "Learn: der Drucker – drucken – funktioniert nicht.",
+      "reason": "An object is easier to use and remember when connected to an action and a common situation."
+    }
+  ],
+  "specialCases": [
+    "Technology vocabulary changes quickly and often includes international loanwords.",
+    "'Der Rechner' can also mean computer, while 'der Computer' is widely understood.",
+    "'Geht nicht' is an informal general problem phrase; 'funktioniert nicht' is clearer for devices."
+  ],
+  "tips": [
+    "Label the devices and objects in your real workspace.",
+    "Practice one positive and one negative sentence for each device.",
+    "Describe a simple digital task as three actions in order."
+  ],
+  "memoryHooks": [
+    {
+      "id": "desk_scene",
+      "title": "One desk, many words",
+      "content": "Place every new object on one mental desk and imagine using it."
+    },
+    {
+      "id": "object_action_problem",
+      "title": "Object, action, problem",
+      "content": "For each device, learn what it is, what you do with it, and one way to say it is not working."
+    }
+  ],
+  "searchHints": [
+    "Büro",
+    "Technik",
+    "Computer",
+    "Drucker",
+    "office German"
+  ],
+  "ui": {
+    "status": "ready",
+    "recommendedSections": [
+      "mentalModel",
+      "coreRules",
+      "tables",
+      "patternsAndUsage",
+      "examples",
+      "commonMistakes",
+      "comparisons",
+      "levelProgression",
+      "advancedSpecialCases"
+    ]
+  },
+  "sourceStyle": {
+    "origin": "LangCompass editorial lesson aligned to the Momente A1.1 M3 catalog topic",
+    "confidence": "high",
+    "notes": "Vocabulary emphasizes common office devices, digital tasks, and beginner-friendly problem descriptions."
+  },
+  "updatedAt": "2026-06-12"
+}

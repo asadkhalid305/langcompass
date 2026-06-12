@@ -1,0 +1,306 @@
+{
+  "id": "a1_1_m3_negation_kein",
+  "title": "Negation with kein / nicht",
+  "level": "A1.1",
+  "section": "grammar",
+  "topicType": "grammar",
+  "summary": "Negating nouns and simple statements in everyday contexts.",
+  "relatedTopicIds": [
+    "a1_1_m3_office_technology",
+    "a1_1_m3_asking_for_repetition"
+  ],
+  "lessonRefs": [
+    {
+      "curriculum": "Momente",
+      "module": "M3"
+    }
+  ],
+  "whyItMatters": "Negation lets you say what you do not have, what something is not, and what does not happen. The key beginner distinction is whether you are negating a noun with 'kein' or negating an action, property, or larger statement with 'nicht'.",
+  "prerequisiteTopicIds": [
+    "a1_1_m2_articles",
+    "a1_1_m3_office_technology"
+  ],
+  "mentalModel": [
+    {
+      "title": "Kein belongs to the noun family",
+      "content": "Use 'kein' where a positive sentence could use 'ein/eine' or no article: 'Ich habe einen Drucker' becomes 'Ich habe keinen Drucker.'"
+    },
+    {
+      "title": "Nicht switches off an action or property",
+      "content": "Use 'nicht' to negate a verb, adjective, adverb, or a more complete idea: 'Der Drucker funktioniert nicht' and 'Das Handy ist nicht neu.'"
+    },
+    {
+      "title": "Ask what exactly is negative",
+      "content": "If the missing thing is a noun, choose 'kein'. If the action or description is false, choose 'nicht'."
+    }
+  ],
+  "coverageChecklist": [
+    "kein",
+    "keine",
+    "keinen",
+    "noun negation",
+    "nicht",
+    "verb negation",
+    "adjective negation",
+    "simple word order"
+  ],
+  "ruleBlocks": [
+    {
+      "id": "kein_nouns",
+      "title": "Use kein to negate an indefinite noun",
+      "content": "Use forms of 'kein' before a noun when the positive idea would use 'ein/eine' or no article: 'Ich habe kein Handy.'"
+    },
+    {
+      "id": "kein_forms",
+      "title": "Match kein to gender, number, and case",
+      "content": "At this stage, learn common forms as chunks: kein Computer, keine Tastatur, kein Handy, keine Computer, and accusative 'keinen Computer'."
+    },
+    {
+      "id": "nicht_action",
+      "title": "Use nicht for an action or statement",
+      "content": "Use 'nicht' when the verb or whole statement is negative: 'Ich arbeite heute nicht.'"
+    },
+    {
+      "id": "nicht_property",
+      "title": "Use nicht before a property",
+      "content": "Place 'nicht' before an adjective or similar description: 'Der Computer ist nicht neu.'"
+    }
+  ],
+  "tables": [
+    {
+      "id": "kein_forms",
+      "title": "Common kein Forms",
+      "columns": [
+        "Noun type",
+        "Positive",
+        "Negative"
+      ],
+      "rows": [
+        [
+          "Masculine subject",
+          "ein Computer",
+          "kein Computer"
+        ],
+        [
+          "Feminine",
+          "eine Tastatur",
+          "keine Tastatur"
+        ],
+        [
+          "Neuter",
+          "ein Handy",
+          "kein Handy"
+        ],
+        [
+          "Plural",
+          "Computer",
+          "keine Computer"
+        ],
+        [
+          "Masculine direct object",
+          "einen Drucker",
+          "keinen Drucker"
+        ]
+      ]
+    },
+    {
+      "id": "kein_or_nicht",
+      "title": "Choosing kein or nicht",
+      "columns": [
+        "What is negative?",
+        "Use",
+        "Example"
+      ],
+      "rows": [
+        [
+          "An indefinite noun",
+          "kein",
+          "Ich habe keinen Drucker."
+        ],
+        [
+          "An action",
+          "nicht",
+          "Ich drucke heute nicht."
+        ],
+        [
+          "A property",
+          "nicht",
+          "Der Bildschirm ist nicht groß."
+        ],
+        [
+          "The functioning of a device",
+          "nicht",
+          "Das Handy funktioniert nicht."
+        ]
+      ]
+    }
+  ],
+  "patterns": [
+    "kein-form + noun",
+    "Subject + haben + kein-form + noun",
+    "Subject + verb + ... + nicht",
+    "Subject + sein + nicht + adjective",
+    "device + funktioniert nicht"
+  ],
+  "sentenceStructure": [
+    "'Kein' appears directly before the noun it negates.",
+    "'Nicht' often appears near the end when it negates the general action.",
+    "'Nicht' appears before an adjective or property being negated.",
+    "The exact placement of 'nicht' becomes more detailed later; first identify what the sentence denies."
+  ],
+  "levelProgression": [
+    {
+      "level": "A1.1",
+      "concepts": [
+        "choose kein for nouns and nicht for actions or properties",
+        "use common kein forms in simple sentences"
+      ]
+    },
+    {
+      "level": "A1.2",
+      "concepts": [
+        "place nicht more precisely",
+        "use kein across additional cases and possessive-like patterns"
+      ]
+    },
+    {
+      "level": "A2",
+      "concepts": [
+        "distinguish partial and sentence negation",
+        "use contrastive negation in longer clauses"
+      ]
+    }
+  ],
+  "comparisons": [
+    {
+      "topicId": "a1_1_m3_office_technology",
+      "summary": "The office lesson supplies concrete noun and device contexts for saying what is unavailable or not working."
+    },
+    {
+      "topicId": "a1_1_m3_asking_for_repetition",
+      "summary": "Clarification phrases often use 'nicht' in chunks such as 'Ich verstehe nicht' or 'Ich weiß nicht'.",
+      "table": {
+        "columns": [
+          "Missing noun",
+          "Negative action or state"
+        ],
+        "rows": [
+          [
+            "Ich habe keinen Drucker.",
+            "Der Drucker funktioniert nicht."
+          ],
+          [
+            "Wir haben kein Papier.",
+            "Ich drucke heute nicht."
+          ],
+          [
+            "Sie hat keine E-Mail.",
+            "Sie versteht die E-Mail nicht."
+          ]
+        ]
+      }
+    }
+  ],
+  "examples": [
+    {
+      "id": "no_printer",
+      "de": "Ich habe keinen Drucker.",
+      "en": "I do not have a printer."
+    },
+    {
+      "id": "no_paper",
+      "de": "Wir haben kein Papier.",
+      "en": "We have no paper."
+    },
+    {
+      "id": "not_working",
+      "de": "Der Computer funktioniert nicht.",
+      "en": "The computer is not working."
+    },
+    {
+      "id": "not_new",
+      "de": "Das Handy ist nicht neu.",
+      "en": "The mobile phone is not new."
+    },
+    {
+      "id": "not_today",
+      "de": "Ich arbeite heute nicht.",
+      "en": "I am not working today."
+    }
+  ],
+  "commonMistakes": [
+    {
+      "id": "nicht_noun",
+      "wrong": "Ich habe nicht Drucker.",
+      "correct": "Ich habe keinen Drucker.",
+      "reason": "Use 'kein' to negate an indefinite noun."
+    },
+    {
+      "id": "kein_adjective",
+      "wrong": "Der Computer ist kein neu.",
+      "correct": "Der Computer ist nicht neu.",
+      "reason": "Use 'nicht' to negate the adjective 'neu'."
+    },
+    {
+      "id": "masculine_object",
+      "wrong": "Ich habe kein Computer.",
+      "correct": "Ich habe keinen Computer.",
+      "reason": "A masculine direct object uses the accusative form 'keinen'."
+    },
+    {
+      "id": "nicht_before_noun",
+      "wrong": "Wir haben nicht Papier.",
+      "correct": "Wir haben kein Papier.",
+      "reason": "A noun used without a definite article is normally negated with 'kein'."
+    }
+  ],
+  "specialCases": [
+    "A noun with a definite article is normally negated with 'nicht': 'Das ist nicht der Drucker.'",
+    "'Kein' follows article-like endings and therefore changes with gender, number, and case.",
+    "The position of 'nicht' changes depending on what is contrasted or negated; this lesson covers the most reliable beginner patterns."
+  ],
+  "tips": [
+    "Convert positive noun sentences from ein/eine to kein/keine.",
+    "Underline the exact word or idea being denied before choosing the negation.",
+    "Practice paired sentences: 'Ich habe einen Drucker' / 'Ich habe keinen Drucker'."
+  ],
+  "memoryHooks": [
+    {
+      "id": "kein_noun",
+      "title": "Kein wears an article ending",
+      "content": "If the negative word stands directly with a noun like an article, think 'kein'."
+    },
+    {
+      "id": "nicht_switch",
+      "title": "Nicht switches off the action or quality",
+      "content": "Use 'nicht' when the action does not happen or the description is not true."
+    }
+  ],
+  "searchHints": [
+    "Negation",
+    "kein oder nicht",
+    "keinen",
+    "nicht verstehen",
+    "German negation"
+  ],
+  "ui": {
+    "status": "ready",
+    "recommendedSections": [
+      "mentalModel",
+      "coreRules",
+      "tables",
+      "patternsAndUsage",
+      "examples",
+      "commonMistakes",
+      "comparisons",
+      "levelProgression",
+      "advancedSpecialCases"
+    ]
+  },
+  "sourceStyle": {
+    "origin": "LangCompass editorial lesson aligned to the Momente A1.1 M3 catalog topic",
+    "confidence": "high",
+    "notes": "The lesson prioritizes the noun-versus-action distinction and defers full nicht placement."
+  },
+  "updatedAt": "2026-06-12"
+}

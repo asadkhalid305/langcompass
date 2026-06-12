@@ -30,6 +30,15 @@ const completedModules = [
   },
   {
     level: "A1.1",
+    module: "M3",
+    topicIds: [
+      "a1_1_m3_office_technology",
+      "a1_1_m3_negation_kein",
+      "a1_1_m3_asking_for_repetition",
+    ],
+  },
+  {
+    level: "A1.1",
     module: "M5",
     topicIds: [
       "a1_1_m5_food_restaurant",
