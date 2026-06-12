@@ -1,0 +1,58 @@
+{
+  "id": "a1_2_m3_requests_instructions",
+  "title": "Requests, Instructions, and Advice",
+  "level": "A1.2",
+  "section": "communication",
+  "topicType": "communication",
+  "summary": "Making requests, giving simple instructions, and asking for or giving advice.",
+  "relatedTopicIds": ["a1_2_m3_health_household", "personal_pronouns_accusative"],
+  "lessonRefs": [{"curriculum": "Momente", "module": "M3"}],
+  "whyItMatters": "Health and household problems often require another person to act. Effective language distinguishes a polite request, a direct instruction, and a suggestion, then checks whether the action is understood and possible.",
+  "prerequisiteTopicIds": ["a1_2_m1_offering_help", "personal_pronouns_accusative"],
+  "mentalModel": [
+    {"title": "Match force to situation", "content": "Use a polite modal question for a request, an imperative for a clear instruction, and 'du solltest' or a fixed suggestion for advice."},
+    {"title": "Name action and object", "content": "Make the desired result visible: 'Bitte bring den Müll raus' is clearer than 'Mach das bitte'."},
+    {"title": "Check the response", "content": "A complete exchange includes acceptance, clarification, refusal, or confirmation."}
+  ],
+  "coverageChecklist": ["polite requests", "informal instructions", "formal instructions", "health advice", "household rules", "accepting and refusing", "clarifying"],
+  "ruleBlocks": [
+    {"id": "request", "title": "Use modal questions for polite requests", "content": "Use 'Kannst du ...?' informally and 'Können Sie ...?' formally, usually with 'bitte'."},
+    {"id": "instruction", "title": "Use a clear imperative for instructions", "content": "Use short action-first forms such as 'Nimm die Tablette' or 'Machen Sie bitte das Fenster zu'."},
+    {"id": "advice", "title": "Frame advice as a helpful option", "content": "Use 'Du solltest ...', 'Am besten ...', or 'Ich würde ...' as learnable advice chunks."},
+    {"id": "response", "title": "Respond and clarify", "content": "Accept with 'Ja, mache ich', decline with a brief reason, or ask 'Wann genau?' and 'Wie oft?'."}
+  ],
+  "tables": [
+    {"id": "toolkit", "title": "Conversation Toolkit", "columns": ["Function", "Phrase"], "rows": [["Informal request", "Kannst du bitte das Fenster zumachen?"], ["Formal request", "Können Sie mich bitte zurückrufen?"], ["Instruction", "Nimm diese Tablette zweimal täglich."], ["Advice", "Du solltest heute zu Hause bleiben."], ["Accept", "Ja, mache ich sofort."], ["Clarify", "Wie oft soll ich das machen?"]]},
+    {"id": "situation", "title": "Problem and Response", "columns": ["Situation", "Useful language"], "rows": [["Headache", "Ruh dich aus und trink Wasser."], ["Open window", "Mach es bitte zu."], ["Full rubbish bin", "Bring ihn bitte raus."], ["Dirty kitchen", "Könnt ihr sie heute putzen?"]]}
+  ],
+  "patterns": ["Kannst du / Können Sie bitte + infinitive?", "Imperative + object.", "Du solltest + infinitive.", "Am besten + verb + subject ...", "Ja, mache ich.", "Wie oft / Wann genau?"],
+  "verbs": ["machen", "nehmen", "rufen", "bringen", "putzen", "ruhen", "trinken", "sollen"],
+  "sentenceStructure": ["A modal request places the action infinitive at the end.", "An imperative normally begins with the action verb.", "Use a pronoun only when its reference is clear.", "Add frequency or timing to health instructions when needed."],
+  "levelProgression": [
+    {"level": "A1.2", "concepts": ["make polite requests", "give short instructions and basic advice", "accept, refuse, or clarify an action"]},
+    {"level": "A2", "concepts": ["soften requests in several ways", "explain reasons and consequences"]},
+    {"level": "B1", "concepts": ["give nuanced recommendations", "negotiate rules and responsibilities"]}
+  ],
+  "comparisons": [
+    {"topicId": "a1_2_m3_health_household", "summary": "The theme lesson supplies the symptoms, chores, and home situations that require action."},
+    {"topicId": "personal_pronouns_accusative", "summary": "Pronouns make repeated instructions natural when an object or person is already known."}
+  ],
+  "examples": [
+    {"id": "request", "de": "A: Kannst du bitte das Bad putzen? B: Ja, mache ich nach dem Essen.", "en": "A: Can you please clean the bathroom? B: Yes, I will do it after eating."},
+    {"id": "formal", "de": "Können Sie mich bitte morgen zurückrufen?", "en": "Can you please call me back tomorrow?"},
+    {"id": "medicine", "de": "Nehmen Sie die Tablette morgens und abends.", "en": "Take the tablet in the morning and evening."},
+    {"id": "advice", "de": "Du solltest dich ausruhen und viel trinken.", "en": "You should rest and drink plenty."},
+    {"id": "pronoun", "de": "Der Müll ist voll. Bring ihn bitte raus.", "en": "The rubbish bin is full. Please take it out."}
+  ],
+  "commonMistakes": [
+    {"id": "infinitive", "wrong": "Kannst du machst das Fenster zu?", "correct": "Kannst du das Fenster zumachen?", "reason": "After the modal, use a final infinitive."},
+    {"id": "unclear", "wrong": "Mach es! (without a clear referent)", "correct": "Mach bitte das Fenster zu.", "reason": "Use the full object until the pronoun reference is clear."},
+    {"id": "register", "wrong": "Nimm die Tablette! to an unfamiliar patient", "correct": "Nehmen Sie bitte die Tablette.", "reason": "Use the formal imperative with an unfamiliar adult."}
+  ],
+  "specialCases": ["'Soll ich ...?' asks whether the speaker should perform an action.", "'Du solltest ...' is advice rather than a command.", "In urgent health situations, direct instructions can be appropriate."],
+  "tips": ["Practice each situation as request, instruction, and advice.", "Always include a realistic response.", "Replace nouns with pronouns only on the second mention."],
+  "searchHints": ["Bitten", "Anweisungen", "Ratschläge", "Kannst du bitte", "German requests"],
+  "ui": {"status": "ready", "recommendedSections": ["mentalModel", "coreRules", "tables", "patternsAndUsage", "examples", "commonMistakes", "comparisons", "levelProgression", "advancedSpecialCases"]},
+  "sourceStyle": {"origin": "LangCompass editorial lesson aligned to the Momente A1.2 M3 catalog topic", "confidence": "high", "notes": "The lesson distinguishes request strength and integrates known direct-object pronouns."},
+  "updatedAt": "2026-06-12"
+}

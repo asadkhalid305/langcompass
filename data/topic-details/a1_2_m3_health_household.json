@@ -1,0 +1,58 @@
+{
+  "id": "a1_2_m3_health_household",
+  "title": "Health and Household",
+  "level": "A1.2",
+  "section": "themes",
+  "topicType": "theme",
+  "summary": "Illness, body, home tasks, requests, and rules at home.",
+  "relatedTopicIds": ["personal_pronouns_accusative", "a1_2_m3_requests_instructions"],
+  "lessonRefs": [{"curriculum": "Momente", "module": "M3"}],
+  "whyItMatters": "Health and household language helps you describe a basic symptom, identify what needs attention at home, and coordinate simple care or chores. These situations require clear nouns, practical verbs, and short statements about problems and needs.",
+  "prerequisiteTopicIds": ["accusative_case", "a1_2_m1_offering_help"],
+  "mentalModel": [
+    {"title": "Name the place, problem, and action", "content": "For health, identify the body part and symptom; for the home, identify the room or object and the task."},
+    {"title": "Separate state from action", "content": "Use 'sein' or 'haben' for a condition and an action verb for the response: 'Ich habe Kopfschmerzen. Ich nehme eine Tablette.'"},
+    {"title": "Connect responsibility to routine", "content": "Household tasks become usable when attached to a person and time: 'Heute räumt Alex die Küche auf.'"}
+  ],
+  "coverageChecklist": ["body parts", "common symptoms", "medicine and rest", "rooms", "household objects", "chores", "simple home rules"],
+  "ruleBlocks": [
+    {"id": "symptoms", "title": "Describe common symptoms", "content": "Use 'Ich habe ...' for Schmerzen, Fieber, Husten, and Schnupfen; use 'Mir ist ...' in common chunks such as 'Mir ist schlecht'."},
+    {"id": "body", "title": "Name the affected body part", "content": "Use clear statements such as 'Mein Rücken tut weh' and 'Ich habe Schmerzen im Bein'."},
+    {"id": "chores", "title": "Learn chores as verb-object chunks", "content": "Practice das Geschirr spülen, den Müll rausbringen, das Bad putzen, and das Zimmer aufräumen."},
+    {"id": "rules", "title": "State simple household expectations", "content": "Use modal or imperative chunks: 'Bitte mach das Fenster zu' and 'Wir müssen heute putzen'."}
+  ],
+  "tables": [
+    {"id": "health", "title": "Health Vocabulary", "columns": ["Problem", "Useful sentence", "Response"], "rows": [["Kopfschmerzen", "Ich habe Kopfschmerzen.", "Ruhe dich aus."], ["Husten", "Ich habe starken Husten.", "Trink etwas Warmes."], ["Fieber", "Sie hat Fieber.", "Sie bleibt im Bett."], ["Rückenschmerzen", "Mein Rücken tut weh.", "Geh zum Arzt."], ["Übelkeit", "Mir ist schlecht.", "Trink langsam Wasser."]]},
+    {"id": "household", "title": "Household Tasks", "columns": ["Task", "Object or place"], "rows": [["aufräumen", "das Zimmer"], ["putzen", "das Bad"], ["spülen", "das Geschirr"], ["rausbringen", "den Müll"], ["waschen", "die Wäsche"], ["zumachen", "das Fenster"]]}
+  ],
+  "patterns": ["Ich habe + symptom.", "body part + tut weh.", "Mir ist + adjective.", "object + action chunk", "Heute muss + person + task + infinitive."],
+  "verbs": ["wehtun", "husten", "nehmen", "ruhen", "putzen", "aufräumen", "spülen", "waschen", "rausbringen"],
+  "sentenceStructure": ["Use 'haben' with many symptom nouns.", "Separable household verbs split in main clauses.", "A direct object identifies what receives the household action.", "Use short sequential sentences for a problem and response."],
+  "levelProgression": [
+    {"level": "A1.2", "concepts": ["describe basic symptoms", "name common chores and home rules", "request simple practical action"]},
+    {"level": "A2", "concepts": ["describe causes, duration, and treatment", "negotiate household responsibilities"]},
+    {"level": "B1", "concepts": ["explain medical history and detailed symptoms", "discuss living arrangements and conflicts"]}
+  ],
+  "comparisons": [
+    {"topicId": "personal_pronouns_accusative", "summary": "The pronoun lesson replaces known people or objects in health and household actions: 'Ich nehme sie' or 'Ruf ihn an'."},
+    {"topicId": "a1_2_m3_requests_instructions", "summary": "The communication lesson turns problems and chores into requests, instructions, and advice."}
+  ],
+  "examples": [
+    {"id": "headache", "de": "Ich habe Kopfschmerzen und brauche Ruhe.", "en": "I have a headache and need rest."},
+    {"id": "back", "de": "Mein Rücken tut seit heute Morgen weh.", "en": "My back has hurt since this morning."},
+    {"id": "medicine", "de": "Nimm die Tablette nach dem Essen.", "en": "Take the tablet after eating."},
+    {"id": "chores", "de": "Ich spüle das Geschirr, und du bringst den Müll raus.", "en": "I wash the dishes, and you take out the rubbish."},
+    {"id": "room", "de": "Bitte räum dein Zimmer vor dem Abendessen auf.", "en": "Please tidy your room before dinner."}
+  ],
+  "commonMistakes": [
+    {"id": "pain", "wrong": "Ich bin Kopfschmerzen.", "correct": "Ich habe Kopfschmerzen.", "reason": "German uses 'haben' with this symptom noun."},
+    {"id": "separable", "wrong": "Ich aufräume das Zimmer.", "correct": "Ich räume das Zimmer auf.", "reason": "The prefix of a separable verb moves to the end in a main clause."},
+    {"id": "article", "wrong": "Bring bitte der Müll raus.", "correct": "Bring bitte den Müll raus.", "reason": "The masculine direct object uses accusative 'den'."}
+  ],
+  "specialCases": ["'Mir ist schlecht' uses a dative person and describes nausea or feeling unwell.", "'Wehtun' agrees with the painful body part: 'Der Rücken tut weh', 'Die Beine tun weh'.", "Medical emergencies require direct professional help beyond this lesson's routine language."],
+  "tips": ["Pair every symptom with one sensible response.", "Assign real household tasks on a weekly chart.", "Practice separable verbs with a visual gap between verb and prefix."],
+  "searchHints": ["Gesundheit", "Haushalt", "Kopfschmerzen", "aufräumen", "German chores"],
+  "ui": {"status": "ready", "recommendedSections": ["mentalModel", "coreRules", "tables", "patternsAndUsage", "examples", "commonMistakes", "comparisons", "levelProgression", "advancedSpecialCases"]},
+  "sourceStyle": {"origin": "LangCompass editorial lesson aligned to the Momente A1.2 M3 catalog topic", "confidence": "high", "notes": "The lesson links everyday symptoms and home tasks to concrete actions."},
+  "updatedAt": "2026-06-12"
+}

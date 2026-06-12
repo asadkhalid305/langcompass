@@ -1,0 +1,57 @@
+{
+  "id": "personal_pronouns_accusative",
+  "title": "Personal Pronouns in the Accusative",
+  "level": "A1.2",
+  "section": "grammar",
+  "topicType": "grammar",
+  "summary": "Using mich, dich, ihn, sie, es, uns, euch, sie/Sie as direct objects.",
+  "relatedTopicIds": ["accusative_case", "a1_2_m3_health_household", "a1_2_m3_requests_instructions"],
+  "lessonRefs": [{"curriculum": "Momente", "module": "M3"}],
+  "whyItMatters": "Accusative pronouns prevent repetition when a person or thing is already known. They answer whom or what an action directly affects: the doctor examines me, I call him, or we clean it.",
+  "prerequisiteTopicIds": ["accusative_case", "a1_1_m1_identity"],
+  "mentalModel": [
+    {"title": "Replace a known direct object", "content": "Start with the full noun, identify the direct object, and replace it with the matching accusative pronoun."},
+    {"title": "Only some forms visibly change", "content": "The clearest changes are ich to mich, du to dich, and er to ihn; several other forms look like the nominative."},
+    {"title": "Keep subject and object roles separate", "content": "In 'Sie sieht ihn', 'sie' performs the action and 'ihn' receives it."}
+  ],
+  "coverageChecklist": ["mich", "dich", "ihn", "sie", "es", "uns", "euch", "sie and Sie", "noun replacement", "word order"],
+  "ruleBlocks": [
+    {"id": "replace", "title": "Replace an established noun", "content": "Use a pronoun after the person or thing is clear: 'Wo ist der Arzt? Ich rufe ihn an.'"},
+    {"id": "forms", "title": "Choose the accusative form", "content": "Use mich, dich, ihn, sie, es, uns, euch, sie, and formal Sie according to the noun or person replaced."},
+    {"id": "position", "title": "Place short pronouns near the verb", "content": "In a simple sentence, the accusative pronoun normally follows the conjugated verb: 'Ich sehe ihn heute.'"},
+    {"id": "formal", "title": "Capitalize formal Sie", "content": "Formal accusative 'Sie' remains capitalized: 'Ich rufe Sie morgen an.'"}
+  ],
+  "tables": [
+    {"id": "forms", "title": "Accusative Personal Pronouns", "columns": ["Nominative", "Accusative", "English"], "rows": [["ich", "mich", "me"], ["du", "dich", "you"], ["er", "ihn", "him"], ["sie", "sie", "her"], ["es", "es", "it"], ["wir", "uns", "us"], ["ihr", "euch", "you all"], ["sie", "sie", "them"], ["Sie", "Sie", "you (formal)"]]},
+    {"id": "replacement", "title": "From Noun to Pronoun", "columns": ["Full object", "Pronoun sentence"], "rows": [["Ich rufe den Arzt an.", "Ich rufe ihn an."], ["Ich nehme die Tablette.", "Ich nehme sie."], ["Wir putzen das Bad.", "Wir putzen es."], ["Sie besucht Anna und mich.", "Sie besucht uns."]]}
+  ],
+  "patterns": ["Subject + verb + accusative pronoun", "Ich sehe ihn/sie/es.", "Kannst du mich hören?", "Wir besuchen euch.", "Ich rufe Sie an."],
+  "sentenceStructure": ["The subject performs the action; the accusative pronoun receives it.", "Short pronouns usually appear early in the middle field.", "A separable prefix still closes the clause: 'Ich rufe ihn an.'", "Formal 'Sie' is capitalized in every case."],
+  "levelProgression": [
+    {"level": "A1.2", "concepts": ["choose common accusative pronouns", "replace a known direct-object noun", "distinguish subject and object roles"]},
+    {"level": "A2", "concepts": ["combine accusative and dative objects", "manage pronoun order in longer sentences"]},
+    {"level": "B1", "concepts": ["use pronouns fluently across clause types", "control reference in extended discourse"]}
+  ],
+  "comparisons": [
+    {"topicId": "accusative_case", "summary": "The accusative-case lesson establishes direct objects; this lesson replaces those noun phrases with pronouns."},
+    {"topicId": "a1_2_m3_requests_instructions", "summary": "Requests often use pronouns for people or known objects: 'Ruf ihn an', 'Nimm sie', or 'Hör mir zu' (dative contrast later)."}
+  ],
+  "examples": [
+    {"id": "me", "de": "Der Arzt untersucht mich.", "en": "The doctor examines me."},
+    {"id": "you", "de": "Ich höre dich nicht.", "en": "I cannot hear you."},
+    {"id": "him", "de": "Paul ist krank. Ich rufe ihn an.", "en": "Paul is ill. I am calling him."},
+    {"id": "it", "de": "Das Fenster ist offen. Bitte mach es zu.", "en": "The window is open. Please close it."},
+    {"id": "formal", "de": "Ich werde Sie morgen kontaktieren.", "en": "I will contact you tomorrow."}
+  ],
+  "commonMistakes": [
+    {"id": "ich", "wrong": "Der Arzt sieht ich.", "correct": "Der Arzt sieht mich.", "reason": "The direct-object form of 'ich' is 'mich'."},
+    {"id": "er", "wrong": "Ich rufe er an.", "correct": "Ich rufe ihn an.", "reason": "The accusative form of masculine 'er' is 'ihn'."},
+    {"id": "register", "wrong": "Ich rufe sie an. (formal you)", "correct": "Ich rufe Sie an.", "reason": "Formal 'Sie' is capitalized."}
+  ],
+  "specialCases": ["Feminine 'sie', plural 'sie', and formal 'Sie' are distinguished by context and capitalization.", "Some verbs such as 'helfen' take dative rather than accusative: 'Hilf mir'.", "Pronoun order with multiple objects is developed at later levels."],
+  "tips": ["Transform full-noun sentences into pronoun sentences.", "Color-code subject and direct object.", "Drill the three visible changes: mich, dich, ihn."],
+  "searchHints": ["Akkusativpronomen", "mich dich ihn", "personal pronouns accusative", "German object pronouns"],
+  "ui": {"status": "ready", "recommendedSections": ["mentalModel", "coreRules", "tables", "patternsAndUsage", "examples", "commonMistakes", "comparisons", "levelProgression", "advancedSpecialCases"]},
+  "sourceStyle": {"origin": "LangCompass editorial lesson aligned to the Momente A1.2 M3 catalog topic", "confidence": "high", "notes": "The lesson focuses on direct-object replacement and contrasts accusative pronouns with subject forms."},
+  "updatedAt": "2026-06-12"
+}
