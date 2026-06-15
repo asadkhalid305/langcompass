@@ -109,6 +109,7 @@ const completedModules = [
       "a2_1_m1_reacting_to_suggestions",
     ],
   },
+  {level:"A2.1",module:"M2",topicIds:["a2_1_m2_sport_habits","a2_1_m2_konjunktiv_ii_advice","a2_1_m2_giving_advice"]},
   {
     level: "B1.1",
     module: "M1",
