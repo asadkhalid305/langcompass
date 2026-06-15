@@ -1,0 +1,36 @@
+{
+  "id": "a2_1_m1_deshalb",
+  "title": "Connector: deshalb",
+  "level": "A2.1",
+  "section": "grammar",
+  "topicType": "grammar",
+  "summary": "Explaining consequences and linking ideas in everyday speech.",
+  "relatedTopicIds": ["a2_1_m1_workday_events", "a2_1_m1_reacting_to_suggestions"],
+  "lessonRefs": [{"curriculum": "Momente", "module": "M1"}],
+  "whyItMatters": "Deshalb lets you connect a reason or situation to its result without repeating the full explanation.",
+  "mentalModel": [
+    {"title": "Reason first, result second", "content": "The first sentence gives the situation; deshalb introduces what follows from it."},
+    {"title": "Deshalb occupies position one", "content": "The finite verb comes immediately after deshalb in a main clause."}
+  ],
+  "ruleBlocks": [
+    {"id": "order", "title": "Use verb-second order", "content": "Say Deshalb komme ich später, not Deshalb ich komme später."},
+    {"id": "meaning", "title": "Express a consequence", "content": "Use deshalb for therefore or that is why, not to introduce the original reason."},
+    {"id": "punctuation", "title": "Link complete clauses", "content": "Use a period, semicolon, or comma where appropriate before deshalb."}
+  ],
+  "tables": [{"id": "pattern", "title": "Deshalb Sentence Pattern", "columns": ["Situation", "Consequence"], "rows": [["Der Bus hat Verspätung.", "Deshalb komme ich später."], ["Wir haben viel Arbeit.", "Deshalb verschieben wir die Pause."], ["Der Raum ist frei.", "Deshalb kann das Treffen dort stattfinden."]]}],
+  "examples": [
+    {"de": "Ich habe um neun Uhr einen Termin. Deshalb fahre ich früher los.", "en": "I have an appointment at nine. Therefore I am leaving earlier."},
+    {"de": "Die Kollegin ist krank, deshalb übernehme ich ihre Aufgabe.", "en": "The colleague is ill, so I am taking over her task."},
+    {"de": "Der Workshop war interessant. Deshalb möchte ich wieder teilnehmen.", "en": "The workshop was interesting. That is why I want to participate again."}
+  ],
+  "commonMistakes": [
+    {"wrong": "Deshalb ich bleibe zu Hause.", "correct": "Deshalb bleibe ich zu Hause.", "reason": "The finite verb stays in second position."},
+    {"wrong": "Use deshalb to mean because.", "correct": "Use weil for the reason and deshalb for the consequence.", "reason": "The connectors point in opposite logical directions."}
+  ],
+  "comparisons": [
+    {"topicId": "a2_1_m1_workday_events", "summary": "Workday changes provide natural reasons and consequences."},
+    {"topicId": "a2_1_m1_reacting_to_suggestions", "summary": "Deshalb helps justify reactions to plans."}
+  ],
+  "ui": {"status": "ready", "recommendedSections": ["mentalModel", "coreRules", "tables", "examples", "commonMistakes", "comparisons"]},
+  "updatedAt": "2026-06-15"
+}

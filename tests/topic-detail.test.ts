@@ -101,6 +101,15 @@ const completedModules = [
     ],
   },
   {
+    level: "A2.1",
+    module: "M1",
+    topicIds: [
+      "a2_1_m1_workday_events",
+      "a2_1_m1_deshalb",
+      "a2_1_m1_reacting_to_suggestions",
+    ],
+  },
+  {
     level: "B1.1",
     module: "M1",
     topicIds: [

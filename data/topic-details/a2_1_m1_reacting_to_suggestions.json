@@ -1,0 +1,36 @@
+{
+  "id": "a2_1_m1_reacting_to_suggestions",
+  "title": "Making and Reacting to Suggestions",
+  "level": "A2.1",
+  "section": "communication",
+  "topicType": "communication",
+  "summary": "Proposing ideas, reacting, persuading, and evaluating plans.",
+  "relatedTopicIds": ["a2_1_m1_workday_events", "a2_1_m1_deshalb"],
+  "lessonRefs": [{"curriculum": "Momente", "module": "M1"}],
+  "whyItMatters": "Coordinating with others requires clear suggestions, specific reactions, and reasons when a plan needs to change.",
+  "mentalModel": [
+    {"title": "Suggestion, reaction, reason", "content": "Propose one concrete action, respond clearly, and explain the response."},
+    {"title": "Improve the plan together", "content": "When you reject an idea, offer an alternative instead of ending the discussion."}
+  ],
+  "ruleBlocks": [
+    {"id": "suggest", "title": "Make a concrete suggestion", "content": "Use Wollen wir, Sollen wir, or Wir könnten with a time and action."},
+    {"id": "react", "title": "Show the degree of agreement", "content": "Distinguish enthusiastic agreement, cautious acceptance, and polite rejection."},
+    {"id": "alternative", "title": "Add an alternative", "content": "Use Vielleicht lieber or Wie wäre es stattdessen mit when the first plan does not work."}
+  ],
+  "tables": [{"id": "toolkit", "title": "Suggestion Toolkit", "columns": ["Function", "Phrase"], "rows": [["Suggest", "Wollen wir ...?"], ["Alternative", "Wir könnten auch ..."], ["Agree", "Ja, das ist eine gute Idee."], ["Hesitate", "Ich weiß nicht. Vielleicht ..."], ["Reject", "Das geht leider nicht, weil ..."], ["Replace", "Wie wäre es stattdessen mit ...?"]]}],
+  "examples": [
+    {"de": "Wollen wir die Besprechung auf Donnerstag verschieben?", "en": "Shall we move the meeting to Thursday?"},
+    {"de": "Ja, das passt gut. Am Donnerstag haben alle Zeit.", "en": "Yes, that works well. Everyone has time on Thursday."},
+    {"de": "Am Vormittag geht es leider nicht. Wie wäre es stattdessen um 14 Uhr?", "en": "Unfortunately the morning does not work. How about 2 p.m. instead?"}
+  ],
+  "commonMistakes": [
+    {"wrong": "Nein, schlecht.", "correct": "Reject politely and give a reason or alternative.", "reason": "Coordination needs actionable information."},
+    {"wrong": "Wir können treffen um zehn?", "correct": "Können wir uns um zehn treffen?", "reason": "Sich treffen is reflexive and the finite verb starts the question."}
+  ],
+  "comparisons": [
+    {"topicId": "a2_1_m1_workday_events", "summary": "The theme supplies schedules and event constraints."},
+    {"topicId": "a2_1_m1_deshalb", "summary": "Deshalb clearly states the consequence of a scheduling problem."}
+  ],
+  "ui": {"status": "ready", "recommendedSections": ["mentalModel", "coreRules", "tables", "examples", "commonMistakes", "comparisons"]},
+  "updatedAt": "2026-06-15"
+}

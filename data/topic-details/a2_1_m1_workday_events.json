@@ -1,0 +1,36 @@
+{
+  "id": "a2_1_m1_workday_events",
+  "title": "Workday and Events",
+  "level": "A2.1",
+  "section": "themes",
+  "topicType": "theme",
+  "summary": "Work routines, events, evaluation, and coordination with others.",
+  "relatedTopicIds": ["a2_1_m1_deshalb", "a2_1_m1_reacting_to_suggestions"],
+  "lessonRefs": [{"curriculum": "Momente", "module": "M1"}],
+  "whyItMatters": "Talking about schedules and events helps you coordinate tasks, explain changes, and evaluate how a workday or activity went.",
+  "mentalModel": [
+    {"title": "Build a timeline", "content": "Place appointments, tasks, breaks, and events in chronological order."},
+    {"title": "Connect plan and result", "content": "State what was planned, what changed, and what consequence followed."}
+  ],
+  "ruleBlocks": [
+    {"id": "routine", "title": "Describe recurring work", "content": "Use morgens, normalerweise, zuerst, danach, and zum Schluss with routine verbs."},
+    {"id": "event", "title": "Name event details", "content": "Include purpose, participants, place, start time, duration, and required preparation."},
+    {"id": "evaluation", "title": "Evaluate concretely", "content": "Use gelungen, stressig, praktisch, pünktlich, or chaotisch and give a reason."}
+  ],
+  "tables": [{"id": "timeline", "title": "Workday Timeline", "columns": ["Stage", "Useful language"], "rows": [["Plan", "Heute muss ich ..."], ["Sequence", "Zuerst ..., danach ..."], ["Change", "Der Termin fällt aus."], ["Result", "Deshalb ..."], ["Evaluation", "Insgesamt war ..."]]}],
+  "examples": [
+    {"de": "Morgens beantworte ich zuerst meine E-Mails.", "en": "In the morning I answer my emails first."},
+    {"de": "Die Besprechung beginnt um zehn Uhr und dauert eine Stunde.", "en": "The meeting starts at ten and lasts one hour."},
+    {"de": "Der Workshop war gut organisiert, weil alle Informationen klar waren.", "en": "The workshop was well organized because all the information was clear."}
+  ],
+  "commonMistakes": [
+    {"wrong": "List tasks without time markers.", "correct": "Use sequence words to make the order clear.", "reason": "A timeline needs visible connections."},
+    {"wrong": "Der Termin macht statt.", "correct": "Der Termin findet statt.", "reason": "Stattfinden is the fixed verb for an event taking place."}
+  ],
+  "comparisons": [
+    {"topicId": "a2_1_m1_deshalb", "summary": "Deshalb connects a situation to its consequence."},
+    {"topicId": "a2_1_m1_reacting_to_suggestions", "summary": "The communication lesson helps coordinate plans with other people."}
+  ],
+  "ui": {"status": "ready", "recommendedSections": ["mentalModel", "coreRules", "tables", "examples", "commonMistakes", "comparisons"]},
+  "updatedAt": "2026-06-15"
+}
