@@ -208,6 +208,7 @@ const completedModules = [
   {level:"B2.1",module:"M5",topicIds:["b2_1_m5_culture_media","b2_1_m5_reported_speech","b2_1_m5_reviewing_culture"]},
   {level:"B2.2",module:"M1",topicIds:["b2_2_m1_economy_globalization","b2_2_m1_function_verb_structures","b2_2_m1_negotiating_conditions"]},
   {level:"B2.2",module:"M2",topicIds:["b2_2_m2_law_privacy","b2_2_m2_subjective_modals","b2_2_m2_formal_complaints"]},
+  {level:"B2.2",module:"M3",topicIds:["b2_2_m3_health_resilience","b2_2_m3_causal_consecutive","b2_2_m3_advice_boundaries"]},
 ] as const
 
 const readJson = async (filePath: string): Promise<unknown> =>
