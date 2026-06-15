@@ -117,6 +117,7 @@ const completedModules = [
   {level:"A2.2",module:"M2",topicIds:["a2_2_m2_teamwork_life_experience","a2_2_m2_verb_preposition","a2_2_m2_cooperating"]},
   {level:"A2.2",module:"M3",topicIds:["a2_2_m3_career_change","a2_2_m3_praeteritum_review","a2_2_m3_expressing_dissatisfaction"]},
   {level:"A2.2",module:"M4",topicIds:["a2_2_m4_sustainability_engagement","a2_2_m4_relative_clauses_basic","a2_2_m4_disagreeing"]},
+  {level:"A2.2",module:"M5",topicIds:["a2_2_m5_biography_business","a2_2_m5_passive_present","a2_2_m5_talking_about_biography"]},
   {
     level: "B1.1",
     module: "M1",
