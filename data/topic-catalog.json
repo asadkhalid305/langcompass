@@ -1687,5 +1687,8 @@
   },
   {
     "id": "b2_1_m3_mediating_conflict", "title": "Mediating Conflict and Reframing Positions", "level": "B2.1", "section": "communication", "topicType": "communication", "summary": "Clarifying interests, reframing conflict, and developing shared options.", "relatedTopicIds": ["b2_1_m3_diversity_cohesion", "b2_1_m3_concessive_connectors"], "lessonRefs": [{"curriculum": "LangCompass", "module": "M3"}]
-  }
+  },
+  {"id":"b2_1_m4_climate_consumption","title":"Climate, Resources, and Sustainable Consumption","level":"B2.1","section":"themes","topicType":"theme","summary":"Climate policy, resource use, consumption, circular economy, and behavioral change.","relatedTopicIds":["b2_1_m4_passive_alternatives","b2_1_m4_evaluating_measures"],"lessonRefs":[{"curriculum":"LangCompass","module":"M4"}]},
+  {"id":"b2_1_m4_passive_alternatives","title":"Alternatives to the Passive Voice","level":"B2.1","section":"grammar","topicType":"grammar","summary":"Using sich lassen, sein plus zu, and -bar/-lich forms to express possibility and necessity.","relatedTopicIds":["b2_1_m4_climate_consumption","b2_1_m4_evaluating_measures"],"lessonRefs":[{"curriculum":"LangCompass","module":"M4"}]},
+  {"id":"b2_1_m4_evaluating_measures","title":"Proposing and Evaluating Measures","level":"B2.1","section":"communication","topicType":"communication","summary":"Developing proposals, defining criteria, and evaluating likely effects and tradeoffs.","relatedTopicIds":["b2_1_m4_climate_consumption","b2_1_m4_passive_alternatives"],"lessonRefs":[{"curriculum":"LangCompass","module":"M4"}]}
 ]

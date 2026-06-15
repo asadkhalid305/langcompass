@@ -204,6 +204,7 @@ const completedModules = [
     topicIds: ["b2_1_m2_science_ai", "b2_1_m2_participial_attributes", "b2_1_m2_explaining_systems"],
   },
   {level:"B2.1",module:"M3",topicIds:["b2_1_m3_diversity_cohesion","b2_1_m3_concessive_connectors","b2_1_m3_mediating_conflict"]},
+  {level:"B2.1",module:"M4",topicIds:["b2_1_m4_climate_consumption","b2_1_m4_passive_alternatives","b2_1_m4_evaluating_measures"]},
 ] as const
 
 const readJson = async (filePath: string): Promise<unknown> =>
