@@ -147,6 +147,15 @@ const completedModules = [
   },
   {
     level: "B1.2",
+    module: "M1",
+    topicIds: [
+      "b1_2_m1_animals",
+      "b1_2_m1_two_part_connectors",
+      "b1_2_m1_describing_animals",
+    ],
+  },
+  {
+    level: "B1.2",
     module: "M2",
     topicIds: [
       "b1_2_m2_job_applications",
