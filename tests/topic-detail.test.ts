@@ -110,6 +110,15 @@ const completedModules = [
     ],
   },
   {
+    level: "B1.1",
+    module: "M2",
+    topicIds: [
+      "b1_1_m2_study_abroad",
+      "b1_1_m2_genitive_prepositions",
+      "b1_1_m2_semi_formal_email",
+    ],
+  },
+  {
     level: "B1.2",
     module: "M2",
     topicIds: [
