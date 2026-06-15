@@ -199,6 +199,10 @@ const completedModules = [
       "b2_1_m1_moderating_discussions",
     ],
   },
+  {
+    level: "B2.1", module: "M2",
+    topicIds: ["b2_1_m2_science_ai", "b2_1_m2_participial_attributes", "b2_1_m2_explaining_systems"],
+  },
 ] as const
 
 const readJson = async (filePath: string): Promise<unknown> =>

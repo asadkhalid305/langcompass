@@ -1669,5 +1669,14 @@
     "summary": "Structuring group discussions, managing turns, and summarizing competing positions.",
     "relatedTopicIds": ["b2_1_m1_future_work", "b2_1_m1_nominalization"],
     "lessonRefs": [{"curriculum": "LangCompass", "module": "M1"}]
+  },
+  {
+    "id": "b2_1_m2_science_ai", "title": "Science, Technology, and Artificial Intelligence", "level": "B2.1", "section": "themes", "topicType": "theme", "summary": "Scientific evidence, emerging technologies, artificial intelligence, and responsible innovation.", "relatedTopicIds": ["b2_1_m2_participial_attributes", "b2_1_m2_explaining_systems"], "lessonRefs": [{"curriculum": "LangCompass", "module": "M2"}]
+  },
+  {
+    "id": "b2_1_m2_participial_attributes", "title": "Participial Attributes", "level": "B2.1", "section": "grammar", "topicType": "grammar", "summary": "Using present and past participles as expanded adjective attributes.", "relatedTopicIds": ["b2_1_m2_science_ai", "b2_1_m2_explaining_systems"], "lessonRefs": [{"curriculum": "LangCompass", "module": "M2"}]
+  },
+  {
+    "id": "b2_1_m2_explaining_systems", "title": "Explaining Complex Systems Clearly", "level": "B2.1", "section": "communication", "topicType": "communication", "summary": "Defining technical concepts, explaining processes, and adapting explanations to an audience.", "relatedTopicIds": ["b2_1_m2_science_ai", "b2_1_m2_participial_attributes"], "lessonRefs": [{"curriculum": "LangCompass", "module": "M2"}]
   }
 ]
