@@ -127,6 +127,15 @@ const completedModules = [
       "b1_2_m3_relativizing_statements",
     ],
   },
+  {
+    level: "B1.2",
+    module: "M4",
+    topicIds: [
+      "b1_2_m4_art_health_training",
+      "b1_2_m4_passive_extended",
+      "b1_2_m4_presenting_art",
+    ],
+  },
 ] as const
 
 const readJson = async (filePath: string): Promise<unknown> =>
