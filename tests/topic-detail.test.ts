@@ -114,6 +114,7 @@ const completedModules = [
   {level:"A2.1",module:"M4",topicIds:["a2_1_m4_city_mobility","a2_1_m4_wechselpraepositionen","a2_1_m4_describing_routes"]},
   {level:"A2.1",module:"M5",topicIds:["a2_1_m5_travel_holidays","a2_1_m5_wishes_haette_waere","a2_1_m5_expressing_preferences"]},
   {level:"A2.2",module:"M1",topicIds:["a2_2_m1_media_entertainment","a2_2_m1_reflexive_verbs","a2_2_m1_evaluating_series"]},
+  {level:"A2.2",module:"M2",topicIds:["a2_2_m2_teamwork_life_experience","a2_2_m2_verb_preposition","a2_2_m2_cooperating"]},
   {
     level: "B1.1",
     module: "M1",
