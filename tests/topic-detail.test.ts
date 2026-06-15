@@ -128,6 +128,15 @@ const completedModules = [
     ],
   },
   {
+    level: "B1.1",
+    module: "M4",
+    topicIds: [
+      "b1_1_m4_products_functions",
+      "b1_1_m4_relative_clauses_dative",
+      "b1_1_m4_describing_functions",
+    ],
+  },
+  {
     level: "B1.2",
     module: "M2",
     topicIds: [
