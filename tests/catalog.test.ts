@@ -10,6 +10,7 @@ const catalogPath = path.join(repoRoot, "data", "topic-catalog.json")
 const detailsDir = path.join(repoRoot, "data", "topic-details")
 const expectedSections = ["themes", "grammar", "communication"] as const
 const expectedModules = ["M1", "M2", "M3", "M4", "M5"] as const
+const expectedLevels = ["A1.1", "A1.2", "A2.1", "A2.2", "B1.1", "B1.2", "B2.1", "B2.2"] as const
 
 const readJson = async (filePath: string): Promise<unknown> =>
   JSON.parse(await readFile(filePath, "utf8")) as unknown
@@ -20,15 +21,15 @@ test("catalog modules contain one topic in every section", async () => {
   const topics = await loadCatalog()
   const ids = new Set(topics.map((topic) => topic.id))
 
+  assert.equal(topics.length, 120)
   assert.equal(ids.size, topics.length)
+  assert.deepEqual(new Set(topics.map((topic) => topic.level)), new Set(expectedLevels))
 
-  for (const level of new Set(topics.map((topic) => topic.level))) {
+  for (const level of expectedLevels) {
     const levelTopics = topics.filter((topic) => topic.level === level)
 
     for (const moduleId of expectedModules) {
       const moduleTopics = levelTopics.filter((topic) => topic.lessonRefs?.some((reference) => reference.module === moduleId))
-      if (moduleTopics.length === 0) continue
-
       assert.equal(moduleTopics.length, 3, `${level} ${moduleId} should contain three topics`)
       assert.deepEqual(
         new Set(moduleTopics.map((topic) => topic.section)),

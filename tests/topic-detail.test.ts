@@ -210,6 +210,7 @@ const completedModules = [
   {level:"B2.2",module:"M2",topicIds:["b2_2_m2_law_privacy","b2_2_m2_subjective_modals","b2_2_m2_formal_complaints"]},
   {level:"B2.2",module:"M3",topicIds:["b2_2_m3_health_resilience","b2_2_m3_causal_consecutive","b2_2_m3_advice_boundaries"]},
   {level:"B2.2",module:"M4",topicIds:["b2_2_m4_history_memory","b2_2_m4_expanded_attributes","b2_2_m4_comparing_sources"]},
+  {level:"B2.2",module:"M5",topicIds:["b2_2_m5_research_ethics","b2_2_m5_complex_conditionals","b2_2_m5_synthesizing_debate"]},
 ] as const
 
 const readJson = async (filePath: string): Promise<unknown> =>
