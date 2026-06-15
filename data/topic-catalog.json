@@ -1678,5 +1678,14 @@
   },
   {
     "id": "b2_1_m2_explaining_systems", "title": "Explaining Complex Systems Clearly", "level": "B2.1", "section": "communication", "topicType": "communication", "summary": "Defining technical concepts, explaining processes, and adapting explanations to an audience.", "relatedTopicIds": ["b2_1_m2_science_ai", "b2_1_m2_participial_attributes"], "lessonRefs": [{"curriculum": "LangCompass", "module": "M2"}]
+  },
+  {
+    "id": "b2_1_m3_diversity_cohesion", "title": "Diversity, Migration, and Social Cohesion", "level": "B2.1", "section": "themes", "topicType": "theme", "summary": "Diversity, migration, belonging, participation, and social cohesion.", "relatedTopicIds": ["b2_1_m3_concessive_connectors", "b2_1_m3_mediating_conflict"], "lessonRefs": [{"curriculum": "LangCompass", "module": "M3"}]
+  },
+  {
+    "id": "b2_1_m3_concessive_connectors", "title": "Advanced Concessive and Adversative Connectors", "level": "B2.1", "section": "grammar", "topicType": "grammar", "summary": "Expressing concession and contrast with obwohl, selbst wenn, während, and wohingegen.", "relatedTopicIds": ["b2_1_m3_diversity_cohesion", "b2_1_m3_mediating_conflict"], "lessonRefs": [{"curriculum": "LangCompass", "module": "M3"}]
+  },
+  {
+    "id": "b2_1_m3_mediating_conflict", "title": "Mediating Conflict and Reframing Positions", "level": "B2.1", "section": "communication", "topicType": "communication", "summary": "Clarifying interests, reframing conflict, and developing shared options.", "relatedTopicIds": ["b2_1_m3_diversity_cohesion", "b2_1_m3_concessive_connectors"], "lessonRefs": [{"curriculum": "LangCompass", "module": "M3"}]
   }
 ]
