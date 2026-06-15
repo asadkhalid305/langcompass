@@ -100,6 +100,15 @@ const completedModules = [
       "a1_2_m5_congratulating",
     ],
   },
+  {
+    level: "B1.1",
+    module: "M1",
+    topicIds: [
+      "b1_1_m1_politics_society",
+      "b1_1_m1_infinitive_zu",
+      "b1_1_m1_stating_opinion",
+    ],
+  },
 ] as const
 
 const readJson = async (filePath: string): Promise<unknown> =>

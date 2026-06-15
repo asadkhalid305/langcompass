@@ -1,0 +1,47 @@
+{
+  "id": "b1_1_m1_politics_society",
+  "title": "Politics and Society",
+  "level": "B1.1",
+  "section": "themes",
+  "topicType": "theme",
+  "summary": "Engagement, politics, participation, and social discussion.",
+  "relatedTopicIds": ["b1_1_m1_infinitive_zu", "b1_1_m1_stating_opinion"],
+  "lessonRefs": [{"curriculum": "Momente", "module": "M1"}],
+  "whyItMatters": "Politics and society vocabulary helps learners follow everyday news, discuss public decisions, and describe how citizens participate. The goal is not specialist terminology but clear language for institutions, rights, responsibilities, and social questions.",
+  "prerequisiteTopicIds": ["a1_2_m4_comparison"],
+  "mentalModel": [
+    {"title": "Separate institution, issue, and action", "content": "Identify who makes or influences a decision, which public issue is involved, and how people respond."},
+    {"title": "Move from fact to viewpoint", "content": "First summarize the situation neutrally, then mark an opinion and support it with a reason or example."},
+    {"title": "Map participation options", "content": "Connect civic verbs to realistic actions: wählen, sich informieren, diskutieren, demonstrieren, and sich engagieren."}
+  ],
+  "coverageChecklist": ["government and elections", "rights and duties", "social issues", "public services", "participation", "news and debate"],
+  "ruleBlocks": [
+    {"id": "institutions", "title": "Name core civic actors", "content": "Use terms such as die Regierung, das Parlament, die Partei, die Gemeinde, die Bürgerinnen und Bürger, and the media."},
+    {"id": "issues", "title": "Organize issues by public impact", "content": "Group vocabulary around education, housing, transport, environment, equality, and social security."},
+    {"id": "participation", "title": "Describe ways to participate", "content": "Use sich informieren, wählen, Mitglied werden, eine Petition unterschreiben, and sich ehrenamtlich engagieren."},
+    {"id": "evidence", "title": "Support broad statements", "content": "Add a concrete example, source, or consequence instead of relying on absolute claims."}
+  ],
+  "tables": [
+    {"id": "civic_vocabulary", "title": "Civic and Social Vocabulary", "columns": ["Area", "Key language", "Example"], "rows": [["Institutions", "Regierung, Parlament, Gemeinde", "Die Gemeinde plant ein Jugendzentrum."], ["Participation", "Wahl, Petition, Ehrenamt", "Viele Menschen engagieren sich ehrenamtlich."], ["Rights", "Recht, Freiheit, Gleichheit", "Alle haben das Recht auf Bildung."], ["Issues", "Wohnraum, Verkehr, Umwelt", "Bezahlbarer Wohnraum ist ein wichtiges Thema."], ["Debate", "Meinung, Argument, Kompromiss", "Die Parteien suchen einen Kompromiss."]]},
+    {"id": "issue_map", "title": "From Issue to Response", "columns": ["Issue", "Possible public response"], "rows": [["Zu wenig Busse", "den Nahverkehr ausbauen"], ["Hohe Mieten", "mehr Wohnungen bauen"], ["Plastikmüll", "Verpackungen reduzieren"], ["Wenig Begegnung", "öffentliche Treffpunkte schaffen"]]}
+  ],
+  "patterns": ["Es geht um + accusative.", "Ein wichtiges Thema ist ...", "Die Regierung/Gemeinde plant, ...", "Bürger können sich engagieren, indem ..."],
+  "verbs": ["wählen", "regieren", "entscheiden", "diskutieren", "fordern", "unterstützen", "sich engagieren", "verändern"],
+  "sentenceStructure": ["Use neutral reporting before evaluation.", "Nominal political terms often combine with functional verbs.", "Use connectors to show cause, contrast, and consequence.", "Avoid unsupported generalizations about social groups."],
+  "levelProgression": [{"level": "B1.1", "concepts": ["describe civic institutions and issues", "explain participation", "support a social viewpoint"]}, {"level": "B2", "concepts": ["analyze policy arguments", "evaluate sources and competing interests"]}],
+  "comparisons": [{"topicId": "b1_1_m1_infinitive_zu", "summary": "The grammar lesson supports plans and evaluations such as 'Die Stadt plant, mehr Wohnungen zu bauen'."}, {"topicId": "b1_1_m1_stating_opinion", "summary": "The communication lesson structures evidence-based discussion of these issues."}],
+  "examples": [
+    {"id": "housing", "de": "In vielen Städten ist bezahlbarer Wohnraum ein wichtiges politisches Thema.", "en": "In many cities, affordable housing is an important political issue."},
+    {"id": "election", "de": "Bei einer Wahl entscheiden Bürgerinnen und Bürger über ihre Vertreter.", "en": "In an election, citizens decide on their representatives."},
+    {"id": "participation", "de": "Man kann sich auch außerhalb von Parteien gesellschaftlich engagieren.", "en": "People can also participate socially outside political parties."},
+    {"id": "transport", "de": "Die Gemeinde möchte den öffentlichen Verkehr verbessern.", "en": "The municipality wants to improve public transport."},
+    {"id": "debate", "de": "In der Diskussion wurden verschiedene Lösungen vorgeschlagen.", "en": "Various solutions were proposed in the discussion."}
+  ],
+  "commonMistakes": [{"id": "absolute", "wrong": "Alle Politiker denken nur an sich.", "correct": "Mark the statement as an opinion and support a narrower claim.", "reason": "Absolute generalizations weaken a discussion."}, {"id": "fact_opinion", "wrong": "Present a personal evaluation as an established fact.", "correct": "Use opinion markers and name evidence.", "reason": "The listener should be able to distinguish report from viewpoint."}, {"id": "false_friend", "wrong": "die Politik = policy only", "correct": "Die Politik can mean politics broadly; use specific compounds for policy areas.", "reason": "The German term has a wider everyday scope."}],
+  "specialCases": ["Institutional structures and terminology vary across German-speaking countries.", "Gender-inclusive forms vary in writing and speech; this lesson uses clear paired or neutral forms.", "Political vocabulary should be practiced with multiple perspectives and reliable sources."],
+  "tips": ["Summarize one local issue in three neutral sentences.", "Build word families such as wählen, die Wahl, der Wähler/die Wählerin.", "For every opinion, add one reason and one example."],
+  "searchHints": ["Politik", "Gesellschaft", "Wahl", "Bürger", "German civic vocabulary"],
+  "ui": {"status": "ready", "recommendedSections": ["mentalModel", "coreRules", "tables", "patternsAndUsage", "examples", "commonMistakes", "comparisons", "levelProgression", "advancedSpecialCases"]},
+  "sourceStyle": {"origin": "LangCompass editorial lesson aligned to the Momente B1.1 M1 catalog topic", "confidence": "high", "notes": "The lesson emphasizes civic literacy, neutral reporting, and supported viewpoints."},
+  "updatedAt": "2026-06-15"
+}

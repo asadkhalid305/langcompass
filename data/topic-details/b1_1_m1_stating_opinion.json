@@ -1,0 +1,47 @@
+{
+  "id": "b1_1_m1_stating_opinion",
+  "title": "Stating Opinion, Agreeing, and Disagreeing",
+  "level": "B1.1",
+  "section": "communication",
+  "topicType": "communication",
+  "summary": "Joining discussions, taking a stance, and managing turn-taking.",
+  "relatedTopicIds": ["b1_1_m1_politics_society", "b1_1_m1_infinitive_zu"],
+  "lessonRefs": [{"curriculum": "Momente", "module": "M1"}],
+  "whyItMatters": "B1 discussions require more than saying yes or no. A strong contribution marks a viewpoint, gives a reason and example, responds to another argument, and leaves room for qualification or compromise.",
+  "prerequisiteTopicIds": ["a1_2_m4_describing_people"],
+  "mentalModel": [
+    {"title": "Claim, reason, example", "content": "Build each opinion as a short argument rather than an isolated judgment."},
+    {"title": "Respond to the idea, not the person", "content": "Name the point you accept or question and avoid personal labels."},
+    {"title": "Agreement has degrees", "content": "Choose full agreement, partial agreement, doubt, or disagreement and explain the boundary."}
+  ],
+  "coverageChecklist": ["opinion markers", "reasons", "examples", "agreement", "partial agreement", "polite disagreement", "clarification", "compromise"],
+  "ruleBlocks": [
+    {"id": "opinion", "title": "Mark the viewpoint", "content": "Use 'Meiner Meinung nach', 'Ich bin der Ansicht, dass', or 'Ich halte es für wichtig, ... zu ...'."},
+    {"id": "support", "title": "Add reason and evidence", "content": "Continue with 'weil', 'denn', or 'zum Beispiel' and keep the support relevant to the claim."},
+    {"id": "respond", "title": "Show exactly what you accept", "content": "Use 'Da stimme ich dir zu' or 'In diesem Punkt hast du recht' before adding your own perspective."},
+    {"id": "disagree", "title": "Disagree constructively", "content": "Use 'Das sehe ich anders', 'Ich bin nicht ganz überzeugt', or 'Einerseits ..., andererseits ...'."}
+  ],
+  "tables": [
+    {"id": "toolkit", "title": "Conversation Toolkit", "columns": ["Function", "Phrase"], "rows": [["State opinion", "Meiner Meinung nach ..."], ["Support", "Der wichtigste Grund dafür ist ..."], ["Example", "Ein gutes Beispiel dafür ist ..."], ["Agree", "Da stimme ich dir/Ihnen völlig zu."], ["Partly agree", "Grundsätzlich ja, aber ..."], ["Disagree", "Das sehe ich anders, weil ..."], ["Clarify", "Meinst du damit, dass ...?"], ["Compromise", "Vielleicht können wir uns darauf einigen, dass ..."]]},
+    {"id": "argument", "title": "A Complete Discussion Turn", "columns": ["Step", "Example"], "rows": [["Claim", "Ich halte mehr Busverbindungen für sinnvoll."], ["Reason", "Viele Menschen haben kein Auto."], ["Example", "In meinem Stadtteil fährt abends nur ein Bus."], ["Conclusion", "Deshalb sollte die Stadt das Angebot ausbauen."]]}
+  ],
+  "patterns": ["Meiner Meinung nach + verb-second clause", "Ich denke, dass + verb-final clause", "Ich halte es für + adjective + zu-infinitive", "Da stimme ich ... zu.", "Das sehe ich anders, weil ..."],
+  "verbs": ["meinen", "denken", "finden", "zustimmen", "widersprechen", "begründen", "überzeugen", "sich einigen"],
+  "sentenceStructure": ["Signal whether a statement is fact, report, or opinion.", "Give one focused reason before adding examples.", "Refer explicitly to the previous speaker's point.", "Use concession to show nuance before disagreement."],
+  "levelProgression": [{"level": "B1.1", "concepts": ["state and justify an opinion", "agree or disagree with nuance", "seek clarification and compromise"]}, {"level": "B2", "concepts": ["evaluate counterarguments", "structure extended formal debate"]}],
+  "comparisons": [{"topicId": "b1_1_m1_politics_society", "summary": "The theme lesson supplies issues that benefit from balanced public discussion."}, {"topicId": "b1_1_m1_infinitive_zu", "summary": "Infinitive clauses support evaluations such as 'Ich halte es für wichtig, wählen zu gehen'."}],
+  "examples": [
+    {"id": "opinion", "de": "Meiner Meinung nach sollte die Stadt mehr in den öffentlichen Verkehr investieren.", "en": "In my opinion, the city should invest more in public transport."},
+    {"id": "agree", "de": "Da stimme ich dir zu, besonders beim Thema bezahlbarer Wohnraum.", "en": "I agree with you, especially on affordable housing."},
+    {"id": "partial", "de": "Grundsätzlich hast du recht, aber die Lösung ist wahrscheinlich zu teuer.", "en": "Basically you are right, but the solution is probably too expensive."},
+    {"id": "disagree", "de": "Das sehe ich anders, weil auch kleinere Gemeinden gute Angebote brauchen.", "en": "I see that differently because smaller municipalities also need good services."},
+    {"id": "compromise", "de": "Vielleicht können wir uns darauf einigen, zuerst ein Pilotprojekt zu starten.", "en": "Perhaps we can agree to start a pilot project first."}
+  ],
+  "commonMistakes": [{"id": "unsupported", "wrong": "Das ist schlecht.", "correct": "State what is problematic and give a reason or example.", "reason": "An evaluation alone is not an argument."}, {"id": "personal", "wrong": "Du verstehst das nicht.", "correct": "Ich bin von diesem Argument noch nicht überzeugt.", "reason": "Respond to the claim rather than attacking the speaker."}, {"id": "agreement", "wrong": "Ich bin einverstanden dich.", "correct": "Ich stimme dir zu. / Ich bin mit dir einverstanden.", "reason": "'Zustimmen' takes dative; 'einverstanden' uses 'mit'."}],
+  "specialCases": ["'Meiner Meinung nach' is followed by normal verb-second word order.", "Formal discussions use 'Ihnen' and more distanced formulations.", "Strong certainty markers should match the available evidence."],
+  "tips": ["Use a four-line claim-reason-example-conclusion card.", "Practice one full, one partial, and one negative response.", "Summarize the previous point before challenging it."],
+  "searchHints": ["Meinung äußern", "zustimmen widersprechen", "Meiner Meinung nach", "German discussion"],
+  "ui": {"status": "ready", "recommendedSections": ["mentalModel", "coreRules", "tables", "patternsAndUsage", "examples", "commonMistakes", "comparisons", "levelProgression", "advancedSpecialCases"]},
+  "sourceStyle": {"origin": "LangCompass editorial lesson aligned to the Momente B1.1 M1 catalog topic", "confidence": "high", "notes": "The lesson treats discussion as supported claims, targeted responses, and constructive compromise."},
+  "updatedAt": "2026-06-15"
+}

@@ -1,0 +1,46 @@
+{
+  "id": "b1_1_m1_infinitive_zu",
+  "title": "Infinitive with zu",
+  "level": "B1.1",
+  "section": "grammar",
+  "topicType": "grammar",
+  "summary": "Expressing plans, intentions, necessity, and purpose with infinitive constructions.",
+  "relatedTopicIds": ["b1_1_m1_politics_society", "b1_1_m1_stating_opinion"],
+  "lessonRefs": [{"curriculum": "Momente", "module": "M1"}],
+  "whyItMatters": "Infinitive clauses with 'zu' compress plans, intentions, evaluations, and recommendations without repeating the subject. They are common in public discussion, formal writing, and everyday explanations.",
+  "prerequisiteTopicIds": ["a1_2_m2_werden_wollen"],
+  "mentalModel": [
+    {"title": "One subject, two actions", "content": "Use an infinitive clause when the understood subject of the second action is the same as or controlled by an element in the main clause."},
+    {"title": "The infinitive group closes the clause", "content": "Place 'zu' with the infinitive at the end: 'Die Stadt plant, mehr Wohnungen zu bauen.'"},
+    {"title": "Keep inseparable and separable forms distinct", "content": "Use zu verstehen but teilzunehmen and vorzuschlagen."}
+  ],
+  "coverageChecklist": ["verbs plus zu", "adjectives plus zu", "nouns plus zu", "separable verbs", "um ... zu", "verbs without zu"],
+  "ruleBlocks": [
+    {"id": "triggers", "title": "Use zu after common triggers", "content": "Frequent triggers include versuchen, planen, hoffen, vergessen, die Möglichkeit haben, and es ist wichtig."},
+    {"id": "placement", "title": "Place zu directly with the infinitive", "content": "Use 'zu machen' with simple verbs and insert 'zu' inside separable verbs: 'mitzumachen'."},
+    {"id": "purpose", "title": "Use um ... zu for purpose", "content": "When the subject is shared, express a goal with 'um ... zu': 'Sie informiert sich, um besser zu entscheiden.'"},
+    {"id": "exceptions", "title": "Do not use zu after modal verbs and selected verbs", "content": "Modal verbs, lassen, sehen, and hören normally take a bare infinitive in these patterns."}
+  ],
+  "tables": [
+    {"id": "triggers", "title": "Common Infinitive-Clause Triggers", "columns": ["Trigger", "Example"], "rows": [["planen", "Die Regierung plant, das Gesetz zu ändern."], ["versuchen", "Wir versuchen, einen Kompromiss zu finden."], ["es ist wichtig", "Es ist wichtig, wählen zu gehen."], ["die Möglichkeit haben", "Alle sollten die Möglichkeit haben, teilzunehmen."], ["um ... zu", "Sie liest die Zeitung, um informiert zu sein."]]},
+    {"id": "forms", "title": "Placement of zu", "columns": ["Verb type", "Infinitive form"], "rows": [["simple", "machen → zu machen"], ["inseparable prefix", "verstehen → zu verstehen"], ["separable prefix", "teilnehmen → teilzunehmen"], ["separable prefix", "vorschlagen → vorzuschlagen"]]}
+  ],
+  "patterns": ["verb/adjective/noun + comma + ... zu + infinitive", "um + ... + zu + infinitive", "separable prefix + zu + verb stem"],
+  "sentenceStructure": ["The infinitive group usually follows the main clause.", "A comma is required with 'um ... zu' and is standard or required in several expanded infinitive groups.", "The infinitive stands at the end of its group.", "Use a finite subordinate clause when the subjects differ."],
+  "levelProgression": [{"level": "B1.1", "concepts": ["form common zu-infinitive clauses", "use um ... zu for shared-subject purpose", "handle separable verbs"]}, {"level": "B2", "concepts": ["control expanded infinitive groups", "choose between infinitive and dass clauses stylistically"]}],
+  "comparisons": [{"topicId": "b1_1_m1_politics_society", "summary": "Civic plans and participation provide authentic infinitive-clause contexts."}, {"topicId": "b1_1_m1_stating_opinion", "summary": "Opinion language frequently evaluates actions with phrases such as 'Es ist sinnvoll, ... zu ...'."}],
+  "examples": [
+    {"id": "plan", "de": "Die Stadt plant, ein neues Jugendzentrum zu bauen.", "en": "The city plans to build a new youth center."},
+    {"id": "important", "de": "Es ist wichtig, verschiedene Meinungen zu hören.", "en": "It is important to hear different opinions."},
+    {"id": "separable", "de": "Viele Menschen versuchen, an der Diskussion teilzunehmen.", "en": "Many people try to participate in the discussion."},
+    {"id": "purpose", "de": "Ich lese mehrere Quellen, um mich gut zu informieren.", "en": "I read several sources in order to inform myself well."},
+    {"id": "different_subject", "de": "Ich hoffe, dass die Regierung eine Lösung findet.", "en": "I hope that the government finds a solution.", "note": "A dass-clause makes the different subject explicit."}
+  ],
+  "commonMistakes": [{"id": "separable", "wrong": "zu teilnehmen", "correct": "teilzunehmen", "reason": "'Zu' enters between the separable prefix and verb stem."}, {"id": "modal", "wrong": "Wir müssen zu handeln.", "correct": "Wir müssen handeln.", "reason": "Modal verbs take a bare infinitive."}, {"id": "subject", "wrong": "Use um ... zu when the two clauses have different subjects.", "correct": "Use damit or another finite clause when subjects differ.", "reason": "The understood subject of an um-zu clause normally matches the main-clause subject."}],
+  "specialCases": ["Comma rules depend on the trigger and structure; 'um ... zu' always takes a comma.", "'Brauchen' with 'nicht/nur' can behave like a modal in colloquial and standard patterns.", "A dass-clause may be clearer when the agent must be explicit."],
+  "tips": ["Underline the controller of the infinitive action.", "Practice simple and separable verbs in pairs.", "Transform purpose clauses between 'um ... zu' and 'damit'."],
+  "searchHints": ["Infinitiv mit zu", "um zu", "teilzunehmen", "German infinitive clause"],
+  "ui": {"status": "ready", "recommendedSections": ["mentalModel", "coreRules", "tables", "patternsAndUsage", "examples", "commonMistakes", "comparisons", "levelProgression", "advancedSpecialCases"]},
+  "sourceStyle": {"origin": "LangCompass editorial lesson aligned to the Momente B1.1 M1 catalog topic", "confidence": "high", "notes": "The lesson prioritizes trigger patterns, subject control, separable forms, and purpose clauses."},
+  "updatedAt": "2026-06-15"
+}
