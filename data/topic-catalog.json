@@ -1639,5 +1639,35 @@
         "module": "M5"
       }
     ]
+  },
+  {
+    "id": "b2_1_m1_future_work",
+    "title": "Future of Work and Digital Transformation",
+    "level": "B2.1",
+    "section": "themes",
+    "topicType": "theme",
+    "summary": "Automation, digital transformation, changing professions, and future workplace models.",
+    "relatedTopicIds": ["b2_1_m1_nominalization", "b2_1_m1_moderating_discussions"],
+    "lessonRefs": [{"curriculum": "LangCompass", "module": "M1"}]
+  },
+  {
+    "id": "b2_1_m1_nominalization",
+    "title": "Nominalization and Verbal Alternatives",
+    "level": "B2.1",
+    "section": "grammar",
+    "topicType": "grammar",
+    "summary": "Transforming between verbal and nominal styles in formal and professional German.",
+    "relatedTopicIds": ["b2_1_m1_future_work", "b2_1_m1_moderating_discussions"],
+    "lessonRefs": [{"curriculum": "LangCompass", "module": "M1"}]
+  },
+  {
+    "id": "b2_1_m1_moderating_discussions",
+    "title": "Moderating Discussions and Summarizing Positions",
+    "level": "B2.1",
+    "section": "communication",
+    "topicType": "communication",
+    "summary": "Structuring group discussions, managing turns, and summarizing competing positions.",
+    "relatedTopicIds": ["b2_1_m1_future_work", "b2_1_m1_nominalization"],
+    "lessonRefs": [{"curriculum": "LangCompass", "module": "M1"}]
   }
 ]

@@ -190,6 +190,15 @@ const completedModules = [
       "b1_2_m5_consensus",
     ],
   },
+  {
+    level: "B2.1",
+    module: "M1",
+    topicIds: [
+      "b2_1_m1_future_work",
+      "b2_1_m1_nominalization",
+      "b2_1_m1_moderating_discussions",
+    ],
+  },
 ] as const
 
 const readJson = async (filePath: string): Promise<unknown> =>
@@ -204,7 +213,7 @@ test("completed modules contain ready theme, grammar, and communication lessons"
         topic.level === completedModule.level &&
         topic.lessonRefs?.some(
           (reference) =>
-            reference.curriculum === "Momente" &&
+            reference.curriculum === (completedModule.level.startsWith("B2") ? "LangCompass" : "Momente") &&
             reference.module === completedModule.module,
         ),
     )
