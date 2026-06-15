@@ -119,6 +119,15 @@ const completedModules = [
     ],
   },
   {
+    level: "B1.1",
+    module: "M3",
+    topicIds: [
+      "b1_1_m3_work_satisfaction",
+      "b1_1_m3_temporal_connectors",
+      "b1_1_m3_describing_statistics",
+    ],
+  },
+  {
     level: "B1.2",
     module: "M2",
     topicIds: [
