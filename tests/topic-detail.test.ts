@@ -137,6 +137,15 @@ const completedModules = [
     ],
   },
   {
+    level: "B1.1",
+    module: "M5",
+    topicIds: [
+      "b1_1_m5_food_preparation",
+      "b1_1_m5_sodass",
+      "b1_1_m5_recommending_dishes",
+    ],
+  },
+  {
     level: "B1.2",
     module: "M2",
     topicIds: [
