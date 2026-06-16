@@ -32,5 +32,5 @@
     {"topicId": "a2_1_m1_reacting_to_suggestions", "summary": "The communication lesson helps coordinate plans with other people."}
   ],
   "ui": {"status": "ready", "recommendedSections": ["mentalModel", "coreRules", "tables", "examples", "commonMistakes", "comparisons"]},
-  "updatedAt": "2026-06-15"
+  "sourceStyle":{"origin":"LangCompass editorial lesson aligned to the Momente A2.1 M1 catalog topic","confidence":"medium","notes":"Reviewed against CEFR/Goethe DaF level expectations and standard German grammar references; no external source text is copied."},"updatedAt": "2026-06-15"
 }

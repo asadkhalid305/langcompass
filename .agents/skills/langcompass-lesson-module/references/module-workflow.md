@@ -13,3 +13,14 @@ For each topic, verify:
 - examples are practical and level-appropriate
 - prerequisites, relationships, and comparisons resolve
 - the metadata-only fallback remains unaffected for other topics
+
+## Editorial Quality Rubric
+
+Use CEFR/Council of Europe descriptors for learner outcomes, Goethe-Institut DaF framing for practical A1-C2 expectations, and standard German grammar references such as IDS grammis or Duden when checking rule claims.
+
+- `themes` lessons build useful vocabulary fields, pragmatic context, and safe cultural framing. They should not behave like grammar lessons with labels swapped.
+- `grammar` lessons state rules narrowly, name common learner traps, include natural examples, and avoid absolute claims where German usage has register or context variation.
+- `communication` lessons model interaction moves, register choices, repair strategies, and realistic spoken or written phrases.
+- Examples use natural German, faithful English translations, and level-appropriate sentence length. Advanced forms may appear early only as fixed chunks with a clear note.
+- `commonMistakes` entries include a learner-plausible wrong form, a corrected form or strategy, and a reason that teaches the underlying distinction.
+- Comparisons connect module siblings and nearby progression topics, not unrelated grammar.

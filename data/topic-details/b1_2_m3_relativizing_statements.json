@@ -16,5 +16,5 @@
   "tips": ["Write criteria before discussing preferences.", "Replace 'immer/nie' with a more accurate scope.", "End with a condition-based recommendation."],
   "searchHints": ["Alternativen nennen", "Aussagen relativieren", "einerseits andererseits"],
   "ui": {"status": "ready", "recommendedSections": ["mentalModel", "coreRules", "tables", "patternsAndUsage", "examples", "commonMistakes", "comparisons", "levelProgression"]},
-  "sourceStyle": {"origin": "LangCompass editorial lesson aligned to the Momente B1.2 M3 catalog topic", "confidence": "high"}, "updatedAt": "2026-06-15"
+  "sourceStyle": {"origin": "LangCompass editorial lesson aligned to the Momente B1.2 M3 catalog topic", "confidence": "high","notes":"Reviewed against CEFR/Goethe DaF level expectations and standard German grammar references; no external source text is copied."}, "updatedAt": "2026-06-15"
 }

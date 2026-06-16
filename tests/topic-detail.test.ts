@@ -264,6 +264,13 @@ test("completed modules contain ready theme, grammar, and communication lessons"
       )
 
       assert.equal(detail.ui?.status, "ready", `${topicId} should be editorially ready`)
+      assert.ok(detail.sourceStyle, `${topicId} should include editorial provenance`)
+      assert.match(
+        detail.sourceStyle.origin,
+        /^LangCompass editorial lesson/,
+        `${topicId} should describe its editorial origin`,
+      )
+      assert.ok(detail.sourceStyle.notes, `${topicId} should describe its review basis`)
       assert.ok((detail.mentalModel?.length ?? 0) >= 2, `${topicId} should establish a clear starting model`)
       assert.ok(detail.ruleBlocks.length >= 2, `${topicId} should contain substantial building blocks`)
       assert.ok((detail.examples?.length ?? 0) >= 3, `${topicId} should contain practical examples`)

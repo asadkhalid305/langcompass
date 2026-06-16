@@ -22,6 +22,6 @@
   "tips": ["Underline matching words in the vacancy and your evidence.", "Prepare three short situation-action-result examples.", "Read the final application for consistent dates and terminology."],
   "searchHints": ["Bewerbung", "Lebenslauf", "Stellenanzeige", "Qualifikationen"],
   "ui": {"status": "ready", "recommendedSections": ["mentalModel", "coreRules", "tables", "patternsAndUsage", "examples", "commonMistakes", "comparisons", "levelProgression"]},
-  "sourceStyle": {"origin": "LangCompass editorial lesson aligned to the Momente B1.2 M2 catalog topic", "confidence": "high"},
+  "sourceStyle": {"origin": "LangCompass editorial lesson aligned to the Momente B1.2 M2 catalog topic", "confidence": "high","notes":"Reviewed against CEFR/Goethe DaF level expectations and standard German grammar references; no external source text is copied."},
   "updatedAt": "2026-06-15"
 }

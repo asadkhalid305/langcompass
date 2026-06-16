@@ -21,6 +21,6 @@
   "tips": ["Identify exactly what the relative word refers to.", "Transform 'wo' clauses into formal prepositional alternatives.", "Practice whole-clause comments with outcomes and reactions."],
   "searchHints": ["Relativsatz was", "Relativsatz wo", "alles was", "German relative clauses"],
   "ui": {"status": "ready", "recommendedSections": ["mentalModel", "coreRules", "tables", "patternsAndUsage", "examples", "commonMistakes", "comparisons", "levelProgression"]},
-  "sourceStyle": {"origin": "LangCompass editorial lesson aligned to the Momente B1.2 M2 catalog topic", "confidence": "high"},
+  "sourceStyle": {"origin": "LangCompass editorial lesson aligned to the Momente B1.2 M2 catalog topic", "confidence": "high","notes":"Reviewed against CEFR/Goethe DaF level expectations and standard German grammar references; no external source text is copied."},
   "updatedAt": "2026-06-15"
 }

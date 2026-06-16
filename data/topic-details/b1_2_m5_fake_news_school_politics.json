@@ -16,5 +16,5 @@
   "tips":["Use a five-question verification routine.","Open the original source before sharing.","State what remains uncertain."],
   "searchHints":["Fake News","Medienkompetenz","Quellen prüfen","Politik","Schule"],
   "ui":{"status":"ready","recommendedSections":["mentalModel","coreRules","tables","patternsAndUsage","examples","commonMistakes","comparisons","levelProgression"]},
-  "sourceStyle":{"origin":"LangCompass editorial lesson aligned to the Momente B1.2 M5 catalog topic","confidence":"high"},"updatedAt":"2026-06-15"
+  "sourceStyle":{"origin":"LangCompass editorial lesson aligned to the Momente B1.2 M5 catalog topic","confidence":"high","notes":"Reviewed against CEFR/Goethe DaF level expectations and standard German grammar references; no external source text is copied."},"updatedAt":"2026-06-15"
 }

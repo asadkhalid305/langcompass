@@ -367,6 +367,7 @@ const validateTopicDetails = async (catalogItems) => {
   const fileIssues = []
   const metadataMismatches = []
   const referenceIssues = []
+  const editorialIssues = []
   const warnings = []
 
   const seenIds = []
@@ -391,6 +392,14 @@ const validateTopicDetails = async (catalogItems) => {
       const normalized = normalizeCatalogItem(parsed.data)
 
       warnings.push(...collectModelWarnings(`topic-details/${file.name} (${parsed.data.id})`, parsed.data, normalized))
+
+      if (parsed.data.ui?.status === "ready" && !parsed.data.sourceStyle) {
+        editorialIssues.push(`${file.name}: ${parsed.data.id} is marked ready but is missing sourceStyle provenance`)
+      }
+
+      if (parsed.data.ui?.status === "ready" && parsed.data.sourceStyle && !parsed.data.sourceStyle.notes) {
+        editorialIssues.push(`${file.name}: ${parsed.data.id} is marked ready but sourceStyle is missing review notes`)
+      }
 
       if (parsed.data.id !== fileId) {
         filenameMismatches.push(`${file.name}: id "${parsed.data.id}" != filename "${fileId}"`)
@@ -455,6 +464,7 @@ const validateTopicDetails = async (catalogItems) => {
     fileIssues,
     metadataMismatches,
     referenceIssues,
+    editorialIssues,
     warnings,
   }
 }
@@ -513,6 +523,11 @@ async function main() {
   if (details.referenceIssues.length > 0) {
     hasFailures = true
     printMessages("Invalid references in topic-details:", details.referenceIssues)
+  }
+
+  if (details.editorialIssues.length > 0) {
+    hasFailures = true
+    printMessages("Editorial readiness issues in topic-details:", details.editorialIssues)
   }
 
   const warnings = [

@@ -24,3 +24,7 @@ LangCompass is a static-first, curriculum-aware German learning explorer built w
 - `langcompass-context-maintenance`: instructions, skills, docs, agents, and Codex configuration.
 
 See `docs/architecture.md` when deeper product or architecture context is required.
+
+## Verification
+
+Before running npm, Next.js, or Vitest commands, load nvm and use the repo Node version: `export PATH=/bin:/usr/bin:/usr/local/bin:$PATH; source ~/.nvm/nvm.sh && nvm use`. The `.nvmrc` value is authoritative; a plain shell may otherwise fall back to the system Node.

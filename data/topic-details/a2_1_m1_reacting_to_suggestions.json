@@ -32,5 +32,5 @@
     {"topicId": "a2_1_m1_deshalb", "summary": "Deshalb clearly states the consequence of a scheduling problem."}
   ],
   "ui": {"status": "ready", "recommendedSections": ["mentalModel", "coreRules", "tables", "examples", "commonMistakes", "comparisons"]},
-  "updatedAt": "2026-06-15"
+  "sourceStyle":{"origin":"LangCompass editorial lesson aligned to the Momente A2.1 M1 catalog topic","confidence":"medium","notes":"Reviewed against CEFR/Goethe DaF level expectations and standard German grammar references; no external source text is copied."},"updatedAt": "2026-06-15"
 }
