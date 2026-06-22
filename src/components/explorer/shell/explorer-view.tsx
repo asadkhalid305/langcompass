@@ -29,7 +29,7 @@ export function ExplorerView({
 }: ExplorerViewProps) {
   return (
     <div className="space-y-10 pr-0 md:pr-4">
-      <section className="bg-white border text-center border-border px-8 py-8 shadow-sm">
+      <section className="border border-border bg-[linear-gradient(135deg,#fffdf8_0%,#ffffff_45%,#eef6ff_100%)] px-8 py-8 text-center shadow-[6px_6px_0_#111827]">
         <p className="text-xs uppercase tracking-[0.08em] text-muted-foreground">Learning flow</p>
         {!hasActiveSearch ? (
           <>
@@ -144,7 +144,7 @@ export function ExplorerView({
               </section>
             ))
           ) : (
-            <section className="rounded-lg bg-muted/35 px-4 py-6 text-center">
+            <section className="border border-border bg-muted/35 px-4 py-6 text-center">
               <p className="text-sm font-medium">No matching topics</p>
               <p className="mt-1 text-sm text-muted-foreground">Try a broader query.</p>
             </section>

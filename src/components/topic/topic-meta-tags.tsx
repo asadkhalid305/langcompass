@@ -11,29 +11,35 @@ interface TopicMetaTagsProps {
   topic: Pick<TopicCatalogItem, "level" | "section" | "group" | "difficultyStage">
   hasDetailFile?: boolean
   className?: string
+  tone?: "light" | "dark"
 }
 
-export function TopicMetaTags({ topic, hasDetailFile, className }: TopicMetaTagsProps) {
+export function TopicMetaTags({ topic, hasDetailFile, className, tone = "light" }: TopicMetaTagsProps) {
+  const badgeClassName =
+    tone === "dark"
+      ? "rounded-none border-white/20 bg-white/5 text-[11px] uppercase tracking-[0.08em] text-white"
+      : "rounded-none border-border/80 bg-white/70 text-[11px] uppercase tracking-[0.08em]"
+
   return (
     <div className={className}>
-      <Badge variant="outline" className="rounded-none border-border/80 bg-white/70 text-[11px] uppercase tracking-[0.08em]">
+      <Badge variant="outline" className={badgeClassName}>
         Level {topic.level}
       </Badge>
-      <Badge variant="outline" className="rounded-none border-border/80 bg-white/70 text-[11px] uppercase tracking-[0.08em]">
+      <Badge variant="outline" className={badgeClassName}>
         {humanizeSectionLabel(topic.section)}
       </Badge>
       {topic.group && !isSectionFallbackGroup(topic.group, topic.section) ? (
-        <Badge variant="outline" className="rounded-none border-border/80 bg-white/70 text-[11px] uppercase tracking-[0.08em]">
+        <Badge variant="outline" className={badgeClassName}>
           {humanizeGroupLabel(topic.group)}
         </Badge>
       ) : null}
-      <Badge variant="outline" className="rounded-none border-border/80 bg-white/70 text-[11px] uppercase tracking-[0.08em]">
+      <Badge variant="outline" className={badgeClassName}>
         {humanizeDifficultyStageLabel(topic.difficultyStage)}
       </Badge>
       {typeof hasDetailFile === "boolean" ? (
         <Badge
           variant="outline"
-          className="rounded-none border-border/80 bg-white/70 text-[11px] uppercase tracking-[0.08em]"
+          className={badgeClassName}
         >
           {hasDetailFile ? "Detail file" : "Metadata only"}
         </Badge>

@@ -40,13 +40,13 @@ export function TopicPreviewDrawer({
   return (
     <>
       {selectedTopicId ? (
-        <aside className="hidden lg:flex lg:flex-col lg:h-[calc(100dvh-9rem)] lg:overflow-hidden lg:bg-white lg:shadow-[0_0_40px_rgba(0,0,0,0.05)] lg:border-l lg:border-border lg:sticky lg:top-4">
-          <div className="flex items-center justify-between px-8 pt-6 pb-4 border-b border-border shrink-0">
-            <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Topic preview</p>
+        <aside className="hidden lg:flex lg:flex-col lg:h-[calc(100dvh-9rem)] lg:overflow-hidden lg:border lg:border-[#111827] lg:bg-[#111827] lg:shadow-[6px_6px_0_#F97316] lg:sticky lg:top-4">
+          <div className="flex items-center justify-between border-b border-white/15 px-6 pb-4 pt-5 shrink-0">
+            <p className="text-xs font-bold uppercase tracking-widest text-white/60">Topic preview</p>
             <button
               type="button"
               onClick={onClose}
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              className="text-white/60 transition-colors hover:text-white"
               aria-label="Close panel"
             >
               <X className="h-4 w-4" aria-hidden="true" />

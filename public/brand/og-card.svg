@@ -1,0 +1,23 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#FFFDF8"/>
+  <rect x="24" y="24" width="1152" height="582" fill="#FFFDF8" stroke="#111827" stroke-width="10"/>
+  <path d="M0 630V444C113 389 217 362 328 362C482 362 596 281 682 131H1200V630H0Z" fill="#E8F1FF"/>
+  <path d="M1200 0V191C1112 258 1024 292 931 292C798 292 702 364 621 506H0V0H1200Z" fill="#FFF1D7"/>
+  <rect x="78" y="84" width="210" height="210" fill="#F3F0FF" stroke="#111827" stroke-width="10"/>
+  <path d="M183 121L238 205L183 289L128 205L183 121Z" fill="#F97316" stroke="#111827" stroke-width="12"/>
+  <path d="M183 157L214 205L183 253L152 205L183 157Z" fill="#FEF3C7" stroke="#111827" stroke-width="8"/>
+  <path d="M103 258C129 231 159 218 189 218C224 218 256 197 279 146" stroke="#3B82F6" stroke-width="16" stroke-linecap="square"/>
+  <circle cx="279" cy="146" r="20" fill="#3B82F6" stroke="#111827" stroke-width="8"/>
+  <rect x="318" y="96" width="167" height="38" fill="#111827"/>
+  <text x="318" y="255" fill="#111827" font-family="Space Grotesk, Arial, sans-serif" font-size="122" font-weight="700" letter-spacing="-0.06em">LangCompass</text>
+  <text x="322" y="300" fill="#4B5563" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="700" letter-spacing="0.12em">CURRICULUM-FIRST GERMAN</text>
+  <text x="322" y="334" fill="#4B5563" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="700" letter-spacing="0.12em">LEARNING EXPLORER</text>
+  <text x="108" y="410" fill="#111827" font-family="Space Grotesk, Arial, sans-serif" font-size="58" font-weight="700" letter-spacing="-0.04em">See how grammar, themes, and</text>
+  <text x="108" y="476" fill="#111827" font-family="Space Grotesk, Arial, sans-serif" font-size="58" font-weight="700" letter-spacing="-0.04em">communication connect across CEFR.</text>
+  <rect x="108" y="525" width="224" height="46" fill="#111827"/>
+  <text x="131" y="556" fill="#FFFDF8" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="0.1em">STATIC-FIRST</text>
+  <rect x="350" y="525" width="266" height="46" fill="#F97316"/>
+  <text x="373" y="556" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="0.1em">TOPIC EXPLORER</text>
+  <rect x="634" y="525" width="232" height="46" fill="#3B82F6"/>
+  <text x="657" y="556" fill="#FFFDF8" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="0.1em">FULL LESSONS</text>
+</svg>

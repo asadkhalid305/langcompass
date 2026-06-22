@@ -8,7 +8,7 @@ interface TopicDetailHeaderProps {
 
 export function TopicDetailHeader({ topic, detail }: TopicDetailHeaderProps) {
   return (
-    <header className="mt-6 rounded-none border border-border bg-white px-5 py-7 shadow-[5px_5px_0_#111827] md:px-8">
+    <header className="mt-6 rounded-none border border-border bg-[linear-gradient(135deg,#fffdf8_0%,#ffffff_55%,#eef6ff_100%)] px-5 py-7 shadow-[6px_6px_0_#111827] md:px-8">
       <p className="text-xs font-bold uppercase tracking-[0.1em] text-muted-foreground">Full lesson page</p>
       <h1 className="mt-4 max-w-4xl text-pretty text-3xl font-display font-bold leading-tight md:text-5xl">{topic.title}</h1>
       <TopicMetaTags topic={topic} hasDetailFile={Boolean(detail)} className="mt-5 flex flex-wrap gap-2" />

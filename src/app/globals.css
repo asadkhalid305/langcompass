@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --background: 0 0% 98%; /* #FAFAFA */
+  --background: 35 50% 98%; /* #FFFCF7 */
   --foreground: 220 39% 11%; /* #111827 */
   --muted: 210 40% 96.1%;
   --muted-foreground: 215.4 16.3% 46.9%;
@@ -14,6 +14,9 @@
   --ring: 222.2 84% 4.9%;
   --accent: 210 40% 96.1%;
   --accent-foreground: 222.2 47.4% 11.2%;
+  --brand-paper: 37 100% 98%;
+  --brand-sky: 213 100% 94%;
+  --brand-sun: 26 95% 56%;
   --radius: 0px;
 }
 
@@ -29,7 +32,10 @@ body {
 body {
   margin: 0;
   overflow-x: hidden;
-  background-color: hsl(var(--background));
+  background:
+    radial-gradient(circle at top left, hsl(var(--brand-sky)) 0, transparent 22rem),
+    radial-gradient(circle at bottom right, hsl(32 100% 92%) 0, transparent 18rem),
+    hsl(var(--background));
   color: hsl(var(--foreground));
   font-family: var(--font-text), "Inter", sans-serif;
 }

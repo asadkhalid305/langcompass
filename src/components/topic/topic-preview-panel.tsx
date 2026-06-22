@@ -1,6 +1,8 @@
 import Link from "next/link"
 import { ArrowRight, BookOpenText } from "lucide-react"
+import type { ReactNode } from "react"
 
+import { LangCompassMark } from "@/components/branding/langcompass-logo"
 import { Button } from "@/components/ui/button"
 import { TopicMetaTags } from "@/components/topic/topic-meta-tags"
 import { formatIntroducedInLabel, formatRevisitedInLabel } from "@/lib/explorer/labels"
@@ -29,6 +31,20 @@ const fallbackSummary = (topic: TopicCatalogItem): string =>
 
 const fallbackWhyItMatters = (topic: TopicCatalogItem): string =>
   `This topic supports ${topic.section.replace(/[_-]+/g, " ")} fluency and appears in guided practice across the curriculum.`
+
+interface PreviewInfoSectionProps {
+  title: string
+  children: ReactNode
+}
+
+function PreviewInfoSection({ title, children }: PreviewInfoSectionProps) {
+  return (
+    <section className="border border-white/15 bg-white/5 px-4 py-3">
+      <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-white/60">{title}</p>
+      <div className="mt-3 text-sm leading-relaxed text-white">{children}</div>
+    </section>
+  )
+}
 
 export function TopicPreviewPanel({
   topic,
@@ -62,107 +78,103 @@ export function TopicPreviewPanel({
     (loadedDetail?.twoWayPrepositions?.length ?? 0)
 
   return (
-    <div className={cn("flex min-h-0 flex-col bg-white", className)}>
-      <div className="hide-scrollbar flex-1 space-y-8 overflow-y-auto px-6 pb-6 pt-5" aria-live="polite">
-        <section className="space-y-4">
-          <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Topic preview</p>
-          <h2 className="text-pretty text-3xl font-display font-bold leading-tight">{topic.title}</h2>
-          <TopicMetaTags topic={topic} hasDetailFile={hasDetailFile} className="flex flex-wrap gap-2" />
+    <div className={cn("flex min-h-0 flex-col bg-[#111827] text-white", className)}>
+      <div className="hide-scrollbar flex-1 space-y-4 overflow-y-auto px-5 pb-6 pt-5" aria-live="polite">
+        <section className="border border-white/15 bg-white/5 p-4">
+          <div className="flex items-start justify-between gap-4">
+            <div className="min-w-0">
+              <p className="text-xs font-bold uppercase tracking-widest text-white/60">Topic preview</p>
+              <h2 className="mt-3 text-pretty text-2xl font-display font-bold leading-tight text-white">{topic.title}</h2>
+            </div>
+            <LangCompassMark className="h-10 w-10" />
+          </div>
+          <TopicMetaTags topic={topic} hasDetailFile={hasDetailFile} tone="dark" className="mt-4 flex flex-wrap gap-2" />
         </section>
 
-        <section className="space-y-3 border-t border-border pt-5">
-          <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Curriculum placement</p>
-          <p className="text-sm font-medium text-foreground">{formatIntroducedInLabel(topic.firstIntroducedIn)}</p>
-          <p className="text-sm text-muted-foreground">{formatRevisitedInLabel(topic.revisitedIn)}</p>
-        </section>
+        <PreviewInfoSection title="Curriculum placement">
+          <p className="font-medium">{formatIntroducedInLabel(topic.firstIntroducedIn)}</p>
+          <p className="mt-1 text-white/70">{formatRevisitedInLabel(topic.revisitedIn)}</p>
+        </PreviewInfoSection>
 
         {!hasDetailFile ? (
-          <section className="space-y-3 border-t border-border pt-5">
-            <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Detail status</p>
-            <p className="text-sm text-muted-foreground">
+          <PreviewInfoSection title="Detail status">
+            <p className="text-white/75">
               This topic currently has catalog metadata only. Full lesson sections can be added in a future detail file.
             </p>
-          </section>
+          </PreviewInfoSection>
         ) : null}
 
         {hasDetailFile && isLoading ? (
-          <section className="space-y-3 border-t border-border pt-5">
-            <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Loading preview…</p>
-            <p className="text-sm text-muted-foreground">Fetching summary and section highlights.</p>
-          </section>
+          <PreviewInfoSection title="Loading preview...">
+            <p className="text-white/75">Fetching summary and section highlights.</p>
+          </PreviewInfoSection>
         ) : null}
 
         {hasDetailFile && loadError ? (
-          <section className="space-y-3 border-t border-border pt-5">
-            <p className="text-xs font-bold uppercase tracking-widest text-red-600">Preview unavailable</p>
-            <p className="text-sm text-muted-foreground">{loadError}</p>
-          </section>
+          <PreviewInfoSection title="Preview unavailable">
+            <p className="text-red-100">{loadError}</p>
+          </PreviewInfoSection>
         ) : null}
 
         {(!hasDetailFile || loadedDetail) && !loadError ? (
           <>
-            <section className="space-y-3 border-t border-border pt-5">
-              <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">What it is</p>
-              <p className="text-sm leading-relaxed text-foreground">{previewSummary}</p>
-            </section>
+            <PreviewInfoSection title="What it is">
+              <p>{previewSummary}</p>
+            </PreviewInfoSection>
 
-            <section className="space-y-3 border-t border-border pt-5">
-              <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Why it matters</p>
-              <p className="text-sm leading-relaxed text-foreground">{previewWhyItMatters}</p>
-            </section>
+            <PreviewInfoSection title="Why it matters">
+              <p>{previewWhyItMatters}</p>
+            </PreviewInfoSection>
 
             {previewMentalModel ? (
-              <section className="space-y-3 border-t border-border pt-5">
-              <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Lesson focus</p>
-                <p className="text-sm leading-relaxed text-foreground">{clampPreview(previewMentalModel, 180)}</p>
-              </section>
+              <PreviewInfoSection title="Lesson focus">
+                <p>{clampPreview(previewMentalModel, 180)}</p>
+              </PreviewInfoSection>
             ) : null}
 
-            <section className="space-y-3 border-t border-border pt-5">
-              <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Learning structure</p>
-              <p className="text-sm text-muted-foreground">
+            <PreviewInfoSection title="Learning structure">
+              <p className="text-white/75">
                 Built for a clear starting point, practical language, connections, and examples.
               </p>
               {loadedDetail ? (
-                <p className="text-xs text-muted-foreground">
+                <p className="mt-3 text-xs text-white/60">
                   {loadedDetail.ruleBlocks.length} building blocks · {loadedDetail.examples?.length ?? 0} examples · {loadedDetail.tables?.length ?? 0} reference tables
                   {previewPatternsCount > 0 ? ` · ${previewPatternsCount} usage cues` : ""}
                 </p>
               ) : null}
-            </section>
+            </PreviewInfoSection>
           </>
         ) : null}
 
         {relatedTopics.length > 0 ? (
-          <section className="space-y-3 border-t border-border pt-5">
-            <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Related topics</p>
+          <PreviewInfoSection title="Related topics">
             <div className="flex flex-wrap gap-2">
               {relatedTopics.slice(0, 4).map((relatedTopic) => (
                 <button
                   key={relatedTopic.id}
                   type="button"
                   onClick={() => onOpenTopic(relatedTopic.id)}
-                  className="rounded-none border border-border bg-background px-2.5 py-1.5 text-xs text-foreground transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground"
+                  className="rounded-none border border-white/20 bg-white/5 px-2.5 py-1.5 text-xs text-white transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
                 >
                   {relatedTopic.title}
                 </button>
               ))}
             </div>
-          </section>
+          </PreviewInfoSection>
         ) : null}
       </div>
 
-      <div className="border-t border-border bg-background/65 p-5">
-        <p className="mb-3 text-xs font-medium uppercase tracking-[0.08em] text-muted-foreground">Ready for full lesson mode?</p>
+      <div className="border-t border-white/15 bg-[#111827] p-5">
+        <p className="mb-3 text-xs font-medium uppercase tracking-[0.08em] text-white/60">Ready for full lesson mode?</p>
         {fullLessonHref ? (
-          <Button asChild className="h-10 w-full rounded-none border border-foreground shadow-[3px_3px_0_#111827] transition-[transform,box-shadow] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0_#111827]">
+          <Button asChild className="h-10 w-full rounded-none border border-white bg-white text-[#111827] transition-colors hover:bg-white/90">
             <Link href={fullLessonHref}>
               View full lesson
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
           </Button>
         ) : (
-          <Button disabled className="h-10 w-full rounded-none border border-foreground">
+          <Button disabled className="h-10 w-full rounded-none border border-white/30 bg-white/10">
             View full lesson
           </Button>
         )}
