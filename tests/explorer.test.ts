@@ -10,7 +10,7 @@ import {
   parseExplorerQueryState,
 } from "../src/lib/explorer/navigation"
 import { createTopicSearchEngine } from "../src/lib/explorer/search"
-import { getLevelSections, getLevelTopicCounts } from "../src/lib/explorer/selectors"
+import { getLevelSections, getLevelSectionsForAllLevels, getLevelTopicCounts, getTopicModuleLabel } from "../src/lib/explorer/selectors"
 import { TopicCatalogSchema } from "../src/lib/schemas/topic"
 
 const loadCatalog = async () => {
@@ -64,6 +64,40 @@ test("level selectors expose five topics per section", async () => {
     grammar: 5,
     communication: 5,
   })
+})
+
+test("level selectors sort topics by curriculum module order", async () => {
+  const topics = await loadCatalog()
+  const grammarSection = getLevelSections(topics, "A1.1").find((section) => section.section === "grammar")
+
+  assert.deepEqual(
+    grammarSection?.topics.map((topic) => topic.id),
+    [
+      "a1_1_m1_present_basic",
+      "a1_1_m2_articles",
+      "a1_1_m3_negation_kein",
+      "a1_1_m4_modal_koennen",
+      "accusative_case",
+    ],
+  )
+  assert.deepEqual(grammarSection?.topics.map(getTopicModuleLabel), ["M1", "M2", "M3", "M4", "M5"])
+})
+
+test("all-level selector keeps level order before module order", async () => {
+  const topics = await loadCatalog()
+  const themeSection = getLevelSectionsForAllLevels(topics).find((section) => section.section === "themes")
+
+  assert.deepEqual(
+    themeSection?.topics.slice(0, 6).map((topic) => topic.id),
+    [
+      "a1_1_m1_identity",
+      "a1_1_m2_shopping_objects",
+      "a1_1_m3_office_technology",
+      "a1_1_m4_hobbies_time",
+      "a1_1_m5_food_restaurant",
+      "a1_2_m1_city_orientation",
+    ],
+  )
 })
 
 test("search finds representative Momente catalog content", async () => {

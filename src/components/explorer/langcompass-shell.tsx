@@ -15,7 +15,7 @@ import type { LevelCounts, SectionSummary } from "@/components/explorer/shell/ty
 import { ALLOWED_LEVELS, ALL_LEVEL, TOPIC_SECTION_ORDER } from "@/lib/constants/topic"
 import { buildExplorerHref, buildOverviewHref, buildTopicDetailHref, parseExplorerQueryState, parseOverviewQueryState } from "@/lib/explorer/navigation"
 import { createTopicSearchEngine } from "@/lib/explorer/search"
-import { getAllLevelTopicCounts, getLevelSections } from "@/lib/explorer/selectors"
+import { getAllLevelTopicCounts, getLevelSections, getLevelSectionsForAllLevels } from "@/lib/explorer/selectors"
 import type { ExplorerLevelSection } from "@/lib/explorer/types"
 import type { TopicCatalogItem, TopicId, TopicLevel, TopicLevelOrAll, TopicSection } from "@/lib/types/topic"
 import { cn } from "@/lib/utils/cn"
@@ -26,22 +26,8 @@ interface LangCompassShellProps {
   detailTopicIds: TopicId[]
 }
 
-const sortTopicsByTitle = (topics: TopicCatalogItem[]): TopicCatalogItem[] => [...topics].sort((a, b) => a.title.localeCompare(b.title))
-
 const topicAppearsInLevel = (topic: TopicCatalogItem, level: TopicLevelOrAll): boolean =>
   level === ALL_LEVEL || topic.firstIntroducedIn === level || topic.revisitedIn.includes(level)
-
-const getLevelSectionsForAllLevels = (topics: TopicCatalogItem[]): ExplorerLevelSection[] =>
-  TOPIC_SECTION_ORDER.map((section) => {
-    const topicsInSection = sortTopicsByTitle(topics.filter((topic) => topic.section === section))
-
-    return {
-      section,
-      introducedTopics: topicsInSection,
-      revisitedTopics: [],
-      topics: topicsInSection,
-    }
-  }).filter((section) => section.topics.length > 0)
 
 const getFirstTopicIdFromLevelSections = (sections: ExplorerLevelSection[]): TopicId | null => {
   for (const section of sections) {

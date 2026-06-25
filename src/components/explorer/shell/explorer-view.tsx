@@ -80,6 +80,7 @@ export function ExplorerView({
                             key={topic.id}
                             topic={topic}
                             isSelected={topic.id === selectedTopicId}
+                            showLevelBadge={selectedLevel === ALL_LEVEL}
                             onOpenTopic={onOpenTopic}
                           />
                         ))}
@@ -98,6 +99,7 @@ export function ExplorerView({
                             key={topic.id}
                             topic={topic}
                             isSelected={topic.id === selectedTopicId}
+                            showLevelBadge={selectedLevel === ALL_LEVEL}
                             showEarlierIndicator
                             onOpenTopic={onOpenTopic}
                           />

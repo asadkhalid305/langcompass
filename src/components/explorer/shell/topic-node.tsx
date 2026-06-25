@@ -1,10 +1,12 @@
 import { humanizeDifficultyStageLabel, humanizeSectionLabel } from "@/lib/explorer/labels"
+import { getTopicModuleLabel } from "@/lib/explorer/selectors"
 import type { TopicCatalogItem, TopicId } from "@/lib/types/topic"
 import { cn } from "@/lib/utils/cn"
 
 interface TopicNodeProps {
   topic: TopicCatalogItem
   isSelected: boolean
+  showLevelBadge?: boolean
   showEarlierIndicator?: boolean
   onOpenTopic: (topicId: TopicId) => void
 }
@@ -21,7 +23,9 @@ const getSectionColorClasses = (section: TopicCatalogItem["section"]) => {
   }
 }
 
-export function TopicNode({ topic, isSelected, showEarlierIndicator = false, onOpenTopic }: TopicNodeProps) {
+export function TopicNode({ topic, isSelected, showLevelBadge = false, showEarlierIndicator = false, onOpenTopic }: TopicNodeProps) {
+  const moduleLabel = getTopicModuleLabel(topic)
+
   return (
     <button
       type="button"
@@ -33,7 +37,14 @@ export function TopicNode({ topic, isSelected, showEarlierIndicator = false, onO
         isSelected ? "ring-2 ring-foreground shadow-[4px_4px_0px_#111827] -translate-y-0.5 -translate-x-0.5" : "",
       )}
     >
-      <p className="text-base font-bold leading-snug font-sans text-foreground">{topic.title}</p>
+      <div className="flex items-start justify-between gap-3">
+        <p className="min-w-0 text-base font-bold leading-snug font-sans text-foreground">{topic.title}</p>
+        {showLevelBadge || moduleLabel ? (
+          <span className="shrink-0 border border-foreground/20 bg-white px-1.5 py-0.5 text-[10px] font-bold leading-none text-foreground">
+            {[showLevelBadge ? topic.level : null, moduleLabel].filter(Boolean).join(" ")}
+          </span>
+        ) : null}
+      </div>
       <div className="mt-3 flex items-center gap-3 text-xs font-medium text-muted-foreground uppercase tracking-wider">
         <span>{humanizeSectionLabel(topic.section)}</span>
         <span className="w-1 h-1 bg-border rounded-full" />
