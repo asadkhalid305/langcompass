@@ -1,151 +1,119 @@
 # LangCompass
 
-LangCompass is a static-first German learning explorer built around a curriculum, not a chat prompt or a generic LMS.
+[Open LangCompass](https://langcompass.vercel.app) · [Explore the curriculum](https://langcompass.vercel.app/explorer)
 
-It helps learners and curriculum editors answer a few practical questions quickly:
+LangCompass is a free, static-first German learning explorer for seeing how CEFR levels, themes, grammar, and communication skills fit together.
 
-- What gets introduced at each CEFR sub-level?
-- Which grammar, theme, and communication topics belong together?
-- Is there already a fuller lesson page for this topic?
-- What should I open next if I want context, examples, or related topics?
+It is intentionally a focused learning map—not a chat interface, account-based course platform, or replacement for a teacher or textbook.
 
-## What It Feels Like
+![LangCompass curriculum overview](docs/readme-assets/overview.png)
 
-LangCompass has three main surfaces:
+## What You Can Do
 
-- An overview page for scanning the full curriculum or a single level.
-- An explorer for browsing topics and opening fast previews.
-- A full lesson page for topics that already have rich detail content.
+- Scan the complete curriculum or focus on one CEFR sub-level.
+- Browse related theme, grammar, and communication topics in module order.
+- Search across titles, aliases, keywords, summaries, and lesson metadata.
+- Open a compact topic preview before moving into a full lesson.
+- Follow prerequisites, related topics, examples, common mistakes, and level progression where available.
 
-### Overview
+The shortest useful path is:
 
-![LangCompass overview](docs/readme-assets/overview.png)
+1. Open the [curriculum overview](https://langcompass.vercel.app).
+2. Select `All` or a level such as `A2.1`.
+3. Open the explorer and search or browse by section.
+4. Select a topic for a quick preview.
+5. Open its full lesson when you want examples and deeper context.
 
-### Explorer + topic preview
+Good starting points include `Accusative Case`, `Ordering in a Restaurant`, `Travel and Holidays`, and `Giving Advice`.
 
-![LangCompass explorer with topic preview](docs/readme-assets/explorer-preview.png)
+### Explorer and topic preview
+
+![LangCompass explorer with a topic preview](docs/readme-assets/explorer-preview.png)
 
 ### Full lesson page
 
 ![LangCompass full lesson page](docs/readme-assets/topic-detail.png)
 
-## First-Time User Guide
+## Learning Design
 
-If you are opening LangCompass for the first time, this is the shortest useful path:
+LangCompass uses a few simple design principles:
 
-1. Start on the overview page and pick `All` or a CEFR level like `A2.1`.
-2. Open the explorer to browse topics grouped into `themes`, `grammar`, and `communication`.
-3. Use search when you already know the concept you want.
-4. Click any topic to open its preview.
-5. If the topic has richer editorial content, open the full lesson page.
+- **Map before detail.** A visible curriculum helps learners understand where a topic belongs before studying it in isolation.
+- **Learn in connected groups.** Every module combines a theme, a grammar focus, and a communication goal.
+- **Use progressive disclosure.** The overview, preview, and full lesson provide increasing depth without presenting everything at once.
+- **Make revisitation visible.** Topics can show where they first appear and where later levels return to them.
+- **Keep navigation predictable.** CEFR and module order determine the learning sequence instead of alphabetical sorting.
 
-Good examples to try:
+These are product-design choices, not claims of formal learning certification.
 
-- `Accusative Case`
-- `Ordering in a Restaurant`
-- `Travel and Holidays`
-- `Asking For and Giving Advice`
+## Curriculum and Editorial Provenance
 
-## Who This Repo Is For
+The current repository covers `A1.1` through `B2.2`: 40 modules and 120 topics, with one theme, grammar, and communication topic in every module.
 
-This repository is useful for both non-technical and technical contributors.
+- The 90 catalog topics from `A1.1` through `B1.2` are aligned to the module structure of *Momente*.
+- The 30 `B2.1` and `B2.2` catalog topics are LangCompass extensions.
+- Rich lesson pages are original LangCompass editorial content aligned to those catalog topics. They do not copy external lesson text.
+- Every ready lesson includes source-style and confidence metadata. Confidence records the depth of editorial review; it is not a claim of native-teacher or institutional certification.
 
-### If you are working on content
+LangCompass is an independent project and is not affiliated with or endorsed by Hueber, *Momente*, Goethe-Institut, or the CEFR framework's governing bodies. See the [content quality audit](docs/content-quality-audit.md) for the current editorial assessment.
 
-You mostly care about two places:
-
-- `data/topic-catalog.json`
-  This is the searchable curriculum index.
-- `data/topic-details/*.json`
-  These are optional rich lesson pages for individual topics.
-
-Not every topic needs a detail file. A topic can still render correctly from catalog metadata alone.
-
-### If you are working on the app
-
-The app is a Next.js static-first frontend with:
-
-- Next.js App Router
-- TypeScript
-- Tailwind CSS
-- shadcn/ui primitives
-- Zod validation
-- Fuse.js search
-
-Core implementation areas:
-
-- `src/app`
-- `src/components`
-- `src/lib/data`
-- `src/lib/explorer`
-- `src/lib/schemas`
-
-## Local Development
+## Run It Locally
 
 ### Requirements
 
-- Node.js `24`
+- Node.js 24 (the version in `.nvmrc`)
 - npm
 
-The repo uses `.nvmrc`, so use that version instead of your system default.
-
 ```bash
-export PATH=/bin:/usr/bin:/usr/local/bin:$PATH
+git clone https://github.com/asadkhalid305/langcompass.git
+cd langcompass
 source ~/.nvm/nvm.sh
 nvm use
-npm install
+npm ci
 npm run dev
 ```
 
-Then open [http://127.0.0.1:3000](http://127.0.0.1:3000).
+Open [http://127.0.0.1:3000](http://127.0.0.1:3000).
 
-## Common Commands
+No environment variables are required for normal local development. `NEXT_PUBLIC_SITE_URL` may optionally set the canonical metadata origin in a non-Vercel deployment; Vercel supplies its production URL automatically.
+
+## Verify a Change
 
 ```bash
-npm run dev
-npm run build
-npm run lint
-npm test
 npm run validate:topics
+npm test
+npm run lint
+npm run build
 ```
 
-## How The Content Model Works
+The same verification runs in GitHub Actions for pull requests and pushes to `develop`.
 
-LangCompass keeps the product model deliberately simple:
+## Extend the Project
 
-- `topicId` is the stable key across routes, JSON files, and UI state.
-- `All` is a UI-only aggregate level and is not stored in the content files.
-- Topics are organized by `themes`, `grammar`, and `communication`.
-- The catalog drives discovery.
-- Detail JSON extends a topic when a fuller lesson exists.
+LangCompass keeps content in two places:
 
-This means you can add or improve curriculum content without introducing a backend, CMS, or runtime AI system.
+- [`data/topic-catalog.json`](data/topic-catalog.json) is the navigation and search index.
+- [`data/topic-details`](data/topic-details) contains optional rich lesson content.
 
-## How To Add A New Topic
+To add or improve a topic:
 
-1. Add the topic metadata to `data/topic-catalog.json`.
-2. If you want a richer lesson page, add `data/topic-details/<topicId>.json`.
-3. Run `npm run validate:topics`.
-4. Run `npm test`.
+1. Add or update its catalog entry.
+2. Optionally add `data/topic-details/<topicId>.json` for a full lesson.
+3. Keep `topicId` identical across the catalog, detail filename, relationships, and routes.
+4. Use `themes`, `grammar`, or `communication` as the section.
+5. Use a real CEFR sub-level; `All` exists only in the interface.
+6. Run topic validation and tests before opening a pull request.
 
-## Project Boundaries
+Missing detail files are valid. The app deliberately falls back to catalog metadata so contributors can expand the curriculum gradually.
 
-LangCompass is intentionally:
+## Technology and Boundaries
 
-- static-first
-- file-backed
-- curriculum-aware
-- navigated by route state
+The app uses Next.js App Router, React, TypeScript, Tailwind CSS, shadcn/ui primitives, Zod, Fuse.js, and static JSON data.
 
-It intentionally does not include:
+The current version intentionally has no authentication, database, backend service, runtime AI, embeddings, or vector search. Those are future product decisions rather than requirements for using the curriculum explorer today.
 
-- auth
-- a database
-- embeddings
-- vector search
-- runtime AI lesson generation
+For deeper implementation context, see [the architecture guide](docs/architecture.md).
 
-## Need More Context?
+## License
 
-- Product and architecture notes: [`docs/architecture.md`](docs/architecture.md)
-- Agent and repo working rules: [`AGENTS.md`](AGENTS.md)
+LangCompass is available under the [MIT License](LICENSE).

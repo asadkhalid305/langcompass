@@ -4,8 +4,7 @@ on:
   pull_request:
   push:
     branches:
-      - main
-      - experiment-02
+      - develop
 
 jobs:
   verify:

@@ -1,4 +1,0 @@
-interface:
-  display_name: "LangCompass UI"
-  short_description: "Build consistent LangCompass interfaces"
-  default_prompt: "Use $langcompass-ui to implement this interface change."

@@ -67,7 +67,7 @@ export function ShellHeader({
               <Input
                 value={searchInput}
                 onChange={(event) => onSearchChange(event.target.value)}
-                placeholder="Search topics, skills, grammar..."
+                placeholder="Search topics, skills, grammar…"
                 className="h-10 rounded-none border border-border bg-[#FFFDF8] pl-9 pr-9 text-sm shadow-none focus-visible:border-foreground focus-visible:ring-0"
                 aria-label="Search topics"
                 name="topicSearch"

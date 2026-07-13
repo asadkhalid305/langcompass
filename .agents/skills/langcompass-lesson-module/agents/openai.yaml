@@ -1,4 +1,0 @@
-interface:
-  display_name: "LangCompass Lesson Module"
-  short_description: "Expand a complete Momente lesson module"
-  default_prompt: "Use $langcompass-lesson-module to expand the next Momente module."

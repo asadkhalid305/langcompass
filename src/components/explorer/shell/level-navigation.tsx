@@ -23,7 +23,7 @@ export function LevelNavigation({ selectedLevel, levelCounts, onLevelSelect }: L
             key={level}
             onClick={() => onLevelSelect(level)}
             className={cn(
-              "group flex w-full items-center justify-between py-2 text-left transition-all",
+              "group flex w-full items-center justify-between py-2 text-left transition-colors",
               isActive ? "text-foreground font-bold" : "text-muted-foreground hover:text-foreground",
             )}
             aria-current={isActive ? "page" : undefined}

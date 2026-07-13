@@ -1,4 +1,0 @@
-interface:
-  display_name: "LangCompass Topic Data"
-  short_description: "Change topic data and schemas consistently"
-  default_prompt: "Use $langcompass-topic-data to update LangCompass topic data safely."

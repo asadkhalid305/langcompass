@@ -28,14 +28,14 @@ export function ExplorerView({
   onOpenTopic,
 }: ExplorerViewProps) {
   return (
-    <div className="space-y-10 pr-0 md:pr-4">
+    <div className="space-y-10 pb-8 pr-0 md:pr-4">
       <section className="border border-border bg-[linear-gradient(135deg,#fffdf8_0%,#ffffff_45%,#eef6ff_100%)] px-8 py-8 text-center shadow-[6px_6px_0_#111827]">
         <p className="text-xs uppercase tracking-[0.08em] text-muted-foreground">Learning flow</p>
         {!hasActiveSearch ? (
           <>
-            <h2 className="mt-1 text-pretty text-xl font-semibold">
+            <h1 className="mt-1 text-pretty text-xl font-semibold">
               {selectedLevel === ALL_LEVEL ? "All levels explorer" : `Level ${selectedLevel} explorer`}
-            </h2>
+            </h1>
             <p className="mt-1 text-sm text-muted-foreground">
               {selectedLevelCounts.introducedCount > 0 ? `${selectedLevelCounts.introducedCount} new` : null}
               {selectedLevelCounts.introducedCount > 0 && selectedLevelCounts.revisitedCount > 0 ? " and " : null}
@@ -45,7 +45,7 @@ export function ExplorerView({
           </>
         ) : (
           <>
-            <h2 className="mt-1 text-pretty text-xl font-semibold">Global search</h2>
+            <h1 className="mt-1 text-pretty text-xl font-semibold">Global search</h1>
             <p className="mt-1 text-sm text-muted-foreground">{totalSearchMatches} matching topics across all levels.</p>
           </>
         )}
@@ -62,7 +62,7 @@ export function ExplorerView({
             return (
               <section key={section.section} className="space-y-8 [content-visibility:auto]">
                 <header className="mb-2 flex items-baseline gap-4 border-b border-border/70 pb-3">
-                  <h3 className="text-2xl font-display font-bold">{humanizeSectionLabel(section.section)}</h3>
+                  <h2 className="text-2xl font-display font-bold">{humanizeSectionLabel(section.section)}</h2>
                   <p className="text-xs font-medium tracking-widest text-muted-foreground uppercase">
                     {section.topics.length} topics
                   </p>
@@ -118,16 +118,16 @@ export function ExplorerView({
             searchResultsByLevel.map((entry) => (
               <section key={entry.level} className="space-y-3 [content-visibility:auto]">
                 <header className="flex items-end justify-between gap-3 border-b border-border/80 pb-2">
-                  <h3 className="text-sm font-semibold">Level {entry.level}</h3>
+                  <h2 className="text-sm font-semibold">Level {entry.level}</h2>
                   <p className="text-xs text-muted-foreground">{entry.totalCount} matches</p>
                 </header>
                 <div className="space-y-5">
                   {entry.sections.map((section) => (
                     <section key={`${entry.level}:${section.section}`} className="space-y-3">
                       <div className="flex items-center justify-between gap-3">
-                        <h4 className="text-xs font-bold uppercase tracking-[0.1em] text-muted-foreground">
+                        <h3 className="text-xs font-bold uppercase tracking-[0.1em] text-muted-foreground">
                           {humanizeSectionLabel(section.section)}
-                        </h4>
+                        </h3>
                         <p className="text-xs text-muted-foreground">{section.topics.length} matches</p>
                       </div>
                       <div className="flex flex-wrap gap-2.5 md:gap-3">

@@ -371,7 +371,7 @@ export function LangCompassShell({ mode, topics, detailTopicIds }: LangCompassSh
             <LevelNavigation selectedLevel={selectedLevel} levelCounts={levelCounts} onLevelSelect={handleLevelSelect} />
           </aside>
 
-          <main className="min-h-0 bg-transparent">
+          <main id="main-content" className="min-h-0 min-w-0 scroll-mt-4 bg-transparent">
             {!isExplorerMode ? (
               <OverviewView
                 selectedLevel={selectedLevel}

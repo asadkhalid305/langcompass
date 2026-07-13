@@ -35,7 +35,7 @@ export default async function TopicDetailPage({ params }: TopicDetailPageProps) 
   const relatedTopics = resolveTopicLinks(detail?.relatedTopicIds ?? topic.relatedTopicIds, topicsById)
 
   return (
-    <main className="min-h-screen">
+    <main id="main-content" className="min-h-screen min-w-0 scroll-mt-4">
       <div className="mx-auto w-full max-w-[1200px] px-4 py-4 md:px-8 md:py-6">
         <Suspense fallback={<StaticTopicBreadcrumb topicId={topic.id} topicTitle={topic.title} level={topic.level} section={topic.section} />}>
           <TopicDetailBreadcrumb topicId={topic.id} topicTitle={topic.title} defaultLevel={topic.level} defaultSection={topic.section} />
@@ -43,7 +43,7 @@ export default async function TopicDetailPage({ params }: TopicDetailPageProps) 
 
         <TopicDetailHeader topic={topic} detail={detail} />
 
-        <div className="mt-8 grid gap-6 lg:grid-cols-[minmax(0,1fr)_18rem]">
+        <div className="mt-8 grid min-w-0 gap-6 lg:grid-cols-[minmax(0,1fr)_18rem]">
           <TopicDetailContent detail={detail} topicId={topic.id} topicsById={topicsById} />
           <TopicDetailSidebar topic={topic} detail={detail} prerequisiteTopics={prerequisiteTopics} relatedTopics={relatedTopics} />
         </div>

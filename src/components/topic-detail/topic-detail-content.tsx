@@ -34,7 +34,7 @@ interface TokenListProps {
 
 function DetailSection({ title, eyebrow, accentClassName, children }: DetailSectionProps) {
   return (
-    <section className={`rounded-none border border-border bg-white px-5 py-6 md:px-7 ${accentClassName ?? ""} [content-visibility:auto]`}>
+    <section className={`min-w-0 rounded-none border border-border bg-white px-5 py-6 md:px-7 ${accentClassName ?? ""} [content-visibility:auto]`}>
       {eyebrow ? <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-muted-foreground">{eyebrow}</p> : null}
       <h2 className="mt-2 text-xl font-display font-semibold md:text-2xl">{title}</h2>
       {children}
@@ -63,7 +63,12 @@ function DetailTable({ table }: { table: TopicTable }) {
   return (
     <div className="space-y-3 overflow-hidden border border-border bg-white">
       <p className="border-b border-border bg-muted/35 px-4 py-2 text-sm font-semibold">{table.title}</p>
-      <div className="overflow-x-auto">
+      <div
+        className="max-w-full overflow-x-auto overscroll-x-contain focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-ring"
+        role="region"
+        aria-label={`${table.title} table`}
+        tabIndex={0}
+      >
         <table className="w-full min-w-[28rem] border-collapse text-sm">
           <thead>
             <tr className="bg-muted/20">
@@ -115,7 +120,12 @@ function ComparisonCard({
         <p className="text-sm leading-relaxed text-foreground">{comparison.summary}</p>
       </div>
       {comparison.table ? (
-        <div className="overflow-x-auto border border-border bg-white">
+        <div
+          className="max-w-full overflow-x-auto overscroll-x-contain border border-border bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-ring"
+          role="region"
+          aria-label={`${comparisonTitle} comparison table`}
+          tabIndex={0}
+        >
           <table className="w-full min-w-[24rem] border-collapse text-sm">
             <thead>
               <tr className="bg-muted/20">
@@ -147,7 +157,7 @@ function ComparisonCard({
 export function TopicDetailContent({ detail, topicId, topicsById }: TopicDetailContentProps) {
   if (!detail) {
     return (
-      <article className="space-y-6">
+      <article className="min-w-0 space-y-6">
         <section className="rounded-none border border-dashed border-border bg-white px-5 py-6 text-sm text-muted-foreground md:px-7">
           No detail JSON is available for this topic yet. Once a file is added under `data/topic-details/{topicId}.json`,
           long-form lesson sections will appear here automatically.
@@ -459,5 +469,5 @@ export function TopicDetailContent({ detail, topicId, topicsById }: TopicDetailC
 
   const sections = sectionOrder.map(renderSection).filter(Boolean)
 
-  return <article className="space-y-6">{sections}</article>
+  return <article className="min-w-0 space-y-6">{sections}</article>
 }

@@ -105,7 +105,7 @@ export function TopicPreviewPanel({
         ) : null}
 
         {hasDetailFile && isLoading ? (
-          <PreviewInfoSection title="Loading preview...">
+          <PreviewInfoSection title="Loading preview…">
             <p className="text-white/75">Fetching summary and section highlights.</p>
           </PreviewInfoSection>
         ) : null}

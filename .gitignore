@@ -19,3 +19,14 @@ yarn-debug.log*
 yarn-error.log*
 
 /docs/private
+
+# Local agent and owner workflow
+/AGENTS.md
+/.agents/
+/.codex/
+/skills-lock.json
+/scripts/codex-promote-worktree.sh
+
+# Local data working copies
+/data/topic-catalog.backup.*.json
+/momente_catalog_draft*.json

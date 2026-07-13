@@ -1,4 +1,0 @@
-interface:
-  display_name: "LangCompass Engineering"
-  short_description: "Implement LangCompass code with local conventions"
-  default_prompt: "Use $langcompass-engineering to implement this LangCompass code change."

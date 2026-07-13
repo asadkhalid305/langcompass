@@ -52,9 +52,9 @@ export function OverviewView({
       <section className="grid gap-5 lg:grid-cols-[minmax(0,1.4fr)_minmax(18rem,0.8fr)]">
         <div className="border border-border bg-white px-6 py-7 shadow-[6px_6px_0_#111827] md:px-8 md:py-9">
           <p className="text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground">Curriculum overview</p>
-          <h2 className="mt-4 text-pretty text-3xl font-display font-bold md:text-5xl">
+          <h1 className="mt-4 text-pretty text-3xl font-display font-bold md:text-5xl">
             {selectedLevel === ALL_LEVEL ? levelProfile.title : `Level ${selectedLevel}: ${levelProfile.title}`}
-          </h2>
+          </h1>
           <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground">{levelProfile.description}</p>
           <div className="mt-6 flex flex-wrap items-center gap-6 text-sm font-medium text-foreground">
             <span className="flex items-center gap-2">
@@ -76,7 +76,7 @@ export function OverviewView({
           </div>
           <Button
             onClick={onExploreLevel}
-            className="mt-8 rounded-none border-foreground shadow-[4px_4px_0_#111827] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_#111827]"
+            className="mt-8 rounded-none border-foreground shadow-[4px_4px_0_#111827] transition-[transform,box-shadow] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_#111827] motion-reduce:transition-none"
             size="lg"
           >
             Open topic explorer
@@ -127,14 +127,14 @@ export function OverviewView({
               type="button"
               onClick={onExploreLevel}
               className={cn(
-                "group flex w-full flex-col gap-1.5 bg-white border border-border p-5 text-left transition-all duration-200",
+                "group flex w-full flex-col gap-1.5 bg-white border border-border p-5 text-left transition-[transform,box-shadow] duration-200 motion-reduce:transition-none",
                 "hover:shadow-[4px_4px_0px_#111827] hover:-translate-x-[2px] hover:-translate-y-[2px]",
                 "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground",
               )}
             >
-              <h3 className="text-sm font-bold font-sans group-hover:underline underline-offset-2">
+              <h2 className="text-sm font-bold font-sans group-hover:underline underline-offset-2">
                 {humanizeSectionLabel(summary.section)}
-              </h3>
+              </h2>
               <p className="text-xs tracking-wider text-muted-foreground uppercase font-medium">
                 {summary.totalCount} topics
               </p>
