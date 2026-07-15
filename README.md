@@ -15,6 +15,7 @@ It is intentionally a focused learning map—not a chat interface, account-based
 - Search across titles, aliases, keywords, summaries, and lesson metadata.
 - Open a compact topic preview before moving into a full lesson.
 - Follow prerequisites, related topics, examples, common mistakes, and level progression where available.
+- On supported desktop Chrome devices, use optional on-device learning tools to translate, explain, create examples, summarize lessons, and check German sentences.
 
 The shortest useful path is:
 
@@ -110,9 +111,9 @@ Missing detail files are valid. The app deliberately falls back to catalog metad
 
 The app uses Next.js App Router, React, TypeScript, Tailwind CSS, shadcn/ui primitives, Zod, Fuse.js, and static JSON data.
 
-The current version intentionally has no authentication, database, backend service, runtime AI, embeddings, or vector search. Those are future product decisions rather than requirements for using the curriculum explorer today.
+The current version intentionally has no authentication, database, AI backend service, embeddings, or vector search. Optional learning tools use supported Chrome features on the learner's device and do not change the static hosting model.
 
-For deeper implementation context, see [the architecture guide](docs/architecture.md).
+For help using the optional feature, see [the learning tools user guide](docs/learning-tools.md). For deeper implementation context, see [the architecture guide](docs/architecture.md).
 
 ## License
 

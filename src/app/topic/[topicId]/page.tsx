@@ -2,6 +2,7 @@ import { notFound } from "next/navigation"
 import { Suspense } from "react"
 
 import { StaticTopicBreadcrumb } from "@/components/topic-detail/static-topic-breadcrumb"
+import { LearningToolsWorkspace } from "@/components/topic-detail/learning-tools-workspace"
 import { TopicDetailContent } from "@/components/topic-detail/topic-detail-content"
 import { TopicDetailHeader } from "@/components/topic-detail/topic-detail-header"
 import { resolveTopicLinks } from "@/components/topic-detail/topic-detail-page-helpers"
@@ -9,6 +10,7 @@ import { TopicDetailSidebar } from "@/components/topic-detail/topic-detail-sideb
 import { TopicDetailBreadcrumb } from "@/components/topic/topic-detail-breadcrumb"
 import { loadTopicCatalog } from "@/lib/data/topic-catalog"
 import { loadTopicDetailById } from "@/lib/data/topic-detail"
+import { buildLearningToolsContext } from "@/lib/learning-tools"
 import type { TopicId } from "@/lib/types/topic"
 
 interface TopicDetailPageProps {
@@ -31,6 +33,7 @@ export default async function TopicDetailPage({ params }: TopicDetailPageProps) 
   }
 
   const detail = await loadTopicDetailById(topic.id)
+  const learningToolsContext = buildLearningToolsContext(topic, detail)
   const prerequisiteTopics = resolveTopicLinks(detail?.prerequisiteTopicIds, topicsById)
   const relatedTopics = resolveTopicLinks(detail?.relatedTopicIds ?? topic.relatedTopicIds, topicsById)
 
@@ -42,6 +45,7 @@ export default async function TopicDetailPage({ params }: TopicDetailPageProps) 
         </Suspense>
 
         <TopicDetailHeader topic={topic} detail={detail} />
+        <LearningToolsWorkspace key={topic.id} context={learningToolsContext} />
 
         <div className="mt-8 grid min-w-0 gap-6 lg:grid-cols-[minmax(0,1fr)_18rem]">
           <TopicDetailContent detail={detail} topicId={topic.id} topicsById={topicsById} />

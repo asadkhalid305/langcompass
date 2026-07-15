@@ -1,6 +1,8 @@
 import { TopicMetaTags } from "@/components/topic/topic-meta-tags"
 import type { TopicCatalogItem, TopicDetail } from "@/lib/types/topic"
 
+import { LearningToolsContextActions } from "./learning-tools-context-actions"
+
 interface TopicDetailHeaderProps {
   topic: TopicCatalogItem
   detail: TopicDetail | null
@@ -13,7 +15,13 @@ export function TopicDetailHeader({ topic, detail }: TopicDetailHeaderProps) {
       <h1 className="mt-4 max-w-4xl text-pretty text-3xl font-display font-bold leading-tight md:text-5xl">{topic.title}</h1>
       <TopicMetaTags topic={topic} hasDetailFile={Boolean(detail)} className="mt-5 flex flex-wrap gap-2" />
       {detail?.summary || topic.summary ? (
-        <p className="mt-6 max-w-3xl text-base leading-relaxed text-foreground md:text-lg">{detail?.summary ?? topic.summary}</p>
+        <div className="mt-6 max-w-3xl">
+          <p className="text-base leading-relaxed text-foreground md:text-lg">{detail?.summary ?? topic.summary}</p>
+          <LearningToolsContextActions
+            source={{ label: `${topic.title} summary`, text: detail?.summary ?? topic.summary }}
+            tools={detail ? ["explain", "summarize"] : ["explain"]}
+          />
+        </div>
       ) : (
         <p className="mt-6 max-w-3xl text-base leading-relaxed text-muted-foreground">
           This topic currently has curriculum metadata, and the full lesson content is being prepared.

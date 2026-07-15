@@ -56,7 +56,9 @@ The visual system uses square corners, strong borders and shadows, Space Grotesk
 
 Development uses webpack because the tested Next.js 16 Turbopack HMR path has crashed on dynamic topic routes. Production uses the standard Next.js build.
 
-The current stage intentionally excludes authentication, persistence, runtime AI generation, vector search, and server-heavy architecture.
+The current stage intentionally excludes authentication, server-side persistence, vector search, cloud AI services, and server-heavy architecture.
+
+Learning tools are an optional client-side progressive enhancement. They use browser-managed on-device models when the required Chrome API, language combination, model, and hardware are available. They do not change the static hosting model, and lesson exploration remains complete when every AI capability is unavailable. The dated capability matrix and API-selection rationale live in [the on-device learning tools decision record](decisions/2026-07-13-on-device-learning-tools.md).
 
 ## Contributor Invariants
 

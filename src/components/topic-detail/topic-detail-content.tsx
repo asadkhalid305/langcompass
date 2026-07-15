@@ -13,6 +13,7 @@ import {
   resolveDetailSectionPresentation,
   type DetailSectionId,
 } from "./topic-detail-page-helpers"
+import { LearningToolsContextActions } from "./learning-tools-context-actions"
 
 interface TopicDetailContentProps {
   detail: TopicDetail | null
@@ -60,6 +61,8 @@ function TokenList({ items, tone = "default" }: TokenListProps) {
 }
 
 function DetailTable({ table }: { table: TopicTable }) {
+  const tableText = [table.columns.join(" | "), ...table.rows.map((row) => row.join(" | "))].join("\n")
+
   return (
     <div className="space-y-3 overflow-hidden border border-border bg-white">
       <p className="border-b border-border bg-muted/35 px-4 py-2 text-sm font-semibold">{table.title}</p>
@@ -91,6 +94,12 @@ function DetailTable({ table }: { table: TopicTable }) {
             ))}
           </tbody>
         </table>
+      </div>
+      <div className="px-4 pb-4">
+        <LearningToolsContextActions
+          source={{ label: `${table.title} table`, text: tableText }}
+          tools={["explain", "examples"]}
+        />
       </div>
     </div>
   )
@@ -185,6 +194,10 @@ export function TopicDetailContent({ detail, topicId, topicsById }: TopicDetailC
                 <article key={`${item.title}-${index}`} className="border border-amber-300/80 bg-white/90 p-4 shadow-[4px_4px_0_rgba(146,64,14,0.12)]">
                   <h3 className="text-base font-semibold text-foreground">{item.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-foreground">{item.content}</p>
+                  <LearningToolsContextActions
+                    source={{ label: `${presentation.mentalModel.title}: ${item.title}`, text: item.content }}
+                    tools={["explain", "examples"]}
+                  />
                 </article>
               ))}
             </div>
@@ -211,6 +224,10 @@ export function TopicDetailContent({ detail, topicId, topicsById }: TopicDetailC
                   <article key={ruleBlock.id} className="border-l-2 border-foreground/60 bg-muted/20 px-4 py-3">
                     <h3 className="text-sm font-semibold text-foreground md:text-base">{ruleBlock.title}</h3>
                     <p className="mt-2 text-sm leading-relaxed text-foreground">{ruleBlock.content}</p>
+                    <LearningToolsContextActions
+                      source={{ label: `${presentation.coreRules.title}: ${ruleBlock.title}`, text: ruleBlock.content }}
+                      tools={["explain", "examples"]}
+                    />
                   </article>
                 ))}
               </div>
@@ -261,6 +278,10 @@ export function TopicDetailContent({ detail, topicId, topicsById }: TopicDetailC
                       </li>
                     ))}
                   </ul>
+                  <LearningToolsContextActions
+                    source={{ label: presentation.patternsAndUsage.patternsLabel, text: detail.patterns.join("\n") }}
+                    tools={["explain", "examples"]}
+                  />
                 </article>
               ) : null}
               {hasRows(detail.sentenceStructure) ? (
@@ -275,6 +296,10 @@ export function TopicDetailContent({ detail, topicId, topicsById }: TopicDetailC
                       </li>
                     ))}
                   </ul>
+                  <LearningToolsContextActions
+                    source={{ label: presentation.patternsAndUsage.sentenceStructureLabel, text: detail.sentenceStructure.join("\n") }}
+                    tools={["explain", "examples"]}
+                  />
                 </article>
               ) : null}
             </div>
@@ -372,6 +397,16 @@ export function TopicDetailContent({ detail, topicId, topicsById }: TopicDetailC
                   {example.note ? (
                     <p className="mt-3 border-t border-border pt-3 text-xs uppercase tracking-[0.08em] text-muted-foreground">{example.note}</p>
                   ) : null}
+                  <LearningToolsContextActions
+                    source={{
+                      label: `${presentation.examples.title} example ${index + 1}`,
+                      text: [example.de, example.en, example.note].filter(Boolean).join(" — "),
+                    }}
+                    toolSources={{
+                      translate: { label: `${presentation.examples.title} example ${index + 1}`, text: example.de },
+                    }}
+                    tools={["translate", "explain", "examples"]}
+                  />
                 </article>
               ))}
             </div>
