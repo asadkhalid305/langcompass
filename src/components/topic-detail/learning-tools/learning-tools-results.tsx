@@ -3,6 +3,7 @@
 import { History, Trash2 } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { LEARNING_TOOL_IDS, LEARNING_TOOL_LABELS, type LearningToolId } from "@/lib/learning-tools"
 
 import { LearningToolResultCard } from "./learning-tool-result-card"
@@ -24,12 +25,15 @@ export function LearningToolsResults({ controller }: LearningToolsResultsProps) 
       </div>
 
       <div className="mt-3 flex flex-wrap items-end gap-3 border border-border bg-muted/15 p-3">
-        <label className="text-xs font-semibold">Filter by tool
-          <select value={controller.historyTool} onChange={(event) => controller.setHistoryTool(event.target.value as LearningToolId | "all")} className="mt-1 block min-h-10 border border-border bg-white px-2 text-sm">
-            <option value="all">All tools</option>
-            {LEARNING_TOOL_IDS.map((item) => <option key={item} value={item}>{LEARNING_TOOL_LABELS[item]}</option>)}
-          </select>
-        </label>
+        <div className="text-xs font-semibold">Filter by tool
+          <Select value={controller.historyTool} onValueChange={(value) => controller.setHistoryTool(value as LearningToolId | "all")}>
+            <SelectTrigger aria-label="Filter by tool" className="min-w-40"><SelectValue /></SelectTrigger>
+            <SelectContent>
+              <SelectItem value="all">All tools</SelectItem>
+              {LEARNING_TOOL_IDS.map((item) => <SelectItem key={item} value={item}>{LEARNING_TOOL_LABELS[item]}</SelectItem>)}
+            </SelectContent>
+          </Select>
+        </div>
         <label className="flex min-h-10 items-center gap-2 text-sm">
           <input type="checkbox" checked={controller.recentEnabled} onChange={(event) => controller.updateRecentEnabled(event.target.checked)} />
           Keep recent results for seven days

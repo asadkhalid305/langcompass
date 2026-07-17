@@ -4,10 +4,6 @@ import { useCallback, useEffect, useMemo, useState } from "react"
 
 import {
   DEFAULT_LEARNING_TOOL_OPTIONS,
-  GERMAN_TRANSLATION_SOURCE_LANGUAGE,
-  readWorkspace,
-  TRANSLATION_TARGET_LANGUAGES,
-  writeWorkspace,
   type LearningToolId,
   type LearningToolSource,
   type LearningToolsContext,
@@ -26,7 +22,6 @@ export function useLearningToolsWorkspaceState(context: LearningToolsContext) {
   )
   const [open, setOpen] = useState(false)
   const [desktop, setDesktop] = useState(false)
-  const [workspaceRestored, setWorkspaceRestored] = useState(false)
   const [tool, setTool] = useState<LearningToolId>("translate")
   const [source, setSource] = useState<LearningToolSource>(defaultSource)
   const [learnerText, setLearnerText] = useState("")
@@ -40,44 +35,6 @@ export function useLearningToolsWorkspaceState(context: LearningToolsContext) {
     media.addEventListener("change", update)
     return () => media.removeEventListener("change", update)
   }, [])
-
-  useEffect(() => {
-    let active = true
-    queueMicrotask(() => {
-      if (!active) return
-      const workspace = readWorkspace(window.sessionStorage)
-      if (workspace?.topicId === context.topicId) {
-        const restoredTargetLanguage = TRANSLATION_TARGET_LANGUAGES.some(
-          (language) => language.code === workspace.options.targetLanguage,
-        )
-          ? workspace.options.targetLanguage
-          : "en"
-        setTool(workspace.tool)
-        setSource(workspace.source)
-        setLearnerText(workspace.learnerText)
-        setTaskOptions({
-          ...workspace.options,
-          sourceLanguage: GERMAN_TRANSLATION_SOURCE_LANGUAGE,
-          targetLanguage: restoredTargetLanguage,
-        })
-      }
-      setWorkspaceRestored(true)
-    })
-    return () => {
-      active = false
-    }
-  }, [context.topicId])
-
-  useEffect(() => {
-    if (!workspaceRestored) return
-    writeWorkspace(window.sessionStorage, {
-      topicId: context.topicId,
-      tool,
-      source,
-      learnerText,
-      options: taskOptions,
-    })
-  }, [context.topicId, learnerText, source, taskOptions, tool, workspaceRestored])
 
   const openFromContext = useCallback(({ tool: nextTool, source: nextSource }: LearningToolsOpenRequest) => {
     setTool(nextTool)
@@ -114,6 +71,15 @@ export function useLearningToolsWorkspaceState(context: LearningToolsContext) {
     setSentenceFocusRequest((request) => request + 1)
   }, [])
 
+  const clearLearnerText = useCallback(() => setLearnerText(""), [])
+
+  const resetWorkspace = useCallback(() => {
+    setTool("translate")
+    setSource(defaultSource)
+    setLearnerText("")
+    setTaskOptions(DEFAULT_LEARNING_TOOL_OPTIONS)
+  }, [defaultSource])
+
   const explainGeneratedExample = useCallback((sourceText: string, index: number) => {
     setTool("explain")
     setSource({ label: `Generated example ${index + 1}`, text: sourceText })
@@ -127,6 +93,7 @@ export function useLearningToolsWorkspaceState(context: LearningToolsContext) {
   return {
     defaultSource,
     desktop,
+    clearLearnerText,
     explainGeneratedExample,
     languagePairInvalid,
     learnerText,
@@ -135,6 +102,7 @@ export function useLearningToolsWorkspaceState(context: LearningToolsContext) {
     openFromContext,
     requiresLessonDetail,
     resetSourceForTool,
+    resetWorkspace,
     selectTranslationSource,
     sentenceFocusRequest,
     setLearnerText,

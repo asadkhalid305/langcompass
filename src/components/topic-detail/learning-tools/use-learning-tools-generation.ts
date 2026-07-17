@@ -21,7 +21,6 @@ interface GenerationStatus {
   state: GenerationState
   downloadProgress: number | null
   errorMessage: string
-  streamingText: string
 }
 
 type GenerationAction =
@@ -29,7 +28,6 @@ type GenerationAction =
   | { type: "preparing" }
   | { type: "download-progress"; progress: number }
   | { type: "generating" }
-  | { type: "streaming"; text: string }
   | { type: "success" }
   | { type: "canceled" }
   | { type: "error"; message: string }
@@ -38,7 +36,6 @@ const INITIAL_GENERATION_STATUS: GenerationStatus = {
   state: "idle",
   downloadProgress: null,
   errorMessage: "",
-  streamingText: "",
 }
 
 const generationReducer = (_status: GenerationStatus, action: GenerationAction): GenerationStatus => {
@@ -51,8 +48,6 @@ const generationReducer = (_status: GenerationStatus, action: GenerationAction):
       return { ..._status, downloadProgress: action.progress }
     case "generating":
       return { ..._status, state: "generating", downloadProgress: null }
-    case "streaming":
-      return { ..._status, state: "generating", streamingText: action.text }
     case "success":
       return { ..._status, state: "success", downloadProgress: null }
     case "canceled":
@@ -64,6 +59,7 @@ const generationReducer = (_status: GenerationStatus, action: GenerationAction):
 
 interface UseLearningToolsGenerationOptions {
   capabilities: LearningToolCapabilities
+  clearLearnerText: () => void
   context: LearningToolsContext
   defaultSource: LearningToolSource
   learnerText: string
@@ -91,6 +87,7 @@ const createResultId = (): string =>
 
 export function useLearningToolsGeneration({
   capabilities,
+  clearLearnerText,
   context,
   defaultSource,
   learnerText,
@@ -124,8 +121,8 @@ export function useLearningToolsGeneration({
 
     const controller = new AbortController()
     abortRef.current = controller
-    dispatch({ type: "preparing" })
     const downloadExpected = selectedCapability === "downloadable" || selectedCapability === "downloading"
+    dispatch({ type: downloadExpected ? "preparing" : "generating" })
     const capabilityKey = selectedTool === "translate"
       ? "translate"
       : selectedTool === "summarize"
@@ -165,7 +162,6 @@ export function useLearningToolsGeneration({
           setCapabilities((current) => ({ ...current, [capabilityKey]: "ready" }))
           dispatch({ type: "generating" })
         },
-        onChunk: (text) => dispatch({ type: "streaming", text }),
       })
       const normalizedOutput = generated.text.trim()
       if (!normalizedOutput) throw new Error("The on-device model returned an empty result. Try again.")
@@ -186,6 +182,7 @@ export function useLearningToolsGeneration({
         saved: false,
       }
       persistResults([result, ...resultsRef.current])
+      if (selectedTool === "check") clearLearnerText()
       setCapabilities((current) => ({
         ...current,
         [generated.generatedBy === "translator"
@@ -212,6 +209,7 @@ export function useLearningToolsGeneration({
     }
   }, [
     capabilities,
+    clearLearnerText,
     context,
     defaultSource,
     learnerText,
@@ -238,6 +236,5 @@ export function useLearningToolsGeneration({
     reportError,
     resetGeneration,
     runGeneration,
-    streamingText: status.streamingText,
   }
 }

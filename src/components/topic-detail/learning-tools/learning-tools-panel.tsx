@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react"
 import { CheckCircle2, LoaderCircle, Sparkles, XCircle } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { SheetContent, SheetDescription, SheetHeader, SheetTitle } from "@/components/ui/sheet"
 import {
   LEARNING_TOOL_API_LABELS,
@@ -21,13 +22,33 @@ interface LearningToolsPanelProps {
   controller: LearningToolsController
 }
 
+interface ToolOptionSelectProps {
+  label: string
+  value: string
+  onValueChange: (value: string) => void
+  disabled: boolean
+  options: Array<[string, string]>
+}
+
+function ToolOptionSelect({ label, value, onValueChange, disabled, options }: ToolOptionSelectProps) {
+  return (
+    <div className="mt-4 text-sm font-semibold">
+      {label}
+      <Select value={value} onValueChange={onValueChange} disabled={disabled}>
+        <SelectTrigger aria-label={label}><SelectValue /></SelectTrigger>
+        <SelectContent>{options.map(([optionValue, optionLabel]) => <SelectItem key={optionValue} value={optionValue}>{optionLabel}</SelectItem>)}</SelectContent>
+      </Select>
+    </div>
+  )
+}
+
 const capabilityCopy: Record<CapabilityState, string> = {
   checking: "Checking this browser…",
   unsupported: "This API is not available in this browser.",
   unavailable: "This device or language combination does not meet the current requirements.",
   downloadable: "The on-device model needs a one-time download.",
   downloading: "Downloading the on-device model…",
-  ready: "Ready on this device.",
+  ready: "Ready for this tool.",
 }
 
 export function LearningToolsPanel({ controller }: LearningToolsPanelProps) {
@@ -93,22 +114,25 @@ export function LearningToolsPanel({ controller }: LearningToolsPanelProps) {
             </div>
 
             {controller.tool === "translate" && controller.context.translationSources.length > 0 ? (
-              <label className="mt-4 block text-sm font-semibold">
+              <div className="mt-4">
                 German sentence
-                <select
+                <Select
                   value={controller.translationSourceIndex >= 0 ? String(controller.translationSourceIndex) : ""}
-                  onChange={(event) => controller.selectTranslationSource(Number(event.target.value))}
+                  onValueChange={(value) => controller.selectTranslationSource(Number(value))}
                   disabled={controller.isBusy}
-                  className="mt-2 min-h-11 w-full border border-border bg-white px-3 text-sm disabled:cursor-not-allowed disabled:opacity-60"
                 >
-                  {controller.translationSourceIndex < 0 ? <option value="" disabled>Choose a German sentence</option> : null}
-                  {controller.context.translationSources.map((candidate, index) => (
-                    <option key={`${candidate.label}-${candidate.text}`} value={index}>
+                  <SelectTrigger aria-label="German sentence">
+                    <SelectValue placeholder="Choose a German sentence" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {controller.context.translationSources.map((candidate, index) => (
+                      <SelectItem key={`${candidate.label}-${candidate.text}`} value={String(index)}>
                       {index + 1}. {candidate.text}
-                    </option>
-                  ))}
-                </select>
-              </label>
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
             ) : null}
 
             <div className="mt-4 border border-border bg-muted/15 p-3">
@@ -139,35 +163,24 @@ export function LearningToolsPanel({ controller }: LearningToolsPanelProps) {
             ) : null}
 
             {controller.tool === "translate" ? (
-              <label className="mt-4 block text-sm font-semibold">Translate into
-                <select value={controller.taskOptions.targetLanguage} onChange={(event) => controller.updateTaskOption("targetLanguage", event.target.value)} disabled={controller.isBusy} className="mt-2 min-h-11 w-full border border-border bg-white px-3 text-sm disabled:cursor-not-allowed disabled:opacity-60">
-                  {TRANSLATION_TARGET_LANGUAGES.map((language) => <option key={language.code} value={language.code}>{language.label}</option>)}
-                </select>
-              </label>
+              <div className="mt-4 text-sm font-semibold">Translate into
+                <Select value={controller.taskOptions.targetLanguage} onValueChange={(value) => controller.updateTaskOption("targetLanguage", value)} disabled={controller.isBusy}>
+                  <SelectTrigger aria-label="Translate into"><SelectValue /></SelectTrigger>
+                  <SelectContent>{TRANSLATION_TARGET_LANGUAGES.map((language) => <SelectItem key={language.code} value={language.code}>{language.label}</SelectItem>)}</SelectContent>
+                </Select>
+              </div>
             ) : null}
 
             {controller.tool === "explain" ? (
-              <label className="mt-4 block text-sm font-semibold">What should be explained?
-                <select value={controller.taskOptions.explanationFocus} onChange={(event) => controller.updateTaskOption("explanationFocus", event.target.value as LearningToolTaskOptions["explanationFocus"])} disabled={controller.isBusy} className="mt-2 min-h-11 w-full border border-border bg-white px-3 text-sm disabled:cursor-not-allowed disabled:opacity-60">
-                  <option value="overview">Meaning and usage</option><option value="word">One word or phrase</option><option value="structure">Sentence structure</option><option value="form">Why this form</option><option value="contrast">Contrast alternatives</option><option value="memory">Mental model</option><option value="table">Comparison table</option><option value="pattern">Reusable pattern</option>
-                </select>
-              </label>
+              <ToolOptionSelect label="What should be explained?" value={controller.taskOptions.explanationFocus} onValueChange={(value) => controller.updateTaskOption("explanationFocus", value as LearningToolTaskOptions["explanationFocus"])} disabled={controller.isBusy} options={[["overview", "Meaning and usage"], ["word", "One word or phrase"], ["structure", "Sentence structure"], ["form", "Why this form"], ["contrast", "Contrast alternatives"], ["memory", "Mental model"], ["table", "Comparison table"], ["pattern", "Reusable pattern"]]} />
             ) : null}
 
             {controller.tool === "summarize" ? (
-              <label className="mt-4 block text-sm font-semibold">Summary format
-                <select value={controller.taskOptions.summaryFormat} onChange={(event) => controller.updateTaskOption("summaryFormat", event.target.value as LearningToolTaskOptions["summaryFormat"])} disabled={controller.isBusy} className="mt-2 min-h-11 w-full border border-border bg-white px-3 text-sm disabled:cursor-not-allowed disabled:opacity-60">
-                  <option value="quick-recap">Quick recap</option><option value="key-rules">Key rules</option><option value="five-bullets">Five bullets</option><option value="revision-card">Revision card</option>
-                </select>
-              </label>
+              <ToolOptionSelect label="Summary format" value={controller.taskOptions.summaryFormat} onValueChange={(value) => controller.updateTaskOption("summaryFormat", value as LearningToolTaskOptions["summaryFormat"])} disabled={controller.isBusy} options={[["quick-recap", "Quick recap"], ["key-rules", "Key rules"], ["five-bullets", "Five bullets"], ["revision-card", "Revision card"]]} />
             ) : null}
 
             {controller.tool === "examples" ? (
-              <label className="mt-4 block text-sm font-semibold">Difficulty
-                <select value={controller.taskOptions.exampleDifficulty} onChange={(event) => controller.updateTaskOption("exampleDifficulty", event.target.value as LearningToolTaskOptions["exampleDifficulty"])} disabled={controller.isBusy} className="mt-2 min-h-11 w-full border border-border bg-white px-3 text-sm disabled:cursor-not-allowed disabled:opacity-60">
-                  <option value="easier">Easier</option><option value="same-level">Same difficulty</option><option value="challenge">More challenging</option>
-                </select>
-              </label>
+              <ToolOptionSelect label="Difficulty" value={controller.taskOptions.exampleDifficulty} onValueChange={(value) => controller.updateTaskOption("exampleDifficulty", value as LearningToolTaskOptions["exampleDifficulty"])} disabled={controller.isBusy} options={[["easier", "Easier"], ["same-level", "Same difficulty"], ["challenge", "More challenging"]]} />
             ) : null}
 
             <div className="mt-4 flex flex-wrap gap-2">
@@ -198,12 +211,6 @@ export function LearningToolsPanel({ controller }: LearningToolsPanelProps) {
               {controller.generationState === "success" ? <p className="flex items-center gap-2 text-emerald-700"><CheckCircle2 className="h-4 w-4" aria-hidden="true" />Generated on this device.</p> : null}
             </div>
 
-            {controller.generationState === "generating" && controller.streamingText ? (
-              <div className="mt-3 border border-border bg-white p-4 text-sm leading-relaxed" aria-live="polite">
-                <p className="text-[11px] font-bold uppercase tracking-[0.12em] text-orange-700">Generating locally</p>
-                <p className="mt-2 whitespace-pre-wrap">{controller.streamingText}</p>
-              </div>
-            ) : null}
           </section>
 
           <LearningToolsResults controller={controller} />

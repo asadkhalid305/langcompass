@@ -34,6 +34,7 @@ export function useLearningToolsController(context: LearningToolsContext) {
   })
   const generation = useLearningToolsGeneration({
     capabilities: capability.capabilities,
+    clearLearnerText: workspace.clearLearnerText,
     context,
     defaultSource: workspace.defaultSource,
     learnerText: workspace.learnerText,
@@ -72,6 +73,15 @@ export function useLearningToolsController(context: LearningToolsContext) {
     workspace.resetSourceForTool(tool)
     setHistoryTool(tool)
     generation.resetGeneration()
+  }
+
+  const setOpen = (nextOpen: boolean) => {
+    workspace.setOpen(nextOpen)
+    if (!nextOpen) {
+      workspace.resetWorkspace()
+      generation.resetGeneration()
+      setHistoryView("recent")
+    }
   }
 
   const selectTranslationSource = (index: number) => {
@@ -170,9 +180,8 @@ export function useLearningToolsController(context: LearningToolsContext) {
     setHistoryTool,
     setHistoryView,
     setLearnerText: workspace.setLearnerText,
-    setOpen: workspace.setOpen,
+    setOpen,
     source: workspace.source,
-    streamingText: generation.streamingText,
     taskOptions: workspace.taskOptions,
     toggleSaved,
     tool: workspace.tool,

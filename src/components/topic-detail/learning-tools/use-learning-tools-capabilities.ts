@@ -51,6 +51,7 @@ export function useLearningToolsCapabilities({
   }, [context, sessionPool, taskOptions.sourceLanguage, taskOptions.summaryFormat, taskOptions.targetLanguage])
 
   useEffect(() => {
+    setCapabilities((current) => ({ ...current, translate: "checking", summarize: "checking" }))
     void refreshCapabilities()
   }, [refreshCapabilities])
 
