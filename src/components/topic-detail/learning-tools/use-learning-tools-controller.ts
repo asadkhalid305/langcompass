@@ -23,6 +23,12 @@ import {
 
 export function useLearningToolsController(context: LearningToolsContext) {
   const [sessionPool] = useState(() => new ChromeAISessionPool())
+  const [confirmation, setConfirmation] = useState<{
+    action: () => void
+    confirmLabel: string
+    description: string
+    title: string
+  } | null>(null)
   const [historyView, setHistoryView] = useState<"recent" | "saved">("recent")
   const [historyTool, setHistoryTool] = useState<LearningToolId | "all">("translate")
   const workspace = useLearningToolsWorkspaceState(context)
@@ -110,8 +116,12 @@ export function useLearningToolsController(context: LearningToolsContext) {
   }
 
   const clearAll = () => {
-    if (!window.confirm("Delete all recent and saved learning-tool results from this browser?")) return
-    persistence.clearAllResults()
+    setConfirmation({
+      action: persistence.clearAllResults,
+      confirmLabel: "Delete everything",
+      description: "Delete all recent and saved learning-tool results from this browser?",
+      title: "Delete all results?",
+    })
   }
 
   const clearCurrentResults = () => {
@@ -122,13 +132,26 @@ export function useLearningToolsController(context: LearningToolsContext) {
       : historyTool === "all"
         ? "Delete all saved learning-tool results from this browser? Recent results will remain."
         : `Delete saved results for ${LEARNING_TOOL_LABELS[historyTool]}? Other saved results and all recent results will remain.`
-    if (!window.confirm(message)) return
-    persistence.persistResults(removeHistoryResults(persistence.results, historyView, historyTool))
+    setConfirmation({
+      action: () => persistence.persistResults(removeHistoryResults(persistence.results, historyView, historyTool)),
+      confirmLabel: historyView === "recent" ? "Clear results" : "Delete results",
+      description: message,
+      title: historyView === "recent" ? "Clear these recent results?" : "Delete these saved results?",
+    })
   }
 
   const deleteResult = (id: string) => {
-    if (!window.confirm("Delete this generated result from this browser?")) return
-    persistence.persistResults(persistence.results.filter((result) => result.id !== id))
+    setConfirmation({
+      action: () => persistence.persistResults(persistence.results.filter((result) => result.id !== id)),
+      confirmLabel: "Delete result",
+      description: "Delete this generated result from this browser?",
+      title: "Delete this result?",
+    })
+  }
+
+  const confirmAction = () => {
+    confirmation?.action()
+    setConfirmation(null)
   }
 
   const toggleSaved = (id: string) => {
@@ -153,6 +176,8 @@ export function useLearningToolsController(context: LearningToolsContext) {
     canGenerate,
     clearAll,
     clearCurrentResults,
+    confirmation,
+    confirmAction,
     context,
     copyText,
     currentCapability,
@@ -180,6 +205,7 @@ export function useLearningToolsController(context: LearningToolsContext) {
     setHistoryTool,
     setHistoryView,
     setLearnerText: workspace.setLearnerText,
+    setConfirmation,
     setOpen,
     source: workspace.source,
     taskOptions: workspace.taskOptions,

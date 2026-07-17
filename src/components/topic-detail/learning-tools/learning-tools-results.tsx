@@ -2,6 +2,16 @@
 
 import { History, Trash2 } from "lucide-react"
 
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from "@/components/ui/alert-dialog"
 import { Button } from "@/components/ui/button"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { LEARNING_TOOL_IDS, LEARNING_TOOL_LABELS, type LearningToolId } from "@/lib/learning-tools"
@@ -15,7 +25,20 @@ interface LearningToolsResultsProps {
 
 export function LearningToolsResults({ controller }: LearningToolsResultsProps) {
   return (
-    <section className="mt-6 border-t border-border pt-5" aria-labelledby="learning-tools-history">
+    <>
+      <AlertDialog open={controller.confirmation !== null} onOpenChange={(open) => !open && controller.setConfirmation(null)}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>{controller.confirmation?.title}</AlertDialogTitle>
+            <AlertDialogDescription>{controller.confirmation?.description}</AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel asChild><Button type="button" variant="outline">Cancel</Button></AlertDialogCancel>
+            <AlertDialogAction asChild><Button type="button" onClick={controller.confirmAction}>{controller.confirmation?.confirmLabel}</Button></AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
+      <section className="mt-6 border-t border-border pt-5" aria-labelledby="learning-tools-history">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <h2 id="learning-tools-history" className="flex items-center gap-2 text-lg font-semibold"><History className="h-4 w-4" aria-hidden="true" />Results</h2>
         <div className="flex gap-2" role="group" aria-label="Result view">
@@ -55,6 +78,7 @@ export function LearningToolsResults({ controller }: LearningToolsResultsProps) 
           ))}
         </div>
       )}
-    </section>
+      </section>
+    </>
   )
 }
