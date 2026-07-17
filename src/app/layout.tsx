@@ -3,6 +3,8 @@ import type { Metadata } from "next"
 import type { ReactNode } from "react"
 import { Space_Grotesk, Inter } from "next/font/google"
 
+import { LearningToolsDeviceStatusNotice } from "@/components/learning-tools/learning-tools-device-status"
+
 const textFont = Inter({
   subsets: ["latin"],
   variable: "--font-text",
@@ -48,6 +50,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           Skip to main content
         </a>
         {children}
+        <LearningToolsDeviceStatusNotice />
       </body>
     </html>
   )

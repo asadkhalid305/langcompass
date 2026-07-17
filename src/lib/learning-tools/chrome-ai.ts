@@ -84,6 +84,8 @@ export interface LearningToolCapabilities {
   proofreader: CapabilityState
 }
 
+export type LearningToolsDeviceStatus = "checking" | "ready" | "downloadable" | "unavailable"
+
 const promptLanguageOptions = () => ({
   expectedInputs: [{ type: "text", languages: ["de", "en"] }],
   expectedOutputs: [{ type: "text", languages: ["en", "de"] }],
@@ -105,6 +107,14 @@ const summarizerOptions = (options: LearningToolTaskOptions, context?: LearningT
 
 const mapAvailability = (availability: BrowserAvailability): CapabilityState =>
   availability === "available" ? "ready" : availability
+
+export const resolveLearningToolsDeviceStatus = (capabilities: LearningToolCapabilities): LearningToolsDeviceStatus => {
+  const states = Object.values(capabilities)
+  if (states.includes("checking")) return "checking"
+  if (states.includes("ready")) return "ready"
+  if (states.includes("downloadable") || states.includes("downloading")) return "downloadable"
+  return "unavailable"
+}
 
 export const capabilityForTool = (
   tool: LearningToolId,

@@ -18,6 +18,7 @@ import {
   parseGeneratedText,
   parseSentenceCheckOutput,
   readResults,
+  resolveLearningToolsDeviceStatus,
   readWorkspace,
   RECENT_RETENTION_MS,
   removeHistoryResults,
@@ -209,6 +210,13 @@ test("capability detection independently represents supported and experimental A
   assert.equal(capabilityForTool("translate", capabilities), "ready")
   assert.equal(capabilityForTool("summarize", capabilities), "downloadable")
   assert.equal(capabilityForTool("check", capabilities), "unavailable")
+})
+
+test("device availability status is derived from live tool capabilities", () => {
+  assert.equal(resolveLearningToolsDeviceStatus({ translate: "checking", summarize: "unsupported", prompt: "unsupported", proofreader: "unsupported" }), "checking")
+  assert.equal(resolveLearningToolsDeviceStatus({ translate: "ready", summarize: "unavailable", prompt: "unsupported", proofreader: "unsupported" }), "ready")
+  assert.equal(resolveLearningToolsDeviceStatus({ translate: "downloadable", summarize: "unavailable", prompt: "unsupported", proofreader: "unsupported" }), "downloadable")
+  assert.equal(resolveLearningToolsDeviceStatus({ translate: "unavailable", summarize: "unsupported", prompt: "unsupported", proofreader: "unavailable" }), "unavailable")
 })
 
 test("missing APIs are unsupported without affecting available tools", async () => {
