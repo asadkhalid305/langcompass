@@ -2,6 +2,12 @@ import { ALLOWED_LEVELS, TOPIC_SECTION_ORDER } from "../constants"
 import type { TopicCatalogItem, TopicLevel, TopicSection } from "../types"
 import type { ExplorerLevelSection, LevelTopicCounts } from "./types"
 
+export interface TopicNeighbors {
+  found: boolean
+  previous: TopicCatalogItem | null
+  next: TopicCatalogItem | null
+}
+
 const levelOrder = new Map<TopicLevel, number>(ALLOWED_LEVELS.map((level, index) => [level, index]))
 const sectionOrder = new Map<TopicSection, number>(TOPIC_SECTION_ORDER.map((section, index) => [section, index]))
 
@@ -103,6 +109,27 @@ export const getLevelSectionsForAllLevels = (topics: TopicCatalogItem[]): Explor
       topics: topicsInSection,
     }
   }).filter((section) => section.topics.length > 0)
+
+export const getTopicNeighbors = (
+  topics: TopicCatalogItem[],
+  topicId: TopicCatalogItem["id"],
+  level: TopicLevel | "All",
+): TopicNeighbors => {
+  const currentTopic = topics.find((topic) => topic.id === topicId)
+  if (!currentTopic) return { found: false, previous: null, next: null }
+
+  const sections = level === "All" ? getLevelSectionsForAllLevels(topics) : getLevelSections(topics, level)
+  const sequence = sections.find((section) => section.section === currentTopic.section)?.topics ?? []
+  const topicIndex = sequence.findIndex((topic) => topic.id === topicId)
+
+  if (topicIndex < 0) return { found: false, previous: null, next: null }
+
+  return {
+    found: true,
+    previous: sequence[topicIndex - 1] ?? null,
+    next: sequence[topicIndex + 1] ?? null,
+  }
+}
 
 export const getLevelTopicCounts = (topics: TopicCatalogItem[], level: TopicLevel): LevelTopicCounts => {
   const introduced = getTopicsIntroducedInLevel(topics, level)

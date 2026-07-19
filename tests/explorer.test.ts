@@ -10,7 +10,7 @@ import {
   parseExplorerQueryState,
 } from "../src/lib/explorer/navigation"
 import { createTopicSearchEngine } from "../src/lib/explorer/search"
-import { getLevelSections, getLevelSectionsForAllLevels, getLevelTopicCounts, getTopicModuleLabel } from "../src/lib/explorer/selectors"
+import { getLevelSections, getLevelSectionsForAllLevels, getLevelTopicCounts, getTopicModuleLabel, getTopicNeighbors } from "../src/lib/explorer/selectors"
 import { TopicCatalogSchema } from "../src/lib/schemas/topic"
 
 const loadCatalog = async () => {
@@ -98,6 +98,36 @@ test("all-level selector keeps level order before module order", async () => {
       "a1_2_m1_city_orientation",
     ],
   )
+})
+
+test("topic neighbors stay inside the selected level and section", async () => {
+  const topics = await loadCatalog()
+  const first = getTopicNeighbors(topics, "a1_1_m1_present_basic", "A1.1")
+  const middle = getTopicNeighbors(topics, "a1_1_m3_negation_kein", "A1.1")
+  const last = getTopicNeighbors(topics, "accusative_case", "A1.1")
+
+  assert.equal(first.previous, null)
+  assert.equal(first.next?.id, "a1_1_m2_articles")
+  assert.equal(middle.previous?.id, "a1_1_m2_articles")
+  assert.equal(middle.next?.id, "a1_1_m4_modal_koennen")
+  assert.equal(last.previous?.id, "a1_1_m4_modal_koennen")
+  assert.equal(last.next, null)
+  assert.equal(buildTopicDetailHref(middle.next!.id, { level: "A1.1" }), "/topic/a1_1_m4_modal_koennen?level=A1.1")
+})
+
+test("all-level topic neighbors preserve CEFR order within a section", async () => {
+  const topics = await loadCatalog()
+  const first = getTopicNeighbors(topics, "a1_1_m1_present_basic", "All")
+  const boundary = getTopicNeighbors(topics, "accusative_case", "All")
+  const last = getTopicNeighbors(topics, "b2_2_m5_complex_conditionals", "All")
+
+  assert.equal(first.previous, null)
+  assert.equal(first.next?.id, "a1_1_m2_articles")
+  assert.equal(boundary.previous?.id, "a1_1_m4_modal_koennen")
+  assert.equal(boundary.next?.id, "a1_2_m1_temporal_prepositions")
+  assert.equal(last.previous?.id, "b2_2_m4_expanded_attributes")
+  assert.equal(last.next, null)
+  assert.equal(buildTopicDetailHref(boundary.next!.id, { level: "All" }), "/topic/a1_2_m1_temporal_prepositions?level=All")
 })
 
 test("search finds representative Momente catalog content", async () => {

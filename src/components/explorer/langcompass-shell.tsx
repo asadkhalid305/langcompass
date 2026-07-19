@@ -13,7 +13,7 @@ import { useDesktopViewport } from "@/components/explorer/shell/use-desktop-view
 import { useTopicDetailPreview } from "@/components/explorer/shell/use-topic-detail-preview"
 import type { LevelCounts, SectionSummary } from "@/components/explorer/shell/types"
 import { ALLOWED_LEVELS, ALL_LEVEL, TOPIC_SECTION_ORDER } from "@/lib/constants/topic"
-import { buildExplorerHref, buildOverviewHref, buildTopicDetailHref, parseExplorerQueryState, parseOverviewQueryState } from "@/lib/explorer/navigation"
+import { buildExplorerHref, buildOverviewHref, buildTopicDetailHref, hasLegacyExplorerSignal, parseExplorerQueryState, parseOverviewQueryState } from "@/lib/explorer/navigation"
 import { createTopicSearchEngine } from "@/lib/explorer/search"
 import { getAllLevelTopicCounts, getLevelSections, getLevelSectionsForAllLevels } from "@/lib/explorer/selectors"
 import type { ExplorerLevelSection } from "@/lib/explorer/types"
@@ -62,6 +62,22 @@ export function LangCompassShell({ mode, topics, detailTopicIds }: LangCompassSh
   )
 
   const selectedLevel = (isExplorerMode ? explorerRouteState.level : overviewRouteState.level) ?? ALL_LEVEL
+  const legacyExplorerHref = !isExplorerMode && hasLegacyExplorerSignal({
+    view: searchParams.get("view"),
+    group: searchParams.get("group"),
+    topic: searchParams.get("topic"),
+    q: searchParams.get("q"),
+  })
+    ? buildExplorerHref({
+        level: explorerRouteState.level,
+        query: explorerRouteState.query,
+        topicId: explorerRouteState.topicId,
+      })
+    : null
+
+  useEffect(() => {
+    if (legacyExplorerHref) router.replace(legacyExplorerHref, { scroll: false })
+  }, [legacyExplorerHref, router])
 
   const routeSelectedTopicId = isExplorerMode ? explorerRouteState.topicId : undefined
   const selectedTopicId = routeSelectedTopicId && topics.some((topic) => topic.id === routeSelectedTopicId) ? routeSelectedTopicId : null

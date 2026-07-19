@@ -7,11 +7,14 @@ import { TopicDetailContent } from "@/components/topic-detail/topic-detail-conte
 import { TopicDetailHeader } from "@/components/topic-detail/topic-detail-header"
 import { resolveTopicLinks } from "@/components/topic-detail/topic-detail-page-helpers"
 import { TopicDetailSidebar } from "@/components/topic-detail/topic-detail-sidebar"
+import { TopicSequenceNavigation, type TopicSequenceContext, type TopicSequenceItem } from "@/components/topic-detail/topic-sequence-navigation"
 import { TopicDetailBreadcrumb } from "@/components/topic/topic-detail-breadcrumb"
+import { ALLOWED_LEVEL_OPTIONS } from "@/lib/constants/topic"
 import { loadTopicCatalog } from "@/lib/data/topic-catalog"
 import { loadTopicDetailById } from "@/lib/data/topic-detail"
 import { buildLearningToolsContext } from "@/lib/learning-tools"
-import type { TopicId } from "@/lib/types/topic"
+import { getTopicModuleLabel, getTopicNeighbors } from "@/lib/explorer/selectors"
+import type { TopicId, TopicLevelOrAll } from "@/lib/types/topic"
 
 interface TopicDetailPageProps {
   params: Promise<{ topicId: string }>
@@ -36,6 +39,19 @@ export default async function TopicDetailPage({ params }: TopicDetailPageProps) 
   const learningToolsContext = buildLearningToolsContext(topic, detail)
   const prerequisiteTopics = resolveTopicLinks(detail?.prerequisiteTopicIds, topicsById)
   const relatedTopics = resolveTopicLinks(detail?.relatedTopicIds ?? topic.relatedTopicIds, topicsById)
+  const toSequenceItem = (item: (typeof topics)[number] | null): TopicSequenceItem | null => item ? {
+    id: item.id,
+    title: item.title,
+    moduleLabel: getTopicModuleLabel(item),
+  } : null
+  const sequenceContexts = Object.fromEntries(ALLOWED_LEVEL_OPTIONS.map((level) => {
+    const neighbors = getTopicNeighbors(topics, topic.id, level)
+    return [level, {
+      found: neighbors.found,
+      previous: toSequenceItem(neighbors.previous),
+      next: toSequenceItem(neighbors.next),
+    }]
+  })) as Record<TopicLevelOrAll, TopicSequenceContext>
 
   return (
     <main id="main-content" className="min-h-screen min-w-0 scroll-mt-4">
@@ -51,6 +67,9 @@ export default async function TopicDetailPage({ params }: TopicDetailPageProps) 
           <TopicDetailContent detail={detail} topicId={topic.id} topicsById={topicsById} />
           <TopicDetailSidebar topic={topic} detail={detail} prerequisiteTopics={prerequisiteTopics} relatedTopics={relatedTopics} />
         </div>
+        <Suspense>
+          <TopicSequenceNavigation contexts={sequenceContexts} defaultLevel={topic.level} />
+        </Suspense>
       </div>
     </main>
   )

@@ -19,6 +19,7 @@ import {
   parseSentenceCheckOutput,
   readResults,
   resolveLearningToolsDeviceStatus,
+  splitGermanTranslationSource,
   readWorkspace,
   RECENT_RETENTION_MS,
   removeHistoryResults,
@@ -127,6 +128,27 @@ test("lesson grounding stays concise and contains curated context", () => {
     { label: "Lesson summary", text: context.summary },
   )
   assert.match(summaryPrompt, /The conjugated verb is in position two/)
+})
+
+test("translation sources split dialogue examples into one speaker turn per option", () => {
+  assert.deepEqual(
+    splitGermanTranslationSource("A: Gehen wir am Freitag ins Kino? B: Ja, gern. Um wie viel Uhr?"),
+    ["Gehen wir am Freitag ins Kino?", "Ja, gern. Um wie viel Uhr?"],
+  )
+
+  const context = buildLearningToolsContext(topic, {
+    ...detail,
+    examples: [
+      { de: "A: Gehen wir am Freitag ins Kino? B: Ja, gern. Um wie viel Uhr?" },
+      { de: "Heute lerne ich Deutsch." },
+    ],
+  })
+
+  assert.deepEqual(context.translationSources, [
+    { label: "German example 1, turn 1", text: "Gehen wir am Freitag ins Kino?" },
+    { label: "German example 1, turn 2", text: "Ja, gern. Um wie viel Uhr?" },
+    { label: "German example 2", text: "Heute lerne ich Deutsch." },
+  ])
 })
 
 test("generated prose is parsed into a safe readable subset", () => {

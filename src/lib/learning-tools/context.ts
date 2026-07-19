@@ -7,15 +7,28 @@ const clean = (value: string | undefined): string => value?.replace(/\s+/g, " ")
 const take = (items: Array<string | undefined>, limit: number): string[] =>
   items.map(clean).filter(Boolean).slice(0, limit)
 
+const DIALOGUE_TURN_PATTERN = /\b([A-Z]):\s*([\s\S]*?)(?=\s+\b[A-Z]:\s*|$)/gu
+
+export const splitGermanTranslationSource = (value: string): string[] => {
+  const normalized = value.trim()
+  const turns = Array.from(normalized.matchAll(DIALOGUE_TURN_PATTERN), (match) => clean(match[2]))
+
+  return turns.length > 1 ? turns.filter(Boolean) : [normalized].filter(Boolean)
+}
+
 export function buildLearningToolsContext(
   topic: TopicCatalogItem,
   detail: TopicDetail | null,
 ): LearningToolsContext {
   const summary = clean(detail?.summary ?? topic.summary)
-  const translationSources = detail?.examples?.map((example, index) => ({
-    label: `German example ${index + 1}`,
-    text: example.de.trim(),
-  })).filter((source) => source.text) ?? []
+  const translationSources = detail?.examples?.flatMap((example, exampleIndex) =>
+    splitGermanTranslationSource(example.de).map((text, turnIndex, turns) => ({
+      label: turns.length > 1
+        ? `German example ${exampleIndex + 1}, turn ${turnIndex + 1}`
+        : `German example ${exampleIndex + 1}`,
+      text,
+    })),
+  ) ?? []
   const lessonParts = [
     summary,
     ...take(detail?.ruleBlocks.map((block) => `${block.title}: ${block.content}`) ?? [], 4),
