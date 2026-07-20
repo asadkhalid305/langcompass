@@ -29,6 +29,8 @@ Each tool is checked separately. For example, translation may be available even 
 
 You can close the learning-tools panel at any time and continue reading the lesson. Your selected source and options remain available during normal navigation in the same browser session.
 
+Use **Manage AI storage** at the top of the panel when you want to remove downloaded browser models. This opens the browser-wide removal guidance; it is not placed inside individual tool tabs because several tools share the same model.
+
 ## How to use each tool
 
 ### Translate a lesson passage
@@ -138,6 +140,22 @@ The first use of a tool can require a large download, usually best attempted on 
 
 The normal LangCompass explorer and lessons remain usable when one or every learning tool is unavailable.
 
+### Remove downloaded models
+
+LangCompass cannot delete browser-managed model files directly. Chrome shares its generative foundation model across LangCompass tools, other websites, and Chrome features, so model removal is browser-wide rather than per learning tool.
+
+To remove Chrome's downloaded generative AI models and free their disk space:
+
+1. Open the Chrome menu and select **Settings**.
+2. Open **System**.
+3. Turn off **On-device AI**.
+
+You can also paste `chrome://settings/system` into Chrome's address bar. A website cannot open this protected address for you. Turning **On-device AI** on again allows Chrome to download the models again when an eligible feature needs them.
+
+Translation uses separate language-pair packs. Chrome does not currently expose a website API for deleting one translation pack, so LangCompass cannot provide a working per-language or per-tab removal button. Destroying an active Translator session releases runtime resources but does not remove the downloaded pack from disk.
+
+Browser model removal and LangCompass result deletion are separate. Turning off **On-device AI** does not delete recent or saved results; use the controls under **Results** for those.
+
 ## Frequently asked questions
 
 ### Is this a chatbot?
@@ -159,6 +177,10 @@ Chrome has reported that the required on-device model or language pack can be do
 ### Will the tools work offline?
 
 Do not rely on offline use. Chrome must first have the required model and language resources, and the browser controls whether a particular task is available. Finish any required downloads while connected before experimenting offline.
+
+### Can I remove a model for only one learning tool?
+
+No. Explain, More examples, Summarize lesson, and Check my sentence can share Chrome's generative foundation model, and Chrome does not let websites delete it. Use **Manage AI storage** for Chrome's browser-wide removal steps. Translation packs are also browser-managed and do not currently have a website-accessible per-pack delete API.
 
 ### Is my sentence sent to LangCompass?
 

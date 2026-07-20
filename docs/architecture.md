@@ -60,6 +60,8 @@ The current stage intentionally excludes authentication, server-side persistence
 
 Learning tools are an optional client-side progressive enhancement. They use browser-managed on-device models when the required Chrome API, language combination, model, and hardware are available. They do not change the static hosting model, and lesson exploration remains complete when every AI capability is unavailable. The dated capability matrix and API-selection rationale live in [the on-device learning tools decision record](decisions/2026-07-13-on-device-learning-tools.md).
 
+Chrome owns the downloaded model lifecycle. LangCompass may create, reuse, and destroy active API sessions, but a website cannot delete Chrome's shared foundation model or individual translation packs from disk. The panel therefore exposes one browser-wide **Manage AI storage** guide rather than misleading per-tool removal actions; generated-result deletion remains a separate LangCompass site-data concern.
+
 ## Contributor Invariants
 
 - Keep the app static-first unless product direction explicitly changes.

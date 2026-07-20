@@ -63,6 +63,7 @@ export default function LearningToolsInfoPage() {
             <a className="border border-border bg-muted/20 px-3 py-2 hover:bg-muted/40" href="#how-it-works">How it works</a>
             <a className="border border-border bg-muted/20 px-3 py-2 hover:bg-muted/40" href="#privacy">Privacy</a>
             <a className="border border-border bg-muted/20 px-3 py-2 hover:bg-muted/40" href="#downloads">Downloads and impact</a>
+            <a className="border border-border bg-muted/20 px-3 py-2 hover:bg-muted/40" href="#remove-models">Remove models</a>
             <a className="border border-border bg-muted/20 px-3 py-2 hover:bg-muted/40" href="#requirements">Requirements</a>
             <a className="border border-border bg-muted/20 px-3 py-2 hover:bg-muted/40" href="#browsers">Browsers</a>
             <a className="border border-border bg-muted/20 px-3 py-2 hover:bg-muted/40" href="#troubleshooting">Troubleshooting</a>
@@ -100,6 +101,26 @@ export default function LearningToolsInfoPage() {
             <p>Chrome requires at least <strong>22 GB of free space</strong> before it will make foundation-model tools available. This is an eligibility and safety requirement—not a claim that LangCompass downloads 22 GB. Chrome says the actual model is significantly smaller and exposes its current size in <code className="border border-border bg-muted px-1 py-0.5">chrome://on-device-internals</code>.</p>
             <p>Chrome manages downloads and updates in the background. A model update can involve downloading a complete replacement. If free storage later falls below 10 GB, Chrome may remove the model and download it again when requirements are met.</p>
             <p>While generating, the browser uses local CPU or GPU capacity and memory. On some machines this can temporarily increase battery use, heat, fan activity, or response time. You can cancel generation, close the panel, or ignore Learning tools completely.</p>
+          </div>
+        </section>
+
+        <section id="remove-models" className="mt-8 scroll-mt-6 border border-border bg-white p-5 md:p-8">
+          <p className="text-xs font-bold uppercase tracking-[0.14em] text-orange-700">Free disk space</p>
+          <h2 className="mt-2 font-display text-2xl font-semibold md:text-3xl">How to remove downloaded models</h2>
+          <div className="mt-5 space-y-4 text-sm leading-relaxed text-foreground md:text-base">
+            <p><strong>Model removal is controlled by Chrome, not by LangCompass.</strong> The browser can share one foundation model across explanation, examples, summaries, sentence checking, other websites, and Chrome features. A per-tool delete button would therefore suggest separation that does not exist.</p>
+            <div className="border border-border bg-muted/15 p-4">
+              <p className="font-semibold">In desktop Chrome:</p>
+              <ol className="mt-2 list-decimal space-y-1 pl-5 text-muted-foreground">
+                <li>Open the Chrome menu and select <strong className="text-foreground">Settings</strong>.</li>
+                <li>Open <strong className="text-foreground">System</strong>.</li>
+                <li>Turn off <strong className="text-foreground">On-device AI</strong>.</li>
+              </ol>
+              <p className="mt-3 text-muted-foreground">Chrome deletes its downloaded generative AI models and frees their disk space. If you turn the setting on again, Chrome can download the models again when an eligible feature needs them.</p>
+              <p className="mt-3 text-muted-foreground">You can paste <code className="border border-border bg-white px-1 py-0.5">chrome://settings/system</code> into Chrome&apos;s address bar. Websites cannot open protected <code className="border border-border bg-white px-1 py-0.5">chrome://</code> pages for you.</p>
+            </div>
+            <p><strong>Translation is different.</strong> It uses language-pair packs rather than the shared generative foundation model. Chrome does not currently expose a website API for deleting an individual translation pack, so LangCompass cannot offer an honest per-language removal control.</p>
+            <p>Removing browser models does not delete your recent or saved LangCompass results. Those are separate site data and remain under <strong>Results</strong> until their retention period expires or you delete them.</p>
           </div>
         </section>
 
@@ -162,11 +183,12 @@ export default function LearningToolsInfoPage() {
         </section>
 
         <footer className="mt-8 border-t border-border py-8 text-sm text-muted-foreground">
-          <p>Requirements reviewed July 15, 2026. LangCompass checks live browser availability before allowing generation.</p>
+          <p>Requirements and model-management guidance reviewed July 20, 2026. LangCompass checks live browser availability before allowing generation.</p>
           <div className="mt-3 flex flex-wrap gap-4">
             <a className="inline-flex items-center gap-1 font-semibold text-foreground underline underline-offset-4" href="https://developer.chrome.com/docs/ai/get-started" target="_blank" rel="noreferrer">Chrome requirements <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" /></a>
             <a className="inline-flex items-center gap-1 font-semibold text-foreground underline underline-offset-4" href="https://developer.chrome.com/docs/ai/built-in-apis" target="_blank" rel="noreferrer">Chrome API status <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" /></a>
             <a className="inline-flex items-center gap-1 font-semibold text-foreground underline underline-offset-4" href="https://developer.chrome.com/docs/ai/understand-built-in-model-management" target="_blank" rel="noreferrer">Chrome model management <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" /></a>
+            <a className="inline-flex items-center gap-1 font-semibold text-foreground underline underline-offset-4" href="https://support.google.com/chrome/answer/16961953" target="_blank" rel="noreferrer">Remove Chrome AI models <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" /></a>
             <a className="inline-flex items-center gap-1 font-semibold text-foreground underline underline-offset-4" href="https://learn.microsoft.com/en-us/microsoft-edge/web-platform/translator-api" target="_blank" rel="noreferrer">Edge Translator API <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" /></a>
           </div>
         </footer>

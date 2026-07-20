@@ -92,6 +92,8 @@ The Chrome version remains unavailable through the permitted browser-control sur
 6. Preserve the learner's source text and selected options through unsupported, unavailable, canceled, and error states.
 7. Explain that support depends on Chrome, device, model, and language availability. Do not imply that changing browsers or enabling flags is guaranteed to work.
 8. Do not transmit lesson or learner text to any remote service. If no local path is available, the tool remains unavailable.
+9. Treat downloaded model deletion as a browser-wide setting. Web APIs can destroy active sessions but cannot remove browser-managed model files or individual translation packs from disk.
+10. Keep model removal separate from result deletion: Chrome settings manage browser AI models, while LangCompass Results manages this site's IndexedDB history.
 
 ## Context and output limits
 
@@ -114,6 +116,8 @@ The Chrome version remains unavailable through the permitted browser-control sur
 
 - [Built-in AI API status](https://developer.chrome.com/docs/ai/built-in-apis)
 - [Built-in AI requirements and model download](https://developer.chrome.com/docs/ai/get-started)
+- [Chrome model management and automatic purging](https://developer.chrome.com/docs/ai/understand-built-in-model-management)
+- [Remove on-device generative AI models in Chrome](https://support.google.com/chrome/answer/16961953)
 - [Translator API](https://developer.chrome.com/docs/ai/translator-api)
 - [Language Detector API](https://developer.chrome.com/docs/ai/language-detection)
 - [Summarizer API](https://developer.chrome.com/docs/ai/summarizer-api)

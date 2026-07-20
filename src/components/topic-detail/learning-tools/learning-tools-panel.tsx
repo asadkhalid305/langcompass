@@ -16,6 +16,7 @@ import {
 } from "@/lib/learning-tools"
 
 import { LearningToolsResults } from "./learning-tools-results"
+import { LearningToolsModelManagement } from "./learning-tools-model-management"
 import type { LearningToolsController } from "./use-learning-tools-controller"
 
 interface LearningToolsPanelProps {
@@ -70,7 +71,7 @@ export function LearningToolsPanel({ controller }: LearningToolsPanelProps) {
   return (
     <SheetContent
       side={controller.desktop ? "right" : "bottom"}
-      className={controller.desktop ? "w-[min(46rem,92vw)] max-w-none" : "h-[92dvh] rounded-none"}
+      className={controller.desktop ? "flex w-[min(46rem,92vw)] max-w-none flex-col" : "flex h-[92dvh] flex-col rounded-none"}
     >
       <SheetHeader className="border-b border-border pb-4 pr-12">
         <SheetTitle className="flex items-center gap-2 font-display text-xl">
@@ -80,9 +81,12 @@ export function LearningToolsPanel({ controller }: LearningToolsPanelProps) {
         <SheetDescription>
           Generated locally and kept separate from the curated lesson. AI output can be inaccurate. Chrome built-in AI support varies by desktop browser and device. Recent items stay on this browser for seven days; saved items stay until deleted.
         </SheetDescription>
+        <div className="pt-1">
+          <LearningToolsModelManagement />
+        </div>
       </SheetHeader>
 
-      <div className="grid h-[calc(100%-7.25rem)] min-h-0 grid-rows-[auto_1fr] overflow-hidden lg:grid-cols-[13rem_minmax(0,1fr)] lg:grid-rows-1">
+      <div className="grid min-h-0 flex-1 grid-rows-[auto_1fr] overflow-hidden lg:grid-cols-[13rem_minmax(0,1fr)] lg:grid-rows-1">
         <nav className="flex gap-2 overflow-x-auto border-b border-border p-3 lg:flex-col lg:border-b-0 lg:border-r" aria-label="Learning tool selection">
           {LEARNING_TOOL_IDS.map((item) => (
             <button
